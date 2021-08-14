@@ -1,18 +1,145 @@
-if __name__ == '__main__':
-    pass
+# import dash and bootstrap components
+import dash
+import dash_bootstrap_components as dbc
+# import dash-core, dash-html, dash io, bootstrap
+import os
 
-<<<<<<< HEAD
-print('Hello world. Today is July,24th')
-=======
-print("A Diego le gusta la changua")
+import dash_core_components as dcc
+import dash_html_components as html
+from dash.dependencies import Input, Output
 
-print("Kelly está intentando hacer un cambio")
-<<<<<<< HEAD
->>>>>>> 024e72ce1d67825237ffacdffcf7b0063f36ab10
-=======
+#import index
 
-print("after all")
->>>>>>> 71e3e800ca0ddae54f890b64c62844aebae818e3
+# set app variable with dash, set external style to bootstrap theme
+app = dash.Dash(
+    __name__,
+    external_stylesheets=[dbc.themes.SANDSTONE],
+    meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}],
+)
+app.title = "Dashboard IDT"
+# set app server to variable for deployment
+srv = app.server
+
+# set app callback exceptions to true
+app.config.suppress_callback_exceptions = True
+
+# set applicaiton title
+app.title = "DS4A-G9"
 
 
-print ("a new prove, again")
+app_name = os.getenv("DASH_APP_PATH", "/dash-ds4a-g9")
+
+# Navigation Bar fucntion
+def Navbar():
+    navbar = dbc.NavbarSimple(
+        children=[
+            dbc.NavItem(dbc.NavLink("Team Analysis", href=f"{app_name}/team")),
+            dbc.NavItem(dbc.NavLink("Batting Analysis", href=f"{app_name}/player")),
+            dbc.NavItem(
+                dbc.NavLink("Pitching/Fielding Analysis", href=f"{app_name}/field")
+            ),
+        ],
+        brand="Home",
+        brand_href=f"{app_name}",
+        sticky="top",
+        color="light",
+        dark=False,
+        expand="lg",
+    )
+    return navbar
+
+# Layout variables, navbar, header, content, and container
+nav = Navbar()
+
+header = dbc.Row(
+    dbc.Col(
+        html.Div(
+            [
+                html.H2(children="Major League Baseball History"),
+                html.H3(children="A Visualization of Historical Data"),
+            ]
+        )
+    ),
+    className="banner",
+)
+
+content = html.Div([dcc.Location(id="url"), html.Div(id="page-content")])
+
+container = dbc.Container([header, content])
+
+app_name = os.getenv("DASH_APP_PATH", "/dash-ds4a-g9")
+
+header = dbc.Row(
+    dbc.Col(
+        html.Div(
+            [
+                html.H2(children="Major League Baseball History"),
+                html.H3(children="A Visualization of Historical Data"),
+            ]
+        )
+    ),
+    className="banner",
+)
+
+content = html.Div([dcc.Location(id="url"), html.Div(id="page-content")])
+
+container = dbc.Container([header, content])
+
+
+# Menu callback, set and return
+# Declair function  that connects other pages with content to container
+@app.callback(Output("page-content", "children"), [Input("url", "pathname")])
+def display_page(pathname):
+    if pathname in [app_name, app_name + "/"]:
+        return html.Div(
+            [
+                dcc.Markdown(
+                    """
+            ### The Applicaiton
+            This application is a portfolio project built by [Matt Parra](https://devparra.github.io/) using Plotly's Dash,
+            faculty.ai's Dash Bootstrap Components, and Pandas. Using historical MLB (Major League Baseball) data,
+            this application provides visualizations for team and player statistics dating from 1903 to 2020. Selecting
+            from a dropdown menu, the era will update the list of available teams and players in the range set on the years
+            slider. The slider allows the user to adjust the range of years with which the data is presented.
+
+            ### The Analysis
+            The applicaiton breaks down each baseballs teams win/loss performance within a range of the teams history.
+            Additionally, the application will break down the batting performance with the team batting average, BABIP, and strikeout
+            rate. The application also brakes down the piching perfomance using the teams ERA and strikeout to walk ratio. Finally the feilding
+            performance of each team is illustrated with total errors and double plays. The applicaiton will also breakdown
+            each of teams players statistics within the given era.
+
+            ### The Data
+            The data used in this application was retrieved from [Seanlahman.com](http://www.seanlahman.com/baseball-archive/statistics/).
+            Provided by [Chadwick Baseball Bureau's GitHub](https://github.com/chadwickbureau/baseballdatabank/) .
+            This database is copyright 1996-2021 by Sean Lahman. This data is licensed under a Creative Commons Attribution-ShareAlike
+            3.0 Unported License. For details see: [CreativeCommons](http://creativecommons.org/licenses/by-sa/3.0/)
+        """
+                )
+            ],
+            className="home",
+        )
+    elif pathname.endswith("/team"):
+        return appMenu, menuSlider, teamLayout
+    elif pathname.endswith("/player"):
+        return appMenu, menuSlider, playerMenu, battingLayout
+    elif pathname.endswith("/field"):
+        return appMenu, menuSlider, playerMenu, fieldingLayout
+    else:
+        return "ERROR 404: Page not found!"
+
+
+# Main index function that will call and return all layout variables
+def index():
+    layout = html.Div([nav,container])
+    #layout = html.Div([container])
+    return layout
+
+# Set layout to index function
+app.layout = index()
+
+
+# Call app server
+if __name__ == "__main__":
+    # set debug to false when deploying app
+    app.run_server(debug=True)

@@ -1,9 +1,20 @@
-# Improtant note: This data file would ordinarily be used to connect with a proper database server
-# more likely PostgreSQL, but thats me. I do plan on rewritting this in the future for such implementations.
-# With that said, this file will be be very slow to run and only to demonstrate data processing using
-# functions and pandas along with providing a central file for data references
-#
-# Import Pandas
-import pandas as pd
+import wrangler
+#------ Databases load -----------
+databases = wrangler.read__file_databases()
 
+df_viajeros = databases[wrangler.DATABASE_NAMES[0]]
+df_indicadores = databases[wrangler.DATABASE_NAMES[0]]
+#------- Lists for the selectors --------
+
+# All the variables that end in _list will be used as
+# lists for the frontend selectors
+
+# viajeros_tema_list = df_viajeros['TEMA']
+
+viajeros_tema_list = {}
+viajeros_tema_list["INTERNATIONAL"] = "TURISTAS INTERNACIONALES"
+viajeros_tema_list["NATIONAL"] = "TURISTAS INTERNACIONALES"
+viajeros_tema_list["BOTH"] = "BOTH"
+
+#------- Model related code -------------
 

@@ -3,128 +3,133 @@ import os
 
 import dash_core_components as dcc
 import dash_html_components as html
-from dash.dependencies import Input, Output
 
 # Dash Bootstrap components
 import dash_bootstrap_components as dbc
 
-# Navbar, layouts, custom callbacks
-'''
-from navbar import Navbar
-from layouts import (
-    appMenu,
-    menuSlider,
-    playerMenu,
-    teamLayout,
-    battingLayout,
-    fieldingLayout,
+import layouts
+
+#header_height, footer_height = "8rem", "8rem"
+header_height, footer_height = "6rem", "6rem"
+MAIN_BLUE = "#20284D"
+
+HEADER_STYLE = {
+    "height": header_height,
+    "padding-bottom": "1rem",
+    "background-color": "white",
+    "margin-bottom": "1rem",
+}
+
+FOOTER_STYLE = {
+    "position": "fixed",
+    "bottom": 0,
+    "left": 0,
+    "right": 0,
+    "height": footer_height,
+    "padding": "1rem 1rem",
+    #"padding-bottom": "1rem",
+    "background-color": MAIN_BLUE,
+}
+
+
+# Header
+header = html.Div([
+
+        dbc.Row(
+            dbc.Col(
+                html.Span(
+                    [
+                        html.Img(src="assets/IDT_transparent_logo2.png", className="header-banner"),
+                        #html.H1("IDT"),
+                    ],
+                    className="align-top",
+                ),                               
+                md={"size": 8, "offset": 2},
+                lg={"size": 6, "offset": 2},
+                xl={"size": 4, "offset": 2},
+            )
+        )        
+
+    ], 
+    style=HEADER_STYLE,    
+    className="container-fluid d-none d-sm-block" 
 )
-import callbacks
 
-'''
+# Navbar
+options_navBar = ["Inicio", "viajeros", "indicadores"]
+options_navBar = [option.upper() for option in options_navBar]
 
+options_drop_navBar = {}
+options_drop_navBar[options_navBar[1]] = [{"label":"Quienes son los viajeros?", "value":"viajeros/quienes"},\
+    {"label":"Cuales son sus preferencias?", "value":"viajeros/preferencias"}]
 
-app_name = os.getenv("DASH_APP_PATH", "/dash-ds4a-g9")
+options_drop_navBar[options_navBar[2]] = [{"label":"Economicos", "value":"indicadores/economicos"},\
+    {"label":"Turismo", "value":"indicadores/turismo"}]
 
-# Navigation Bar fucntion
-def Navbar():
-    navbar = dbc.NavbarSimple(
+navBar = dbc.NavbarSimple(
+        id="navbar",
         children=[
-            dbc.NavItem(dbc.NavLink("Team Analysis", href=f"{app_name}/team")),
-            dbc.NavItem(dbc.NavLink("Batting Analysis", href=f"{app_name}/player")),
+            dbc.NavItem(dbc.NavLink(options_navBar[0], href="/")),
             dbc.NavItem(
-                dbc.NavLink("Pitching/Fielding Analysis", href=f"{app_name}/field")
+                dbc.DropdownMenu(
+                    label=options_navBar[1],
+                    children=[
+                        dbc.DropdownMenuItem(html.A(children=[options_drop_navBar[options_navBar[1]][0]["label"]],\
+                            href=options_drop_navBar[options_navBar[1]][0]["value"])),
+                        dbc.DropdownMenuItem(html.A(children=[options_drop_navBar[options_navBar[1]][1]["label"]],\
+                            href=options_drop_navBar[options_navBar[1]][1]["value"])),                        
+                    ],
             ),
+            ),
+            dbc.NavItem(
+                dbc.DropdownMenu(
+                    label=options_navBar[2],
+                    children=[
+                        dbc.DropdownMenuItem(html.A(children=[options_drop_navBar[options_navBar[2]][0]["label"]],\
+                            href=options_drop_navBar[options_navBar[2]][0]["value"])),
+                        dbc.DropdownMenuItem(html.A(children=[options_drop_navBar[options_navBar[2]][1]["label"]],\
+                            href=options_drop_navBar[options_navBar[2]][1]["value"])),                        
+                    ],
+            ),
+            )
+            #dbc.NavItem(dbc.NavLink(options_navBar[1], href="/{}".format(options_navBar[1].lower()))),
+            #dbc.NavItem(dbc.NavLink(options_navBar[2], href="/{}".format(options_navBar[1].lower()))),            
         ],
-        brand="Home",
-        brand_href=f"{app_name}",
-        sticky="top",
-        color="light",
+        color=MAIN_BLUE,
         dark=False,
         expand="lg",
+        #fluid=True,
+        sticky="top",
+        className="mr-auto",
     )
-    return navbar
 
-# Layout variables, navbar, header, content, and container
-nav = Navbar()
-
-header = dbc.Row(
-    dbc.Col(
-        html.Div(
-            [
-                html.H2(children="Major League Baseball History"),
-                html.H3(children="A Visualization of Historical Data"),
-            ]
-        )
-    ),
-    className="banner",
-)
-
-content = html.Div([dcc.Location(id="url"), html.Div(id="page-content")])
-
-container = dbc.Container([header, content])
-
-header = dbc.Row(
-    dbc.Col(
-        html.Div(
-            [
-                html.H2(children="Major League Baseball History"),
-                html.H3(children="A Visualization of Historical Data"),
-            ]
-        )
-    ),
-    className="banner",
-)
-
-content = html.Div([dcc.Location(id="url"), html.Div(id="page-content")])
-
-container = dbc.Container([header, content])
-
-
-# Menu callback, set and return
-# Declair function  that connects other pages with content to container
-@app.callback(Output("page-content", "children"), [Input("url", "pathname")])
-def display_page(pathname):
-    if pathname in [app_name, app_name + "/"]:
-        return html.Div(
-            [
-                dcc.Markdown(
-                    """
-            ### The Applicaiton
-            This application is a portfolio project built by [Matt Parra](https://devparra.github.io/) using Plotly's Dash,
-            faculty.ai's Dash Bootstrap Components, and Pandas. Using historical MLB (Major League Baseball) data,
-            this application provides visualizations for team and player statistics dating from 1903 to 2020. Selecting
-            from a dropdown menu, the era will update the list of available teams and players in the range set on the years
-            slider. The slider allows the user to adjust the range of years with which the data is presented.
-
-            ### The Analysis
-            The applicaiton breaks down each baseballs teams win/loss performance within a range of the teams history.
-            Additionally, the application will break down the batting performance with the team batting average, BABIP, and strikeout
-            rate. The application also brakes down the piching perfomance using the teams ERA and strikeout to walk ratio. Finally the feilding
-            performance of each team is illustrated with total errors and double plays. The applicaiton will also breakdown
-            each of teams players statistics within the given era.
-
-            ### The Data
-            The data used in this application was retrieved from [Seanlahman.com](http://www.seanlahman.com/baseball-archive/statistics/).
-            Provided by [Chadwick Baseball Bureau's GitHub](https://github.com/chadwickbureau/baseballdatabank/) .
-            This database is copyright 1996-2021 by Sean Lahman. This data is licensed under a Creative Commons Attribution-ShareAlike
-            3.0 Unported License. For details see: [CreativeCommons](http://creativecommons.org/licenses/by-sa/3.0/)
-        """
+# Footer
+footer = html.Div([
+    dbc.Row(children=[
+        dbc.Col(
+            children=[
+                html.H4(children="Instituto Distrital de Turismo")
+            ],
+            md={"size": 3, "offset": 1},
+        ),
+        dbc.Col(
+            children=[
+                html.Img(
+                    src="assets/ds4a-logo_2x.png",
+                    width="20%",
                 )
             ],
-            className="home",
+            md={"size": 2, "offset": 6},
+            #lg={"size": 6, "offset": 2},
+            #xl={"size": 4, "offset": 2},            
         )
-    elif pathname.endswith("/team"):
-        return appMenu, menuSlider, teamLayout
-    elif pathname.endswith("/player"):
-        return appMenu, menuSlider, playerMenu, battingLayout
-    elif pathname.endswith("/field"):
-        return appMenu, menuSlider, playerMenu, fieldingLayout
-    else:
-        return "ERROR 404: Page not found!"
+  
+    ]
+  )
+], style=FOOTER_STYLE)
+
+# Containers for pages
+content = html.Div([dcc.Location(id="url"), html.Div(id="page-content")])
+container = dbc.Container([content])
 
 
-# Main index function that will call and return all layout variables
-def index():
-    layout = html.Div([nav, container])
-    return layout

@@ -11,24 +11,26 @@ import layouts
 
 #header_height, footer_height = "8rem", "8rem"
 header_height, footer_height = "6rem", "6rem"
-MAIN_BLUE = "#20284D"
+MAIN_COLOR_CONTRAST = "#20284D"
+MAIN_COLOR_BACKGROUND = "white"
 
 HEADER_STYLE = {
     "height": header_height,
     "padding-bottom": "1rem",
-    "background-color": "white",
+    "background-color": MAIN_COLOR_BACKGROUND,
     "margin-bottom": "1rem",
 }
 
 FOOTER_STYLE = {
-    "position": "fixed",
+    #"position": "relative",
+    #"position": "fixed",
     "bottom": 0,
-    "left": 0,
-    "right": 0,
+    #"left": 0,
+    #"right": 0,
     "height": footer_height,
     "padding": "1rem 1rem",
     #"padding-bottom": "1rem",
-    "background-color": MAIN_BLUE,
+    "background-color": MAIN_COLOR_CONTRAST,
 }
 
 
@@ -39,7 +41,7 @@ header = html.Div([
             dbc.Col(
                 html.Span(
                     [
-                        html.Img(src="assets/IDT_transparent_logo2.png", className="header-banner"),
+                        html.Img(src="assets/header-top-logo-idt.png", className="header-banner"),
                         #html.H1("IDT"),
                     ],
                     className="align-top",
@@ -56,7 +58,7 @@ header = html.Div([
 )
 
 # Navbar
-options_navBar = ["Inicio", "viajeros", "indicadores"]
+options_navBar = ["Inicio", "viajeros", "indicadores", "Modelo", "About Us"]
 options_navBar = [option.upper() for option in options_navBar]
 
 options_drop_navBar = {}
@@ -91,11 +93,11 @@ navBar = dbc.NavbarSimple(
                             href=options_drop_navBar[options_navBar[2]][1]["value"])),                        
                     ],
             ),
-            )
-            #dbc.NavItem(dbc.NavLink(options_navBar[1], href="/{}".format(options_navBar[1].lower()))),
-            #dbc.NavItem(dbc.NavLink(options_navBar[2], href="/{}".format(options_navBar[1].lower()))),            
+            ),
+            dbc.NavItem(dbc.NavLink(options_navBar[3], href="/".format(options_navBar[3].lower()))),
+            dbc.NavItem(dbc.NavLink(options_navBar[4], href="/about-us")),
         ],
-        color=MAIN_BLUE,
+        color=MAIN_COLOR_CONTRAST,
         dark=False,
         expand="lg",
         #fluid=True,
@@ -108,28 +110,17 @@ footer = html.Div([
     dbc.Row(children=[
         dbc.Col(
             children=[
-                html.H4(children="Instituto Distrital de Turismo")
+                html.P("Instituto Distrital de Turismo",id="footer-idt")
             ],
+            xs={"size": 5, "offset": 1},
             md={"size": 3, "offset": 1},
-        ),
-        dbc.Col(
-            children=[
-                html.Img(
-                    src="assets/ds4a-logo_2x.png",
-                    width="20%",
-                )
-            ],
-            md={"size": 2, "offset": 6},
-            #lg={"size": 6, "offset": 2},
-            #xl={"size": 4, "offset": 2},            
         )
-  
     ]
   )
 ], style=FOOTER_STYLE)
 
 # Containers for pages
-content = html.Div([dcc.Location(id="url"), html.Div(id="page-content")])
-container = dbc.Container([content])
+content = dbc.Container([dcc.Location(id="url"), html.Div(id="page-content")], fluid=True)
+container = dbc.Container([content],fluid=True)
 
 

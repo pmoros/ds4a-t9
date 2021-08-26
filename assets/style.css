@@ -1,29 +1,109 @@
 :root {
     font-size: 16px;
+    --font-family-1: "Roboto";
+    /*--font-family-1: "HelveticaNeue-Light";*/
+    --font-family-2: "Poppins";
+    --main-color-background: white;
+    --main-color-contrast: #20284D;
+    --secondary-color-contrast: #BADA55;
 }
 
-.banner{position:relative}
-.banner img{width:100%}
-.banner .container{position: absolute; left:0; right:0; top:50%; text-align:left; transform:translateY(-50%)}
+p {
+    font-family: var(--font-family-1);
+    font-size: 40px;
+}
 
+.poppins-semi-bold {
+    font-family: 'Poppins';
+    font-weight: 600;
+}
 
 .header-banner {  
     max-width: 100%;
     height: auto;
 }
 
-.banner-container {
-    background-image: url("assets/landing_image.jpg");
-    background-color: #cfaeae;
+.row-full{
+    max-width: 100vw !important;
+    width: 100vw !important;
+    position: relative !important;
+    margin-left: -50vw !important;
+    left: 50% !important;
+    }
+
+.landing-banner {  
+    max-height: 600px;
+    height: 600px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    vertical-align: baseline;
+    background-size:cover;
+    background-position: center bottom;
+    object-fit: cover;
+    
+}
+
+.landing-banner::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.60);
+}
+
+
+.landing-title {
+    position: relative;
+    color: var(--main-color-background);
+    font-family:var(--font-family-2);
+    font-size: 70px;
+    font-weight: 700;    
+}
+
+.landing-title-bold {
+    position: relative;
+    color: var(--secondary-color-contrast);
+    font-family:var(--font-family-2);
+    font-size: 70px;
+    font-weight: 700;        
+}
+
+.landing-subtitle {
+    position: relative;
+    margin-top: 1rem;
+    color: var(--main-color-background);
+    font-family:var(--font-family-1);
+    font-size: 24px;
+    font-weight: 200;    
+}
+
+.main-banner {  
+    max-height: 430px;
+    height: 430px;
+    background-size:cover;
+    background-position: center bottom;
+    object-fit: cover;
+}
+
+.fit-image{
     width: 100%;
+    object-fit: cover;
+    height: 100%; /* only if you want fixed height */
+    }
+
+
+
+.navbar .nav-item .nav-link{
+    color: var(--main-color-background) !important;
 }
 
-.nav-link{
-    color: white !important;
-}
-
-.nav-link:hover{
-    color: #BADA55 !important;
+.navbar .nav-item .nav-link:hover{
+    color: var(--secondary-color-contrast) !important;
 }
 
 .navbar {
@@ -31,22 +111,34 @@
 }
 
 .navbar .navbar-nav .nav-item{
-    font-size: 1.1875rem;
     padding-right: 2rem;
     padding-left: 2rem;
   }  
 
 .navbar .navbar-nav .nav-item .nav-link {
+    font-family: var(--font-family-1);
+    font-size: 19px;    
+    font-weight: 400;
     padding-right: 2rem;
     padding-left: 2rem;
   }
 
+/*Maybe use it with target*/
+/*
 .navbar .navbar-nav .nav-item .nav-link:hover {
-    border-bottom: 3px solid rgb(118, 150, 13);
+    border-bottom: 2px solid rgb(118, 150, 13);
+}  
+*/
+.navbar .navbar-nav .nav-item .dropdown .btn{
+    font-family: var(--font-family-1);
+    font-size: 19px; 
+    font-weight: 400;       
+    border-width: 0px;
+    background-color: var(--main-color-contrast);
 }  
 
-.navbar .navbar-nav .nav-item .dropdown .btn{
-    background-color: #20284D;
+.navbar .navbar-nav .nav-item .dropdown .btn:hover{    
+    color: var(--secondary-color-contrast);
 }  
 
 .navbar .navbar-nav .nav-item .dropdown .dropdown-item{
@@ -56,7 +148,7 @@
 }  
 
 .navbar .navbar-nav .nav-item .dropdown .dropdown-item:hover{
-    color: #BADA55;
+    color: var(--secondary-color-contrast);
     }  
 
 .navbar .navbar-nav .nav-item .dropdown .dropdown-menu{
@@ -65,13 +157,14 @@
 }  
 
 .navbar .navbar-nav .nav-item .dropdown .dropdown-menu .dropdown-item{
-    color: #ffffff;
+    color: #FFFF !important;
     background-color: #1F232C;
     border:1px;
 }  
 
+
 .navbar .navbar-nav .nav-item .dropdown .dropdown-menu .dropdown-item:hover{
-    background-color: #31343b;
+    background-color: #454750;
     border:1px;
 }  
 
@@ -82,10 +175,16 @@
     margin-top: -6px;
 }
 
+#footer-idt {
+    font-family: Avenir;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--main-color-background)
+}
 
 @media only screen and (min-width: 960px) {
     
     .navbar .navbar-nav .nav-item:not(:last-child) {
-      border-right: 2px solid white;
+      border-right: 2px solid var(--main-color-background);
     }
   }

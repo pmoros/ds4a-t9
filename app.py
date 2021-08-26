@@ -37,7 +37,7 @@ def index():
 # Declair function  that connects other pages with content to container
 @app.callback(Output("page-content", "children"), [Input("url", "pathname")])
 def display_page(pathname):
-    if pathname.endswith("/"):
+    if pathname.endswith("/" or ""):
         return layouts.landingPage
     else:
         return "ERROR 404: Page not found!"

@@ -39,6 +39,8 @@ def index():
 def display_page(pathname):
     if pathname.endswith("/" or ""):
         return layouts.landingPage
+    elif pathname.endswith(options_drop_navBar[options_navBar[1]][0]["value"]):
+        return layouts.viajerosOpt1            
     else:
         return "ERROR 404: Page not found!"
 

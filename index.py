@@ -41,8 +41,9 @@ header = html.Div([
             dbc.Col(
                 html.Span(
                     [
-                        html.Img(src="assets/header-top-logo-idt.png", className="header-banner"),
-                        #html.H1("IDT"),
+                        html.Img(src="https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/header-top-logo-idt.png", className="header-banner"),
+                        #html.Img(src="assets/header-top-logo-idt.png", className="header-banner"),
+                        #https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/header-top-logo-idt.png
                     ],
                     className="align-top",
                 ),                               

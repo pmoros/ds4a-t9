@@ -176,6 +176,14 @@
     font-size: 23px;    
 }
 
+.main-board-container-standard {
+    display: flex;
+    justify-content: "center";
+    font-family: var(--font-family-1);
+    font-weight: 400;
+    font-size: 20px;
+}
+
 
 .board-menu-subpage {    
     font-family: var(--font-family-1);

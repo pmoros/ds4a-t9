@@ -1,1 +1,3 @@
-gunicorn app:server
+gunicorn \
+--pythonpath plotly-common \
+app:server

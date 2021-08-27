@@ -16,9 +16,9 @@ MAIN_COLOR_BACKGROUND = "white"
 
 HEADER_STYLE = {
     "height": header_height,
-    "padding-bottom": "1rem",
-    "background-color": MAIN_COLOR_BACKGROUND,
-    "margin-bottom": "1rem",
+    "paddingBottom": "1rem",
+    "backgroundColor": MAIN_COLOR_BACKGROUND,
+    "marginBottom": "1rem",
 }
 
 FOOTER_STYLE = {
@@ -30,7 +30,7 @@ FOOTER_STYLE = {
     "height": footer_height,
     "padding": "1rem 1rem",
     #"padding-bottom": "1rem",
-    "background-color": MAIN_COLOR_CONTRAST,
+    "backgroundColor": MAIN_COLOR_CONTRAST,
 }
 
 

@@ -19,7 +19,7 @@ app = dash.Dash(
 app.title = "IDT Dashboard"
 
 # set app server to variable for deployment
-srv = app.server
+server = app.server
 
 # set app callback exceptions to true
 app.config.suppress_callback_exceptions = True

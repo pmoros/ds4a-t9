@@ -15,10 +15,8 @@ MAIN_COLOR_SELECTOR = "#7484d4"
 #MAIN_COLOR_SELECTOR = "#E6F0FF"
 
 
-landingPage_title=["Bienvenidos", \
-    "al sistema de informacion turistica de Bogotá"]
-landingPage_subtitle=["En este sitio encontrarás \
-    los principales datos de la demanda turística de Bogotá"]
+landingPage_title=["Welcome", "to the Bogotá tourist information system"]
+landingPage_subtitle=["In this site you will find the main data on the tourist demand of Bogotá"]
 landingPage = dbc.Container(
     children=[
     dbc.Row(children=[
@@ -58,16 +56,15 @@ landingPage = dbc.Container(
 
 
 
-viajerosOpt1_title=["Conoce", "QUIENES SON",\
-    "los viajeros que visitan Bogotá"]
+viajerosOpt1_title=["Meet", "THE TRAVELERS",\
+    "who visit Bogotá city"]
 
-viajerosOpt1_main_selector = ["Viajeros Nacionales",\
-     "Viajeros Internacionales", "Ambos"]    
+viajerosOpt1_main_selector = ["National Travelers",\
+     "International Travelers", "Both"]    
 
-viajerosOpt1_main_selector_label = "Interactúa con cada uno de los filtros\
-     y descubre la información de tu interés "
+viajerosOpt1_main_selector_label = "Interact with each of the filters and discover the information of your interest"
     
-viajerosOpt1_main_board_title = "Generalidades"
+viajerosOpt1_main_board_title = "General Information"
 
 viajerosOpt1_main_board_menu1 = {'label': 'Año', 'options':[2020, 2019]}
 #This function makes it possible to visualize the options properly
@@ -77,8 +74,8 @@ viajerosOpt1_main_board_menu2 = {'label': 'Mes', 'options':["Enero", "Febrero"]}
 #This function makes it possible to visualize the options properly
 viajerosOpt1_main_board_menu2['options'] = list(map(lambda x: dbc.DropdownMenuItem(x), viajerosOpt1_main_board_menu2['options']))
 
-viajerosOpt1_main_board_labels = ["Viajeros Totales", "Género de los viajeros", "Origen",\
-    "Nivel Educativo", "Edad"]
+viajerosOpt1_main_board_labels = ["Total travelers", "Travelers gender", "Origin",\
+    "Education level", "Age"]
 
 
 viajerosOpt1 = dbc.Container(
@@ -189,7 +186,8 @@ viajerosOpt1 = dbc.Container(
                                 html.Span(html.P("23M", id="viajerosOpt1-main-board-content-cantidad"), className="main-board-content-big"),
 
                             ],
-                            className="main-board-container-standard",
+                            className="main-board-container-standard-h",
+                            style={'borderRight': "4px solid var(--third-color-contrast)"}
                            ),
                        ],
                        
@@ -212,7 +210,7 @@ viajerosOpt1 = dbc.Container(
                                         #That text is burned                                        
                                         html.P("32%", id="viajerosOpt1-main-board-content-genero-hombre", className="main-board-content-big"),                                     
                                         #Burnt label
-                                        html.P("Hombres", className="main-board-subtitle")
+                                        html.P("Men", className="main-board-subtitle")
                                     ],
                                     )
                                 ],
@@ -230,11 +228,11 @@ viajerosOpt1 = dbc.Container(
                                         #That text is burned                                        
                                         html.P("68%", id="viajerosOpt1-main-board-content-genero-hombre", className="main-board-content-big"),                                     
                                         #Burnt label
-                                        html.P("Mujeres", className="main-board-subtitle")
+                                        html.P("Women", className="main-board-subtitle")
                                     ],
                                     )
                                 ],
-                                className="main-board-container-standard",
+                                className="main-board-container-standard-h",
 
                                 ),                         
 
@@ -258,7 +256,7 @@ viajerosOpt1 = dbc.Container(
                    dbc.Col([
                        html.Div(
                            html.P(viajerosOpt1_main_board_labels[0], className="main-board-label"),
-                           style={'textAlign': "right"}
+                           style={'textAlign': "right", 'marginTop': "0.5rem"}
                        )
                    ],
                    md={"size": 4},
@@ -266,19 +264,96 @@ viajerosOpt1 = dbc.Container(
                    dbc.Col([
                        html.Div(
                            html.P(viajerosOpt1_main_board_labels[1], className="main-board-label"),
-                           style={'textAlign': "right"}
+                           style={'textAlign': "right", 'marginTop': "0.5rem"}
                        )
                    ],
                    md={"size": 6},
-                   ),
-               ],               
+                   ),              
+               ], 
+               
                ),
                dbc.Row([
+                   dbc.Col([
+                       html.Div([
+                            html.Img(
+                                src="https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-origin.png",
+                                style={"width": "6rem", "height": "6rem", "marginRight" : "1rem"}                                    
+                            ),       
+                            #This element gotta be reached using a call back with the id to load content
+                            #That text is burned                                        
+                            html.P("Valle del Cauca", id="viajerosOpt1-main-board-content-origin", className="main-board-content-small"),                                     
+                       ],
+                       className="main-board-container-standard-v",
+                       style={'borderRight': "4px solid var(--third-color-contrast)"}              
+                       ),
+                   ],
+                   md={"size": 4},
+                   ),
+                   dbc.Col([
+                       html.Div([
+                            html.Img(
+                                src="https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-education.png",
+                                style={"width": "6rem", "height": "6rem", "marginRight" : "1rem"}                                    
+                            ),       
+                            #This element gotta be reached using a call back with the id to load content
+                            #That text is burned                                        
+                            html.P("Undergraduate degree", id="viajerosOpt1-main-board-content-education", className="main-board-content-small"),                                     
+                       ],
+                       className="main-board-container-standard-v",
+                       style={'borderRight': "4px solid var(--third-color-contrast)"}              
+                       ),
+                   ],
+                   md={"size": 4},
+                   ),
+                   dbc.Col([
+                       html.Div([
+                            html.Img(
+                                src="https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-age.png",
+                                style={"width": "6rem", "height": "6rem", "marginRight" : "1rem"}                                    
+                            ),       
+                            #This element gotta be reached using a call back with the id to load content
+                            #That text is burned                                        
+                            html.P("18-30 years", id="viajerosOpt1-main-board-content-age", className="main-board-content-small"),                                     
+                       ],
+                       className="main-board-container-standard-v",
+                       ),
+                   ],
+                   md={"size": 4},
+                   ),
+               ],
+                justify="center",
+               ),
+               dbc.Row([
+                   dbc.Col([
+                       html.Div(
+                           html.P(viajerosOpt1_main_board_labels[2], className="main-board-label"),
+                           style={'textAlign': "center"}
+                       )
+                   ],
+                   md={"size": 4},
+                   ),
+                   dbc.Col([
+                       html.Div(
+                           html.P(viajerosOpt1_main_board_labels[3], className="main-board-label"),
+                           style={'textAlign': "center"}
+                       )
+                   ],
+                   md={"size": 4},
+                   ),
+                   dbc.Col([
+                       html.Div(
+                           html.P(viajerosOpt1_main_board_labels[3], className="main-board-label"),
+                           style={'textAlign': "center"}
+                       )
+                   ],
+                   md={"size": 4},
+                   ),                   
+               ],               
+               ),
 
-               ])
 
-
-            ]),
+            ]
+            ),
             className="mb-3 main-board-subpage",
         ),
     ]),

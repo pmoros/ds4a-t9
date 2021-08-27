@@ -59,15 +59,16 @@ header = html.Div([
 )
 
 # Navbar
-options_navBar = ["Inicio", "viajeros", "indicadores", "Modelo", "About Us"]
+options_navBar = ["Home", "Travelers", "Indicators", "Model", "About Us"]
 options_navBar = [option.upper() for option in options_navBar]
 
 options_drop_navBar = {}
-options_drop_navBar[options_navBar[1]] = [{"label":"Quienes son los viajeros?", "value":"viajeros/quienes"},\
-    {"label":"Cuales son sus preferencias?", "value":"viajeros/preferencias"}]
+options_drop_navBar[options_navBar[1]] = [{"label":"Who are the travelers?", "value":"travelers/who"},\
+    {"label":"What are their preferences?", "value":"travelers/preferences"}]
 
-options_drop_navBar[options_navBar[2]] = [{"label":"Economicos", "value":"indicadores/economicos"},\
-    {"label":"Turismo", "value":"indicadores/turismo"}]
+options_drop_navBar[options_navBar[2]] = [{"label":"Accommodation", "value":"indicators/accomodation"},\
+    {"label":"Connectivity", "value":"indicators/connectivity"}, {"label":"Economic", "value":"indicators/economic"},\
+        {"label":"Sightseeing", "value":"indicators/sightseeing"}]
 
 navBar = dbc.NavbarSimple(
         id="navbar",
@@ -92,6 +93,10 @@ navBar = dbc.NavbarSimple(
                             href=options_drop_navBar[options_navBar[2]][0]["value"])),
                         dbc.DropdownMenuItem(html.A(children=[options_drop_navBar[options_navBar[2]][1]["label"]],\
                             href=options_drop_navBar[options_navBar[2]][1]["value"])),                        
+                        dbc.DropdownMenuItem(html.A(children=[options_drop_navBar[options_navBar[2]][2]["label"]],\
+                            href=options_drop_navBar[options_navBar[2]][2]["value"])),                             
+                        dbc.DropdownMenuItem(html.A(children=[options_drop_navBar[options_navBar[2]][3]["label"]],\
+                            href=options_drop_navBar[options_navBar[2]][3]["value"])),                                
                     ],
             ),
             ),
@@ -111,7 +116,7 @@ footer = html.Div([
     dbc.Row(children=[
         dbc.Col(
             children=[
-                html.P("Instituto Distrital de Turismo",id="footer-idt")
+                html.P("District Tourism Institute of Bogotá",id="footer-idt")
             ],
             xs={"size": 5, "offset": 1},
             md={"size": 3, "offset": 1},

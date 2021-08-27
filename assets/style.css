@@ -5,9 +5,10 @@
     --font-family-2: "Poppins";
     --main-color-background: white;
     --main-color-contrast: #20284D;    
-    --main-color-selector: #4A589B;
+    --main-color-selector: #4A589B;    
     --secondary-color-contrast: #BADA55;
     --secondary-color-selector: #BADA55;
+    --third-color-contrast: #E6F0FF;
 }
 
 .poppins-semi-bold {
@@ -176,9 +177,19 @@
     font-size: 23px;    
 }
 
-.main-board-container-standard {
+.main-board-container-standard-h {
     display: flex;
-    justify-content: "center";
+    justify-content: center;
+    font-family: var(--font-family-1);
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+.main-board-container-standard-v {
+    margin-top: 2rem;
+    justify-content: center;
+    text-align: center;
     font-family: var(--font-family-1);
     font-weight: 400;
     font-size: 20px;
@@ -288,4 +299,5 @@
     .navbar .navbar-nav .nav-item:not(:last-child) {
       border-right: 2px solid var(--main-color-background);
     }
+
   }

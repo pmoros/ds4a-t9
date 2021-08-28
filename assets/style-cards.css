@@ -1,0 +1,124 @@
+.main-title {
+  position: relative;
+  color: var(--main-color-background);
+  font-family: var(--font-family-2);
+  font-size: 51px;
+  font-weight: 700;
+}
+
+.main-title-bold {
+  position: relative;
+  color: var(--secondary-color-contrast);
+  font-family: var(--font-family-2);
+  font-size: 51px;
+  font-weight: 700;
+}
+
+.main-banner {
+  max-height: 400px;
+  height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center bottom;
+  object-fit: cover;
+}
+
+.main-banner::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.main-primary-selector-subpage {
+  background-color: var(--main-color-selector);
+  font-family: var(--font-family-1);
+  font-size: 20px;
+  font-weight: 300px;
+  text-transform: capitalize;
+  border-radius: 10px;
+  margin: 1.5rem;
+  padding: 1rem;
+}
+
+.main-primary-selector-subpage:hover {
+  background-color: var(--secondary-color-selector);
+}
+
+.main-board-subpage {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
+.main-board-title-subpage {
+  color: var(--main-color-contrast);
+  font-family: var(--font-family-2);
+  font-size: 37px;
+  font-weight: 700;
+}
+
+.main-board-header {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-board-label {
+  font-family: var(--font-family-1);
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.main-board-subtitle {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.main-board-content-big {
+  color: var(--main-color-selector);
+  font-family: var(--font-family-2);
+  font-weight: 700;
+  font-size: 60px;
+  margin-bottom: 0px;
+}
+
+.main-board-content-small {
+  color: var(--main-color-selector);
+  font-family: var(--font-family-2);
+  font-weight: 700;
+  font-size: 23px;
+}
+
+.main-board-container-standard-h {
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-family-1);
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.main-board-container-standard-v {
+  margin-top: 2rem;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--font-family-1);
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.board-menu-subpage {
+  font-family: var(--font-family-1);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.fit-image {
+  width: 100%;
+  object-fit: cover;
+  height: 100%; /* only if you want fixed height */
+}

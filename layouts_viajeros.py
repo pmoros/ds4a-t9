@@ -36,15 +36,15 @@ opt1_title = ["Meet", "THE TRAVELERS",
 
 opt1_banner_image = "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-opt1-main.jpg"
 
-opt1_main_board_menu1 = {'label': 'Year', 'options': [2020, 2019]}
+opt1_main_board_menu1 = [{'label': "2019", 'value':2019},{'label': "2020", 'value':2020}]
 # This function makes it possible to visualize the options properly
-opt1_main_board_menu1['options'] = list(
-    map(lambda x: dbc.DropdownMenuItem(x), opt1_main_board_menu1['options']))
+# opt1_main_board_menu1['value'] = list(
+#     map(lambda x: dbc.DropdownItem(x), opt1_main_board_menu1['value']))
 
-opt1_main_board_menu2 = {'label': 'Month', 'options': ["Enero", "Febrero"]}
+opt1_main_board_menu2 = [{'label': "Enero", 'value':"enero"},{'label': "Febrero", 'value':"Febrero"}]
 # This function makes it possible to visualize the options properly
-opt1_main_board_menu2['options'] = list(
-    map(lambda x: dbc.DropdownMenuItem(x), opt1_main_board_menu2['options']))
+# opt1_main_board_menu2['value'] = list(
+#     map(lambda x: dbc.DropdownItem(x), opt1_main_board_menu2['value']))
 
 opt1_title_div = html.Div(
     children=[
@@ -133,15 +133,21 @@ opt1 = dbc.Container(
                                 html.Div([
                                     html.H3(main_board_title, \
                                             className="main-board-title-subpage"),
-                                    dbc.DropdownMenu(
+                                    dcc.Dropdown(
                                         # Menu Year primer tablero
-                                        opt1_main_board_menu1["options"], label=opt1_main_board_menu1["label"], color=MAIN_COLOR_SELECTOR, bs_size="lg", className="m-1 board-menu-subpage",\
+                                        options= opt1_main_board_menu1,
+                                        value=opt1_main_board_menu1[0]['value'],
+                                        placeholder="Year",
                                         id="main-board-menu-Year",
+                                        multi=True,
                                     ),
-                                    dbc.DropdownMenu(
+                                    dcc.Dropdown(
                                         # Menu Month segundo tablero
-                                        opt1_main_board_menu2["options"], label=opt1_main_board_menu2["label"], color=MAIN_COLOR_SELECTOR, bs_size="lg", className="m-1 board-menu-subpage",\
+                                        options= opt1_main_board_menu2,
+                                        value=opt1_main_board_menu2[0]['value'],
+                                        placeholder="Month",
                                         id="main-board-menu-Month",
+                                        multi=True,
                                     ),
                                 ],
                                     className="main-board-header",
@@ -168,7 +174,7 @@ opt1 = dbc.Container(
 
                                 ],
                                     className="main-board-container-standard-h",
-                                    style={
+                                    style={ 'paddingRight': "0.5rem",
                                     'borderRight': "4px solid var(--third-color-contrast)"}
                                 ),
                             ],
@@ -376,15 +382,15 @@ opt2_title = ["Get to know", "THE PREFERENCES",
 
 opt2_banner_image = "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-op2-main.jpg"
 
-opt2_main_board_menu1 = {'label': 'Year', 'options': [2020, 2019]}
-# This function makes it possible to visualize the options properly
-opt2_main_board_menu1['options'] = list(
-    map(lambda x: dbc.DropdownMenuItem(x), opt2_main_board_menu1['options']))
+opt2_main_board_menu1 = [{'label': "2019", 'value':2019},{'label': "2020", 'value':2020}]
+# This function makes it possible to visualize the value properly
+# opt2_main_board_menu1['value'] = list(
+#     map(lambda x: dbc.DropdownItem(x), opt2_main_board_menu1['value']))
 
-opt2_main_board_menu2 = {'label': 'Month', 'options': ["Enero", "Febrero"]}
-# This function makes it possible to visualize the options properly
-opt2_main_board_menu2['options'] = list(
-    map(lambda x: dbc.DropdownMenuItem(x), opt2_main_board_menu2['options']))
+opt2_main_board_menu2 = [{'label': "Enero", 'value':"enero"},{'label': "Febrero", 'value':"Febrero"}]
+# This function makes it possible to visualize the value properly
+# opt2_main_board_menu2['value'] = list(
+#     map(lambda x: dbc.DropdownItem(x), opt2_main_board_menu2['value']))
 
 opt2_title_div = html.Div(
     children=[
@@ -424,18 +430,24 @@ opt2 = dbc.Container(
                                 html.Div([
                                     html.H3(main_board_title, \
                                             className="main-board-title-subpage"),
-                                    dbc.DropdownMenu(
+                                    dcc.Dropdown(
                                         # Menu Year segundo tablero
-                                        opt2_main_board_menu1["options"], label=opt2_main_board_menu1["label"], color=MAIN_COLOR_SELECTOR, bs_size="lg", className="m-1 board-menu-subpage",\
+                                        options=opt2_main_board_menu1,                                        
+                                        value=opt2_main_board_menu1[0]['value'],
+                                        placeholder="Year",
                                         id="main-board-menu-Year",
+                                        multi=True,
                                     ),
-                                    dbc.DropdownMenu(
+                                    dcc.Dropdown(
                                         # Menu Month segundo tablero
-                                        opt2_main_board_menu2["options"], label=opt2_main_board_menu2["label"], color=MAIN_COLOR_SELECTOR, bs_size="lg", className="m-1 board-menu-subpage",\
+                                        options=opt2_main_board_menu2,
+                                        value=opt2_main_board_menu2[0]['value'],
+                                        placeholder="Month",
+                                        className="m-1 board-menu-subpage",\
                                         id="main-board-menu-Month",
+                                        multi=True,
                                     ),
                                 ],
-                                    className="main-board-header",
                                 )
                             ],
                             width=12,

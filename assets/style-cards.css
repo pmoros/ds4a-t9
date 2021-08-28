@@ -114,6 +114,7 @@
 }
 
 .board-menu-subpage {
+  background-color: #7484d4;
   font-family: var(--font-family-1);
   font-size: 14px;
   font-weight: 400;

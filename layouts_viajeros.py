@@ -27,7 +27,7 @@ main_selector_choices_label = "Interact with each of the filters and discover th
 
 main_board_title = "General Information"
 
-main_board_labels = ["Total travelers", "Travelers gender", "Origin",
+opt1_main_board_labels = ["Total travelers", "Travelers gender", "Origin",
                      "Education level", "Age"]
 
 # --- Layout OPT1
@@ -36,12 +36,12 @@ opt1_title = ["Meet", "THE TRAVELERS",
 
 opt1_banner_image = "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-opt1-main.jpg"
 
-opt1_main_board_menu1 = {'label': 'Año', 'options': [2020, 2019]}
+opt1_main_board_menu1 = {'label': 'Year', 'options': [2020, 2019]}
 # This function makes it possible to visualize the options properly
 opt1_main_board_menu1['options'] = list(
     map(lambda x: dbc.DropdownMenuItem(x), opt1_main_board_menu1['options']))
 
-opt1_main_board_menu2 = {'label': 'Mes', 'options': ["Enero", "Febrero"]}
+opt1_main_board_menu2 = {'label': 'Month', 'options': ["Enero", "Febrero"]}
 # This function makes it possible to visualize the options properly
 opt1_main_board_menu2['options'] = list(
     map(lambda x: dbc.DropdownMenuItem(x), opt1_main_board_menu2['options']))
@@ -134,14 +134,14 @@ opt1 = dbc.Container(
                                     html.H3(main_board_title, \
                                             className="main-board-title-subpage"),
                                     dbc.DropdownMenu(
-                                        # Menu Año primer tablero
+                                        # Menu Year primer tablero
                                         opt1_main_board_menu1["options"], label=opt1_main_board_menu1["label"], color=MAIN_COLOR_SELECTOR, bs_size="lg", className="m-1 board-menu-subpage",\
-                                        id="opt1-main-board-menu-año",
+                                        id="main-board-menu-Year",
                                     ),
                                     dbc.DropdownMenu(
-                                        # Menu Mes segundo tablero
+                                        # Menu Month segundo tablero
                                         opt1_main_board_menu2["options"], label=opt1_main_board_menu2["label"], color=MAIN_COLOR_SELECTOR, bs_size="lg", className="m-1 board-menu-subpage",\
-                                        id="opt1-main-board-menu-mes",
+                                        id="main-board-menu-Month",
                                     ),
                                 ],
                                     className="main-board-header",
@@ -164,7 +164,7 @@ opt1 = dbc.Container(
                                     # This element gotta be reached using a call back with the id to load content
                                     # That text is burned
                                     html.Span(html.P(
-                                        "23M", id="opt1-main-board-content-cantidad"), className="main-board-content-big"),
+                                        "23M", id="main-board-content-cantidad"), className="main-board-content-big"),
 
                                 ],
                                     className="main-board-container-standard-h",
@@ -192,7 +192,7 @@ opt1 = dbc.Container(
                                             # This element gotta be reached using a call back with the id to load content
                                             # That text is burned
                                             html.P(
-                                                "32%", id="opt1-main-board-content-genero-hombre", className="main-board-content-big"),
+                                                "32%", id="main-board-content-genero-hombre", className="main-board-content-big"),
                                             # Burnt label
                                             html.P(
                                                 "Men", className="main-board-subtitle")
@@ -214,7 +214,7 @@ opt1 = dbc.Container(
                                             # This element gotta be reached using a call back with the id to load content
                                             # That text is burned
                                             html.P(
-                                                "68%", id="opt1-main-board-content-genero-hombre", className="main-board-content-big"),
+                                                "68%", id="main-board-content-genero-hombre", className="main-board-content-big"),
                                             # Burnt label
                                             html.P(
                                                 "Women", className="main-board-subtitle")
@@ -245,7 +245,7 @@ opt1 = dbc.Container(
                     dbc.Row([
                         dbc.Col([
                             html.Div(
-                                html.P(main_board_labels[0],
+                                html.P(opt1_main_board_labels[0],
                                        className="main-board-label"),
                                 style={'textAlign': "right",
                                        'marginTop': "0.5rem"}
@@ -255,7 +255,7 @@ opt1 = dbc.Container(
                         ),
                         dbc.Col([
                             html.Div(
-                                html.P(main_board_labels[1],
+                                html.P(opt1_main_board_labels[1],
                                        className="main-board-label"),
                                 style={'textAlign': "right",
                                        'marginTop': "0.5rem"}
@@ -276,7 +276,7 @@ opt1 = dbc.Container(
                                 ),
                                 # This element gotta be reached using a call back with the id to load content
                                 # That text is burned
-                                html.P("Valle del Cauca", id="opt1-main-board-content-origin",
+                                html.P("Valle del Cauca", id="main-board-content-origin",
                                        className="main-board-content-small"),
                             ],
                                 className="main-board-container-standard-v",
@@ -295,7 +295,7 @@ opt1 = dbc.Container(
                                 ),
                                 # This element gotta be reached using a call back with the id to load content
                                 # That text is burned
-                                html.P("Undergraduate degree", id="opt1-main-board-content-education",
+                                html.P("Undergraduate degree", id="main-board-content-education",
                                        className="main-board-content-small"),
                             ],
                                 className="main-board-container-standard-v",
@@ -314,7 +314,7 @@ opt1 = dbc.Container(
                                 ),
                                 # This element gotta be reached using a call back with the id to load content
                                 # That text is burned
-                                html.P("18-30 years", id="opt1-main-board-content-age",
+                                html.P("18-30 years", id="main-board-content-age",
                                        className="main-board-content-small"),
                             ],
                                 className="main-board-container-standard-v",
@@ -328,7 +328,7 @@ opt1 = dbc.Container(
                     dbc.Row([
                         dbc.Col([
                             html.Div(
-                                html.P(main_board_labels[2],
+                                html.P(opt1_main_board_labels[2],
                                        className="main-board-label"),
                                 style={'textAlign': "center"}
                             )
@@ -337,7 +337,7 @@ opt1 = dbc.Container(
                         ),
                         dbc.Col([
                             html.Div(
-                                html.P(main_board_labels[3],
+                                html.P(opt1_main_board_labels[3],
                                        className="main-board-label"),
                                 style={'textAlign': "center"}
                             )
@@ -346,7 +346,277 @@ opt1 = dbc.Container(
                         ),
                         dbc.Col([
                             html.Div(
-                                html.P(main_board_labels[3],
+                                html.P(opt1_main_board_labels[3],
+                                       className="main-board-label"),
+                                style={'textAlign': "center"}
+                            )
+                        ],
+                            md={"size": 4},
+                        ),
+                    ],
+                    ),
+
+
+                ]
+                ),
+                className="mb-3 main-board-subpage",
+            ),
+        ]),
+
+
+    ],
+    fluid=True,
+)
+
+
+# ---------Layout that will be returned to the user-------------------
+# --- Layout OPT2
+opt2_title = ["Get to know", "THE PREFERENCES",
+              "of travelers visiting Bogotá city"]
+
+opt2_banner_image = "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-op2-main.jpg"
+
+opt2_main_board_menu1 = {'label': 'Year', 'options': [2020, 2019]}
+# This function makes it possible to visualize the options properly
+opt2_main_board_menu1['options'] = list(
+    map(lambda x: dbc.DropdownMenuItem(x), opt2_main_board_menu1['options']))
+
+opt2_main_board_menu2 = {'label': 'Month', 'options': ["Enero", "Febrero"]}
+# This function makes it possible to visualize the options properly
+opt2_main_board_menu2['options'] = list(
+    map(lambda x: dbc.DropdownMenuItem(x), opt2_main_board_menu2['options']))
+
+opt2_title_div = html.Div(
+    children=[
+        html.Span(html.H1(opt2_title[0], className="main-title")),
+        html.Span(
+            html.H1(opt2_title[1], className="main-title-bold")),
+        html.Span(html.H1(opt2_title[2], className="main-title"))
+    ],
+    style={"marginLeft": "10%", "marginRight": "10%"},
+)
+
+opt2_main_board_labels = ["Trip purpose", "Most visited tourist attraction", "Travel group",
+                     "Accommodation", "Higher expense"]
+
+
+opt2_main_board_icons = {}
+opt2_main_board_icons['purpose'] = "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-sightseeing.png"
+opt2_main_board_icons['most_visited'] = "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-most-visited.png"
+opt2_main_board_icons['travel_group'] = "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-travelgroup.png"
+opt2_main_board_icons['accommodation'] = "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-accommodation.png"
+opt2_main_board_icons['expense'] = "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-expense.png"
+
+opt2 = dbc.Container(
+    children=[
+        # ---Main banner
+        layouts.get_main_banner(opt2_banner_image, opt2_title_div),
+        # ---Main buttons
+        get_main_selector_category(),
+        # ---Main card general info
+        html.Div(id="opt1-main-board-travelers", children=[
+            dbc.Card(
+                dbc.CardBody(children=[
+                    #Card header
+                    dbc.Row([
+                        dbc.Col(
+                            [
+                                html.Div([
+                                    html.H3(main_board_title, \
+                                            className="main-board-title-subpage"),
+                                    dbc.DropdownMenu(
+                                        # Menu Year segundo tablero
+                                        opt2_main_board_menu1["options"], label=opt2_main_board_menu1["label"], color=MAIN_COLOR_SELECTOR, bs_size="lg", className="m-1 board-menu-subpage",\
+                                        id="main-board-menu-Year",
+                                    ),
+                                    dbc.DropdownMenu(
+                                        # Menu Month segundo tablero
+                                        opt2_main_board_menu2["options"], label=opt2_main_board_menu2["label"], color=MAIN_COLOR_SELECTOR, bs_size="lg", className="m-1 board-menu-subpage",\
+                                        id="main-board-menu-Month",
+                                    ),
+                                ],
+                                    className="main-board-header",
+                                )
+                            ],
+                            width=12,
+                        ),
+                    ],
+
+                    ),
+                    dbc.Row([
+                        dbc.Col([
+                            html.Div([
+                                html.Div([
+                                    html.Img(
+                                        src=opt2_main_board_icons['purpose'],
+                                        style={
+                                            "width": "6rem", "height": "6rem", "marginRight": "1rem"}
+                                    ),
+                                    # This element gotta be reached using a call back with the id to load content
+                                    # That text is burned
+                                    html.Div([
+                                        html.Span(html.P(
+                                            "65%", id="main-board-content-purpose"), className="main-board-content-big"),
+                                        #Burned label
+                                        html.Span(html.P(
+                                        "Sightseeing", className="main-board-subtitle"))                                                                            
+
+                                    ])
+                                    
+                                ],
+                                    style={"display": "flex","justifyContent": "center",
+                                    'borderRight': "4px solid var(--third-color-contrast)"}
+
+                                ),
+                            ],
+
+                            )
+                        ],
+                            style={"marginTop": "3rem"},
+                            md={"size": 6},
+                        ),
+                        dbc.Col([
+                                html.Div([
+                                    html.Div([
+                                        html.Img(
+                                            src=opt2_main_board_icons['most_visited'],
+                                            style={
+                                                "width": "6rem", "height": "6rem", "marginRight": "1rem"}
+                                        ),
+
+                                        html.Div([
+                                            # This element gotta be reached using a call back with the id to load content
+                                            # That text is burned
+                                            html.P(
+                                                "32%", id="main-board-content-genero-hombre", className="main-board-content-big"),
+                                            # Burnt label
+                                            html.P(
+                                                "Malls", className="main-board-subtitle")
+                                        ],
+                                        )
+                                    ],
+                                        style={"display": "flex",
+                                               "justifyContent": "center"}
+
+                                    ),
+
+                            ],
+
+                            )
+                        ],
+                            style={"marginTop": "3rem"},
+                            md={"size": 6},
+                        ),
+
+                    ],
+                        justify="center",
+
+                    ),
+                    dbc.Row([
+                        dbc.Col([
+                            html.Div(
+                                html.P(opt2_main_board_labels[0],
+                                       className="main-board-label"),
+                                style={'textAlign': "center",
+                                       'marginTop': "0.5rem"}
+                            )
+                        ],
+                            md={"size": 6},
+                        ),
+                        dbc.Col([
+                            html.Div(
+                                html.P(opt2_main_board_labels[1],
+                                       className="main-board-label"),
+                                style={'textAlign': "center",
+                                       'marginTop': "0.5rem"}
+                            )
+                        ],
+                            md={"size": 6},
+                        ),
+                    ],
+
+                    ),
+                    dbc.Row([
+                        dbc.Col([
+                            html.Div([
+                                html.Img(
+                                    src=opt2_main_board_icons['travel_group'],
+                                    style={"width": "6rem", "height": "6rem",
+                                           "marginRight": "1rem"}
+                                ),
+                                # This element gotta be reached using a call back with the id to load content
+                                # That text is burned
+                                html.P("Work and / or study colleagues", id="main-board-content-travelgroup",
+                                       className="main-board-content-small"),
+                            ],
+                                className="main-board-container-standard-v",
+                                style={
+                                'borderRight': "4px solid var(--third-color-contrast)"}
+                            ),
+                        ],
+                            md={"size": 4},
+                        ),
+                        dbc.Col([
+                            html.Div([
+                                html.Img(
+                                    src=opt2_main_board_icons['accommodation'],
+                                    style={"width": "6rem", "height": "6rem",
+                                           "marginRight": "1rem"}
+                                ),
+                                # This element gotta be reached using a call back with the id to load content
+                                # That text is burned
+                                html.P("own holiday home", id="main-board-content-accomodation",
+                                       className="main-board-content-small"),
+                            ],
+                                className="main-board-container-standard-v",
+                                style={
+                                'borderRight': "4px solid var(--third-color-contrast)"}
+                            ),
+                        ],
+                            md={"size": 4},
+                        ),
+                        dbc.Col([
+                            html.Div([
+                                html.Img(
+                                    src=opt2_main_board_icons['expense'],
+                                    style={"width": "6rem", "height": "6rem",
+                                           "marginRight": "1rem"}
+                                ),
+                                # This element gotta be reached using a call back with the id to load content
+                                # That text is burned
+                                html.P("Internal transportation", id="main-board-content-expense",
+                                       className="main-board-content-small"),
+                            ],
+                                className="main-board-container-standard-v",
+                            ),
+                        ],
+                            md={"size": 4},
+                        ),
+                    ],
+                        justify="center",
+                    ),
+                    dbc.Row([
+                        dbc.Col([
+                            html.Div(
+                                html.P(opt2_main_board_labels[2],
+                                       className="main-board-label"),
+                                style={'textAlign': "center"}
+                            )
+                        ],
+                            md={"size": 4},
+                        ),
+                        dbc.Col([
+                            html.Div(
+                                html.P(opt2_main_board_labels[3],
+                                       className="main-board-label"),
+                                style={'textAlign': "center"}
+                            )
+                        ],
+                            md={"size": 4},
+                        ),
+                        dbc.Col([
+                            html.Div(
+                                html.P(opt2_main_board_labels[4],
                                        className="main-board-label"),
                                 style={'textAlign': "center"}
                             )

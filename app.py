@@ -90,6 +90,8 @@ def display_page(pathname):
         return landingPage
     elif pathname.endswith(options_drop_navBar[options_navBar[1]][0]["value"]):
         return layouts_viajeros.opt1
+    elif pathname.endswith(options_drop_navBar[options_navBar[1]][1]["value"]):
+        return layouts_viajeros.opt2        
     else:
         return "ERROR 404: Page not found!"
 

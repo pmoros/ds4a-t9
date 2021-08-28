@@ -30,21 +30,11 @@ def clean_database_viajeros():
 
 
 def clean_database_indicadores():
-    '''
-        Wrangles the misspelling, repeated values, etc.
 
-        return:
-            df_cleaned: cleaned data frame ready to use.        
-    '''
-    db_name = DATABASE_NAMES[1]
-    database_path = os.path.join(DATA_DIRECTORY, db_name)
-
-    df_database = pd.read_excel(database_path)
-    # --> Code for cleaning the database
-
-    # --> End of code for cleaning the database
-
-    df_cleaned = df_database  # Assign the result from the cleaning operation
+    df = pd.read_csv("2. Base de Indicadores de Turismo 2.csv")
+    
+    original_names = list(df.columns)
+    df_cleaned = [x.upper() for x in original_names]
 
     return df_cleaned
 

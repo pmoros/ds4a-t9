@@ -18,17 +18,23 @@ viajeros_tema_list["BOTH"] = "BOTH"
 
 # ------- Model related code -------------
 
-#--------Indicadores--------------
+#----------Indicadores----------
+
+#----------Airbnb & Homeaway----------
 
 df_airbnb_homeway = df_indicadores_turismo.copy()
 df_airbnb_homeway = df_airbnb_homeway[df_airbnb_homeway["TEMA"] == "Airbnb & Homeaway"]
 df_airbnb_homeway = df_airbnb_homeway.drop(["TEMA","VARIABLE","CLASE","FUENTE","MES"], axis=1)
 df_airbnb_homeway['VALOR'] = df_airbnb_homeway['VALOR'].astype(float)
 
+#----------Big Data----------
+
 df_bigdata = df_indicadores_turismo.copy()
 df_bigdata = df_bigdata[df_bigdata["TEMA"] == "Big Data"]
 df_bigdata['VALOR'] = df_bigdata['VALOR'].astype(float)
 df_bigdata = df_bigdata.drop(["TEMA","FUENTE","MES"], axis=1)
+
+#----------Certificación de Turismo Sostenible----------
 
 df_cert_turismo_sostenible = df_indicadores_turismo.copy()
 df_cert_turismo_sostenible = df_cert_turismo_sostenible[df_cert_turismo_sostenible["TEMA"] == "Certificación de Turismo Sostenible"]
@@ -37,10 +43,14 @@ df_cert_turismo_sostenible = df_cert_turismo_sostenible.drop(["TEMA","FUENTE","M
 df_cert_turismo_sostenible = df_cert_turismo_sostenible.replace({"Sedes para eventos, congresos, ferias y convenciones": "Sedes para eventos"})
 df_cert_turismo_sostenible = df_cert_turismo_sostenible.replace({"Establecimientos gastronómicos y bares": "Establecimientos gastronómicos"})
 
+#----------Conectividad directa internacional----------
+
 df_conect_internacional = df_indicadores_turismo.copy()
 df_conect_internacional = df_conect_internacional[df_conect_internacional["TEMA"] == "Conectividad directa internacional"]
 df_conect_internacional['VALOR'] = df_conect_internacional['VALOR'].astype(float)
 df_conect_internacional = df_conect_internacional.drop(["TEMA","CLASE","FUENTE","MES"], axis=1)
+
+#----------Generación de empleo turismo----------
 
 df_gen_empleo_turismo = df_indicadores_turismo.copy()
 df_gen_empleo_turismo = df_gen_empleo_turismo[df_gen_empleo_turismo["TEMA"] == "Generación de empleo turismo"]
@@ -54,15 +64,21 @@ df_gen_empleo_turismo["SUBTEMA2"] = df_gen_empleo_turismo["SUBTEMA2"].replace({"
 df_gen_empleo_turismo['VALOR'] = df_gen_empleo_turismo['VALOR'].str.rstrip('%').astype(float)
 df_gen_empleo_turismo = df_gen_empleo_turismo.drop(["TEMA","CLASE","FUENTE"], axis=1)
 
+#----------Índice de Competitividad Turística Regional----------
+
 df_indice_competitividad_turistica = df_indicadores_turismo.copy()
 df_indice_competitividad_turistica = df_indice_competitividad_turistica[df_indice_competitividad_turistica["TEMA"] == "Índice de Competitividad Turística Regional de Colombia-ICTRC"]
 df_indice_competitividad_turistica['VALOR'] = df_indice_competitividad_turistica['VALOR'].astype(float)
 df_indice_competitividad_turistica = df_indice_competitividad_turistica.drop(["TEMA","CLASE","FUENTE","MES"], axis=1)
 
+#----------Índice de Presión Turística----------
+
 df_indice_presion_turistica = df_indicadores_turismo.copy()
 df_indice_presion_turistica = df_indice_presion_turistica[df_indice_presion_turistica["TEMA"] == "Índice de Presión Turística"]
 df_indice_presion_turistica['VALOR'] = df_indice_presion_turistica['VALOR'].astype(float)
 df_indice_presion_turistica = df_indice_presion_turistica.drop(["TEMA","SUBTEMA","VARIABLE","CLASE","FUENTE","MES"], axis=1)
+
+#----------Informacion Destacada del turismo internacional----------
 
 df_turismo_internacional = df_indicadores_turismo.copy()
 df_turismo_internacional = df_turismo_internacional[df_turismo_internacional["TEMA"] == "Informacion Destacada del turismo internacional"]
@@ -78,11 +94,15 @@ df_turismo_internacional2 = df_turismo_internacional2[df_turismo_internacional2[
 df_turismo_internacional2['VALOR'] = df_turismo_internacional2['VALOR'].str.rstrip('%').astype(float)
 df_turismo_internacional2 = df_turismo_internacional2.drop(["TEMA","FUENTE","MES"], axis=1)
 
+#----------PIB----------
+
 df_pib = df_indicadores_turismo.copy()
 df_pib = df_pib[df_pib["TEMA"] == "PIB"]
 df_pib = df_pib.drop(["TEMA","SUBTEMA","VARIABLE","FUENTE","MES"], axis=1)
 df_pib = df_pib.replace({"Sector: Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas; Transporte y almacenamiento; Alojamiento y servicios de comida/ PIB Bogotá": "Sector: Alojamiento y comida"})
 df_pib = df_pib.replace({"Subsector: Alojamiento y servicio de comida/ PIB Bogotá": "Subsector: Alojamiento y comida"})
+
+#----------Prestadores de Servicios Turísticos----------
 
 df_prest_servicios_turisticos = df_indicadores_turismo.copy()
 df_prest_servicios_turisticos = df_prest_servicios_turisticos[df_prest_servicios_turisticos["TEMA"] == "Prestadores de Servicios Turísticos - PST"]
@@ -95,7 +115,9 @@ df_prest_servicios_turisticos = df_prest_servicios_turisticos.replace({"Arrendad
 df_prest_servicios_turisticos = df_prest_servicios_turisticos.replace({"Empresas captadoras de ahorro para viajes y de servicios turisticos": "Empresas captadoras de ahorro para servicios turisticos"})
 df_prest_servicios_turisticos = df_prest_servicios_turisticos.replace({"Usuarios operadores, desarrolladores e industriales en zonas francas turísticas": "Usuarios operadores en zonas francas turísticas"})
 df_prest_servicios_turisticos1 = df_prest_servicios_turisticos.query("VALOR>400") 
-df_prest_servicios_turisticos2 = df_prest_servicios_turisticos.query("VALOR<400") 
+df_prest_servicios_turisticos2 = df_prest_servicios_turisticos.query("VALOR<400")
+
+#----------Tasa de ocupación Airbnb----------
 
 df_tasa_ocupacion_airbnb = df_indicadores_turismo.copy()
 df_tasa_ocupacion_airbnb = df_tasa_ocupacion_airbnb[df_tasa_ocupacion_airbnb["TEMA"] == "Tasa de ocupación Airbnb"]
@@ -104,6 +126,8 @@ df_tasa_ocupacion_airbnb['AÑO-MES'] = df_tasa_ocupacion_airbnb['AÑO'].map(str)
 df_tasa_ocupacion_airbnb['MES'] = pd.to_numeric(df_tasa_ocupacion_airbnb['MES'])
 df_tasa_ocupacion_airbnb = df_tasa_ocupacion_airbnb.query("MES>0") 
 df_tasa_ocupacion_airbnb['VALOR'] = df_tasa_ocupacion_airbnb['VALOR'].str.rstrip('%').astype(float)
+
+#----------Tasa de ocupación Hotelera----------
 
 df_tasa_ocupacion_hotelera = df_indicadores_turismo.copy()
 df_tasa_ocupacion_hotelera = df_tasa_ocupacion_hotelera[df_tasa_ocupacion_hotelera["TEMA"] == "Tasa de ocupación Hotelera"]

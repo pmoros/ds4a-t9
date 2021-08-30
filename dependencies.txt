@@ -4,3 +4,4 @@ dash-table
 pandas
 numpy
 gunicorn
+openpyxl

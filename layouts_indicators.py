@@ -57,6 +57,10 @@ opt1_card1_label_right = "Comparison of the monthly average offer of Airbnb and 
 card1_menu_left_year = data.df_airbnb_homeway['AÑO'].unique()
 opt1_card_options['opt1-board1-row1-menu-left-year'] = list(map(layouts.create_options_dropdown, card1_menu_left_year))
 
+#Pass options to the menus ---- Card1
+card1_menu_right_year = data.df_airbnb_homeway['SUBTEMA'].unique()
+opt1_card_options['opt1-board1-row1-menu-right-year'] = list(map(layouts.create_options_dropdown, card1_menu_right_year))
+
 # --------Card 2 ------
 opt1_card2_title = "Hotel occupancy rate"
 opt1_card2_subtitle = "Find out what is the hotel occupancy rate in the city of Bogotá"

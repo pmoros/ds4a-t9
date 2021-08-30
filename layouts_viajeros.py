@@ -564,8 +564,8 @@ opt1 = dbc.Container(
                                 dbc.Col([
                                     dcc.Dropdown(
                                         # Menu Year segundo tablero
-                                        options=opt1_card_options['opt1-board2-row1-menu-right-origin'],
-                                        value=[opt1_card_options['opt1-board2-row1-menu-right-origin'][0]['value']],
+                                        #options= ,
+                                        #value=whatever_options[0]['value']
                                         placeholder="Select the origin",
                                         id="opt1-board2-row1-menu-right-origin",
                                         multi=True,

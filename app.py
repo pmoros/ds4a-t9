@@ -145,7 +145,7 @@ def update_indicators_opt1_b1_g2(selected_locations):
     return px.bar(df_plot, x='SUBTEMA', y='VALOR')
 
 
-#-----------Travelers (OPT1 [WHO THEY ARE]) -----------------------
+#-----------Travelers - OPT1 (WHO THEY ARE) -----------------------
 
 #THIS IS A TEST GRAPH!!!!!
 #Indicators-> OPT1 -> BOARD 1 -> GRAPH 1 (LEFT)

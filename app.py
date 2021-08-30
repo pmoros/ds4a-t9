@@ -5,9 +5,20 @@ from dash_bootstrap_components._components import Navbar
 import dash_html_components as html
 from dash.dependencies import Input, Output
 
+# import dash IO and graph objects
+from dash.dependencies import Input, Output
+
+# Plotly graph objects to render graph plots
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+import plotly.express as px
+
 from index import *
 import layouts_viajeros
+import layouts_indicators
 
+import data
+import plotly.express as px
 
 # Alternative 1
 MAIN_COLOR_SELECTOR = "#6C7BC4"
@@ -82,7 +93,8 @@ def index():
     return layout
 
 
-# Menu callback, set and return
+#----------------- Menu callback, set and return---------------------
+
 # Declair function  that connects other pages with content to container
 @app.callback(Output("page-content", "children"), [Input("url", "pathname")])
 def display_page(pathname):
@@ -92,11 +104,93 @@ def display_page(pathname):
         return layouts_viajeros.opt1
     elif pathname.endswith(options_drop_navBar[options_navBar[1]][1]["value"]):
         return layouts_viajeros.opt2        
+    elif pathname.endswith(options_drop_navBar[options_navBar[2]][0]["value"]):
+        return layouts_indicators.opt1                
     else:
         return "ERROR 404: Page not found!"
 
 
+#-----------PAGES CALLBACKS ---------------------------
+#-----------Indicadores (OPT1 [ACCOMODATION]) -----------------------
+
+#Indicators-> ACCOMMODATION -> BOARD 1 -> GRAPH 1 (LEFT)
+@app.callback(
+    Output("opt1-board1-row1-graph-left", "figure")
+,[
+    Input("opt1-board1-row1-menu-left-year", "value"),
+])
+def update_indicators_opt1_b1_g1(selected_year):
+    #SUMS 'VALOR' FOR EACH localidad, TOTALLY CRAZY DATA!!!
+    #The plot doesn't make sense at all and doesn't mach the required plot, but
+    #it is a good guide for people to use callbacks
+    #The original menu returns multiple values, for this reason the plot breaks
+    #if you select multiple values
+    df_plot = data.df_airbnb_homeway[data.df_airbnb_homeway['AÑO'] == float(selected_year)]
+    df_plot = df_plot.groupby('SUBTEMA').sum().reset_index()
+
+    return px.bar(df_plot, x='SUBTEMA', y='VALOR')
+
+
+#Indicators-> ACCOMMODATION (option 1) -> BOARD 1 -> GRAPH 2 (RIGHT)
+@app.callback(
+    Output("opt1-board1-row1-graph-right", "figure")
+,[
+    Input("opt1-board1-row1-menu-right-location", "value"),
+])
+def update_indicators_opt1_b1_g2(selected_locations):
+    #Sample plot, THE PLOT IS WRONG, but its used for illustration
+    df_plot = data.df_airbnb_homeway[data.df_airbnb_homeway['SUBTEMA'].isin(selected_locations)]
+    df_plot = df_plot.groupby('SUBTEMA').mean().reset_index()
+
+    return px.bar(df_plot, x='SUBTEMA', y='VALOR')
+
+
+#-----------Travelers (OPT1 [WHO THEY ARE]) -----------------------
+
+#THIS IS A TEST GRAPH!!!!!
+#Indicators-> OPT1 -> BOARD 1 -> GRAPH 1 (LEFT)
+@app.callback(
+    Output("opt1-board1-graph-left", "figure")
+,[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+    Input("viajeros-selector-both", "n_clicks_timestamp")
+])
+def update_indicators_opt1_b1_g2(national_bt, international_bt, both_bt):
+    # USING TYPE OF TOURIST FILTER
+    if int(national_bt) > int(international_bt) and int(national_bt) > int(both_bt):
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt) and int(international_bt) > int(both_bt):
+        category = "TURISTAS INTERNACIONALES"
+    elif int(both_bt) > int(national_bt) and int(both_bt) > int(international_bt):
+        category = "both"
+    else:
+        category = "national"
+
+    #CREATING THE REQUIRED FILTER
+    df_plot = data.df_viajeros
+    if category != "both":        
+        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == category]
+
+    #df_plot = data.df_viajeros[data.df_viajeros['SUBTEMA'] == "MOTIVO"]        
+
+    #df_plot = df_plot.groupby('ITEM').sum().reset_index()
+    df_plot = df_plot.groupby('TEMA').sum().reset_index()
+
+    #CREATION OF THE PLOT + RETURN OF IT
+    return px.bar(df_plot, x='TEMA', y='VIAJEROS')
+
+
+
+
+
+
+
+#--------------------LAYOUT DECLARATION-------------------------
+
 app.layout = index()
+
+
 
 # Call app server
 if __name__ == "__main__":

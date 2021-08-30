@@ -1,4 +1,3 @@
-
 import dash_core_components as dcc
 import dash_html_components as html
 
@@ -13,6 +12,8 @@ MAIN_COLOR_SELECTOR = "#6C7BC4"
 # Alternative 2
 MAIN_COLOR_SELECTOR = "#7484d4"
 
+
+CURR_CATEGORY = 'BOTH'
 # Ideal
 # MAIN_COLOR_SELECTOR = "#E6F0FF"
 
@@ -28,7 +29,7 @@ main_selector_choices_label = "Interact with each of the filters and discover th
 main_board_title = "General Information"
 
 opt1_main_board_labels = ["Total travelers", "Travelers gender", "Origin",
-                     "Education level", "Age"]
+                          "Education level", "Age"]
 
 # --- Layout OPT1
 opt1_title = ["Meet", "THE TRAVELERS",
@@ -36,12 +37,14 @@ opt1_title = ["Meet", "THE TRAVELERS",
 
 opt1_banner_image = "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-opt1-main.jpg"
 
-opt1_main_board_menu1 = [{'label': "2019", 'value':2019},{'label': "2020", 'value':2020}]
+opt1_main_board_menu1 = [{'label': "2019", 'value': 2019}, {
+    'label': "2020", 'value': 2020}]
 # This function makes it possible to visualize the options properly
 # opt1_main_board_menu1['value'] = list(
 #     map(lambda x: dbc.DropdownItem(x), opt1_main_board_menu1['value']))
 
-opt1_main_board_menu2 = [{'label': "Enero", 'value':"enero"},{'label': "Febrero", 'value':"Febrero"}]
+opt1_main_board_menu2 = [{'label': "Enero", 'value': "enero"}, {
+    'label': "Febrero", 'value': "Febrero"}]
 # This function makes it possible to visualize the options properly
 # opt1_main_board_menu2['value'] = list(
 #     map(lambda x: dbc.DropdownItem(x), opt1_main_board_menu2['value']))
@@ -60,34 +63,37 @@ opt1_title_div = html.Div(
 
 
 def get_main_selector_category():
-    multiple_selector = html.Div([
+    multiple_selector = dbc.Container([
         dbc.Row([
                 dbc.Col(
                     html.Div([
                         # Botón Nacionales
-                        dbc.Button(main_selector_choices[0],\
+                        dbc.Button("National travelers",n_clicks_timestamp='0',\
                                    id="viajeros-selector-national", \
                                    className="main-primary-selector-subpage btn-block"),
                     ], style={'textAlign': "center"}),
-                    width=3,
+                    xs={"size": 12},
+                    md={"size": 3},
                 ),
                 dbc.Col(
                     html.Div([
                         # Botón Internacionales
-                        dbc.Button(main_selector_choices[1],\
+                        dbc.Button("International travelers", n_clicks_timestamp='0',\
                                    id="viajeros-selector-international", \
                                    className="main-primary-selector-subpage btn-block"),
                     ], style={'textAlign': "center"}),
-                    width=3,
+                    xs={"size": 12},
+                    md={"size": 3},
                 ),
                 dbc.Col(
                     html.Div([
-                        # Botón Ambos
-                        dbc.Button(main_selector_choices[2],\
+                        # Botón Both
+                        dbc.Button("Both",n_clicks_timestamp='0',\
                                    id="viajeros-selector-both", \
                                    className="main-primary-selector-subpage btn-block"),
                     ], style={'textAlign': "center"}),
-                    width=3,
+                    xs={"size": 12},
+                    md={"size": 3},
                 ),
                 ],
                 justify="center",
@@ -102,7 +108,8 @@ def get_main_selector_category():
                 ],
                 justify="center",
                 )
-    ]
+    ],
+        fluid=True,
     )
 
     return multiple_selector
@@ -117,6 +124,39 @@ opt1_main_board_icons['travelers_origin'] = "https://ds4a-team9-idt.s3.us-east-2
 opt1_main_board_icons['travelers_education'] = "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-education.png"
 opt1_main_board_icons['travelers_age'] = "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-age.png"
 
+# --------------Cards that will be displayed
+# --------Card 1 ------
+opt1_card1_title = "Where do the travelers who visit Bogotá come from?"
+opt1_card1_subtitle = "Get to know the number of travelers that visit Bogotá city by origin"
+
+# --------Card 2 ------
+opt1_card2_title = "How old are the travelers?"
+opt1_card2_subtitle = "Get to know the number of travelers that visit Bogotá city by age"
+
+opt1_card2_label_left = "Age distribution of the total number of travelers who visited Bogotá in the selected years"
+opt1_card2_label_right = "Comparison of the age distribution of travelers who visited Bogotá according to their origin"
+
+# --------Card 3 ------
+opt1_card3_title = "What is the predominant gender among travelers?"
+opt1_card3_subtitle = "Discover the number of travelers that visit Bogotá city by gender"
+
+opt1_card3_label_left = "Gender distribution of the total number of travelers who visited Bogotá in the selected years"
+opt1_card3_label_right = "Comparison of the gender of travelers who visited Bogotá according to their origin"
+
+# --------Card 4 ------
+opt1_card4_title = "What is the educational level of the travelers?"
+opt1_card4_subtitle = "Find out the number of travelers that visit Bogotá city according to their educational level"
+
+opt1_card4_label_top = "Distribution of the educational level of the total number of travelers who visited Bogotá in the selected years"
+opt1_card4_label_bottom = "Comparison of the educational level of travelers who visited Bogotá according to their origin"
+
+# --------Card 5 ------
+opt1_card5_title = "What is the occupation of the travelers?"
+opt1_card5_subtitle = "Get to know the number of travelers that visit Bogota city by occupation"
+
+opt1_card5_label_top = "Distribution of the occupation of the total number of travelers who visited Bogotá in the selected years"
+opt1_card5_label_bottom = "Comparison of the occupation of travelers who visited Bogotá according to their origin"
+
 opt1 = dbc.Container(
     children=[
         # ---Main banner
@@ -127,37 +167,52 @@ opt1 = dbc.Container(
         html.Div(id="opt1-main-board-travelers", children=[
             dbc.Card(
                 dbc.CardBody(children=[
+                    # Card header
                     dbc.Row([
                         dbc.Col(
                             [
                                 html.Div([
                                     html.H3(main_board_title, \
                                             className="main-board-title-subpage"),
-                                    dcc.Dropdown(
-                                        # Menu Year primer tablero
-                                        options= opt1_main_board_menu1,
-                                        value=opt1_main_board_menu1[0]['value'],
-                                        placeholder="Year",
-                                        id="main-board-menu-Year",
-                                        multi=True,
-                                    ),
-                                    dcc.Dropdown(
-                                        # Menu Month segundo tablero
-                                        options= opt1_main_board_menu2,
-                                        value=opt1_main_board_menu2[0]['value'],
-                                        placeholder="Month",
-                                        id="main-board-menu-Month",
-                                        multi=True,
-                                    ),
+
+
                                 ],
-                                    className="main-board-header",
-                                )
+                                ),
                             ],
-                            width=12,
+                            xs={"size": 12},
+                            md={"size": 4},
+                        ),
+                        dbc.Col([
+                            html.Div([
+                                dcc.Dropdown(
+                                    # Menu Year main tablero
+                                    placeholder="Year",
+                                    id="main-board-menu-year",
+                                    multi=True,
+                                ),
+                            ],
+                            ),
+                        ],
+                            xs={"size": 12},
+                            md={"size": 4},
+                        ),
+                        dbc.Col([
+                            html.Div([
+                                dcc.Dropdown(
+                                    # Menu Year main tablero
+                                    placeholder="Month",
+                                    id="main-board-menu-month",
+                                    multi=True,
+                                ),
+                            ])
+                        ],
+                            xs={"size": 12},
+                            md={"size": 4},
                         ),
                     ],
 
                     ),
+
                     dbc.Row([
                         dbc.Col([
                             html.Div([
@@ -174,8 +229,8 @@ opt1 = dbc.Container(
 
                                 ],
                                     className="main-board-container-standard-h",
-                                    style={ 'paddingRight': "0.5rem",
-                                    'borderRight': "4px solid var(--third-color-contrast)"}
+                                    style={'paddingRight': "0.5rem",
+                                           'borderRight': "4px solid var(--third-color-contrast)"}
                                 ),
                             ],
 
@@ -369,6 +424,384 @@ opt1 = dbc.Container(
             ),
         ]),
 
+        # ------- CARD 1 ---------
+        dbc.Card(
+            dbc.CardBody(children=[
+                # Card 1 header
+                layouts.get_board_header(
+                    opt1_card1_title, opt1_card1_subtitle),
+                # Card 1 selector (menus)
+                dbc.Row([
+                    dbc.Col([
+                        html.Div([
+                            dcc.Dropdown(
+                                # Menu Year Board 1
+                                placeholder="Select the year",
+                                id="board1-menu-year",
+                                multi=True,
+                            ),
+                        ],
+                        )
+                    ],
+                        xs={'size': 6},
+                        md={'size': 4, 'offset': 2}
+                    ),
+                    dbc.Col([
+                        html.Div([
+                            dcc.Dropdown(
+                                # Menu Month segundo tablero
+                                placeholder="Select the month",
+                                id="board1-menu-month",
+                                multi=True,
+                            ),
+                        ],
+                        )
+                    ],
+                        xs={'size': 6},
+                        md={'size': 4}
+                    )
+
+                ],
+                    align="center",
+                ),
+
+                # Board 1 PLOTS
+                dbc.Row([
+                    # Board 1 Plot Left
+                    dbc.Col([
+                        html.Div([
+                            #"my plot "
+                            dcc.Graph(
+                                id="opt1-board1-graph-left",
+                            )
+                        ],
+                            # className=""
+                        )
+                    ],
+                        xs={'size': 12},
+                        md={'size': 3}
+
+                    ),
+                    # Board 1 Plot Right
+                    dbc.Col([
+                        html.Div([
+                            #"my plot "
+                            dcc.Graph(
+                                id="opt1-board1-graph-right",
+                            )
+                        ],
+                            # className=""
+                        )
+                    ],
+                        xs={'size': 12},
+                        md={'size': 9}
+
+                    )
+                ]
+                ),
+
+            ]),
+            className="mb-3 main-board-subpage",
+
+        ),
+
+        # -------CARD 2 ------
+        dbc.Card(
+            dbc.CardBody(children=[
+                # Card 2 header
+                layouts.get_board_header(
+                    opt1_card2_title, opt1_card2_subtitle),
+                # Board 2 PLOTS
+                dbc.Row([
+                    # Board 2 Plot Left
+                    dbc.Col([
+                        html.Div([
+                            dcc.Dropdown(
+                                # Menu Year segundo tablero
+                                placeholder="Select the year",
+                                id="opt1-board2-row1-menu-left-year",
+                                multi=True,
+                            ),
+                            html.P(opt1_card2_label_left, className="board-standard-label-graph"),
+                            #"my plot "
+                            dcc.Graph(
+                                id="opt1-board2-row1-graph-left",
+                            )
+                        ],
+                            # className=""
+                        )
+                    ],
+                        xs={'size': 12},
+                        md={'size': 6}
+
+                    ),
+                    # Board 2 Plot Right
+                    dbc.Col([
+                        html.Div([
+                            #"my plot "
+                            dbc.Row([
+                                dbc.Col([
+                                    dcc.Dropdown(
+                                        # Menu Year segundo tablero
+                                        placeholder="Select the year",
+                                        id="opt1-board2-row1-menu-right-year",
+                                        multi=True,
+                                    )
+                                ],
+                                    xs={'size': 12},
+                                    md={'size': 6}
+                                ),
+                                dbc.Col([
+                                    dcc.Dropdown(
+                                        # Menu Year segundo tablero
+                                        placeholder="Select the origin",
+                                        id="opt1-board2-row1-menu-right-origin",
+                                        multi=True,
+                                    )
+                                ],
+                                    xs={'size': 12},
+                                    md={'size': 6}
+                                )
+
+                            ],
+                            ),
+                            html.P(opt1_card2_label_right, className="board-standard-label-graph"),
+                            dcc.Graph(
+                                id="opt1-board2-row1-graph-right",
+                            )
+                        ],
+                            # className=""
+                        )
+                    ],
+                        xs={'size': 12},
+                        md={'size': 6}
+
+                    )
+                ]
+                ),
+
+            ]),
+            className="mb-3 main-board-subpage",
+
+        ),
+
+        # ------CARD 3---------------
+        dbc.Card(
+            dbc.CardBody(children=[
+                # Card 3 header
+                layouts.get_board_header(
+                    opt1_card3_title, opt1_card3_subtitle),
+                # Board 3 PLOTS
+                dbc.Row([
+                    # Board 3 Plot Left
+                    dbc.Col([
+                        html.Div([
+                            dcc.Dropdown(
+                                # Menu Year segundo tablero
+                                placeholder="Select the year",
+                                id="opt1-board3-row1-menu-left-year",
+                                multi=True,
+                            ),
+                            html.P(opt1_card3_label_left, className="board-standard-label-graph"),
+                            #"my plot "
+                            dcc.Graph(
+                                id="opt1-board3-row1-graph-left",
+                            )
+                        ],
+                            # className=""
+                        )
+                    ],
+                        xs={'size': 12},
+                        md={'size': 6}
+
+                    ),
+                    # Board 2 Plot Right
+                    dbc.Col([
+                        html.Div([
+                            #"my plot "
+                            dbc.Row([
+                                dbc.Col([
+                                    dcc.Dropdown(
+                                        # Menu Year segundo tablero
+                                        placeholder="Select the year",
+                                        id="opt1-board3-row1-menu-right-year",
+                                        multi=True,
+                                    )
+                                ],
+                                    xs={'size': 12},
+                                    md={'size': 6}
+                                ),
+                                dbc.Col([
+                                    dcc.Dropdown(
+                                        # Menu Year segundo tablero
+                                        placeholder="Select the origin",
+                                        id="opt1-board3-row1-right-origin",
+                                        multi=True,
+                                    )
+                                ],
+                                    xs={'size': 12},
+                                    md={'size': 6}
+                                )
+
+                            ],
+                            ),
+                            html.P(opt1_card3_label_right, className="board-standard-label-graph"),
+                            dcc.Graph(
+                                id="opt1-board3-row1-graph-right",
+                            )
+                        ],
+                            # className=""
+                        )
+                    ],
+                        xs={'size': 12},
+                        md={'size': 6}
+
+                    )
+                ]
+                ),
+
+            ]),
+            className="mb-3 main-board-subpage",
+
+        ),
+
+        # ------CARD 4---------------
+        dbc.Card(
+            dbc.CardBody(children=[
+                # Card 4 header
+                layouts.get_board_header(
+                    opt1_card4_title, opt1_card4_subtitle),
+                # Board 4 PLOTS
+                dbc.Container([
+                    #Board 4 Plot 1 (Top)
+                    html.Div([
+                        dcc.Dropdown(
+                            # Menu Year segundo tablero
+                            placeholder="Select the year",
+                            id="opt1-board4-menu-top-year",
+                            multi=True,
+                        ),
+                        html.P(opt1_card4_label_top, className="board-standard-label-graph"),
+                        #"my plot "
+                        dcc.Graph(
+                            id="opt1-board4-graph-top",
+                        )
+                    ],
+                        # className=""
+                    ),
+                    #Board 4 Plot 2 (Bottom)                  
+                    html.Div([
+                        #"my plot "
+                        dbc.Row([
+                            dbc.Col([
+                                dcc.Dropdown(
+                                    # Menu Year segundo tablero
+                                    placeholder="Select the year",
+                                    id="opt1-board4-menu-bottom-year",
+                                    multi=True,
+                                )
+                            ],
+                                xs={'size': 12},
+                                md={'size': 6}
+                            ),
+                            dbc.Col([
+                                dcc.Dropdown(
+                                    # Menu Year segundo tablero
+                                    placeholder="Select the origin",
+                                    id="opt1-board4-bottom-origin",
+                                    multi=True,
+                                )
+                            ],
+                                xs={'size': 12},
+                                md={'size': 6}
+                            )
+
+                        ],
+                        ),
+                        html.P(opt1_card4_label_bottom, className="board-standard-label-graph"),
+                        dcc.Graph(
+                            id="opt1-board4-graph-bottom",
+                        )
+                    ],
+                        # className=""
+                    )                    
+                ],
+                fluid=True,
+                ),
+
+            ]),
+            className="mb-3 main-board-subpage",
+        ),        
+# ------CARD 5---------------
+        dbc.Card(
+            dbc.CardBody(children=[
+                # Card 5 header
+                layouts.get_board_header(
+                    opt1_card5_title, opt1_card5_subtitle),
+                # Board 5 PLOTS
+                dbc.Container([
+                    #Board 5 Plot 1 (Top)
+                    html.Div([
+                        dcc.Dropdown(
+                            # Menu Year segundo tablero
+                            placeholder="Select the year",
+                            id="opt1-board5-menu-top-year",
+                            multi=True,
+                        ),
+                        html.P(opt1_card5_label_top, className="board-standard-label-graph"),
+                        #"my plot "
+                        dcc.Graph(
+                            id="opt1-board5-graph-top",
+                        )
+                    ],
+                        # className=""
+                    ),
+                    #Board 5 Plot 2 (Bottom)                  
+                    html.Div([
+                        #"my plot "
+                        dbc.Row([
+                            dbc.Col([
+                                dcc.Dropdown(
+                                    # Menu Year segundo tablero
+                                    placeholder="Select the year",
+                                    id="opt1-board5-menu-bottom-year",
+                                    multi=True,
+                                )
+                            ],
+                                xs={'size': 12},
+                                md={'size': 6}
+                            ),
+                            dbc.Col([
+                                dcc.Dropdown(
+                                    # Menu Year segundo tablero
+                                    placeholder="Select the origin",
+                                    id="opt1-board5-bottom-origin",
+                                    multi=True,
+                                )
+                            ],
+                                xs={'size': 12},
+                                md={'size': 6}
+                            )
+
+                        ],
+                        ),
+                        html.P(opt1_card5_label_bottom, className="board-standard-label-graph"),
+                        dcc.Graph(
+                            id="opt1-board5-graph-bottom",
+                        )
+                    ],
+                        # className=""
+                    )                    
+                ],
+                fluid=True,
+                ),
+
+            ]),
+            className="mb-3 main-board-subpage",
+
+        ),                
+
+        
 
     ],
     fluid=True,
@@ -382,12 +815,14 @@ opt2_title = ["Get to know", "THE PREFERENCES",
 
 opt2_banner_image = "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-op2-main.jpg"
 
-opt2_main_board_menu1 = [{'label': "2019", 'value':2019},{'label': "2020", 'value':2020}]
+opt2_main_board_menu1 = [{'label': "2019", 'value': 2019}, {
+    'label': "2020", 'value': 2020}]
 # This function makes it possible to visualize the value properly
 # opt2_main_board_menu1['value'] = list(
 #     map(lambda x: dbc.DropdownItem(x), opt2_main_board_menu1['value']))
 
-opt2_main_board_menu2 = [{'label': "Enero", 'value':"enero"},{'label': "Febrero", 'value':"Febrero"}]
+opt2_main_board_menu2 = [{'label': "Enero", 'value': "enero"}, {
+    'label': "Febrero", 'value': "Febrero"}]
 # This function makes it possible to visualize the value properly
 # opt2_main_board_menu2['value'] = list(
 #     map(lambda x: dbc.DropdownItem(x), opt2_main_board_menu2['value']))
@@ -403,7 +838,7 @@ opt2_title_div = html.Div(
 )
 
 opt2_main_board_labels = ["Trip purpose", "Most visited tourist attraction", "Travel group",
-                     "Accommodation", "Higher expense"]
+                          "Accommodation", "Higher expense"]
 
 
 opt2_main_board_icons = {}
@@ -423,38 +858,50 @@ opt2 = dbc.Container(
         html.Div(id="opt1-main-board-travelers", children=[
             dbc.Card(
                 dbc.CardBody(children=[
-                    #Card header
+                    # Card header
                     dbc.Row([
                         dbc.Col(
                             [
                                 html.Div([
                                     html.H3(main_board_title, \
                                             className="main-board-title-subpage"),
-                                    dcc.Dropdown(
-                                        # Menu Year segundo tablero
-                                        options=opt2_main_board_menu1,                                        
-                                        value=opt2_main_board_menu1[0]['value'],
-                                        placeholder="Year",
-                                        id="main-board-menu-Year",
-                                        multi=True,
-                                    ),
-                                    dcc.Dropdown(
-                                        # Menu Month segundo tablero
-                                        options=opt2_main_board_menu2,
-                                        value=opt2_main_board_menu2[0]['value'],
-                                        placeholder="Month",
-                                        className="m-1 board-menu-subpage",\
-                                        id="main-board-menu-Month",
-                                        multi=True,
-                                    ),
+
+
                                 ],
-                                )
+                                ),
                             ],
-                            width=12,
+                            width=4,
+                        ),
+                        dbc.Col([
+                            html.Div([
+                                dcc.Dropdown(
+                                    # Menu Year segundo tablero
+                                    placeholder="Year",
+                                    id="main-board-menu-year",
+                                    multi=True,
+                                ),
+                            ],
+                            ),
+                        ],
+                            width=4,
+
+                        ),
+                        dbc.Col([
+                            html.Div([
+                                dcc.Dropdown(
+                                    # Menu Year segundo tablero
+                                    placeholder="Month",
+                                    id="main-board-menu-month",
+                                    multi=True,
+                                ),
+                            ])
+                        ],
+                            width=4,
                         ),
                     ],
 
                     ),
+
                     dbc.Row([
                         dbc.Col([
                             html.Div([
@@ -469,15 +916,15 @@ opt2 = dbc.Container(
                                     html.Div([
                                         html.Span(html.P(
                                             "65%", id="main-board-content-purpose"), className="main-board-content-big"),
-                                        #Burned label
+                                        # Burned label
                                         html.Span(html.P(
-                                        "Sightseeing", className="main-board-subtitle"))                                                                            
+                                            "Sightseeing", className="main-board-subtitle"))
 
                                     ])
-                                    
+
                                 ],
-                                    style={"display": "flex","justifyContent": "center",
-                                    'borderRight': "4px solid var(--third-color-contrast)"}
+                                    style={"display": "flex", "justifyContent": "center",
+                                           'borderRight': "4px solid var(--third-color-contrast)"}
 
                                 ),
                             ],
@@ -512,13 +959,13 @@ opt2 = dbc.Container(
 
                                     ),
 
-                            ],
+                                ],
 
-                            )
-                        ],
-                            style={"marginTop": "3rem"},
-                            md={"size": 6},
-                        ),
+                                )
+                                ],
+                                style={"marginTop": "3rem"},
+                                md={"size": 6},
+                                ),
 
                     ],
                         justify="center",

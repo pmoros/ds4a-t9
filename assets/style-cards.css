@@ -36,6 +36,28 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.main-banner-darker {
+  max-height: 400px;
+  height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center bottom;
+  object-fit: cover;
+}
+
+.main-banner-darker::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
 .main-primary-selector-subpage {
   background-color: var(--main-color-selector);
   font-family: var(--font-family-1);
@@ -120,8 +142,22 @@
   font-weight: 400;
 }
 
-.fit-image {
-  width: 100%;
-  object-fit: cover;
-  height: 100%; /* only if you want fixed height */
+.board-standard-header-title {
+  color: var(--main-color-contrast);
+  font-family: var(--font-family-2);
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.board-standard-header-subtitle {
+  font-family: "Helvetica";
+  font-size: 20px;
+  font-weight: 400;  
+}
+
+.board-standard-label-graph {
+  font-family: "Helvetica";
+  font-size: 15px;
+  font-weight: 400;  
+  margin-top: 1rem;
 }

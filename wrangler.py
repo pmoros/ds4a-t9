@@ -5,7 +5,7 @@ import pandas as pd
 
 DATA_DIRECTORY = "data"
 
-DATABASE_NAMES = ["base_viajeros", "base_indicadores"]
+DATABASE_NAMES = ["base_viajeros.xlsx", "base_indicadores"]
 
 
 def clean_database_viajeros():
@@ -31,10 +31,11 @@ def clean_database_viajeros():
 
 def clean_database_indicadores():
 
-    df = pd.read_csv("2. Base de Indicadores de Turismo 2.csv")
+    df = pd.read_csv("data/2. Base de Indicadores de Turismo 2.csv")
     
     original_names = list(df.columns)
-    df_cleaned = [x.upper() for x in original_names]
+    df.columns= [x.upper() for x in original_names]
+    df_cleaned = df
 
     return df_cleaned
 
@@ -50,21 +51,3 @@ def read__file_databases():
     databases[DATABASE_NAMES[1]] = clean_database_indicadores()
 
     return databases
-
-
-# ---------------- Relational database related code --------
-
-def create_relational_db():
-    '''This contains the code necessary for the creation of 
-       the tables and users.'''
-    pass
-
-
-def upload__datasets():
-    '''
-        Loads the cleaned databases into a PostgreSQL database.
-
-        return:
-            operation_result
-    '''
-    pass

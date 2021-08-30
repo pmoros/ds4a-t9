@@ -65,8 +65,8 @@ opt1_card2_label_top = "Average hotel occupancy rate in selected years"
 opt1_card2_label_bottom = "Comparison of the hotel occupancy rate among the selected years"
 
 #Pass options to the menus ---- Card2
-card1_menu_left_year = data.df_airbnb_homeway['SUBTEMA'].unique()
-opt1_card_options['opt1-board1-row1-menu-right-year'] = list(map(layouts.create_options_dropdown, card1_menu_left_year))
+card2_menu_top_year = data.df_tasa_ocupacion_hotelera['AÑO'].unique()
+opt1_card_options['opt1-board2-menu-top-year'] = list(map(layouts.create_options_dropdown, card2_menu_top_year))
 
 # --------Card 3 ------
 opt1_card3_title = "Airbnb occupancy rate"
@@ -162,6 +162,8 @@ opt1 = dbc.Container(
                         dcc.Dropdown(
                             # Menu Year segundo tablero
                             placeholder="Select the year",
+                            options=opt1_card_options['opt1-board2-menu-top-year'],
+                            value=[opt1_card_options['opt1-board2-menu-top-year'][0]['value']],
                             id="opt1-board2-menu-top-year",
                             multi=True,
                         ),

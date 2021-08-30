@@ -152,7 +152,7 @@ def update_indicators_opt1_b1_g2(selected_locations):
 ])
 def update_indicators_opt1_b2_g1(selected_locations):
     #Sample plot, THE PLOT IS WRONG, but its used for illustration
-    df_plot = data.df_tasa_ocupacion_hotelera[data.df_tasa_ocupacion_hotelera['SUBTEMA'].isin(selected_locations)]
+    df_plot = data.df_airbnb_homeway[data.df_airbnb_homeway['SUBTEMA'].isin(selected_locations)]
     df_plot = df_plot.groupby('SUBTEMA').mean().reset_index()
 
     return px.bar(df_plot, x='SUBTEMA', y='VALOR')

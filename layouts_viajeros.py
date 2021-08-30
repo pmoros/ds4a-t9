@@ -6,6 +6,7 @@ import dash_html_components as html
 import dash_bootstrap_components as dbc
 
 import layouts
+import data
 
 # Alternative 1
 MAIN_COLOR_SELECTOR = "#6C7BC4"
@@ -115,7 +116,7 @@ def get_main_selector_category():
     return multiple_selector
 
 
-# ---------Layout that will be returned to the user-------------------
+# ---------Layout OPT1 -------------------
 opt1_main_board_icons = {}
 opt1_main_board_icons['total_travelers'] = "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-board-logo1.png"
 opt1_main_board_icons['travelers_gender_male'] = "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-genero-hombre.png"
@@ -125,6 +126,10 @@ opt1_main_board_icons['travelers_education'] = "https://ds4a-team9-idt.s3.us-eas
 opt1_main_board_icons['travelers_age'] = "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-age.png"
 
 # --------------Cards that will be displayed
+
+#Card options for the user
+opt1_card_options = {}
+
 # --------Card 1 ------
 opt1_card1_title = "Where do the travelers who visit Bogotá come from?"
 opt1_card1_subtitle = "Get to know the number of travelers that visit Bogotá city by origin"
@@ -135,6 +140,11 @@ opt1_card2_subtitle = "Get to know the number of travelers that visit Bogotá ci
 
 opt1_card2_label_left = "Age distribution of the total number of travelers who visited Bogotá in the selected years"
 opt1_card2_label_right = "Comparison of the age distribution of travelers who visited Bogotá according to their origin"
+
+
+#Pass options to the menus ---- Card2
+#card2_menu_right_origin = data.df_viajeros
+
 
 # --------Card 3 ------
 opt1_card3_title = "What is the predominant gender among travelers?"
@@ -545,7 +555,7 @@ opt1 = dbc.Container(
                                         # Menu Year segundo tablero
                                         placeholder="Select the year",
                                         id="opt1-board2-row1-menu-right-year",
-                                        multi=True,
+                                        #multi=True,
                                     )
                                 ],
                                     xs={'size': 12},
@@ -554,6 +564,8 @@ opt1 = dbc.Container(
                                 dbc.Col([
                                     dcc.Dropdown(
                                         # Menu Year segundo tablero
+                                        options=opt1_card_options['opt1-board2-row1-menu-right-origin'],
+                                        value=[opt1_card_options['opt1-board2-row1-menu-right-origin'][0]['value']],
                                         placeholder="Select the origin",
                                         id="opt1-board2-row1-menu-right-origin",
                                         multi=True,
@@ -732,6 +744,7 @@ opt1 = dbc.Container(
             ]),
             className="mb-3 main-board-subpage",
         ),        
+        
 # ------CARD 5---------------
         dbc.Card(
             dbc.CardBody(children=[

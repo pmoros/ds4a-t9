@@ -55,3 +55,18 @@ def get_board_header(title, subtitle):
     )
 
     return my_header
+
+
+def create_options_dropdown(val):
+    try:
+        val_casted = str(val)
+        label = val_casted
+        value = val_casted
+
+        my_dict = {}
+        my_dict['label'] = label
+        my_dict['value'] = value
+    except:
+        raise Exception("You're trying to use a binary object as label")
+
+    return my_dict    

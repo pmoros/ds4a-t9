@@ -8,24 +8,12 @@ import dash_bootstrap_components as dbc
 import data
 import layouts
 
-def create_options_dropdown(val):
-    try:
-        val_casted = str(val)
-        label = val_casted
-        value = val_casted
 
-        my_dict = {}
-        my_dict['label'] = label
-        my_dict['value'] = value
-    except:
-        raise Exception("You're trying to use a binary object as label")
-
-    return my_dict
 
 #---- Common elements
 banner_image = "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/indicators-banner.jpg"
 
-# --- Layout OPT1 (INDICATORS)
+# --- Layout OPT1 (INDICATORS) ----------------------------
 
 opt1_title = ["Get to know some ", "ACCOMMODATION",
               "indicators"]
@@ -67,32 +55,25 @@ opt1_card1_label_right = "Comparison of the monthly average offer of Airbnb and 
 
 #Pass options to the menus ---- Card1
 card1_menu_left_year = data.df_airbnb_homeway['AÑO'].unique()
-opt1_card_options['opt1-board1-row1-menu-left-year'] = list(map(create_options_dropdown, card1_menu_left_year))
+opt1_card_options['opt1-board1-row1-menu-left-year'] = list(map(layouts.create_options_dropdown, card1_menu_left_year))
 
 # --------Card 2 ------
-opt1_card2_title = "How old are the travelers?"
-opt1_card2_subtitle = "Get to know the number of travelers that visit Bogotá city by age"
+opt1_card2_title = "Hotel occupancy rate"
+opt1_card2_subtitle = "Find out what is the hotel occupancy rate in the city of Bogotá"
 
-opt1_card2_label_left = "Age distribution of the total number of travelers who visited Bogotá in the selected years"
-opt1_card2_label_right = "Comparison of the age distribution of travelers who visited Bogotá according to their origin"
+opt1_card2_label_top = "Average hotel occupancy rate in selected years"
+opt1_card2_label_bottom = "Comparison of the hotel occupancy rate among the selected years"
 
 #Pass options to the menus ---- Card2
 card1_menu_left_year = data.df_airbnb_homeway['SUBTEMA'].unique()
-opt1_card_options['opt1-board1-row1-menu-right-year'] = list(map(create_options_dropdown, card1_menu_left_year))
+opt1_card_options['opt1-board1-row1-menu-right-year'] = list(map(layouts.create_options_dropdown, card1_menu_left_year))
 
 # --------Card 3 ------
-opt1_card3_title = "What is the predominant gender among travelers?"
-opt1_card3_subtitle = "Discover the number of travelers that visit Bogotá city by gender"
+opt1_card3_title = "Airbnb occupancy rate"
+opt1_card3_subtitle = "Find out what is the occupancy rate of Airbnb properties in the city of Bogotá"
 
-opt1_card3_label_left = "Gender distribution of the total number of travelers who visited Bogotá in the selected years"
-opt1_card3_label_right = "Comparison of the gender of travelers who visited Bogotá according to their origin"
-
-# --------Card 4 ------
-opt1_card4_title = "What is the educational level of the travelers?"
-opt1_card4_subtitle = "Find out the number of travelers that visit Bogotá city according to their educational level"
-
-opt1_card4_label_top = "What is the occupation of the travelers?"
-opt1_card4_label_bottom = "Get to know the number of travelers that visit Bogota city by occupation"
+opt1_card3_label_top = "Average Airbnb occupancy rate in selected years"
+opt1_card3_label_bottom = "Airbnb occupancy rate comparison among selected years"
 
 
 #-------------OPT1 Container--------------
@@ -166,8 +147,124 @@ opt1 = dbc.Container(
 
             ]),
             className="mb-3 main-board-subpage",
-
         ),
+
+# ------CARD 2---------------
+        dbc.Card(
+            dbc.CardBody(children=[
+                # Card 2 header
+                layouts.get_board_header(
+                    opt1_card2_title, opt1_card2_subtitle),
+                # Board 2 PLOTS
+                dbc.Container([
+                    #Board 2 Plot 1 (Top)
+                    html.Div([
+                        dcc.Dropdown(
+                            # Menu Year segundo tablero
+                            placeholder="Select the year",
+                            id="opt1-board2-menu-top-year",
+                            multi=True,
+                        ),
+                        html.P(opt1_card2_label_top, className="board-standard-label-graph"),
+                        #"my plot "
+                        dcc.Graph(
+                            id="opt1-board2-graph-top",
+                        )
+                    ],
+                        # className=""
+                    ),
+                    #Board 2 Plot 2 (Bottom)                  
+                    html.Div([
+                        #"my plot "
+                        dbc.Row([
+                            dbc.Col([
+                                dcc.Dropdown(
+                                    # Menu Year segundo tablero
+                                    placeholder="Select the year",
+                                    id="opt1-board2-menu-bottom-year",
+                                    multi=True,
+                                )
+                            ],
+                                xs={'size': 12},
+                                #md={'size': 6, 'offset': 3}
+                            ),
+
+                        ],
+                        ),
+                        html.P(opt1_card2_label_bottom, className="board-standard-label-graph"),
+                        dcc.Graph(
+                            id="opt1-board2-graph-bottom",
+                        )
+                    ],
+                        # className=""
+                    )                    
+                ],
+                fluid=True,
+                ),
+
+            ]
+            ),
+            className="mb-3 main-board-subpage",
+        ),                
+
+# ------CARD 3---------------
+        dbc.Card(
+            dbc.CardBody(children=[
+                # Card 3 header
+                layouts.get_board_header(
+                    opt1_card3_title, opt1_card3_subtitle),
+                # Board 3 PLOTS
+                dbc.Container([
+                    #Board 3 Plot 1 (Top)
+                    html.Div([
+                        dcc.Dropdown(
+                            # Menu Year segundo tablero
+                            placeholder="Select the year",
+                            id="opt1-board3-menu-top-year",
+                            multi=True,
+                        ),
+                        html.P(opt1_card3_label_top, className="board-standard-label-graph"),
+                        #"my plot "
+                        dcc.Graph(
+                            id="opt1-board3-graph-top",
+                        )
+                    ],
+                        # className=""
+                    ),
+                    #Board 3 Plot 2 (Bottom)                  
+                    html.Div([
+                        #"my plot "
+                        dbc.Row([
+                            dbc.Col([
+                                dcc.Dropdown(
+                                    # Menu Year segundo tablero
+                                    placeholder="Select the year",
+                                    id="opt1-board3-menu-bottom-year",
+                                    multi=True,
+                                )
+                            ],
+                                xs={'size': 12},
+                                #md={'size': 6, 'offset': 3}
+                            ),
+
+                        ],
+                        ),
+                        html.P(opt1_card3_label_bottom, className="board-standard-label-graph"),
+                        dcc.Graph(
+                            id="opt1-board3-graph-bottom",
+                        )
+                    ],
+                        # className=""
+                    )                    
+                ],
+                fluid=True,
+                ),
+
+            ]
+            ),
+            className="mb-3 main-board-subpage",
+        ),                
+
 
 
     ]

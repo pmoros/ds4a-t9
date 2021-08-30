@@ -148,7 +148,8 @@ def update_indicators_opt1_b1_g2(selected_locations):
 #-----------Travelers - OPT1 (WHO THEY ARE) -----------------------
 
 #THIS IS A TEST GRAPH!!!!!
-#Indicators-> OPT1 -> BOARD 1 -> GRAPH 1 (LEFT)
+#------------- BOARD 1 -------------------
+#Travelers -> OPT1 -> BOARD 1 -> GRAPH 1 (LEFT)
 @app.callback(
     Output("opt1-board1-graph-left", "figure")
 ,[
@@ -180,8 +181,9 @@ def update_indicators_opt1_b1_g2(national_bt, international_bt, both_bt):
     #CREATION OF THE PLOT + RETURN OF IT
     return px.bar(df_plot, x='TEMA', y='VIAJEROS')
 
+#------------------ BOARD 2 ----------------
 
-
+#Travelers -> OPT1 -> BOARD 2 -> MENU -> RIGHT -> ORIGIN
 
 
 

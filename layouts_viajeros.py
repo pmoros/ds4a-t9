@@ -38,17 +38,6 @@ opt1_title = ["Meet", "THE TRAVELERS",
 
 opt1_banner_image = "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-opt1-main.jpg"
 
-opt1_main_board_menu1 = [{'label': "2019", 'value': 2019}, {
-    'label': "2020", 'value': 2020}]
-# This function makes it possible to visualize the options properly
-# opt1_main_board_menu1['value'] = list(
-#     map(lambda x: dbc.DropdownItem(x), opt1_main_board_menu1['value']))
-
-opt1_main_board_menu2 = [{'label': "Enero", 'value': "enero"}, {
-    'label': "Febrero", 'value': "Febrero"}]
-# This function makes it possible to visualize the options properly
-# opt1_main_board_menu2['value'] = list(
-#     map(lambda x: dbc.DropdownItem(x), opt1_main_board_menu2['value']))
 
 opt1_title_div = html.Div(
     children=[
@@ -1108,4 +1097,21 @@ opt2 = dbc.Container(
 
     ],
     fluid=True,
+)
+
+# --- Layout OPT1
+opt1_title = ["Meet", "THE TRAVELERS",
+              "who visit Bogotá city"]
+
+opt1_banner_image = "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-opt1-main.jpg"
+
+
+opt1_title_div = html.Div(
+    children=[
+        html.Span(html.H1(opt1_title[0], className="main-title")),
+        html.Span(
+            html.H1(opt1_title[1], className="main-title-bold")),
+        html.Span(html.H1(opt1_title[2], className="main-title"))
+    ],
+    style={"marginLeft": "10%", "marginRight": "10%"},
 )

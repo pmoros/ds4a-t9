@@ -108,6 +108,10 @@ def display_page(pathname):
         return layouts_indicators.opt1      
     elif pathname.endswith(options_drop_navBar[options_navBar[2]][1]["value"]):
         return layouts_indicators.opt2
+    elif pathname.endswith(options_drop_navBar[options_navBar[2]][2]["value"]):
+        return layouts_indicators.opt2
+    elif pathname.endswith(options_drop_navBar[options_navBar[2]][3]["value"]):
+        return layouts_indicators.opt2
     else:
         return "ERROR 404: Page not found!"
 
@@ -189,7 +193,7 @@ def update_indicators_opt2_b1_g1(selected_year):
              labels={
                 'SUBTEMA': "Country",  'AÑO': "Year", 'VALOR': "Total"
             },
-             color_continuous_scale='Magenta'
+             color_continuous_scale='Aggrnyl'
             )
     fig.update_layout(legend_title="Category")
     
@@ -209,9 +213,9 @@ def update_indicators_opt2_b2_g1(selected_item):
     
     fig = px.bar(df_plot, x='AÑO', y='VALOR', color='AÑO',
              labels={
-                "VALOR": variable, "AÑO": "Year"
+                'VALOR': variable, 'AÑO': "Year"
             },
-             color_continuous_scale='Magenta'  
+             color_continuous_scale='Aggrnyl'  
             )
     fig.update_layout(legend_title="Continent")
     
@@ -227,8 +231,18 @@ def update_indicators_opt2_b2_g1(selected_item):
 def update_indicators_opt2_b3_g1(selected_item):
 
     df_plot = data.df_turismo_internacional[data.df_turismo_internacional['VARIABLE'] == selected_item]
+    clase = df_plot['CLASE'].iloc[0]
+    
+    fig = px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA',
+             labels={
+                'VALOR': clase, 'AÑO': "Year"
+            },
+             color_continuous_scale='Aggrnyl'     
+            )
+    fig.update_layout(legend_title="Continent")
+    
+    return fig 
 
-    return px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA')
 
 #Indicators-> CONNECTIVITY -> BOARD 4 -> GRAPH 1
 @app.callback(
@@ -240,7 +254,15 @@ def update_indicators_opt2_b4_g1(selected_item):
 
     df_plot = data.df_turismo_internacional2[data.df_turismo_internacional2['VARIABLE'] == selected_item]
 
-    return px.area(df_plot, x='AÑO', y='VALOR', color='CLASE', line_group='CLASE')
+    return px.area(df_plot, x='AÑO', y='VALOR', color='CLASE', line_group='CLASE',
+             labels={
+                'VALOR': "Value", 'AÑO': "Year"
+            },
+             color_continuous_scale='Aggrnyl'     
+            )
+    fig.update_layout(legend_title="Category")
+    
+    return fig 
 
 
 #-----------Travelers - OPT1 (WHO THEY ARE) -----------------------

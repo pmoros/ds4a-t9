@@ -372,7 +372,7 @@ opt2 = dbc.Container(
                                 #Passing possible options
                                 options=opt2_card_options["opt2-board1-menu-year"],
                                 #Using the first value as default
-                                value=opt2_card_options['opt2-board1-menu-year'][0]['value'],
+                                value=[opt2_card_options['opt2-board1-menu-year'][0]['value']],
                                 placeholder="Select the year",
                                 multi=True,
                             ),

@@ -20,18 +20,6 @@ opt1_title = ["Get to know some ", "ACCOMMODATION",
 
 
 
-opt1_main_board_menu1 = [{'label': "2019", 'value': 2019}, {
-    'label': "2020", 'value': 2020}]
-# This function makes it possible to visualize the options properly
-# opt1_main_board_menu1['value'] = list(
-#     map(lambda x: dbc.DropdownItem(x), opt1_main_board_menu1['value']))
-
-opt1_main_board_menu2 = [{'label': "Enero", 'value': "enero"}, {
-    'label': "Febrero", 'value': "Febrero"}]
-# This function makes it possible to visualize the options properly
-# opt1_main_board_menu2['value'] = list(
-#     map(lambda x: dbc.DropdownItem(x), opt1_main_board_menu2['value']))
-
 opt1_title_div = html.Div(
     children=[
         html.Span(html.H1(opt1_title[0], className="main-title")),
@@ -284,20 +272,6 @@ opt1 = dbc.Container(
 
 opt2_title = ["Get to know some ", "CONNECTIVITY",
               "indicators"]
-
-
-
-opt2_main_board_menu1 = [{'label': "2019", 'value': 2019}, {
-    'label': "2020", 'value': 2020}]
-# This function makes it possible to visualize the options properly
-# opt2_main_board_menu1['value'] = list(
-#     map(lambda x: dbc.DropdownItem(x), opt2_main_board_menu1['value']))
-
-opt2_main_board_menu2 = [{'label': "Enero", 'value': "enero"}, {
-    'label': "Febrero", 'value': "Febrero"}]
-# This function makes it possible to visualize the options properly
-# opt2_main_board_menu2['value'] = list(
-#     map(lambda x: dbc.DropdownItem(x), opt2_main_board_menu2['value']))
 
 opt2_title_div = html.Div(
     children=[

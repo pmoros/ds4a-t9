@@ -237,7 +237,7 @@ def update_indicators_opt2_b3_g1(selected_item):
              labels={
                 'VALOR': clase, 'AÑO': "Year"
             },
-             color_continuous_scale='Aggrnyl'     
+             #color_continuous_scale='Aggrnyl'     
             )
     fig.update_layout(legend_title="Continent")
     

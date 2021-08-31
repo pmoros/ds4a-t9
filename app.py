@@ -191,10 +191,9 @@ def update_indicators_opt2_b1_g1(selected_year):
             },
              color_continuous_scale='Magenta'
             )
-    fig.update_layout(legend_title="Category", )
+    fig.update_layout(legend_title="Category")
     
     return fig
-    #return px.bar(df_plot, x='SUBTEMA', y='VALOR', color='VARIABLE', facet_col='AÑO')
 
 
 #Indicators-> CONNECTIVITY -> BOARD 2 -> GRAPH 1
@@ -206,8 +205,17 @@ def update_indicators_opt2_b1_g1(selected_year):
 def update_indicators_opt2_b2_g1(selected_item):
 
     df_plot = data.df_conect_internacional[data.df_conect_internacional['SUBTEMA'] == selected_item]
-
-    return px.bar(df_plot, x='AÑO', y='VALOR', color='AÑO')
+    variable = df_plot['VARIABLE'].iloc[0]
+    
+    fig = px.bar(df_plot, x='AÑO', y='VALOR', color='AÑO'
+             labels={
+                "VALOR": variable, "AÑO": "Year"
+            },
+             color_continuous_scale='Magenta'  
+            )
+    fig.update_layout(legend_title="Continent")
+    
+    return fig
 
 
 #Indicators-> CONNECTIVITY -> BOARD 3 -> GRAPH 1

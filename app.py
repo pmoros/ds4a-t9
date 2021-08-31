@@ -189,7 +189,7 @@ def update_indicators_opt2_b1_g1(selected_year):
              labels={
                 'SUBTEMA': "Country",  'AÑO': "Year", 'VALOR': "Total"
             },
-             color_continuous_scale='Inferno'
+             color_continuous_scale='Magenta'
             )
     fig.update_layout(legend_title="Category", )
     

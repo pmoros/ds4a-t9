@@ -182,7 +182,7 @@ def update_indicators_opt1_b3_g1(selected_year):
     Input("opt2-board1-menu-year", "value"),
 ])
 def update_indicators_opt2_b1_g1(selected_year):
-    selected_year = [int(x) for x in selected_number]
+    selected_year = [int(x) for x in selected_year]
     df_plot = data.df_bigdata[data.df_bigdata['AÑO'].isin(selected_year)]
 
     return px.bar(df_plot, x='SUBTEMA', y='VALOR', color='VARIABLE', facet_col='AÑO')

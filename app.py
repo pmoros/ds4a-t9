@@ -161,8 +161,13 @@ def update_indicators_opt1_b2_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
     df_plot = data.df_tasa_ocupacion_hotelera[data.df_tasa_ocupacion_hotelera['AÑO'].isin(selected_year)]
     
-    return px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO')
-
+    fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO'
+             labels={
+                'VALOR': "Value (%)", 'AÑO': "Year", 'MES': "Month"
+            },
+            )
+    
+    return fig
 
 #Indicators-> ACCOMMODATION (option 1) -> BOARD 3 -> GRAPH 1 (TOP)
 @app.callback(
@@ -174,8 +179,13 @@ def update_indicators_opt1_b3_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
     df_plot = data.df_tasa_ocupacion_airbnb[data.df_tasa_ocupacion_airbnb['AÑO'].isin(selected_year)]
     
-    return px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO')
-
+    fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO')
+             labels={
+                'VALOR': "Value (%)", 'AÑO': "Year", 'MES': "Month"
+            },
+            )
+    
+    return fig
 
 #-----------Indicadores (OPT2 [CONNECTIVITY]) -----------------------
 
@@ -253,7 +263,7 @@ def update_indicators_opt2_b4_g1(selected_item):
 
     df_plot = data.df_turismo_internacional2[data.df_turismo_internacional2['VARIABLE'] == selected_item]
 
-    return px.area(df_plot, x='AÑO', y='VALOR', color='CLASE', line_group='CLASE',
+    fig = px.area(df_plot, x='AÑO', y='VALOR', color='CLASE', line_group='CLASE',
              labels={
                 'VALOR': "Value", 'AÑO': "Year"
             },    

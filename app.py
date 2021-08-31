@@ -176,17 +176,17 @@ def update_indicators_opt1_b3_g1(selected_year):
 #-----------Indicadores (OPT2 [CONNECTIVITY]) -----------------------
 
 #Indicators-> CONNECTIVITY -> BOARD 1 -> GRAPH 1
-@app.callback(
+'''@app.callback(
     Output("opt2-board1-graph", "figure")
 ,[
     Input("opt2-board1-menu-year", "value"),
 ])
 def update_indicators_opt2_b1_g1(selected_year):
 
-    df_plot = data.df_bigdata[data.df_bigdata['AÑO'].isin(selected_year)]
+    df_plot = data.df_bigdata[data.df_bigdata['AÑO'].isin([selected_year])]
 
     return px.bar(df_plot, x='SUBTEMA', y='VALOR', color='VARIABLE', facet_col='AÑO')
-
+'''
 
 #Indicators-> CONNECTIVITY -> BOARD 2 -> GRAPH 1
 @app.callback(

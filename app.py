@@ -171,6 +171,59 @@ def update_indicators_opt1_b3_g1(selected_locations):
     return px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO')
 
 
+#-----------Indicadores (OPT2 [CONNECTIVITY]) -----------------------
+
+#Indicators-> CONNECTIVITY -> BOARD 1 -> GRAPH 1
+@app.callback(
+    Output("opt2-board1-graph", "figure")
+,[
+    Input("opt2-board1-menu-year", "value"),
+])
+def update_indicators_opt2_b1_g1(selected_year):
+
+    df_plot = data.df_bigdata[data.df_bigdata['AÑO'].isin(selected_year)]
+
+    return px.bar(df_plot, x='SUBTEMA', y='VALOR', color='VARIABLE', facet_col='AÑO')
+
+
+#Indicators-> CONNECTIVITY -> BOARD 2 -> GRAPH 1
+@app.callback(
+    Output("opt2-board2-graph", "figure")
+,[
+    Input("opt2-board2-menu-year", "value"),
+])
+def update_indicators_opt2_b2_g1(selected_item):
+
+    df_plot = data.df_conect_internacional[data.df_conect_internacional['SUBTEMA'].isin(selected_item)]
+
+    return px.bar(df_plot, x='AÑO', y='VALOR', color='AÑO')
+
+
+#Indicators-> CONNECTIVITY -> BOARD 3 -> GRAPH 1
+@app.callback(
+    Output("opt2-board3-graph", "figure")
+,[
+    Input("opt2-board3-menu-year", "value"),
+])
+def update_indicators_opt2_b3_g1(selected_item):
+
+    df_plot = data.df_turismo_internacional[data.df_turismo_internacional['VARIABLE'].isin(selected_item)]
+
+    return px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA')
+
+#Indicators-> CONNECTIVITY -> BOARD 4 -> GRAPH 1
+@app.callback(
+    Output("opt2-board4-graph", "figure")
+,[
+    Input("opt2-board4-menu-year", "value"),
+])
+def update_indicators_opt2_b4_g1(selected_item):
+
+    df_plot = data.df_turismo_internacional2[data.df_turismo_internacional2['VARIABLE'].isin(selected_item)]
+
+    return px.area(df_plot, x='AÑO', y='VALOR', color='CLASE', line_group='CLASE')
+
+
 #-----------Travelers - OPT1 (WHO THEY ARE) -----------------------
 
 #THIS IS A TEST GRAPH!!!!!

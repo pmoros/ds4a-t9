@@ -155,12 +155,12 @@ def update_indicators_opt1_b2_g1(selected_locations):
 
     df_plot = data.df_tasa_ocupacion_airbnb[data.df_tasa_ocupacion_airbnb['AÑO'].isin(selected_locations)]
     
-    fig=px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO'
+    return px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO'
                     #labels={"VALOR": "Valor (%)", "AÑO": "Año", "MES": "Mes"}
             )
     #fig.update_layout(legend_title="Año",transition_duration = 500)
 
-    return fig
+    #return fig
 
 
 #-----------Travelers - OPT1 (WHO THEY ARE) -----------------------

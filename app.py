@@ -25,6 +25,10 @@ MAIN_COLOR_SELECTOR = "#6C7BC4"
 # Alternative 2
 MAIN_COLOR_SELECTOR = "#7484d4"
 
+COLOR_PALETTE_DISCRETE = px.colors.qualitative.T10
+COLOR_PALETTE_CONTINUOUS = "Darkmint"
+
+
 landingPage_title = ["Welcome", "to the Bogotá tourist information system"]
 landingPage_subtitle = [
     "In this site you will find the main data on the tourist demand of Bogotá"]
@@ -105,7 +109,13 @@ def display_page(pathname):
     elif pathname.endswith(options_drop_navBar[options_navBar[1]][1]["value"]):
         return layouts_viajeros.opt2        
     elif pathname.endswith(options_drop_navBar[options_navBar[2]][0]["value"]):
-        return layouts_indicators.opt1                
+        return layouts_indicators.opt1      
+    elif pathname.endswith(options_drop_navBar[options_navBar[2]][1]["value"]):
+        return layouts_indicators.opt2
+    elif pathname.endswith(options_drop_navBar[options_navBar[2]][2]["value"]):
+        return layouts_indicators.opt2
+    elif pathname.endswith(options_drop_navBar[options_navBar[2]][3]["value"]):
+        return layouts_indicators.opt2
     else:
         return "ERROR 404: Page not found!"
 
@@ -143,6 +153,136 @@ def update_indicators_opt1_b1_g2(selected_locations):
     df_plot = df_plot.groupby('SUBTEMA').mean().reset_index()
 
     return px.bar(df_plot, x='SUBTEMA', y='VALOR')
+
+
+#Indicators-> ACCOMMODATION (option 1) -> BOARD 2 -> GRAPH 1 (TOP)
+@app.callback(
+    Output("opt1-board2-graph-top", "figure")
+,[
+    Input("opt1-board2-menu-top-year", "value"),
+])
+def update_indicators_opt1_b2_g1(selected_year):
+    selected_year = [int(x) for x in selected_year]
+    df_plot = data.df_tasa_ocupacion_hotelera[data.df_tasa_ocupacion_hotelera['AÑO'].isin(selected_year)]
+    
+    fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO',
+             labels={
+                'VALOR': "Value (%)", 'AÑO': "Year", 'MES': "Month"
+            },
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
+
+            )
+    
+    return fig
+
+#Indicators-> ACCOMMODATION (option 1) -> BOARD 3 -> GRAPH 1 (TOP)
+@app.callback(
+    Output("opt1-board3-graph-top", "figure")
+,[
+    Input("opt1-board3-menu-top-year", "value"),
+])
+def update_indicators_opt1_b3_g1(selected_year):
+    selected_year = [int(x) for x in selected_year]
+    df_plot = data.df_tasa_ocupacion_airbnb[data.df_tasa_ocupacion_airbnb['AÑO'].isin(selected_year)]
+    
+    fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO',
+             labels={
+                'VALOR': "Value (%)", 'AÑO': "Year", 'MES': "Month"
+            },
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
+
+            )
+    
+    return fig
+
+#-----------Indicadores (OPT2 [CONNECTIVITY]) -----------------------
+
+#Indicators-> CONNECTIVITY -> BOARD 1 -> GRAPH 1
+@app.callback(
+    Output("opt2-board1-graph", "figure")
+,[
+    Input("opt2-board1-menu-year", "value"),
+])
+def update_indicators_opt2_b1_g1(selected_year):
+    selected_year = [int(x) for x in selected_year]
+    df_plot = data.df_bigdata[data.df_bigdata['AÑO'].isin(selected_year)]
+    
+    fig = px.bar(df_plot, x='SUBTEMA', y='VALOR', color='VARIABLE', facet_col='AÑO',
+             labels={
+                'SUBTEMA': "Country",  'AÑO': "Year", 'VALOR': "Total"
+            },
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
+
+            )
+    fig.update_layout(legend_title="Category")
+    
+    return fig
+
+
+#Indicators-> CONNECTIVITY -> BOARD 2 -> GRAPH 1
+@app.callback(
+    Output("opt2-board2-graph", "figure")
+,[
+    Input("opt2-board2-menu-year", "value"),
+])
+def update_indicators_opt2_b2_g1(selected_item):
+
+    df_plot = data.df_conect_internacional[data.df_conect_internacional['SUBTEMA'] == selected_item]
+    variable = df_plot['VARIABLE'].iloc[0]
+    
+    fig = px.bar(df_plot, x='AÑO', y='VALOR', color='AÑO',
+             labels={
+                'VALOR': variable, 'AÑO': "Year"
+            },
+             color_continuous_scale=COLOR_PALETTE_CONTINUOUS,
+            )
+    fig.update_layout(legend_title="Continent")
+    
+    return fig
+
+
+#Indicators-> CONNECTIVITY -> BOARD 3 -> GRAPH 1
+@app.callback(
+    Output("opt2-board3-graph", "figure")
+,[
+    Input("opt2-board3-menu-year", "value"),
+])
+def update_indicators_opt2_b3_g1(selected_item):
+
+    df_plot = data.df_turismo_internacional[data.df_turismo_internacional['VARIABLE'] == selected_item]
+    clase = df_plot['CLASE'].iloc[0]
+    
+    fig = px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA',
+             labels={
+                'VALOR': clase, 'AÑO': "Year"
+            },    
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE, 
+            )
+    fig.update_layout(legend_title="Continent")
+    
+    return fig 
+
+
+#Indicators-> CONNECTIVITY -> BOARD 4 -> GRAPH 1
+@app.callback(
+    Output("opt2-board4-graph", "figure")
+,[
+    Input("opt2-board4-menu-year", "value"),
+])
+def update_indicators_opt2_b4_g1(selected_item):
+
+    df_plot = data.df_turismo_internacional2[data.df_turismo_internacional2['VARIABLE'] == selected_item]
+
+    fig = px.area(df_plot, x='AÑO', y='VALOR', color='CLASE', line_group='CLASE',
+             labels={
+                'VALOR': "Value", 'AÑO': "Year"
+            }, 
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
+
+            )
+    fig.update_layout(legend_title="Category")
+    
+    return fig 
 
 
 #-----------Travelers - OPT1 (WHO THEY ARE) -----------------------

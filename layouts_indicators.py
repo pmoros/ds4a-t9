@@ -442,8 +442,7 @@ opt2 = dbc.Container(
                             placeholder="Select the year",
                             options=opt2_card_options['opt2-board3-menu-year'],
                             value=opt2_card_options['opt2-board3-menu-year'][0]['value'],
-                            id="opt2-board3-menu-year",
-                            multi=True,
+                            id="opt2-board3-menu-year"
                         ),
                         html.P(opt2_card3_label, className="board-standard-label-graph"),
                         #"my plot "

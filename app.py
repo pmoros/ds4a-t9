@@ -183,7 +183,7 @@ def update_indicators_opt1_b3_g1(selected_locations):
 ])
 def update_indicators_opt2_b1_g1(selected_year):
 
-    df_plot = data.df_bigdata[data.df_bigdata['AÑO'].isin(selected_year)]
+    df_plot = data.df_bigdata[data.df_bigdata['AÑO'].isin([selected_year])]
 
     return px.bar(df_plot, x='SUBTEMA', y='VALOR', color='VARIABLE', facet_col='AÑO')
 
@@ -196,7 +196,7 @@ def update_indicators_opt2_b1_g1(selected_year):
 ])
 def update_indicators_opt2_b2_g1(selected_item):
 
-    df_plot = data.df_conect_internacional[data.df_conect_internacional['SUBTEMA'].isin(selected_item)]
+    df_plot = df_conect_internacional[df_conect_internacional['SUBTEMA'] == selected_item]
 
     return px.bar(df_plot, x='AÑO', y='VALOR', color='AÑO')
 
@@ -209,7 +209,7 @@ def update_indicators_opt2_b2_g1(selected_item):
 ])
 def update_indicators_opt2_b3_g1(selected_item):
 
-    df_plot = data.df_turismo_internacional[data.df_turismo_internacional['VARIABLE'].isin(selected_item)]
+    df_plot = df_turismo_internacional[df_turismo_internacional['VARIABLE'] == selected_item]
 
     return px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA')
 
@@ -221,7 +221,7 @@ def update_indicators_opt2_b3_g1(selected_item):
 ])
 def update_indicators_opt2_b4_g1(selected_item):
 
-    df_plot = data.df_turismo_internacional2[data.df_turismo_internacional2['VARIABLE'].isin(selected_item)]
+    df_plot = df_turismo_internacional2[df_turismo_internacional2['VARIABLE'] == selected_item]
 
     return px.area(df_plot, x='AÑO', y='VALOR', color='CLASE', line_group='CLASE')
 

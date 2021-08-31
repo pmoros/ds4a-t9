@@ -159,7 +159,7 @@ def update_indicators_opt1_b1_g2(selected_locations):
 ])
 def update_indicators_opt1_b2_g1(selected_year):
 
-    df_plot = data.df_tasa_ocupacion_hotelera[data.df_tasa_ocupacion_hotelera['AÑO'].isin([selected_year])]
+    df_plot = data.df_tasa_ocupacion_hotelera[data.df_tasa_ocupacion_hotelera['AÑO'].isin(selected_year)]
     
     return px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO')
 
@@ -172,7 +172,7 @@ def update_indicators_opt1_b2_g1(selected_year):
 ])
 def update_indicators_opt1_b3_g1(selected_year):
 
-    df_plot = data.df_tasa_ocupacion_airbnb[data.df_tasa_ocupacion_airbnb['AÑO'].isin([selected_year])]
+    df_plot = data.df_tasa_ocupacion_airbnb[data.df_tasa_ocupacion_airbnb['AÑO'].isin(selected_year)]
     
     return px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO')
 
@@ -236,8 +236,7 @@ def update_indicators_opt2_b3_g1(selected_item):
     fig = px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA',
              labels={
                 'VALOR': clase, 'AÑO': "Year"
-            },
-             #color_continuous_scale='Aggrnyl'     
+            },    
             )
     fig.update_layout(legend_title="Continent")
     
@@ -257,8 +256,7 @@ def update_indicators_opt2_b4_g1(selected_item):
     return px.area(df_plot, x='AÑO', y='VALOR', color='CLASE', line_group='CLASE',
              labels={
                 'VALOR': "Value", 'AÑO': "Year"
-            },
-             color_continuous_scale='Aggrnyl'     
+            },    
             )
     fig.update_layout(legend_title="Category")
     

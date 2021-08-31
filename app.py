@@ -187,10 +187,12 @@ def update_indicators_opt2_b1_g1(selected_year):
     
     fig = px.bar(df_plot, x='SUBTEMA', y='VALOR', color='VARIABLE', facet_col='AÑO',
              labels={
-                'SUBTEMA': "País",  'AÑO': "Año", 'VALOR': "Total"
-            }
+                'SUBTEMA': "Country",  'AÑO': "Year", 'VALOR': "Total"
+            },
+             color_continuous_scale='Inferno'
             )
-
+    fig.update_layout(legend_title="Category", )
+    
     return fig
     #return px.bar(df_plot, x='SUBTEMA', y='VALOR', color='VARIABLE', facet_col='AÑO')
 

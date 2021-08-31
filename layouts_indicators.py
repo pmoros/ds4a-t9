@@ -345,7 +345,7 @@ opt2_card4_title = "Number of travelers visiting Bogotá by origin"
 opt2_card4_subtitle = "Discover the total number of travelers who visit Bogotá city according to their origin"
 opt2_card4_label = "Travelers visiting Bogotá by origin"
 
-#Pass options to the menus ---- Card3
+#Pass options to the menus ---- Card4
 card4_menu_year = data.df_turismo_internacional2['VARIABLE'].unique()
 opt2_card_options['opt2-board4-menu-year'] = list(map(layouts.create_options_dropdown, card4_menu_year))
 
@@ -423,7 +423,6 @@ opt2 = dbc.Container(
                 ],
                 fluid=True,
                 ),
-
             ]
             ),
             className="mb-3 main-board-subpage",
@@ -449,7 +448,7 @@ opt2 = dbc.Container(
                         html.P(opt2_card3_label, className="board-standard-label-graph"),
                         #"my plot "
                         dcc.Graph(
-                            id="opt2-board3-graph-top",
+                            id="opt2-board3-graph",
                         )
                     ],
                         # className=""
@@ -462,8 +461,5 @@ opt2 = dbc.Container(
             ),
             className="mb-3 main-board-subpage",
         ),                
-
-
-
     ]
 )

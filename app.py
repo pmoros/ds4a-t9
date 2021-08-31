@@ -25,6 +25,10 @@ MAIN_COLOR_SELECTOR = "#6C7BC4"
 # Alternative 2
 MAIN_COLOR_SELECTOR = "#7484d4"
 
+COLOR_PALETTE_DISCRETE = px.colors.qualitative.T10
+COLOR_PALETTE_CONTINUOUS = "Darkmint"
+
+
 landingPage_title = ["Welcome", "to the Bogotá tourist information system"]
 landingPage_subtitle = [
     "In this site you will find the main data on the tourist demand of Bogotá"]
@@ -161,10 +165,12 @@ def update_indicators_opt1_b2_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
     df_plot = data.df_tasa_ocupacion_hotelera[data.df_tasa_ocupacion_hotelera['AÑO'].isin(selected_year)]
     
-    fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO'
+    fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO',
              labels={
                 'VALOR': "Value (%)", 'AÑO': "Year", 'MES': "Month"
             },
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
+
             )
     
     return fig
@@ -179,10 +185,12 @@ def update_indicators_opt1_b3_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
     df_plot = data.df_tasa_ocupacion_airbnb[data.df_tasa_ocupacion_airbnb['AÑO'].isin(selected_year)]
     
-    fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO')
+    fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO',
              labels={
                 'VALOR': "Value (%)", 'AÑO': "Year", 'MES': "Month"
             },
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
+
             )
     
     return fig
@@ -203,7 +211,8 @@ def update_indicators_opt2_b1_g1(selected_year):
              labels={
                 'SUBTEMA': "Country",  'AÑO': "Year", 'VALOR': "Total"
             },
-             color_continuous_scale='Aggrnyl'
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
+
             )
     fig.update_layout(legend_title="Category")
     
@@ -225,7 +234,7 @@ def update_indicators_opt2_b2_g1(selected_item):
              labels={
                 'VALOR': variable, 'AÑO': "Year"
             },
-             color_continuous_scale='Aggrnyl'  
+             color_continuous_scale=COLOR_PALETTE_CONTINUOUS,
             )
     fig.update_layout(legend_title="Continent")
     
@@ -247,6 +256,7 @@ def update_indicators_opt2_b3_g1(selected_item):
              labels={
                 'VALOR': clase, 'AÑO': "Year"
             },    
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE, 
             )
     fig.update_layout(legend_title="Continent")
     
@@ -266,7 +276,9 @@ def update_indicators_opt2_b4_g1(selected_item):
     fig = px.area(df_plot, x='AÑO', y='VALOR', color='CLASE', line_group='CLASE',
              labels={
                 'VALOR': "Value", 'AÑO': "Year"
-            },    
+            }, 
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
+
             )
     fig.update_layout(legend_title="Category")
     

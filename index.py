@@ -92,7 +92,9 @@ navBar = dbc.NavbarSimple(
                 label=options_navBar[2],
                 children=[
                     dbc.DropdownMenuItem(html.A(children=[options_drop_navBar[options_navBar[2]][0]["label"]],
-                                                href=options_drop_navBar[options_navBar[2]][0]["value"])),
+                                                href=options_drop_navBar[options_navBar[2]][0]["label"])),
+                    # dbc.DropdownMenuItem(dbc.NavLink(options_drop_navBar[options_navBar[2]][0]["label"],\
+                    #      href=options_drop_navBar[options_navBar[2]][0]["value"])),
                     dbc.DropdownMenuItem(html.A(children=[options_drop_navBar[options_navBar[2]][1]["label"]],
                                                 href=options_drop_navBar[options_navBar[2]][1]["value"])),
                     dbc.DropdownMenuItem(html.A(children=[options_drop_navBar[options_navBar[2]][2]["label"]],
@@ -131,4 +133,4 @@ footer = html.Div([
 # Containers for pages
 content = dbc.Container(
     [dcc.Location(id="url"), html.Div(id="page-content")], fluid=True)
-container = dbc.Container([content], fluid=True)
+container = dbc.Container([content], fluid=True, style={'overflow': "hidden"})

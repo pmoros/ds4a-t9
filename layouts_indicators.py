@@ -361,9 +361,8 @@ opt2 = dbc.Container(
                 layouts.get_board_header(
                     opt2_card1_title, opt2_card1_subtitle),
                 # Board 1 PLOT
-                dbc.Row([
+                dbc.Container([
                     # Board 1 Plot 1
-                    dbc.Col([
                         html.Div([
                             dcc.Dropdown(
                                 # Menu Year primer tablero
@@ -383,15 +382,12 @@ opt2 = dbc.Container(
                             ),
                         ],
                             # className=""
-                        )
+                        ),
                     ],
-                        xs={'size': 12},
-                        md={'size': 6}
-
-                    )
-                ]
+                fluid=True,
                 ),
-            ]),
+            ]
+            ),
             className="mb-3 main-board-subpage",
         ),
 

@@ -460,6 +460,39 @@ opt2 = dbc.Container(
             ]
             ),
             className="mb-3 main-board-subpage",
-        ),                
+        ),
+
+# ------CARD 4---------------
+        dbc.Card(
+            dbc.CardBody(children=[
+                # Card 4 header
+                layouts.get_board_header(
+                    opt2_card4_title, opt2_card4_subtitle),
+                # Board 4 PLOT
+                dbc.Container([
+                    #Board 4 Plot 1
+                    html.Div([
+                        dcc.Dropdown(
+                            placeholder="Select the year",
+                            options=opt2_card_options['opt2-board4-menu-year'],
+                            value=opt2_card_options['opt2-board4-menu-year'][0]['value'],
+                            id="opt2-board4-menu-year",
+                        ),
+                        html.P(opt2_card4_label, className="board-standard-label-graph"),
+                        #"my plot "
+                        dcc.Graph(
+                            id="opt2-board4-graph",
+                        )
+                    ],
+                        # className=""
+                    ),                  
+                ],
+                fluid=True,
+                ),
+
+            ]
+            ),
+            className="mb-3 main-board-subpage",
+        ),      
     ]
 )

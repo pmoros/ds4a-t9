@@ -153,9 +153,9 @@ def update_indicators_opt1_b1_g2(selected_locations):
 ,[
     Input("opt1-board2-menu-top-year", "value"),
 ])
-def update_indicators_opt1_b2_g1(selected_locations):
+def update_indicators_opt1_b2_g1(selected_year):
 
-    df_plot = data.df_tasa_ocupacion_hotelera[data.df_tasa_ocupacion_hotelera['AÑO'].isin(selected_locations)]
+    df_plot = data.df_tasa_ocupacion_hotelera[data.df_tasa_ocupacion_hotelera['AÑO'].isin([selected_year])]
     
     return px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO')
 
@@ -166,9 +166,9 @@ def update_indicators_opt1_b2_g1(selected_locations):
 ,[
     Input("opt1-board3-menu-top-year", "value"),
 ])
-def update_indicators_opt1_b3_g1(selected_locations):
+def update_indicators_opt1_b3_g1(selected_year):
 
-    df_plot = data.df_tasa_ocupacion_airbnb[data.df_tasa_ocupacion_airbnb['AÑO'].isin(selected_locations)]
+    df_plot = data.df_tasa_ocupacion_airbnb[data.df_tasa_ocupacion_airbnb['AÑO'].isin([selected_year])]
     
     return px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO')
 

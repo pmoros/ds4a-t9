@@ -142,9 +142,9 @@ def update_indicators_opt1_b1_g2(selected_locations):
     #df_plot = df_plot.groupby('SUBTEMA').mean().reset_index()
 
     fig=px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO'
-                    labels={"VALOR": "Valor (%)", "AÑO": "Año", "MES": "Mes"}
+                    #labels={"VALOR": "Valor (%)", "AÑO": "Año", "MES": "Mes"}
             )
-    fig.update_layout(legend_title="Año",transition_duration = 500)
+    #fig.update_layout(legend_title="Año",transition_duration = 500)
 
     return fig
 

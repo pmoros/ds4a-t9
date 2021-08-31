@@ -69,7 +69,7 @@ opt1_card2_label_top = "Average hotel occupancy rate in selected years"
 opt1_card2_label_bottom = "Comparison of the hotel occupancy rate among the selected years"
 
 #Pass options to the menus ---- Card2
-card2_menu_top_year = data.df_airbnb_homeway['AÑO'].unique()
+card2_menu_top_year = data.df_tasa_ocupacion_airbnb['AÑO'].unique()
 opt1_card_options['opt1-board2-menu-top-year'] = list(map(layouts.create_options_dropdown, card2_menu_top_year))
 
 # --------Card 3 ------

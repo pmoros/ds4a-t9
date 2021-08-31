@@ -138,15 +138,12 @@ def update_indicators_opt1_b1_g1(selected_year):
     Input("opt1-board1-row1-menu-right-location", "value"),
 ])
 def update_indicators_opt1_b1_g2(selected_locations):
-    df_plot = data.df_tasa_ocupacion_airbnb[data.df_tasa_ocupacion_airbnb['AÑO'].isin(selected_locations)]
-    #df_plot = df_plot.groupby('SUBTEMA').mean().reset_index()
+    #Sample plot, THE PLOT IS WRONG, but its used for illustration
+    df_plot = data.df_airbnb_homeway[data.df_airbnb_homeway['SUBTEMA'].isin(selected_locations)]
+    df_plot = df_plot.groupby('SUBTEMA').mean().reset_index()
 
-    fig=px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO'
-                    #labels={"VALOR": "Valor (%)", "AÑO": "Año", "MES": "Mes"}
-            )
-    #fig.update_layout(legend_title="Año",transition_duration = 500)
+    return px.bar(df_plot, x='SUBTEMA', y='VALOR')
 
-    return fig
 
 #Indicators-> ACCOMMODATION (option 1) -> BOARD 2 -> GRAPH 1 (TOP)
 @app.callback(
@@ -155,11 +152,16 @@ def update_indicators_opt1_b1_g2(selected_locations):
     Input("opt1-board2-menu-top-year", "value"),
 ])
 def update_indicators_opt1_b2_g1(selected_locations):
-    #Sample plot, THE PLOT IS WRONG, but its used for illustration
-    #df_plot = data.df_airbnb_homeway[data.df_airbnb_homeway['SUBTEMA'].isin(selected_locations)]
-    df_plot = data.df_airbnb_homeway.groupby('SUBTEMA').mean().reset_index()
 
-    return px.bar(df_plot, x='SUBTEMA', y='VALOR')
+    df_plot = data.df_tasa_ocupacion_airbnb[data.df_tasa_ocupacion_airbnb['AÑO'].isin(selected_locations)]
+    
+    fig=px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO'
+                    #labels={"VALOR": "Valor (%)", "AÑO": "Año", "MES": "Mes"}
+            )
+    #fig.update_layout(legend_title="Año",transition_duration = 500)
+
+    return fig
+
 
 #-----------Travelers - OPT1 (WHO THEY ARE) -----------------------
 

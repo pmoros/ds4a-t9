@@ -207,7 +207,7 @@ def update_indicators_opt2_b2_g1(selected_item):
     df_plot = data.df_conect_internacional[data.df_conect_internacional['SUBTEMA'] == selected_item]
     variable = df_plot['VARIABLE'].iloc[0]
     
-    fig = px.bar(df_plot, x='AÑO', y='VALOR', color='AÑO'
+    fig = px.bar(df_plot, x='AÑO', y='VALOR', color='AÑO',
              labels={
                 "VALOR": variable, "AÑO": "Year"
             },

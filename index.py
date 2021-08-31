@@ -92,7 +92,7 @@ navBar = dbc.NavbarSimple(
                 label=options_navBar[2],
                 children=[
                     dbc.DropdownMenuItem(html.A(children=[options_drop_navBar[options_navBar[2]][0]["label"]],
-                                                href=options_drop_navBar[options_navBar[2]][0]["label"])),
+                                                href=options_drop_navBar[options_navBar[2]][0]["value"])),
                     # dbc.DropdownMenuItem(dbc.NavLink(options_drop_navBar[options_navBar[2]][0]["label"],\
                     #      href=options_drop_navBar[options_navBar[2]][0]["value"])),
                     dbc.DropdownMenuItem(html.A(children=[options_drop_navBar[options_navBar[2]][1]["label"]],

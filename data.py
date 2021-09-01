@@ -46,15 +46,12 @@ df_conect_internacional = df_conect_internacional.drop(["TEMA","CLASE","FUENTE",
 
 df_gen_empleo_turismo = df_indicadores_turismo.copy()
 df_gen_empleo_turismo = df_gen_empleo_turismo[df_gen_empleo_turismo["TEMA"] == "Generación de empleo turismo"]
-df_gen_empleo_turismo["MES"] = df_gen_empleo_turismo['MES'].map(str)
-df_gen_empleo_turismo["MES"] = df_gen_empleo_turismo["MES"].replace({"nan": ""})
-df_gen_empleo_turismo['SUBTEMA2'] = df_gen_empleo_turismo['SUBTEMA'].map(str) + " " + df_gen_empleo_turismo['MES']
-df_gen_empleo_turismo["SUBTEMA2"] = df_gen_empleo_turismo["SUBTEMA2"].replace({"Empleo Turismo Bogotá TRIM I": "Empleo Turismo Bogotá Trimestral"})
-df_gen_empleo_turismo["SUBTEMA2"] = df_gen_empleo_turismo["SUBTEMA2"].replace({"Empleo Turismo Bogotá TRIM II": "Empleo Turismo Bogotá Trimestral"})
-df_gen_empleo_turismo["SUBTEMA2"] = df_gen_empleo_turismo["SUBTEMA2"].replace({"Empleo Turismo Bogotá TRIM III": "Empleo Turismo Bogotá Trimestral"})
-df_gen_empleo_turismo["SUBTEMA2"] = df_gen_empleo_turismo["SUBTEMA2"].replace({"Empleo Turismo Bogotá TRIM IV": "Empleo Turismo Bogotá Trimestral"})
-df_gen_empleo_turismo['VALOR'] = df_gen_empleo_turismo['VALOR'].str.rstrip('%').astype(float)
 df_gen_empleo_turismo = df_gen_empleo_turismo.drop(["TEMA","CLASE","FUENTE"], axis=1)
+df_gen_empleo_turismo['VALOR'] = df_gen_empleo_turismo['VALOR'].str.rstrip('%').astype(float)
+
+df_gen_empleo_turismo = df_gen_empleo_turismo[df_gen_empleo_turismo["MES"]==""]
+
+df_gen_empleo_turismo2 = df_gen_empleo_turismo[df_gen_empleo_turismo["MES"]!=""]
 
 #----------Índice de Competitividad Turística Regional----------
 

@@ -297,6 +297,7 @@ def update_indicators_opt3_b1_g1(selected_year):
     df_plot = data.df_pib[data.df_pib['AÑO'].isin(selected_year)]
     
     fig = px.line(df_plot, x='AÑO', y='VALOR', color='CLASE', line_group='CLASE',
+             category_orders={"CLASE":["Subsector: Alojamiento y comida","Sector: Alojamiento y comida"]},
              labels={
                 'VALOR': "GDP (%)", 'AÑO': "Year", 'CLASE': ""
             },
@@ -304,6 +305,26 @@ def update_indicators_opt3_b1_g1(selected_year):
             )
     fig.update_traces(mode='markers+lines')
     
+    return fig
+
+#Indicators-> ECONOMIC -> BOARD 2 -> GRAPH 1
+@app.callback(
+    Output("opt3-board2-graph-top", "figure")
+,[
+    Input("opt3-board2-menu-top-year", "value"),
+])
+def update_indicators_opt3_b2_g1(selected_item):
+    
+    df_plot = data.df_gen_empleo_turismo[data.df_gen_empleo_turismo['SUBTEMA'] == selected_item]
+    
+    fig = px.line(df_plot, x='AÑO', y='VALOR', color='VARIABLE', line_group='VARIABLE',
+             labels={
+                'VALOR': "Jobs", 'AÑO': "Year",
+            },
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
+            )
+    fig.update_traces(mode='markers+lines')
+    fig.update_layout(legend_title="Category")
     return fig
 
 #-----------Travelers - OPT1 (WHO THEY ARE) -----------------------

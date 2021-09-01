@@ -284,6 +284,28 @@ def update_indicators_opt2_b4_g1(selected_item):
     
     return fig 
 
+#-----------Indicadores (OPT3 [ECONOMIC]) -----------------------
+
+#Indicators-> ECONOMIC -> BOARD 1 -> GRAPH 1
+@app.callback(
+    Output("opt3-board1-graph", "figure")
+,[
+    Input("opt3-board1-menu-year", "value"),
+])
+def update_indicators_opt3_b1_g1(selected_year):
+    selected_year = [int(x) for x in selected_year]
+    df_plot = data.df_pib[data.df_pib['AÑO'].isin(selected_year)]
+    
+    fig = px.line(df_plot, x='AÑO', y='VALOR', color='CLASE', line_group='CLASE',
+             labels={
+                'VALOR': "GDP (%)", 'AÑO': "Year", 'CLASE': ""
+            },
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
+
+            )
+    fig.update_traces(mode='markers+lines')
+    
+    return fig
 
 #-----------Travelers - OPT1 (WHO THEY ARE) -----------------------
 

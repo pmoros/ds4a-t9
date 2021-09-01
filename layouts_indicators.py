@@ -582,7 +582,7 @@ opt3 = dbc.Container(
                                     # Menu Year segundo tablero
                                     placeholder="Select the year",
                                     options=opt3_card_options['opt3-board2-menu-bottom-year'],
-                                    value=opt3_card_options['opt3-board2-menu-bottom-year'][0]['value'],
+                                    value=[opt3_card_options['opt3-board2-menu-bottom-year'][0]['value']],
                                     id="opt3-board2-menu-bottom-year",
                                     multi=True,
                                 )

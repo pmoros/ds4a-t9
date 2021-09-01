@@ -319,7 +319,7 @@ def update_indicators_opt3_b2_g1(selected_item):
 
     fig = px.line(df_plot, x='AÑO', y='VALOR', color='VARIABLE', line_group='VARIABLE',
              labels={
-                'VALOR': "Jobs", 'AÑO': "Year",
+                'VALOR': "Jobs", 'AÑO': "Year"
             },
             color_discrete_sequence=COLOR_PALETTE_DISCRETE,
             )

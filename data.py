@@ -1,6 +1,11 @@
 import pandas as pd
+import plotly.express as px
 
 import wrangler
+
+
+COLOR_PALETTE_DISCRETE = px.colors.qualitative.T10
+COLOR_PALETTE_CONTINUOUS = "Darkmint"
 
 # ------ Databases load -----------
 databases = wrangler.read__file_databases()
@@ -125,3 +130,33 @@ df_tasa_ocupacion_hotelera['MES'] = df_tasa_ocupacion_hotelera['MES'].map(str)
 df_tasa_ocupacion_hotelera = df_tasa_ocupacion_hotelera.query("MES!='nan'")
 df_tasa_ocupacion_hotelera['AÑO-MES'] = df_tasa_ocupacion_hotelera['AÑO'].map(str) + "-" + df_tasa_ocupacion_hotelera['MES']
 df_tasa_ocupacion_hotelera['VALOR'] = df_tasa_ocupacion_hotelera['VALOR'].str.rstrip('%').astype(float)
+
+
+#-----------Static graphs (figures) ------------
+def get_indicators_opt3_b1_g1():
+    df_plot = df_pib
+
+    fig = px.line(df_plot, x='AÑO', y='VALOR', color='CLASE', line_group='CLASE',
+             category_orders={"CLASE":["Subsector: Alojamiento y comida","Sector: Alojamiento y comida"]},
+             labels={
+                'VALOR': "GDP (%)", 'AÑO': "Year", 'CLASE': ""
+            },
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
+            )
+    fig.update_traces(mode='markers+lines')
+
+    return fig
+
+
+#Indicators-> SIGHTSEEING -> BOARD 4 -> GRAPH 1
+def get_indicators_opt4_b4_g1():
+    df_plot = df_indice_presion_turistica
+
+    fig = px.line(df_plot, x='AÑO', y='VALOR',
+             labels={
+                'VALOR': "Value", 'AÑO': "Year"
+            },
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
+            )
+
+    return fig    

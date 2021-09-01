@@ -286,27 +286,6 @@ def update_indicators_opt2_b4_g1(selected_item):
 
 #-----------Indicadores (OPT3 [ECONOMIC]) -----------------------
 
-#Indicators-> ECONOMIC -> BOARD 1 -> GRAPH 1
-@app.callback(
-    Output("opt3-board1-graph", "figure")
-,[
-    Input("opt3-board1-menu-year", "value"),
-])
-def update_indicators_opt3_b1_g1(selected_year):
-    selected_year = [int(x) for x in selected_year]
-    df_plot = data.df_pib[data.df_pib['AÑO'].isin(selected_year)]
-
-    fig = px.line(df_plot, x='AÑO', y='VALOR', color='CLASE', line_group='CLASE',
-             category_orders={"CLASE":["Subsector: Alojamiento y comida","Sector: Alojamiento y comida"]},
-             labels={
-                'VALOR': "GDP (%)", 'AÑO': "Year", 'CLASE': ""
-            },
-            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
-            )
-    fig.update_traces(mode='markers+lines')
-
-    return fig
-
 #Indicators-> ECONOMIC -> BOARD 2 -> GRAPH 1
 @app.callback(
     Output("opt3-board2-graph-top", "figure")
@@ -427,25 +406,7 @@ def update_indicators_opt4_b3_g1(selected_year):
     fig.update_yaxes(showline=True, linewidth=2, linecolor='black', mirror=True)
 
     return fig
-
-#Indicators-> SIGHTSEEING -> BOARD 4 -> GRAPH 1
-@app.callback(
-    Output("opt4-board4-graph", "figure")
-,[
-    Input("opt4-board4-menu-year", "value"),
-])
-def update_indicators_opt4_b4_g1(selected_year):
-    selected_year = [int(x) for x in selected_year]
-    df_plot = data.df_indice_presion_turistica[data.df_indice_presion_turistica['AÑO'].isin(selected_year)]
-
-    fig = px.line(df_plot, x='AÑO', y='VALOR',
-             labels={
-                'VALOR': "Value", 'AÑO': "Year"
-            },
-            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
-            )
-
-    return fig
+    
 
 #-----------Travelers - OPT1 (WHO THEY ARE) -----------------------
 

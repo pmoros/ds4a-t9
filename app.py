@@ -330,9 +330,9 @@ def update_indicators_opt3_b2_g2(selected_year):
 
 #Indicators-> SIGHTSEEING -> BOARD 1 -> GRAPH 1
 @app.callback(
-    Output("opt4-board2-graph", "figure")
+    Output("opt4-board1-graph", "figure")
 ,[
-    Input("opt4-board2-menu-year", "value"),
+    Input("opt4-board1-menu-year", "value"),
 ])
 def update_indicators_opt4_b1_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
@@ -406,7 +406,7 @@ def update_indicators_opt4_b3_g1(selected_year):
     fig.update_yaxes(showline=True, linewidth=2, linecolor='black', mirror=True)
 
     return fig
-    
+
 
 #-----------Travelers - OPT1 (WHO THEY ARE) -----------------------
 

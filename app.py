@@ -327,6 +327,26 @@ def update_indicators_opt3_b2_g1(selected_item):
     fig.update_layout(legend_title="Category")
     return fig
 
+#Indicators-> ECONOMIC -> BOARD 2 -> GRAPH 2
+@app.callback(
+    Output("opt3-board2-graph-bottom", "figure")
+,[
+    Input("opt3-board2-menu-bottom-year", "value"),
+])
+def update_indicators_opt3_b2_g2(selected_year):
+    selected_year = [int(x) for x in selected_year]
+    df_plot = data.df_gen_empleo_turismo2[data.df_gen_empleo_turismo2['AÑO'].isin(selected_year)]
+   
+    fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO',
+             labels={
+                'VALOR': "Jobs", 'AÑO': "Year",
+            },
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
+            )
+    fig.update_traces(mode='markers+lines')
+
+    return fig
+
 #-----------Travelers - OPT1 (WHO THEY ARE) -----------------------
 
 #THIS IS A TEST GRAPH!!!!!

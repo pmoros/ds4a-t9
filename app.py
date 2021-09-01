@@ -326,7 +326,7 @@ def update_indicators_opt3_b2_g1(selected_item):
     fig.update_traces(mode='markers+lines')
     fig.update_layout(legend_title="Category")
     return fig
-
+-
 #Indicators-> ECONOMIC -> BOARD 2 -> GRAPH 2
 @app.callback(
     Output("opt3-board2-graph-bottom", "figure")
@@ -344,6 +344,106 @@ def update_indicators_opt3_b2_g2(selected_year):
             color_discrete_sequence=COLOR_PALETTE_DISCRETE,
             )
     fig.update_traces(mode='markers+lines')
+
+    return fig
+
+#-----------Indicadores (OPT4 [SIGHTSEEING]) -----------------------
+
+#Indicators-> SIGHTSEEING -> BOARD 1 -> GRAPH 1
+@app.callback(
+    Output("opt4-board2-graph", "figure")
+,[
+    Input("opt4-board2-menu-year", "value"),
+])
+def update_indicators_opt4_b1_g1(selected_year):
+    selected_year = [int(x) for x in selected_year]
+    df_plot = data.df_cert_turismo_sostenible[data.df_cert_turismo_sostenible['AÑO'].isin(selected_year)]
+   
+    fig = px.bar(df_plot, x='VARIABLE', y='VALOR', color='VARIABLE',
+             labels={
+                'VARIABLE': "Establishment Type", 'VALOR': "Total",
+            },
+            color_continuous_scale=COLOR_PALETTE_CONTINUOUS,
+            )
+
+    return fig
+
+#Indicators-> SIGHTSEEING -> BOARD 2 -> GRAPH 1
+@app.callback(
+    Output("opt4-board2-graph-top", "figure")
+,[
+    Input("opt4-board2-menu-top-year", "value"),
+])
+def update_indicators_opt4_b2_g1(selected_item):
+
+    df_plot = data.df_prest_servicios_turisticos1[data.df_prest_servicios_turisticos1['SUBTEMA'].isin(selected_item)]
+   
+    fig = px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA'
+             labels={
+                'VALOR': "Total", 'AÑO': "Year", 'SUBTEMA': "Provider"
+            },
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
+            )
+
+    return fig
+
+#Indicators-> SIGHTSEEING -> BOARD 2 -> GRAPH 2
+@app.callback(
+    Output("opt4-board2-graph-bottom", "figure")
+,[
+    Input("opt4-board2-menu-bottom-year", "value"),
+])
+def update_indicators_opt4_b2_g2(selected_item):
+
+    df_plot = data.df_prest_servicios_turisticos2[data.df_prest_servicios_turisticos2['SUBTEMA'].isin(selected_item)]
+   
+    fig = px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA'
+             labels={
+                'VALOR': "Total", 'AÑO': "Year", 'SUBTEMA': "Provider"
+            },
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
+            )
+
+    return fig
+
+#Indicators-> SIGHTSEEING -> BOARD 3 -> GRAPH 1
+@app.callback(
+    Output("opt4-board3-graph", "figure")
+,[
+    Input("opt4-board3-menu-year", "value"),
+])
+def update_indicators_opt4_b3_g1(selected_year):
+    selected_year = [int(x) for x in selected_year]
+    df_plot = data.df_indice_competitividad_turistica[data.df_indice_competitividad_turistica['AÑO'].isin(selected_year)]
+
+    fig = px.bar_polar(df_plot, r='VALOR', theta='VARIABLE', color='AÑO', template='plotly_white'
+             labels={
+                'VALOR': "Indice", 'AÑO': "Year", 'VARIABLE': "Category"
+            },
+            color_continuous_scale=COLOR_PALETTE_CONTINUOUS,
+            )
+    
+    fig.update_xaxes(showline=True, linewidth=2, linecolor='black', mirror=True)
+    fig.update_yaxes(showline=True, linewidth=2, linecolor='black', mirror=True)
+
+    return fig
+
+#Indicators-> SIGHTSEEING -> BOARD 4 -> GRAPH 1
+@app.callback(
+    Output("opt4-board4-graph", "figure")
+,[
+    Input("opt4-board4-menu-year", "value"),
+])
+def update_indicators_opt4_b4_g1(selected_year):
+    selected_year = [int(x) for x in selected_year]
+    df_plot = data.df_indice_presion_turistica[data.df_indice_presion_turistica['AÑO'].isin(selected_year)]
+   
+    fig = px.line(df_plot, x='AÑO', y='VALOR',
+             labels={
+                'VALOR': "Value", 'AÑO': "Year"
+            },
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
+            )
 
     return fig
 

@@ -49,9 +49,9 @@ df_gen_empleo_turismo = df_gen_empleo_turismo[df_gen_empleo_turismo["TEMA"] == "
 df_gen_empleo_turismo = df_gen_empleo_turismo.drop(["TEMA","CLASE","FUENTE"], axis=1)
 df_gen_empleo_turismo['VALOR'] = df_gen_empleo_turismo['VALOR'].str.rstrip('%').astype(float)
 
-df_gen_empleo_turismo = df_gen_empleo_turismo[df_gen_empleo_turismo["MES"]==""]
+df_gen_empleo_turismo2 = df_gen_empleo_turismo[df_gen_empleo_turismo["MES"].notnull()]
 
-df_gen_empleo_turismo2 = df_gen_empleo_turismo[df_gen_empleo_turismo["MES"]!=""]
+df_gen_empleo_turismo = df_gen_empleo_turismo[df_gen_empleo_turismo["MES"].isnull()]
 
 #----------Índice de Competitividad Turística Regional----------
 

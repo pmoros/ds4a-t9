@@ -1,5 +1,12 @@
 import pandas as pd
 
+# Plotly graph objects to render graph plots
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+import plotly.express as px
+
+#import requests
+import json
 import wrangler
 
 # ------ Databases load -----------
@@ -8,9 +15,49 @@ databases = wrangler.read__file_databases()
 df_viajeros = databases[wrangler.DATABASE_NAMES[0]]
 df_indicadores_turismo = databases[wrangler.DATABASE_NAMES[1]]
 
-# ------- Model related code -------------
+# ------- Model related code -----------------------------------------
 
-#----------Indicadores----------
+#----------Travelers-----------------------------------
+
+#------Data sources-----
+# geojson_col = requests.get("https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/colombia.geojson")
+# geojson_col = geojson_col.json()
+col_path = "assets/colombia.geojson"
+with open(col_path) as geo:
+    geojson_col = json.loads(geo.read())
+
+
+df_viajeros_nacional = df_viajeros[df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
+
+def viajeros_region_nacional_plot(years, months):
+    global df_viajeros_nacional
+    global geojson_col
+
+    years = [int(x) for x in years]
+    db_viajeros_nacional_filtered = df_viajeros_nacional[df_viajeros_nacional['AÑO'].isin(years)]
+    db_viajeros_nacional_filtered = db_viajeros_nacional_filtered[db_viajeros_nacional_filtered['MES'].isin(months)]
+    
+    plot_data = db_viajeros_nacional_filtered.groupby('ORIGEN').sum().reset_index()
+    
+
+    
+    my_plot = px.choropleth_mapbox(
+    plot_data,
+    locations="ORIGEN",
+    color="VIAJEROS",
+    geojson=geojson_col,
+    zoom=4,
+    featureidkey="properties.NOMBRE_DPT",
+    mapbox_style="carto-positron",
+    center={"lat": 4.1000, "lon": -72.9089},
+    color_continuous_scale="Viridis",
+    opacity=0.5, 
+    title="National travelers by region"
+    )
+    
+    return my_plot
+
+#----------Indicators----------------------------------
 
 #----------Airbnb & Homeaway----------
 

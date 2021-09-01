@@ -123,6 +123,17 @@ opt1_card_options = {}
 opt1_card1_title = "Where do the travelers who visit Bogotá come from?"
 opt1_card1_subtitle = "Get to know the number of travelers that visit Bogotá city by origin"
 
+#Pass options to the menus ---- Card1
+
+#Loading years
+card1_menu_year = data.df_viajeros['AÑO'].unique()
+opt1_card_options['board1-menu-year'] = list(map(layouts.create_options_dropdown, card1_menu_year))
+
+#Loading months
+card1_menu_month = data.df_viajeros['MES'].unique()
+opt1_card_options['board1-menu-month'] = list(map(layouts.create_options_dropdown, card1_menu_month))
+
+
 # --------Card 2 ------
 opt1_card2_title = "How old are the travelers?"
 opt1_card2_subtitle = "Get to know the number of travelers that visit Bogotá city by age"
@@ -435,6 +446,9 @@ opt1 = dbc.Container(
                         html.Div([
                             dcc.Dropdown(
                                 # Menu Year Board 1
+                                options=opt1_card_options['board1-menu-year'],
+                                #BE AWARE OF SQUARE BRACKETS IN MULTI DROPDOWNS
+                                value=[opt1_card_options['board1-menu-year'][0]['value']],
                                 placeholder="Select the year",
                                 id="board1-menu-year",
                                 multi=True,
@@ -449,6 +463,8 @@ opt1 = dbc.Container(
                         html.Div([
                             dcc.Dropdown(
                                 # Menu Month segundo tablero
+                                options=opt1_card_options['board1-menu-month'],
+                                value=[opt1_card_options['board1-menu-month'][0]['value']],
                                 placeholder="Select the month",
                                 id="board1-menu-month",
                                 multi=True,
@@ -842,7 +858,7 @@ opt2_main_board_icons['expense'] = "https://ds4a-team9-idt.s3.us-east-2.amazonaw
 # --------------Cards that will be displayed
 
 #Card options for the user
-opt1_card_options = {}
+opt2_card_options = {}
 
 # --------Card 1 ------
 opt2_card1_title = "What is the trip purpose?"
@@ -859,8 +875,6 @@ opt2_card2_label_top = "Tourist attractions that travelers visited in the select
 opt2_card2_label_bottom = "Comparison of the reason for travel of travelers who visited Bogotá according to their origin"
 
 
-#Pass options to the menus ---- Card2
-#card2_menu_right_origin = data.df_viajeros
 
 
 # --------Card 3 ------

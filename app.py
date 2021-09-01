@@ -18,7 +18,6 @@ import layouts_viajeros
 import layouts_indicators
 
 import data
-import plotly.express as px
 
 # Alternative 1
 MAIN_COLOR_SELECTOR = "#6C7BC4"
@@ -289,6 +288,7 @@ def update_indicators_opt2_b4_g1(selected_item):
 
 #THIS IS A TEST GRAPH!!!!!
 #------------- BOARD 1 -------------------
+
 #Travelers -> OPT1 -> BOARD 1 -> GRAPH 1 (LEFT)
 @app.callback(
     Output("opt1-board1-graph-left", "figure")
@@ -297,7 +297,7 @@ def update_indicators_opt2_b4_g1(selected_item):
     Input("viajeros-selector-international", "n_clicks_timestamp"),
     Input("viajeros-selector-both", "n_clicks_timestamp")
 ])
-def update_indicators_opt1_b1_g2(national_bt, international_bt, both_bt):
+def update_travelers_opt1_b1_g2(national_bt, international_bt, both_bt):
     # USING TYPE OF TOURIST FILTER
     if int(national_bt) > int(international_bt) and int(national_bt) > int(both_bt):
         category = "TURISTAS NACIONALES"
@@ -320,6 +320,38 @@ def update_indicators_opt1_b1_g2(national_bt, international_bt, both_bt):
 
     #CREATION OF THE PLOT + RETURN OF IT
     return px.bar(df_plot, x='TEMA', y='VIAJEROS')
+
+
+#Travelers -> OPT1 -> BOARD 1 -> GRAPH 1 (LEFT)
+@app.callback(
+    Output("opt1-board1-graph-right", "figure")
+,[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+    Input("viajeros-selector-both", "n_clicks_timestamp"),
+    #DANGER: THE YEAR/MONTH BUTTON SHOULD TAKE VALUES BASED ON THE ORIGIN
+    Input("board1-menu-year", "value"),
+    Input("board1-menu-month", "value")
+])
+def update_travelers_opt1_b1_g2(national_bt, international_bt, both_bt, years, months):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt) and int(national_bt) > int(both_bt):
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt) and int(international_bt) > int(both_bt):
+        category = "TURISTAS INTERNACIONALES"
+    elif int(both_bt) > int(national_bt) and int(both_bt) > int(international_bt):
+        category = "BOTH"
+
+    #Creating the right graph
+    if category == "TURISTAS NACIONALES":
+        my_plot = data.viajeros_region_nacional_plot(years, months)
+    elif category == "TURISTAS INTERNACIONALES":
+        pass
+    else:
+        pass
+
+    return my_plot
 
 #------------------ BOARD 2 ----------------
 

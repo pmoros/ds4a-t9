@@ -667,8 +667,8 @@ opt4_card4_subtitle = "Discover the index of tourist pressure of the city. This 
 opt4_card4_label = "Tourist pressure index"
 
 #Pass options to the menus ---- Card4
-#card4_menu_year = data.df_indice_presion_turistica['AÑO'].unique()
-#opt4_card_options['opt4-board4-menu-year'] = list(map(layouts.create_options_dropdown, card4_menu_year))
+card4_menu_year = data.df_indice_presion_turistica['AÑO'].unique()
+opt4_card_options['opt4-board4-menu-year'] = list(map(layouts.create_options_dropdown, card4_menu_year))
 
 #-------------OPT4 Container--------------
 opt4 = dbc.Container(

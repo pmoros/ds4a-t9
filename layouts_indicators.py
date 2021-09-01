@@ -647,10 +647,10 @@ opt4_card2_label_bottom = "Tourism service providers"
 
 #Pass options to the menus ---- Card2
 card2_menu_top_year = data.df_prest_servicios_turisticos1['SUBTEMA'].unique()
-opt4_card_options['opt4-board2-menu-top_year'] = list(map(layouts.create_options_dropdown, card2_menu_top_year))
+opt4_card_options['opt4-board2-menu-top-year'] = list(map(layouts.create_options_dropdown, card2_menu_top_year))
 
 card2_menu_bottom_year = data.df_prest_servicios_turisticos2['SUBTEMA'].unique()
-opt4_card_options['opt4-board2-menu-bottom_year'] = list(map(layouts.create_options_dropdown, card2_menu_bottom_year))
+opt4_card_options['opt4-board2-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card2_menu_bottom_year))
 
 # --------Card 3 ------
 opt4_card3_title = "Regional Travel & Tourism Competitiveness Index (RTTCI)"

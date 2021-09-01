@@ -467,7 +467,7 @@ opt2 = dbc.Container(
 )
 
 # --- Layout OPT3 (INDICATORS) ----------------------------
-
+'''
 opt3_title = ["Get to know some ", "ECONOMIC",
               "indicators"]
 
@@ -609,6 +609,6 @@ opt3 = dbc.Container(
             ),
             className="mb-3 main-board-subpage",
         ),                
-                   
+  '''                 
     ]
 )

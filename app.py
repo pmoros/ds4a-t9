@@ -107,9 +107,9 @@ def display_page(pathname):
     elif pathname.endswith(options_drop_navBar[options_navBar[1]][0]["value"]):
         return layouts_viajeros.opt1
     elif pathname.endswith(options_drop_navBar[options_navBar[1]][1]["value"]):
-        return layouts_viajeros.opt2        
+        return layouts_viajeros.opt2
     elif pathname.endswith(options_drop_navBar[options_navBar[2]][0]["value"]):
-        return layouts_indicators.opt1      
+        return layouts_indicators.opt1
     elif pathname.endswith(options_drop_navBar[options_navBar[2]][1]["value"]):
         return layouts_indicators.opt2
     elif pathname.endswith(options_drop_navBar[options_navBar[2]][2]["value"]):
@@ -164,7 +164,7 @@ def update_indicators_opt1_b1_g2(selected_locations):
 def update_indicators_opt1_b2_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
     df_plot = data.df_tasa_ocupacion_hotelera[data.df_tasa_ocupacion_hotelera['AÑO'].isin(selected_year)]
-    
+
     fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO',
              labels={
                 'VALOR': "Value (%)", 'AÑO': "Year", 'MES': "Month"
@@ -172,7 +172,7 @@ def update_indicators_opt1_b2_g1(selected_year):
             color_discrete_sequence=COLOR_PALETTE_DISCRETE,
 
             )
-    
+
     return fig
 
 #Indicators-> ACCOMMODATION (option 1) -> BOARD 3 -> GRAPH 1 (TOP)
@@ -184,7 +184,7 @@ def update_indicators_opt1_b2_g1(selected_year):
 def update_indicators_opt1_b3_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
     df_plot = data.df_tasa_ocupacion_airbnb[data.df_tasa_ocupacion_airbnb['AÑO'].isin(selected_year)]
-    
+
     fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO',
              labels={
                 'VALOR': "Value (%)", 'AÑO': "Year", 'MES': "Month"
@@ -192,7 +192,7 @@ def update_indicators_opt1_b3_g1(selected_year):
             color_discrete_sequence=COLOR_PALETTE_DISCRETE,
 
             )
-    
+
     return fig
 
 #-----------Indicadores (OPT2 [CONNECTIVITY]) -----------------------
@@ -206,7 +206,7 @@ def update_indicators_opt1_b3_g1(selected_year):
 def update_indicators_opt2_b1_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
     df_plot = data.df_bigdata[data.df_bigdata['AÑO'].isin(selected_year)]
-    
+
     fig = px.bar(df_plot, x='SUBTEMA', y='VALOR', color='VARIABLE', facet_col='AÑO',
              labels={
                 'SUBTEMA': "Country",  'AÑO': "Year", 'VALOR': "Total"
@@ -215,7 +215,7 @@ def update_indicators_opt2_b1_g1(selected_year):
 
             )
     fig.update_layout(legend_title="Category")
-    
+
     return fig
 
 
@@ -229,7 +229,7 @@ def update_indicators_opt2_b2_g1(selected_item):
 
     df_plot = data.df_conect_internacional[data.df_conect_internacional['SUBTEMA'] == selected_item]
     variable = df_plot['VARIABLE'].iloc[0]
-    
+
     fig = px.bar(df_plot, x='AÑO', y='VALOR', color='AÑO',
              labels={
                 'VALOR': variable, 'AÑO': "Year"
@@ -237,7 +237,7 @@ def update_indicators_opt2_b2_g1(selected_item):
              color_continuous_scale=COLOR_PALETTE_CONTINUOUS,
             )
     fig.update_layout(legend_title="Continent")
-    
+
     return fig
 
 
@@ -251,16 +251,16 @@ def update_indicators_opt2_b3_g1(selected_item):
 
     df_plot = data.df_turismo_internacional[data.df_turismo_internacional['VARIABLE'] == selected_item]
     clase = df_plot['CLASE'].iloc[0]
-    
+
     fig = px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA',
              labels={
                 'VALOR': clase, 'AÑO': "Year"
-            },    
-            color_discrete_sequence=COLOR_PALETTE_DISCRETE, 
+            },
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
             )
     fig.update_layout(legend_title="Continent")
-    
-    return fig 
+
+    return fig
 
 
 #Indicators-> CONNECTIVITY -> BOARD 4 -> GRAPH 1
@@ -276,13 +276,13 @@ def update_indicators_opt2_b4_g1(selected_item):
     fig = px.area(df_plot, x='AÑO', y='VALOR', color='CLASE', line_group='CLASE',
              labels={
                 'VALOR': "Value", 'AÑO': "Year"
-            }, 
+            },
             color_discrete_sequence=COLOR_PALETTE_DISCRETE,
 
             )
     fig.update_layout(legend_title="Category")
-    
-    return fig 
+
+    return fig
 
 #-----------Indicadores (OPT3 [ECONOMIC]) -----------------------
 
@@ -295,7 +295,7 @@ def update_indicators_opt2_b4_g1(selected_item):
 def update_indicators_opt3_b1_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
     df_plot = data.df_pib[data.df_pib['AÑO'].isin(selected_year)]
-    
+
     fig = px.line(df_plot, x='AÑO', y='VALOR', color='CLASE', line_group='CLASE',
              category_orders={"CLASE":["Subsector: Alojamiento y comida","Sector: Alojamiento y comida"]},
              labels={
@@ -304,7 +304,7 @@ def update_indicators_opt3_b1_g1(selected_year):
             color_discrete_sequence=COLOR_PALETTE_DISCRETE,
             )
     fig.update_traces(mode='markers+lines')
-    
+
     return fig
 
 #Indicators-> ECONOMIC -> BOARD 2 -> GRAPH 1
@@ -314,9 +314,9 @@ def update_indicators_opt3_b1_g1(selected_year):
     Input("opt3-board2-menu-top-year", "value"),
 ])
 def update_indicators_opt3_b2_g1(selected_item):
-    
+
     df_plot = data.df_gen_empleo_turismo[data.df_gen_empleo_turismo['SUBTEMA'] == selected_item]
-    
+
     fig = px.line(df_plot, x='AÑO', y='VALOR', color='VARIABLE', line_group='VARIABLE',
              labels={
                 'VALOR': "Jobs", 'AÑO': "Year",
@@ -326,7 +326,7 @@ def update_indicators_opt3_b2_g1(selected_item):
     fig.update_traces(mode='markers+lines')
     fig.update_layout(legend_title="Category")
     return fig
--
+
 #Indicators-> ECONOMIC -> BOARD 2 -> GRAPH 2
 @app.callback(
     Output("opt3-board2-graph-bottom", "figure")
@@ -336,7 +336,7 @@ def update_indicators_opt3_b2_g1(selected_item):
 def update_indicators_opt3_b2_g2(selected_year):
     selected_year = [int(x) for x in selected_year]
     df_plot = data.df_gen_empleo_turismo2[data.df_gen_empleo_turismo2['AÑO'].isin(selected_year)]
-   
+
     fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO',
              labels={
                 'VALOR': "Jobs", 'AÑO': "Year",
@@ -358,7 +358,7 @@ def update_indicators_opt3_b2_g2(selected_year):
 def update_indicators_opt4_b1_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
     df_plot = data.df_cert_turismo_sostenible[data.df_cert_turismo_sostenible['AÑO'].isin(selected_year)]
-   
+
     fig = px.bar(df_plot, x='VARIABLE', y='VALOR', color='VARIABLE',
              labels={
                 'VARIABLE': "Establishment Type", 'VALOR': "Total",
@@ -377,8 +377,8 @@ def update_indicators_opt4_b1_g1(selected_year):
 def update_indicators_opt4_b2_g1(selected_item):
 
     df_plot = data.df_prest_servicios_turisticos1[data.df_prest_servicios_turisticos1['SUBTEMA'].isin(selected_item)]
-   
-    fig = px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA'
+
+    fig = px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA',
              labels={
                 'VALOR': "Total", 'AÑO': "Year", 'SUBTEMA': "Provider"
             },
@@ -396,8 +396,8 @@ def update_indicators_opt4_b2_g1(selected_item):
 def update_indicators_opt4_b2_g2(selected_item):
 
     df_plot = data.df_prest_servicios_turisticos2[data.df_prest_servicios_turisticos2['SUBTEMA'].isin(selected_item)]
-   
-    fig = px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA'
+
+    fig = px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA',
              labels={
                 'VALOR': "Total", 'AÑO': "Year", 'SUBTEMA': "Provider"
             },
@@ -416,13 +416,13 @@ def update_indicators_opt4_b3_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
     df_plot = data.df_indice_competitividad_turistica[data.df_indice_competitividad_turistica['AÑO'].isin(selected_year)]
 
-    fig = px.bar_polar(df_plot, r='VALOR', theta='VARIABLE', color='AÑO', template='plotly_white'
+    fig = px.bar_polar(df_plot, r='VALOR', theta='VARIABLE', color='AÑO', template='plotly_white',
              labels={
                 'VALOR': "Indice", 'AÑO': "Year", 'VARIABLE': "Category"
             },
             color_continuous_scale=COLOR_PALETTE_CONTINUOUS,
             )
-    
+
     fig.update_xaxes(showline=True, linewidth=2, linecolor='black', mirror=True)
     fig.update_yaxes(showline=True, linewidth=2, linecolor='black', mirror=True)
 
@@ -437,7 +437,7 @@ def update_indicators_opt4_b3_g1(selected_year):
 def update_indicators_opt4_b4_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
     df_plot = data.df_indice_presion_turistica[data.df_indice_presion_turistica['AÑO'].isin(selected_year)]
-   
+
     fig = px.line(df_plot, x='AÑO', y='VALOR',
              labels={
                 'VALOR': "Value", 'AÑO': "Year"
@@ -472,10 +472,10 @@ def update_indicators_opt1_b1_g2(national_bt, international_bt, both_bt):
 
     #CREATING THE REQUIRED FILTER
     df_plot = data.df_viajeros
-    if category != "both":        
+    if category != "both":
         df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == category]
 
-    #df_plot = data.df_viajeros[data.df_viajeros['SUBTEMA'] == "MOTIVO"]        
+    #df_plot = data.df_viajeros[data.df_viajeros['SUBTEMA'] == "MOTIVO"]
 
     #df_plot = df_plot.groupby('ITEM').sum().reset_index()
     df_plot = df_plot.groupby('TEMA').sum().reset_index()

@@ -113,9 +113,9 @@ def display_page(pathname):
     elif pathname.endswith(options_drop_navBar[options_navBar[2]][1]["value"]):
         return layouts_indicators.opt2
     elif pathname.endswith(options_drop_navBar[options_navBar[2]][2]["value"]):
-        return layouts_indicators.opt2
+        return layouts_indicators.opt3
     elif pathname.endswith(options_drop_navBar[options_navBar[2]][3]["value"]):
-        return layouts_indicators.opt2
+        return layouts_indicators.opt4
     else:
         return "ERROR 404: Page not found!"
 
@@ -301,7 +301,6 @@ def update_indicators_opt3_b1_g1(selected_year):
                 'VALOR': "GDP (%)", 'AÑO': "Year", 'CLASE': ""
             },
             color_discrete_sequence=COLOR_PALETTE_DISCRETE,
-
             )
     fig.update_traces(mode='markers+lines')
     

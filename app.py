@@ -19,7 +19,6 @@ import layouts_indicators
 import layouts_about_us
 
 import data
-import plotly.express as px
 
 # Alternative 1
 MAIN_COLOR_SELECTOR = "#6C7BC4"
@@ -28,6 +27,9 @@ MAIN_COLOR_SELECTOR = "#7484d4"
 
 COLOR_PALETTE_DISCRETE = px.colors.qualitative.T10
 COLOR_PALETTE_CONTINUOUS = "Darkmint"
+
+MESES_ORDEN = {'Enero':1, 'Febrero':2, 'Marzo':3, 'Abril':4, 'Mayo':5,'Junio':6,
+       'Julio':7, 'Agosto':8, 'Septiembre':9, 'Octubre':10,'Noviembre':11,'Diciembre':12}
 
 
 landingPage_title = ["Welcome", "to the Bogotá tourist information system"]
@@ -126,37 +128,47 @@ def display_page(pathname):
 #-----------PAGES CALLBACKS ---------------------------
 #-----------Indicadores (OPT1 [ACCOMODATION]) -----------------------
 
-#Indicators-> ACCOMMODATION -> BOARD 1 -> GRAPH 1 (LEFT)
+#Indicators-> ACCOMMODATION -> BOARD 1 -> GRAPH 1 (TOP)
 @app.callback(
-    Output("opt1-board1-row1-graph-left", "figure")
+    Output("opt1-board1-graph-top", "figure")
 ,[
-    Input("opt1-board1-row1-menu-left-year", "value"),
+    Input("opt1-board1-menu-top-year", "value"),
 ])
 def update_indicators_opt1_b1_g1(selected_year):
-    #SUMS 'VALOR' FOR EACH localidad, TOTALLY CRAZY DATA!!!
-    #The plot doesn't make sense at all and doesn't mach the required plot, but
-    #it is a good guide for people to use callbacks
-    #The original menu returns multiple values, for this reason the plot breaks
-    #if you select multiple values
-    df_plot = data.df_airbnb_homeway[data.df_airbnb_homeway['AÑO'] == float(selected_year)]
+    selected_year = [int(x) for x in selected_year]
+    df_plot = data.df_airbnb_homeway[data.df_airbnb_homeway['AÑO'].isin(selected_year)]
     df_plot = df_plot.groupby('SUBTEMA').sum().reset_index()
 
-    return px.bar(df_plot, x='SUBTEMA', y='VALOR')
+    fig = px.bar(df_plot, x='SUBTEMA', y='VALOR',
+             labels={
+                'VALOR': "Value", 'SUBTEMA': "Location"
+            },
+             color_continuous_scale=COLOR_PALETTE_CONTINUOUS,
 
+            )
 
-#Indicators-> ACCOMMODATION (option 1) -> BOARD 1 -> GRAPH 2 (RIGHT)
+    return fig
+
+#Indicators-> ACCOMMODATION (option 1) -> BOARD 1 -> GRAPH 2 (BOTTOM)
 @app.callback(
-    Output("opt1-board1-row1-graph-right", "figure")
+    Output("opt1-board1-graph-bottom", "figure")
 ,[
-    Input("opt1-board1-row1-menu-right-location", "value"),
+    Input("opt1-board1-menu-bottom-year", "value"),
 ])
 def update_indicators_opt1_b1_g2(selected_locations):
-    #Sample plot, THE PLOT IS WRONG, but its used for illustration
+
     df_plot = data.df_airbnb_homeway[data.df_airbnb_homeway['SUBTEMA'].isin(selected_locations)]
     df_plot = df_plot.groupby('SUBTEMA').mean().reset_index()
 
-    return px.bar(df_plot, x='SUBTEMA', y='VALOR')
+    fig = px.bar(df_plot, x='SUBTEMA', y='VALOR',
+             labels={
+                'VALOR': "Value", 'SUBTEMA': "Location"
+            },
+             color_continuous_scale=COLOR_PALETTE_CONTINUOUS,
 
+            )
+
+    return fig
 
 #Indicators-> ACCOMMODATION (option 1) -> BOARD 2 -> GRAPH 1 (TOP)
 @app.callback(
@@ -165,6 +177,30 @@ def update_indicators_opt1_b1_g2(selected_locations):
     Input("opt1-board2-menu-top-year", "value"),
 ])
 def update_indicators_opt1_b2_g1(selected_year):
+    
+    selected_year = [int(x) for x in selected_year]
+    df_plot = data.df_tasa_ocupacion_hotelera[data.df_tasa_ocupacion_hotelera['AÑO'].isin(selected_year)]
+    df_plot = df_plot.groupby('MES').mean().reset_index()
+    df_plot['MESNO'] = df_plot['MES'].replace(MESES_ORDEN)
+    df_plot = df_plot.sort_values(by=['MESNO'])
+    
+    fig = px.line(df_plot, x='MES', y='VALOR',
+            labels={
+                'VALOR': "Value (%)", 'AÑO': "Year", 'MES': "Month"
+            },
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
+
+            )
+
+    return fig
+
+#Indicators-> ACCOMMODATION (option 1) -> BOARD 2 -> GRAPH 1 (BOTTOM)
+@app.callback(
+    Output("opt1-board2-graph-bottom", "figure")
+,[
+    Input("opt1-board2-menu-bottom-year", "value"),
+])
+def update_indicators_opt1_b2_g2(selected_year):
     selected_year = [int(x) for x in selected_year]
     df_plot = data.df_tasa_ocupacion_hotelera[data.df_tasa_ocupacion_hotelera['AÑO'].isin(selected_year)]
 
@@ -185,6 +221,28 @@ def update_indicators_opt1_b2_g1(selected_year):
     Input("opt1-board3-menu-top-year", "value"),
 ])
 def update_indicators_opt1_b3_g1(selected_year):
+    selected_year = [int(x) for x in selected_year]
+    df_plot = data.df_tasa_ocupacion_airbnb[data.df_tasa_ocupacion_airbnb['AÑO'].isin(selected_year)]
+    df_plot = df_plot.groupby('MES').mean().reset_index()
+    
+
+    fig = px.line(df_plot, x='MES', y='VALOR',
+             labels={
+                'VALOR': "Value (%)", 'AÑO': "Year", 'MES': "Month"
+            },
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
+
+            )
+
+    return fig
+
+#Indicators-> ACCOMMODATION (option 1) -> BOARD 3 -> GRAPH 1 (BOTTOM)
+@app.callback(
+    Output("opt1-board3-graph-bottom", "figure")
+,[
+    Input("opt1-board3-menu-bottom-year", "value"),
+])
+def update_indicators_opt1_b3_g2(selected_year):
     selected_year = [int(x) for x in selected_year]
     df_plot = data.df_tasa_ocupacion_airbnb[data.df_tasa_ocupacion_airbnb['AÑO'].isin(selected_year)]
 
@@ -246,9 +304,9 @@ def update_indicators_opt2_b2_g1(selected_item):
 
 #Indicators-> CONNECTIVITY -> BOARD 3 -> GRAPH 1
 @app.callback(
-    Output("opt2-board3-graph", "figure")
+    Output("opt2-board3-graph-top", "figure")
 ,[
-    Input("opt2-board3-menu-year", "value"),
+    Input("opt2-board3-menu-top-year", "value"),
 ])
 def update_indicators_opt2_b3_g1(selected_item):
 
@@ -266,19 +324,19 @@ def update_indicators_opt2_b3_g1(selected_item):
     return fig
 
 
-#Indicators-> CONNECTIVITY -> BOARD 4 -> GRAPH 1
+#Indicators-> CONNECTIVITY -> BOARD 3 -> GRAPH 2
 @app.callback(
-    Output("opt2-board4-graph", "figure")
+    Output("opt2-board3-graph-bottom", "figure")
 ,[
-    Input("opt2-board4-menu-year", "value"),
+    Input("opt2-board3-menu-bottom-year", "value"),
 ])
-def update_indicators_opt2_b4_g1(selected_item):
+def update_indicators_opt2_b3_g2(selected_item):
 
     df_plot = data.df_turismo_internacional2[data.df_turismo_internacional2['VARIABLE'] == selected_item]
 
     fig = px.area(df_plot, x='AÑO', y='VALOR', color='CLASE', line_group='CLASE',
              labels={
-                'VALOR': "Value", 'AÑO': "Year"
+                'VALOR': "Value (%)", 'AÑO': "Year"
             },
             color_discrete_sequence=COLOR_PALETTE_DISCRETE,
 
@@ -321,7 +379,7 @@ def update_indicators_opt3_b2_g2(selected_year):
 
     fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO',
              labels={
-                'VALOR': "Jobs", 'AÑO': "Year",
+                'VALOR': "Jobs", 'AÑO': "Year", 'MES': "Quarter",
             },
             color_discrete_sequence=COLOR_PALETTE_DISCRETE,
             )
@@ -413,39 +471,39 @@ def update_indicators_opt4_b3_g1(selected_year):
 
 #-----------Travelers - OPT1 (WHO THEY ARE) -----------------------
 
-#THIS IS A TEST GRAPH!!!!!
+
 #------------- BOARD 1 -------------------
-#Travelers -> OPT1 -> BOARD 1 -> GRAPH 1 (LEFT)
+
+#Travelers -> OPT1 -> BOARD 1 -> GRAPH 1 (RIGHT)
 @app.callback(
-    Output("opt1-board1-graph-left", "figure")
+    Output("opt1-board1-graph-right", "figure")
 ,[
     Input("viajeros-selector-national", "n_clicks_timestamp"),
     Input("viajeros-selector-international", "n_clicks_timestamp"),
-    Input("viajeros-selector-both", "n_clicks_timestamp")
+    Input("viajeros-selector-both", "n_clicks_timestamp"),
+    #DANGER: THE YEAR/MONTH BUTTON SHOULD TAKE VALUES BASED ON THE ORIGIN
+    Input("board1-menu-year", "value"),
+    Input("board1-menu-month", "value")
 ])
-def update_indicators_opt1_b1_g2(national_bt, international_bt, both_bt):
+def update_travelers_opt1_b1_g2(national_bt, international_bt, both_bt, years, months):
     # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS INTERNACIONALES"
     if int(national_bt) > int(international_bt) and int(national_bt) > int(both_bt):
         category = "TURISTAS NACIONALES"
     elif int(international_bt) > int(national_bt) and int(international_bt) > int(both_bt):
         category = "TURISTAS INTERNACIONALES"
     elif int(both_bt) > int(national_bt) and int(both_bt) > int(international_bt):
-        category = "both"
+        category = "BOTH"
+
+    #Creating the right graph
+    if category == "TURISTAS NACIONALES":
+        my_plot = data.viajeros_region_nacional_plot(years, months)
+    elif category == "TURISTAS INTERNACIONALES":
+        my_plot = data.viajeros_region_internacional_plot(years, months)
     else:
-        category = "national"
+        pass
 
-    #CREATING THE REQUIRED FILTER
-    df_plot = data.df_viajeros
-    if category != "both":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == category]
-
-    #df_plot = data.df_viajeros[data.df_viajeros['SUBTEMA'] == "MOTIVO"]
-
-    #df_plot = df_plot.groupby('ITEM').sum().reset_index()
-    df_plot = df_plot.groupby('TEMA').sum().reset_index()
-
-    #CREATION OF THE PLOT + RETURN OF IT
-    return px.bar(df_plot, x='TEMA', y='VIAJEROS')
+    return my_plot
 
 #------------------ BOARD 2 ----------------
 

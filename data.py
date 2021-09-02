@@ -1,11 +1,27 @@
 import pandas as pd
 import plotly.express as px
 
+# Plotly graph objects to render graph plots
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+
+#import requests
+import json
 import wrangler
 
 
 COLOR_PALETTE_DISCRETE = px.colors.qualitative.T10
 COLOR_PALETTE_CONTINUOUS = "Darkmint"
+
+
+COUNTRIES_ALPHA3 = {'ALEMANIA':"DEU", 'ARGENTINA':"ARG", 'BOLIVIA':"BOL", 'BRASIL':"BRA", 'CHILE':"CHL",
+       'COSTA RICA':"CRI", 'ECUADOR':"ECU", 'ESPAÑA':"ESP", 'ESTADOS UNIDOS':"USA", 'FRANCIA':"FRA",
+       'ITALIA':"ITA", 'MEXICO':"MEX", 'PANAMA':"PAN", 'PERU':"PER", 'REINO UNIDO':"GBR"}
+    
+CONTINENTS_ALPHA3 = {"DEU": "Europe","ARG": "Americas", "BOL": "Americas", "BRA": "Americas", "CHL": "Americas",
+       "CRI": "Americas", "ECU": "Americas", "ESP": "Europe", "USA":"Americas", "FRA":"Europe",
+       "ITA": "Europe", "MEX": "Americas", "PAN":"Americas", "PER":"Americas", "GBR":"Europe"}
+
 
 # ------ Databases load -----------
 databases = wrangler.read__file_databases()
@@ -13,9 +29,75 @@ databases = wrangler.read__file_databases()
 df_viajeros = databases[wrangler.DATABASE_NAMES[0]]
 df_indicadores_turismo = databases[wrangler.DATABASE_NAMES[1]]
 
-# ------- Model related code -------------
+#----------Travelers-----------------------------------
 
-#----------Indicadores----------
+#------Data sources-----
+# geojson_col = requests.get("https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/colombia.geojson")
+# geojson_col = geojson_col.json()
+col_path = "assets/colombia.geojson"
+with open(col_path) as geo:
+    geojson_col = json.loads(geo.read())
+
+
+df_viajeros_nacional = df_viajeros[df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
+
+
+
+#TRAVELERS -> OPT1 -> BOARD1 -> PLOT RIGHT
+def viajeros_region_nacional_plot(years, months):
+    global df_viajeros_nacional
+    global geojson_col
+
+    years = [int(x) for x in years]
+    db_viajeros_nacional_filtered = df_viajeros_nacional[df_viajeros_nacional['AÑO'].isin(years)]
+    db_viajeros_nacional_filtered = db_viajeros_nacional_filtered[db_viajeros_nacional_filtered['MES'].isin(months)]
+    
+    plot_data = db_viajeros_nacional_filtered.groupby('ORIGEN').sum().reset_index()
+    
+
+    
+    my_plot = px.choropleth_mapbox(
+    plot_data,
+    locations="ORIGEN",
+    color="VIAJEROS",
+    geojson=geojson_col,
+    zoom=4.1,
+    featureidkey="properties.NOMBRE_DPT",
+    mapbox_style="carto-positron",
+    #center={"lat": 4.1000, "lon": -72.9089},
+    center={"lat": 4.824335, "lon": -74.063644},
+    color_continuous_scale="Viridis",
+    #color_continuous_scale="deep",
+    opacity=0.5, 
+    #Title would be in the left plot
+    #title="National travelers by region"
+    )
+    
+    return my_plot
+
+
+df_viajeros_internacional = df_viajeros[df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
+def viajeros_region_internacional_plot(years, months):
+    global df_viajeros_internacional
+    global COUNTRIES_ALPHA3
+
+    years = [int(x) for x in years]
+    db_viajeros_internacional_filtered = df_viajeros_internacional[df_viajeros_internacional['AÑO'].isin(years)]
+    db_viajeros_internacional_filtered = db_viajeros_internacional_filtered[db_viajeros_internacional_filtered['MES'].isin(months)]
+    
+    plot_data = db_viajeros_internacional_filtered.groupby('ORIGEN').sum().reset_index()    
+    plot_data['iso_alpha'] = plot_data['ORIGEN'].replace(COUNTRIES_ALPHA3)
+    plot_data['Continent'] = plot_data['iso_alpha'].replace(CONTINENTS_ALPHA3)
+    
+    fig = px.scatter_geo(plot_data, locations="iso_alpha", color="Continent",
+                     hover_name="ORIGEN", size="VIAJEROS",
+                     projection="natural earth")    
+    
+    
+    return fig
+    
+
+#----------Indicators----------------------------------
 
 #----------Airbnb & Homeaway----------
 

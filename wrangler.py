@@ -6,7 +6,7 @@ import pandas as pd
 DATA_DIRECTORY = "data"
 
 DATABASE_NAMES = ["base_viajeros.xlsx", "base_indicadores"]
-
+GEOJSON_FILES = ["colombia.geojson"]
 
 def clean_database_viajeros():
     '''
@@ -51,3 +51,5 @@ def read__file_databases():
     databases[DATABASE_NAMES[1]] = clean_database_indicadores()
 
     return databases
+
+

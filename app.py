@@ -167,20 +167,6 @@ def update_indicators_opt1_b1_g2(selected_locations):
 
     return fig
 
-'''def update_indicators_opt1_b1_g2(selected_locations):
-
-    df_plot = data.df_airbnb_homeway[data.df_airbnb_homeway['SUBTEMA'].isin(selected_locations)]
-
-    fig = px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA',
-             labels={
-                'VALOR': "Value", 'AÑO': "Year", 'SUBTEMA': "Location"
-            },
-            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
-
-            )
-
-    return fig''''
-
 #Indicators-> ACCOMMODATION (option 1) -> BOARD 2 -> GRAPH 1 (TOP)
 @app.callback(
     Output("opt1-board2-graph-top", "figure")

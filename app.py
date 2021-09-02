@@ -155,6 +155,22 @@ def update_indicators_opt1_b1_g1(selected_year):
 def update_indicators_opt1_b1_g2(selected_locations):
 
     df_plot = data.df_airbnb_homeway[data.df_airbnb_homeway['SUBTEMA'].isin(selected_locations)]
+    df_plot = df_plot.groupby('SUBTEMA').mean().reset_index()
+
+    fig = px.bar(df_plot, x='SUBTEMA', y='VALOR',
+             labels={
+                'VALOR': "Value", 'SUBTEMA': "Location"
+            },
+             color_continuous_scale=COLOR_PALETTE_CONTINUOUS,
+
+            )
+
+    return fig
+
+'''
+def update_indicators_opt1_b1_g2(selected_locations):
+
+    df_plot = data.df_airbnb_homeway[data.df_airbnb_homeway['SUBTEMA'].isin(selected_locations)]
     #df_plot = df_plot.groupby('SUBTEMA').mean().reset_index()
 
     fig = px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA',
@@ -166,7 +182,7 @@ def update_indicators_opt1_b1_g2(selected_locations):
             )
 
     return fig
-
+'''
 #Indicators-> ACCOMMODATION (option 1) -> BOARD 2 -> GRAPH 1 (TOP)
 @app.callback(
     Output("opt1-board2-graph-top", "figure")
@@ -182,7 +198,6 @@ def update_indicators_opt1_b2_g1(selected_year):
     df_plot = df_plot.sort_values(by=['MESNO'])
     
     fig = px.line(df_plot, x='MES', y='VALOR',
-            #category_orders={"MES":["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]},
             labels={
                 'VALOR': "Value (%)", 'AÑO': "Year", 'MES': "Month"
             },

@@ -155,13 +155,13 @@ def update_indicators_opt1_b1_g1(selected_year):
 def update_indicators_opt1_b1_g2(selected_locations):
 
     df_plot = data.df_airbnb_homeway[data.df_airbnb_homeway['SUBTEMA'].isin(selected_locations)]
-    df_plot = df_plot.groupby('SUBTEMA').mean().reset_index()
+    #df_plot = df_plot.groupby('SUBTEMA').mean().reset_index()
 
-    fig = px.bar(df_plot, x='SUBTEMA', y='VALOR',
+    fig = px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA',
              labels={
-                'VALOR': "Value", 'SUBTEMA': "Location"
+                'VALOR': "Value", 'AÑO': "Year", 'SUBTEMA': "Location"
             },
-             color_continuous_scale=COLOR_PALETTE_CONTINUOUS,
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
 
             )
 
@@ -334,7 +334,7 @@ def update_indicators_opt2_b3_g2(selected_item):
 
     fig = px.area(df_plot, x='AÑO', y='VALOR', color='CLASE', line_group='CLASE',
              labels={
-                'VALOR': "Value", 'AÑO': "Year"
+                'VALOR': "Value (%)", 'AÑO': "Year"
             },
             color_discrete_sequence=COLOR_PALETTE_DISCRETE,
 

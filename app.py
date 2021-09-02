@@ -155,7 +155,7 @@ def update_indicators_opt1_b1_g1(selected_year):
 def update_indicators_opt1_b1_g2(selected_locations):
 
     df_plot = data.df_airbnb_homeway[data.df_airbnb_homeway['SUBTEMA'].isin(selected_locations)]
-    #df_plot = df_plot.groupby('SUBTEMA').mean().reset_index()
+    df_plot = df_plot.groupby('SUBTEMA').mean().reset_index()
 
     fig = px.bar(df_plot, x='SUBTEMA', y='VALOR',
              labels={

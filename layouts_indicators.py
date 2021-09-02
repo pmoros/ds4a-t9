@@ -450,6 +450,11 @@ opt2 = dbc.Container(
                 ],
                 fluid=True,
                 ),
+
+            ]
+            ),
+            className="mb-3 main-board-subpage",
+        ),                
     ]
 )
 

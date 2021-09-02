@@ -302,18 +302,18 @@ card1_menu_year = data.df_bigdata['AÑO'].unique()
 opt2_card_options['opt2-board1-menu-year'] = list(map(layouts.create_options_dropdown, card1_menu_year))
 
 # --------Card 2 ------
-opt2_card2_title = "Total travelers per year"
-opt2_card2_subtitle = "Get to know the total number of travelers who visit the city of Bogotá per year"
-opt2_card2_label = "Total travelers per year"
+opt2_card2_title = "Direct international connectivity indicators"
+opt2_card2_subtitle = "Get to know important indicators per year about international conectivity"
+opt2_card2_label = ""
 
 #Pass options to the menus ---- Card2
 card2_menu_year = data.df_conect_internacional['SUBTEMA'].unique()
 opt2_card_options['opt2-board2-menu-year'] = list(map(layouts.create_options_dropdown, card2_menu_year))
 
 # --------Card 3 ------
-opt2_card3_title = "Number of travelers visiting Bogotá by origin"
-opt2_card3_subtitle = "Discover the total number of travelers who visit Bogotá city according to their origin"
-opt2_card3_label = "Travelers visiting Bogotá by origin"
+opt2_card3_title = "Outstanding information on international tourism"
+opt2_card3_subtitle = "Discover relevant information about international tourism among the years"
+opt2_card3_label = ""
 
 #Pass options to the menus ---- Card3
 card3_menu_year = data.df_turismo_internacional['VARIABLE'].unique()
@@ -322,7 +322,7 @@ opt2_card_options['opt2-board3-menu-year'] = list(map(layouts.create_options_dro
 # --------Card 4 ------
 opt2_card4_title = "Number of travelers visiting Bogotá by origin"
 opt2_card4_subtitle = "Discover the total number of travelers who visit Bogotá city according to their origin"
-opt2_card4_label = "Travelers visiting Bogotá by origin"
+opt2_card4_label = ""
 
 #Pass options to the menus ---- Card4
 card4_menu_year = data.df_turismo_internacional2['VARIABLE'].unique()
@@ -414,7 +414,7 @@ opt2 = dbc.Container(
                     #Board 3 Plot 1
                     html.Div([
                         dcc.Dropdown(
-                            placeholder="Select the year",
+                            placeholder="Select the category",
                             options=opt2_card_options['opt2-board3-menu-year'],
                             value=opt2_card_options['opt2-board3-menu-year'][0]['value'],
                             id="opt2-board3-menu-year"
@@ -447,7 +447,7 @@ opt2 = dbc.Container(
                     #Board 4 Plot 1
                     html.Div([
                         dcc.Dropdown(
-                            placeholder="Select the year",
+                            placeholder="Select the category",
                             options=opt2_card_options['opt2-board4-menu-year'],
                             value=opt2_card_options['opt2-board4-menu-year'][0]['value'],
                             id="opt2-board4-menu-year",

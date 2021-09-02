@@ -110,7 +110,7 @@ opt1 = dbc.Container(
                             dbc.Col([
                                 dcc.Dropdown(
                                     # Menu Year primer tablero
-                                    placeholder="Select the year",
+                                    placeholder="Select the location",
                                     options=opt1_card_options['opt1-board1-menu-bottom-year'],
                                     value=[opt1_card_options['opt1-board1-menu-bottom-year'][0]['value']],
                                     id="opt1-board1-menu-bottom-year",
@@ -173,6 +173,8 @@ opt1 = dbc.Container(
                                 dcc.Dropdown(
                                     # Menu Year segundo tablero
                                     placeholder="Select the year",
+                                    options=opt1_card_options['opt1-board2-menu-bottom-year'],
+                                    value=[opt1_card_options['opt1-board2-menu-bottom-year'][0]['value']],
                                     id="opt1-board2-menu-bottom-year",
                                     multi=True,
                                 )
@@ -232,6 +234,8 @@ opt1 = dbc.Container(
                                 dcc.Dropdown(
                                     # Menu Year segundo tablero
                                     placeholder="Select the year",
+                                    options=opt1_card_options['opt1-board3-menu-bottom-year'],
+                                    value=[opt1_card_options['opt1-board3-menu-bottom-year'][0]['value']],
                                     id="opt1-board3-menu-bottom-year",
                                     multi=True,
                                 )

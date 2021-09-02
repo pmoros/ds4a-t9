@@ -76,7 +76,7 @@ card3_menu_top_year = data.df_tasa_ocupacion_airbnb['AÑO'].unique()
 opt1_card_options['opt1-board3-menu-top-year'] = list(map(layouts.create_options_dropdown, card3_menu_top_year))
 
 #Pass options to the menus ---- Card3
-card3_menu_top_bottom = data.df_tasa_ocupacion_airbnb['AÑO'].unique()
+card3_menu_bottom_year = data.df_tasa_ocupacion_airbnb['AÑO'].unique()
 opt1_card_options['opt1-board3-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card3_menu_bottom_year))
 
 #-------------OPT1 Container--------------

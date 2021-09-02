@@ -302,9 +302,9 @@ def update_indicators_opt2_b2_g1(selected_item):
 
 #Indicators-> CONNECTIVITY -> BOARD 3 -> GRAPH 1
 @app.callback(
-    Output("opt2-board3-graph", "figure")
+    Output("opt2-board3-graph-top", "figure")
 ,[
-    Input("opt2-board3-menu-year", "value"),
+    Input("opt2-board3-menu-top-year", "value"),
 ])
 def update_indicators_opt2_b3_g1(selected_item):
 
@@ -322,13 +322,13 @@ def update_indicators_opt2_b3_g1(selected_item):
     return fig
 
 
-#Indicators-> CONNECTIVITY -> BOARD 4 -> GRAPH 1
+#Indicators-> CONNECTIVITY -> BOARD 3 -> GRAPH 2
 @app.callback(
-    Output("opt2-board4-graph", "figure")
+    Output("opt2-board3-graph-bottom", "figure")
 ,[
-    Input("opt2-board4-menu-year", "value"),
+    Input("opt2-board3-menu-bottom-year", "value"),
 ])
-def update_indicators_opt2_b4_g1(selected_item):
+def update_indicators_opt2_b3_g2(selected_item):
 
     df_plot = data.df_turismo_internacional2[data.df_turismo_internacional2['VARIABLE'] == selected_item]
 

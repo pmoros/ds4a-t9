@@ -152,10 +152,10 @@ def update_indicators_opt1_b1_g1(selected_year):
 ,[
     Input("opt1-board1-menu-bottom-year", "value"),
 ])
-'''def update_indicators_opt1_b1_g2(selected_locations):
+def update_indicators_opt1_b1_g2(selected_locations):
 
     df_plot = data.df_airbnb_homeway[data.df_airbnb_homeway['SUBTEMA'].isin(selected_locations)]
-    df_plot = df_plot.groupby('SUBTEMA').mean().reset_index()
+    #df_plot = df_plot.groupby('SUBTEMA').mean().reset_index()
 
     fig = px.bar(df_plot, x='SUBTEMA', y='VALOR',
              labels={
@@ -167,21 +167,19 @@ def update_indicators_opt1_b1_g1(selected_year):
 
     return fig
 
-'''
-def update_indicators_opt1_b1_g2(selected_locations):
+'''def update_indicators_opt1_b1_g2(selected_locations):
 
     df_plot = data.df_airbnb_homeway[data.df_airbnb_homeway['SUBTEMA'].isin(selected_locations)]
-    df_plot = df_plot.groupby('SUBTEMA').mean().reset_index()
 
-    fig = px.line(df_plot, x='AÑO', y='VALOR', 
+    fig = px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA',
              labels={
-                'VALOR': "Value", 'AÑO': "Year"
+                'VALOR': "Value", 'AÑO': "Year", 'SUBTEMA': "Location"
             },
             color_discrete_sequence=COLOR_PALETTE_DISCRETE,
 
             )
 
-    return fig
+    return fig''''
 
 #Indicators-> ACCOMMODATION (option 1) -> BOARD 2 -> GRAPH 1 (TOP)
 @app.callback(

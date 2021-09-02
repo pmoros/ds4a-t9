@@ -173,9 +173,9 @@ def update_indicators_opt1_b1_g2(selected_locations):
 def update_indicators_opt1_b2_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
     df_plot = data.df_tasa_ocupacion_hotelera[data.df_tasa_ocupacion_hotelera['AÑO'].isin(selected_year)]
-    df_plot = df_plot.groupby('MES').mean().reset_index()
+    df_plot = df_plot.groupby('AÑO').mean().reset_index()
 
-    fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO',
+    fig = px.line(df_plot, x='MES', y='VALOR',
              labels={
                 'VALOR': "Value (%)", 'AÑO': "Year", 'MES': "Month"
             },
@@ -214,9 +214,9 @@ def update_indicators_opt1_b2_g2(selected_year):
 def update_indicators_opt1_b3_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
     df_plot = data.df_tasa_ocupacion_airbnb[data.df_tasa_ocupacion_airbnb['AÑO'].isin(selected_year)]
-    df_plot = df_plot.groupby('MES').mean().reset_index()
+    df_plot = df_plot.groupby('AÑO').mean().reset_index()
 
-    fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO',
+    fig = px.line(df_plot, x='MES', y='VALOR',
              labels={
                 'VALOR': "Value (%)", 'AÑO': "Year", 'MES': "Month"
             },

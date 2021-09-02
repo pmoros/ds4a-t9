@@ -316,17 +316,12 @@ opt2_card3_subtitle = "Discover relevant information about international tourism
 opt2_card3_label = ""
 
 #Pass options to the menus ---- Card3
-card3_menu_year = data.df_turismo_internacional['VARIABLE'].unique()
-opt2_card_options['opt2-board3-menu-year'] = list(map(layouts.create_options_dropdown, card3_menu_year))
+card3_menu_top_year = data.df_turismo_internacional['VARIABLE'].unique()
+opt2_card_options['opt2-board3-menu-top-year'] = list(map(layouts.create_options_dropdown, card3_menu_top_year))
 
-# --------Card 4 ------
-opt2_card4_title = "Number of travelers visiting Bogotá by origin"
-opt2_card4_subtitle = "Discover the total number of travelers who visit Bogotá city according to their origin"
-opt2_card4_label = ""
-
-#Pass options to the menus ---- Card4
-card4_menu_year = data.df_turismo_internacional2['VARIABLE'].unique()
-opt2_card_options['opt2-board4-menu-year'] = list(map(layouts.create_options_dropdown, card4_menu_year))
+#Pass options to the menus ---- Card3
+card3_menu_bottom_year = data.df_turismo_internacional2['VARIABLE'].unique()
+opt2_card_options['opt2-board3-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card3_menu_bottom_year))
 
 #-------------OPT2 Container--------------
 opt2 = dbc.Container(
@@ -402,72 +397,59 @@ opt2 = dbc.Container(
             ),
             className="mb-3 main-board-subpage",
         ),                
-
 # ------CARD 3---------------
         dbc.Card(
             dbc.CardBody(children=[
                 # Card 3 header
                 layouts.get_board_header(
                     opt2_card3_title, opt2_card3_subtitle),
-                # Board 3 PLOT
+                # Board 3 PLOTS
                 dbc.Container([
-                    #Board 3 Plot 1
+                    #Board 3 Plot 1 (Top)
                     html.Div([
                         dcc.Dropdown(
                             placeholder="Select the category",
-                            options=opt2_card_options['opt2-board3-menu-year'],
-                            value=opt2_card_options['opt2-board3-menu-year'][0]['value'],
-                            id="opt2-board3-menu-year"
+                            options=opt2_card_options['opt2-board3-menu-top-year'],
+                            value=opt2_card_options['opt2-board3-menu-top-year'][0]['value'],
+                            id="opt2-board3-menu-top-year",
                         ),
-                        html.P(opt2_card3_label, className="board-standard-label-graph"),
+                        html.P(opt2_card3_label_top, className="board-standard-label-graph"),
                         #"my plot "
                         dcc.Graph(
-                            id="opt2-board3-graph",
+                            id="opt2-board3-graph-top",
                         )
                     ],
                         # className=""
-                    ),                  
-                ],
-                fluid=True,
-                ),
-
-            ]
-            ),
-            className="mb-3 main-board-subpage",
-        ),
-
-# ------CARD 4---------------
-        dbc.Card(
-            dbc.CardBody(children=[
-                # Card 4 header
-                layouts.get_board_header(
-                    opt2_card4_title, opt2_card4_subtitle),
-                # Board 4 PLOT
-                dbc.Container([
-                    #Board 4 Plot 1
+                    ),
+                    #Board 3 Plot 2 (Bottom)                  
                     html.Div([
-                        dcc.Dropdown(
-                            placeholder="Select the category",
-                            options=opt2_card_options['opt2-board4-menu-year'],
-                            value=opt2_card_options['opt2-board4-menu-year'][0]['value'],
-                            id="opt2-board4-menu-year",
-                        ),
-                        html.P(opt2_card4_label, className="board-standard-label-graph"),
                         #"my plot "
+                        dbc.Row([
+                            dbc.Col([
+                                dcc.Dropdown(
+                                    # Menu Year segundo tablero
+                                    placeholder="Select the category",
+                                    options=opt2_card_options['opt2-board3-menu-bottom-year'],
+                                    value=opt2_card_options['opt2-board3-menu-bottom-year'][0]['value'],
+                                    id="opt2-board3-menu-bottom-year",
+                                )
+                            ],
+                                xs={'size': 12},
+                                #md={'size': 6, 'offset': 3}
+                            ),
+
+                        ],
+                        ),
+                        html.P(opt2_card3_label_bottom, className="board-standard-label-graph"),
                         dcc.Graph(
-                            id="opt2-board4-graph",
+                            id="opt2-board3-graph-bottom",
                         )
                     ],
                         # className=""
-                    ),                  
+                    )                    
                 ],
                 fluid=True,
                 ),
-
-            ]
-            ),
-            className="mb-3 main-board-subpage",
-        ),      
     ]
 )
 

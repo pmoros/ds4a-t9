@@ -133,8 +133,15 @@ def update_indicators_opt1_b1_g1(selected_year):
     df_plot = data.df_airbnb_homeway[data.df_airbnb_homeway['AÑO'].isin(selected_year)]
     df_plot = df_plot.groupby('SUBTEMA').sum().reset_index()
 
-    return px.bar(df_plot, x='SUBTEMA', y='VALOR')
+    fig = px.bar(df_plot, x='SUBTEMA', y='VALOR',
+             labels={
+                'VALOR': "Value", 'SUBTEMA': "Location"
+            },
+             color_continuous_scale=COLOR_PALETTE_CONTINUOUS,
 
+            )
+
+    return fig
 
 #Indicators-> ACCOMMODATION (option 1) -> BOARD 1 -> GRAPH 2 (BOTTOM)
 @app.callback(
@@ -147,8 +154,15 @@ def update_indicators_opt1_b1_g2(selected_locations):
     df_plot = data.df_airbnb_homeway[data.df_airbnb_homeway['SUBTEMA'].isin(selected_locations)]
     df_plot = df_plot.groupby('SUBTEMA').mean().reset_index()
 
-    return px.bar(df_plot, x='SUBTEMA', y='VALOR')
+    fig = px.bar(df_plot, x='SUBTEMA', y='VALOR',
+             labels={
+                'VALOR': "Value", 'SUBTEMA': "Location"
+            },
+             color_continuous_scale=COLOR_PALETTE_CONTINUOUS,
 
+            )
+
+    return fig
 
 #Indicators-> ACCOMMODATION (option 1) -> BOARD 2 -> GRAPH 1 (TOP)
 @app.callback(
@@ -157,6 +171,27 @@ def update_indicators_opt1_b1_g2(selected_locations):
     Input("opt1-board2-menu-top-year", "value"),
 ])
 def update_indicators_opt1_b2_g1(selected_year):
+    selected_year = [int(x) for x in selected_year]
+    df_plot = data.df_tasa_ocupacion_hotelera[data.df_tasa_ocupacion_hotelera['AÑO'].isin(selected_year)]
+    df_plot = df_plot.groupby('MES').mean().reset_index()
+
+    fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO',
+             labels={
+                'VALOR': "Value (%)", 'AÑO': "Year", 'MES': "Month"
+            },
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
+
+            )
+
+    return fig
+
+#Indicators-> ACCOMMODATION (option 1) -> BOARD 2 -> GRAPH 1 (BOTTOM)
+@app.callback(
+    Output("opt1-board2-graph-bottom", "figure")
+,[
+    Input("opt1-board2-menu-bottom-year", "value"),
+])
+def update_indicators_opt1_b2_g2(selected_year):
     selected_year = [int(x) for x in selected_year]
     df_plot = data.df_tasa_ocupacion_hotelera[data.df_tasa_ocupacion_hotelera['AÑO'].isin(selected_year)]
 
@@ -177,6 +212,27 @@ def update_indicators_opt1_b2_g1(selected_year):
     Input("opt1-board3-menu-top-year", "value"),
 ])
 def update_indicators_opt1_b3_g1(selected_year):
+    selected_year = [int(x) for x in selected_year]
+    df_plot = data.df_tasa_ocupacion_airbnb[data.df_tasa_ocupacion_airbnb['AÑO'].isin(selected_year)]
+    df_plot = df_plot.groupby('MES').mean().reset_index()
+
+    fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO',
+             labels={
+                'VALOR': "Value (%)", 'AÑO': "Year", 'MES': "Month"
+            },
+            color_discrete_sequence=COLOR_PALETTE_DISCRETE,
+
+            )
+
+    return fig
+
+#Indicators-> ACCOMMODATION (option 1) -> BOARD 3 -> GRAPH 1 (BOTTOM)
+@app.callback(
+    Output("opt1-board3-graph-bottom", "figure")
+,[
+    Input("opt1-board3-menu-bottom-year", "value"),
+])
+def update_indicators_opt1_b3_g2(selected_year):
     selected_year = [int(x) for x in selected_year]
     df_plot = data.df_tasa_ocupacion_airbnb[data.df_tasa_ocupacion_airbnb['AÑO'].isin(selected_year)]
 

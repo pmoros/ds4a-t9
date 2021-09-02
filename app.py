@@ -122,32 +122,28 @@ def display_page(pathname):
 #-----------PAGES CALLBACKS ---------------------------
 #-----------Indicadores (OPT1 [ACCOMODATION]) -----------------------
 
-#Indicators-> ACCOMMODATION -> BOARD 1 -> GRAPH 1 (LEFT)
+#Indicators-> ACCOMMODATION -> BOARD 1 -> GRAPH 1 (TOP)
 @app.callback(
-    Output("opt1-board1-row1-graph-left", "figure")
+    Output("opt1-board1-graph-top", "figure")
 ,[
-    Input("opt1-board1-row1-menu-left-year", "value"),
+    Input("opt1-board1-menu-top-year", "value"),
 ])
 def update_indicators_opt1_b1_g1(selected_year):
-    #SUMS 'VALOR' FOR EACH localidad, TOTALLY CRAZY DATA!!!
-    #The plot doesn't make sense at all and doesn't mach the required plot, but
-    #it is a good guide for people to use callbacks
-    #The original menu returns multiple values, for this reason the plot breaks
-    #if you select multiple values
-    df_plot = data.df_airbnb_homeway[data.df_airbnb_homeway['AÑO'] == float(selected_year)]
+    selected_year = [int(x) for x in selected_year]
+    df_plot = data.df_airbnb_homeway[data.df_airbnb_homeway['AÑO'].isin(selected_year)]
     df_plot = df_plot.groupby('SUBTEMA').sum().reset_index()
 
     return px.bar(df_plot, x='SUBTEMA', y='VALOR')
 
 
-#Indicators-> ACCOMMODATION (option 1) -> BOARD 1 -> GRAPH 2 (RIGHT)
+#Indicators-> ACCOMMODATION (option 1) -> BOARD 1 -> GRAPH 2 (BOTTOM)
 @app.callback(
-    Output("opt1-board1-row1-graph-right", "figure")
+    Output("opt1-board1-graph-bottom", "figure")
 ,[
-    Input("opt1-board1-row1-menu-right-location", "value"),
+    Input("opt1-board1-menu-bottom-year", "value"),
 ])
 def update_indicators_opt1_b1_g2(selected_locations):
-    #Sample plot, THE PLOT IS WRONG, but its used for illustration
+
     df_plot = data.df_airbnb_homeway[data.df_airbnb_homeway['SUBTEMA'].isin(selected_locations)]
     df_plot = df_plot.groupby('SUBTEMA').mean().reset_index()
 

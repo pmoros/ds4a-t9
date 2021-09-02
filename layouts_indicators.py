@@ -38,16 +38,16 @@ opt1_card_options = {}
 opt1_card1_title = "Average monthly listing of Airbnb & Homeaway properties by location"
 opt1_card1_subtitle = "Get to know the average monthly offer of Airbnb and Homeaway properties by location"
 
-opt1_card1_label_left = "Total average monthly offer of Airbnb and Homeaway properties in selected years"
-opt1_card1_label_right = "Comparison of the monthly average offer of Airbnb and Homeaway properties among the selected locations"
+opt1_card1_label_top = "Total average monthly offer of Airbnb and Homeaway properties in selected years"
+opt1_card1_label_bottom = "Comparison of the monthly average offer of Airbnb and Homeaway properties among the selected locations"
 
 #Pass options to the menus ---- Card1
-card1_menu_left_year = data.df_airbnb_homeway['AÑO'].unique()
-opt1_card_options['opt1-board1-row1-menu-left-year'] = list(map(layouts.create_options_dropdown, card1_menu_left_year))
+card1_menu_top_year = data.df_airbnb_homeway['AÑO'].unique()
+opt1_card_options['opt1-board1-menu-top-year'] = list(map(layouts.create_options_dropdown, card1_menu_top_year))
 
 #Pass options to the menus ---- Card1
-card1_menu_right_year = data.df_airbnb_homeway['SUBTEMA'].unique()
-opt1_card_options['opt1-board1-row1-menu-right-year'] = list(map(layouts.create_options_dropdown, card1_menu_right_year))
+card1_menu_bottom_year = data.df_airbnb_homeway['SUBTEMA'].unique()
+opt1_card_options['opt1-board1-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card1_menu_bottom_year))
 
 # --------Card 2 ------
 opt1_card2_title = "Hotel occupancy rate"
@@ -76,6 +76,69 @@ opt1 = dbc.Container(
     children=[
         # ---Main banner
         layouts.get_main_banner_darker(banner_image, opt1_title_div),
+
+# ------CARD 1---------------
+        dbc.Card(
+            dbc.CardBody(children=[
+                # Card 1 header
+                layouts.get_board_header(
+                    opt1_card1_title, opt1_card1_subtitle),
+                # Board 1 PLOTS
+                dbc.Container([
+                    #Board 1 Plot 1 (Top)
+                    html.Div([
+                        dcc.Dropdown(
+                            # Menu Year primer tablero
+                            placeholder="Select the year",
+                            options=opt1_card_options['opt1-board1-menu-top-year'],
+                            value=[opt1_card_options['opt1-board1-menu-top-year'][0]['value']],
+                            id="opt1-board1-menu-top-year",
+                            multi=True,
+                        ),
+                        html.P(opt1_card1_label_top, className="board-standard-label-graph"),
+                        #"my plot "
+                        dcc.Graph(
+                            id="opt1-board1-graph-top",
+                        )
+                    ],
+                        # className=""
+                    ),
+                    #Board 1 Plot 2 (Bottom)                  
+                    html.Div([
+                        #"my plot "
+                        dbc.Row([
+                            dbc.Col([
+                                dcc.Dropdown(
+                                    # Menu Year primer tablero
+                                    placeholder="Select the year",
+                                    options=opt1_card_options['opt1-board1-menu-bottom-year'],
+                                    value=[opt1_card_options['opt1-board1-menu-bottom-year'][0]['value']],
+                                    id="opt1-board1-menu-bottom-year",
+                                    multi=True,
+                                )
+                            ],
+                                xs={'size': 12},
+                                #md={'size': 6, 'offset': 3}
+                            ),
+
+                        ],
+                        ),
+                        html.P(opt1_card1_label_bottom, className="board-standard-label-graph"),
+                        dcc.Graph(
+                            id="opt1-board1-graph-bottom",
+                        )
+                    ],
+                        # className=""
+                    )                    
+                ],
+                fluid=True,
+                ),
+
+            ]
+            ),
+            className="mb-3 main-board-subpage",
+        ),   
+      
         # -------CARD 1 ------
         dbc.Card(
             dbc.CardBody(children=[

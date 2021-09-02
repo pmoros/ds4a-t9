@@ -28,7 +28,7 @@ COLOR_PALETTE_DISCRETE = px.colors.qualitative.T10
 COLOR_PALETTE_CONTINUOUS = "Darkmint"
 
 MESES_ORDEN = {'Enero':1, 'Febrero':2, 'Marzo':3, 'Abril':4, 'Mayo':5,'Junio':6,
-       'Julio':7, 'Agosto':8, 'Septiembre':9, 'Octubre':10,'Noviembre':11,'Diciembre':2}
+       'Julio':7, 'Agosto':8, 'Septiembre':9, 'Octubre':10,'Noviembre':11,'Diciembre':12}
 
 
 landingPage_title = ["Welcome", "to the Bogotá tourist information system"]

@@ -27,6 +27,9 @@ MAIN_COLOR_SELECTOR = "#7484d4"
 COLOR_PALETTE_DISCRETE = px.colors.qualitative.T10
 COLOR_PALETTE_CONTINUOUS = "Darkmint"
 
+MESES_ORDEN = {'Enero':1, 'Febrero':2, 'Marzo':3, 'Abril':4, 'Mayo':5,'Junio':6,
+       'Julio':7, 'Agosto':8, 'Septiembre':9, 'Octubre':10,'Noviembre':11,'Diciembre':2}
+
 
 landingPage_title = ["Welcome", "to the Bogotá tourist information system"]
 landingPage_subtitle = [
@@ -171,12 +174,15 @@ def update_indicators_opt1_b1_g2(selected_locations):
     Input("opt1-board2-menu-top-year", "value"),
 ])
 def update_indicators_opt1_b2_g1(selected_year):
+    
     selected_year = [int(x) for x in selected_year]
     df_plot = data.df_tasa_ocupacion_hotelera[data.df_tasa_ocupacion_hotelera['AÑO'].isin(selected_year)]
     df_plot = df_plot.groupby('MES').mean().reset_index()
-
+    df_plot['MESNO'] = df_plot['MES'].replace(MESES_ORDEN)
+    df_plot = df_plot.sort_values(by=['MESNO'])
+    
     fig = px.line(df_plot, x='MES', y='VALOR',
-            category_orders={"MES":["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]},
+            #category_orders={"MES":["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]},
             labels={
                 'VALOR': "Value (%)", 'AÑO': "Year", 'MES': "Month"
             },

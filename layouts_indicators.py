@@ -408,12 +408,13 @@ opt2 = dbc.Container(
                     #Board 3 Plot 1 (Top)
                     html.Div([
                         dcc.Dropdown(
+                            # Menu Year tercer tablero
                             placeholder="Select the category",
                             options=opt2_card_options['opt2-board3-menu-top-year'],
                             value=opt2_card_options['opt2-board3-menu-top-year'][0]['value'],
                             id="opt2-board3-menu-top-year",
                         ),
-                        html.P(opt2_card3_label_top, className="board-standard-label-graph"),
+                        html.P(opt2_card3_label, className="board-standard-label-graph"),
                         #"my plot "
                         dcc.Graph(
                             id="opt2-board3-graph-top",
@@ -421,7 +422,7 @@ opt2 = dbc.Container(
                     ],
                         # className=""
                     ),
-                    #Board 3 Plot 2 (Bottom)                  
+                    #Board 2 Plot 2 (Bottom)                  
                     html.Div([
                         #"my plot "
                         dbc.Row([
@@ -440,7 +441,7 @@ opt2 = dbc.Container(
 
                         ],
                         ),
-                        html.P(opt2_card3_label_bottom, className="board-standard-label-graph"),
+                        html.P(opt2_card3_label, className="board-standard-label-graph"),
                         dcc.Graph(
                             id="opt2-board3-graph-bottom",
                         )
@@ -456,7 +457,7 @@ opt2 = dbc.Container(
             className="mb-3 main-board-subpage",
         ),                
     ]
-)
+)                
 
 # --- Layout OPT3 (INDICATORS) ----------------------------
 

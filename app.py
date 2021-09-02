@@ -469,43 +469,10 @@ def update_indicators_opt4_b3_g1(selected_year):
 
 #-----------Travelers - OPT1 (WHO THEY ARE) -----------------------
 
-#THIS IS A TEST GRAPH!!!!!
+
 #------------- BOARD 1 -------------------
 
-#Travelers -> OPT1 -> BOARD 1 -> GRAPH 1 (LEFT)
-@app.callback(
-    Output("opt1-board1-graph-left", "figure")
-,[
-    Input("viajeros-selector-national", "n_clicks_timestamp"),
-    Input("viajeros-selector-international", "n_clicks_timestamp"),
-    Input("viajeros-selector-both", "n_clicks_timestamp")
-])
-def update_travelers_opt1_b1_g2(national_bt, international_bt, both_bt):
-    # USING TYPE OF TOURIST FILTER
-    if int(national_bt) > int(international_bt) and int(national_bt) > int(both_bt):
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) and int(international_bt) > int(both_bt):
-        category = "TURISTAS INTERNACIONALES"
-    elif int(both_bt) > int(national_bt) and int(both_bt) > int(international_bt):
-        category = "both"
-    else:
-        category = "national"
-
-    #CREATING THE REQUIRED FILTER
-    df_plot = data.df_viajeros
-    if category != "both":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == category]
-
-    #df_plot = data.df_viajeros[data.df_viajeros['SUBTEMA'] == "MOTIVO"]
-
-    #df_plot = df_plot.groupby('ITEM').sum().reset_index()
-    df_plot = df_plot.groupby('TEMA').sum().reset_index()
-
-    #CREATION OF THE PLOT + RETURN OF IT
-    return px.bar(df_plot, x='TEMA', y='VIAJEROS')
-
-
-#Travelers -> OPT1 -> BOARD 1 -> GRAPH 1 (LEFT)
+#Travelers -> OPT1 -> BOARD 1 -> GRAPH 1 (RIGHT)
 @app.callback(
     Output("opt1-board1-graph-right", "figure")
 ,[
@@ -518,7 +485,7 @@ def update_travelers_opt1_b1_g2(national_bt, international_bt, both_bt):
 ])
 def update_travelers_opt1_b1_g2(national_bt, international_bt, both_bt, years, months):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
+    category = "TURISTAS INTERNACIONALES"
     if int(national_bt) > int(international_bt) and int(national_bt) > int(both_bt):
         category = "TURISTAS NACIONALES"
     elif int(international_bt) > int(national_bt) and int(international_bt) > int(both_bt):
@@ -530,7 +497,7 @@ def update_travelers_opt1_b1_g2(national_bt, international_bt, both_bt, years, m
     if category == "TURISTAS NACIONALES":
         my_plot = data.viajeros_region_nacional_plot(years, months)
     elif category == "TURISTAS INTERNACIONALES":
-        pass
+        my_plot = data.viajeros_region_internacional_plot(years, months)
     else:
         pass
 

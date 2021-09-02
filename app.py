@@ -377,7 +377,7 @@ def update_indicators_opt3_b2_g2(selected_year):
 
     fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO',
              labels={
-                'VALOR': "Jobs", 'AÑO': "Year", 'MES': "Quarter"
+                'VALOR': "Jobs", 'AÑO': "Year", 'MES': "Quarter",
             },
             color_discrete_sequence=COLOR_PALETTE_DISCRETE,
             )

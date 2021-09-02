@@ -60,7 +60,7 @@ header = html.Div([
 )
 
 # Navbar
-options_navBar = ["Home", "Travelers", "Indicators", "Model", "About Us"]
+options_navBar = ["Home", "Travelers", "Indicators", "About Us"]
 options_navBar = [option.upper() for option in options_navBar]
 
 options_drop_navBar = {}
@@ -104,9 +104,7 @@ navBar = dbc.NavbarSimple(
                 ],
             ),
         ),
-        dbc.NavItem(dbc.NavLink(
-            options_navBar[3], href="/".format(options_navBar[3].lower()))),
-        dbc.NavItem(dbc.NavLink(options_navBar[4], href="/about-us")),
+        dbc.NavItem(dbc.NavLink(options_navBar[3], href="/about-us")),
     ],
     color=MAIN_COLOR_CONTRAST,
     dark=False,

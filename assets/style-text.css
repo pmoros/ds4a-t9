@@ -1,0 +1,23 @@
+.font-title-3-green {
+    font-family: var(--font-family-2);
+    font-size: var(--font-size-title-3);
+    font-weight: 700;
+    color: var(--secondary-color-contrast);
+}
+
+.font-title-3-blue {
+    font-family: var(--font-family-2);
+    font-size: var(--font-size-title-3);
+    font-weight: 700;
+    color: var(--main-color-contrast);
+}
+
+.font-subtitle-2 {
+    font-size:1.5rem;
+    font-weight: 400;
+}
+
+.font-subtitle-3 {
+    font-size: 1.188rem;
+    font-weight: 400;
+}

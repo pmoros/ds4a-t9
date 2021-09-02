@@ -2,12 +2,21 @@
 
 :root {
   font-size: 16px;
+  /* Font family */
+  font-family: "Roboto";
   --font-family-1: "Roboto";
   /*--font-family-1: "HelveticaNeue-Light";*/
   --font-family-2: 'Poppins', sans-serif;
+  /* Font size */
+  --font-size-title-3: 3.125rem;
+  --font-size-subtitle-3: 1.25rem;
+  --font-size-subtitle-2: 1.5rem;
+  /* Color element */
+  --border-color-2: #c4c3c3;
   --main-color-background: white;
   --main-color-contrast: #20284d;
   --main-color-selector: #4a589b;
+  /* Color text */
   --secondary-color-contrast: #bada55;
   --secondary-color-selector: #bada55;
   --third-color-contrast: #e6f0ff;

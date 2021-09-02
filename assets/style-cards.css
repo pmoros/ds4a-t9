@@ -14,17 +14,7 @@
   font-weight: 700;
 }
 
-.main-banner {
-  max-height: 400px;
-  height: 400px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  background-position: center bottom;
-  object-fit: cover;
-}
 
 .main-banner::before {
   content: "";

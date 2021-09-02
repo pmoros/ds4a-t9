@@ -16,6 +16,7 @@ import plotly.express as px
 from index import *
 import layouts_viajeros
 import layouts_indicators
+import layouts_about_us
 
 import data
 import plotly.express as px
@@ -116,6 +117,8 @@ def display_page(pathname):
         return layouts_indicators.opt3
     elif pathname.endswith(options_drop_navBar[options_navBar[2]][3]["value"]):
         return layouts_indicators.opt4
+    elif pathname.endswith("/about-us"):
+        return layouts_about_us.about_us_layout
     else:
         return "ERROR 404: Page not found!"
 

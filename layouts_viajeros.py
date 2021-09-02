@@ -482,21 +482,6 @@ opt1 = dbc.Container(
 
                 # Board 1 PLOTS
                 dbc.Row([
-                    # Board 1 Plot Left
-                    dbc.Col([
-                        html.Div([
-                            #"my plot "
-                            dcc.Graph(
-                                id="opt1-board1-graph-left",
-                            )
-                        ],
-                            # className=""
-                        )
-                    ],
-                        xs={'size': 12},
-                        md={'size': 3}
-
-                    ),
                     # Board 1 Plot Right
                     dbc.Col([
                         html.Div([
@@ -509,7 +494,7 @@ opt1 = dbc.Container(
                         )
                     ],
                         xs={'size': 12},
-                        md={'size': 9}
+                        md={'size': 10, 'offset': 1},
 
                     )
                 ]

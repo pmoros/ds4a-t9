@@ -174,6 +174,7 @@ def update_indicators_opt1_b2_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
     df_plot = data.df_tasa_ocupacion_hotelera[data.df_tasa_ocupacion_hotelera['AÑO'].isin(selected_year)]
     df_plot = df_plot.groupby('MES').mean().reset_index()
+    category_orders={"MES":["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]},
 
     fig = px.line(df_plot, x='MES', y='VALOR',
              labels={
@@ -215,6 +216,7 @@ def update_indicators_opt1_b3_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
     df_plot = data.df_tasa_ocupacion_airbnb[data.df_tasa_ocupacion_airbnb['AÑO'].isin(selected_year)]
     df_plot = df_plot.groupby('MES').mean().reset_index()
+    
 
     fig = px.line(df_plot, x='MES', y='VALOR',
              labels={

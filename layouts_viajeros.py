@@ -881,10 +881,16 @@ opt2_card2_label_top = "Tourist attractions that travelers visited in the select
 opt2_card2_label_bottom = "Comparison of the reason for travel of travelers who visited Bogotá according to their origin"
 
 
-#Loading months
-# card1_menu_month = data.df_viajeros['MES'].unique()
-# opt2_card_options['board1-menu-month'] = list(map(layouts.create_options_dropdown, card1_menu_month))
+#Pass options to the menus ---- Card2
 
+#Loading years
+card2_menu_year = data.df_viajeros['AÑO'].unique()
+opt2_card_options['opt2-board2-menu-top-year'] = list(map(layouts.create_options_dropdown, card2_menu_year))
+opt2_card_options['opt2-board2-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card2_menu_year))
+
+#Loading origin
+card2_menu_origin = data.df_viajeros['ORIGEN'].unique()
+opt2_card_options['opt2-board2-bottom-origin'] = list(map(layouts.create_options_dropdown, card2_menu_origin))
 
 
 # --------Card 3 ------

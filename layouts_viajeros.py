@@ -330,7 +330,7 @@ opt1 = dbc.Container(
                                        'marginTop': "0.5rem"}
                             )
                         ],
-                            md={"size": 6},
+                            md={"size": 12},
                         ),
                     ],
 
@@ -530,7 +530,7 @@ opt1 = dbc.Container(
                         )
                     ],
                         xs={'size': 12},
-                        md={'size': 6}
+                        md={'size': 12}
 
                     ),
                     # Board 2 Plot Right
@@ -574,7 +574,7 @@ opt1 = dbc.Container(
                         )
                     ],
                         xs={'size': 12},
-                        md={'size': 6}
+                        md={'size': 12}
 
                     )
                 ]
@@ -612,7 +612,7 @@ opt1 = dbc.Container(
                         )
                     ],
                         xs={'size': 12},
-                        md={'size': 6}
+                        md={'size': 12}
 
                     ),
                     # Board 2 Plot Right
@@ -654,7 +654,7 @@ opt1 = dbc.Container(
                         )
                     ],
                         xs={'size': 12},
-                        md={'size': 6}
+                        md={'size': 12}
 
                     )
                 ]
@@ -1060,7 +1060,7 @@ opt2 = dbc.Container(
                                        'marginTop': "0.5rem"}
                             )
                         ],
-                            md={"size": 6},
+                            md={"size": 12},
                         ),
                         dbc.Col([
                             html.Div(
@@ -1070,7 +1070,7 @@ opt2 = dbc.Container(
                                        'marginTop': "0.5rem"}
                             )
                         ],
-                            md={"size": 6},
+                            md={"size": 12},
                         ),
                     ],
 
@@ -1458,7 +1458,7 @@ opt2 = dbc.Container(
                         )
                     ],
                         xs={'size': 12},
-                        md={'size': 6}
+                        md={'size': 12}
 
                     ),
                     # Board 4 Plot Right
@@ -1502,7 +1502,7 @@ opt2 = dbc.Container(
                         )
                     ],
                         xs={'size': 12},
-                        md={'size': 6}
+                        md={'size': 12}
 
                     )
                 ]
@@ -1540,7 +1540,7 @@ opt2 = dbc.Container(
                         )
                     ],
                         xs={'size': 12},
-                        md={'size': 6}
+                        md={'size': 12}
 
                     ),
                     # Board 5 Plot Right
@@ -1584,7 +1584,7 @@ opt2 = dbc.Container(
                         )
                     ],
                         xs={'size': 12},
-                        md={'size': 6}
+                        md={'size': 12}
 
                     )
                 ]
@@ -1622,7 +1622,7 @@ opt2 = dbc.Container(
                         )
                     ],
                         xs={'size': 12},
-                        md={'size': 6}
+                        md={'size': 12}
 
                     ),
                     # Board 6 Plot Right
@@ -1666,7 +1666,7 @@ opt2 = dbc.Container(
                         )
                     ],
                         xs={'size': 12},
-                        md={'size': 6}
+                        md={'size': 12}
 
                     )
                 ]
@@ -1704,7 +1704,7 @@ opt2 = dbc.Container(
                         )
                     ],
                         xs={'size': 12},
-                        md={'size': 6}
+                        md={'size': 12}
 
                     ),
                     # Board 7 Plot Right
@@ -1748,7 +1748,7 @@ opt2 = dbc.Container(
                         )
                     ],
                         xs={'size': 12},
-                        md={'size': 6}
+                        md={'size': 12}
 
                     )
                 ]

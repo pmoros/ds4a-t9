@@ -526,7 +526,7 @@ def update_indicators_opt4_b3_g1(selected_year):
 
 def update_travelers_opt1_b1_g2(national_bt, international_bt, years, months):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS INTERNACIONALES"
+    category = "TURISTAS NACIONALES"
     if int(national_bt) > int(international_bt):
         category = "TURISTAS NACIONALES"
     elif int(international_bt) > int(national_bt):
@@ -566,7 +566,7 @@ def update_travelers_opt1_b1_g2(national_bt, international_bt, years, months):
 ])
 def update_travelers_travelers_opt2_b1_g1(national_bt, international_bt, selected_year):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS INTERNACIONALES"
+    category = "TURISTAS NACIONALES"
     if int(national_bt) > int(international_bt) :
         category = "TURISTAS NACIONALES"
     elif int(international_bt) > int(national_bt) :
@@ -617,7 +617,7 @@ def update_travelers_travelers_opt2_b1_g1(national_bt, international_bt, selecte
 ])
 def update_travelers_travelers_opt2_b1_g2(national_bt, international_bt, selected_year,selected_origin):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS INTERNACIONALES"
+    category = "TURISTAS NACIONALES"
     if int(national_bt) > int(international_bt) :
         category = "TURISTAS NACIONALES"
     elif int(international_bt) > int(national_bt) :
@@ -676,7 +676,7 @@ def update_travelers_travelers_opt2_b1_g2(national_bt, international_bt, selecte
 ])
 def update_travelers_travelers_opt2_b2_g3(national_bt, international_bt, selected_year,selected_origin):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS INTERNACIONALES"
+    category = "TURISTAS NACIONALES"
     if int(national_bt) > int(international_bt) :
         category = "TURISTAS NACIONALES"
     elif int(international_bt) > int(national_bt) :
@@ -729,7 +729,7 @@ def update_travelers_travelers_opt2_b2_g3(national_bt, international_bt, selecte
 ])
 def update_travelers_travelers_opt2_b3_g1(national_bt, international_bt, selected_year):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS INTERNACIONALES"
+    category = "TURISTAS NACIONALES"
     if int(national_bt) > int(international_bt) :
         category = "TURISTAS NACIONALES"
     elif int(international_bt) > int(national_bt) :
@@ -785,7 +785,7 @@ def update_travelers_travelers_opt2_b3_g1(national_bt, international_bt, selecte
 ])
 def update_travelers_travelers_opt2_b3_g2(national_bt, international_bt, selected_year,selected_origin):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS INTERNACIONALES"
+    category = "TURISTAS NACIONALES"
     if int(national_bt) > int(international_bt) :
         category = "TURISTAS NACIONALES"
     elif int(international_bt) > int(national_bt) :

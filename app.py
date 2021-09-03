@@ -596,7 +596,7 @@ def update_travelers_travelers_opt2_b1_g1(national_bt, international_bt, selecte
                        "MES":['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
                               'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE']},
                        labels = {'VIAJEROS':'TRAVELERS','MES':'MONTH',
-                           'ITEM':'','ORIGEN':'ORIGIN'},
+                           'ITEM':''},
             )
     fig.update_layout(
         xaxis = dict(
@@ -871,7 +871,7 @@ def update_travelers_travelers_opt2_b4_g1(national_bt, international_bt, selecte
                        "MES":['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
                               'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE']},
                        labels = {'VIAJEROS':'TRAVELERS','MES':'MONTH',
-                           'ITEM':'','ORIGEN':'ORIGIN'},
+                           'ITEM':'',},
             )
     fig.update_layout(
         xaxis = dict(

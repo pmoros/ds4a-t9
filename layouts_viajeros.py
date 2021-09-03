@@ -908,12 +908,12 @@ travelers_opt2_card4_label_bottom = "Comparison of the travel group of travelers
 #Pass options to the menus ---- Card4
 
 #Loading years
-card3_menu_year = data.df_viajeros['AÑO'].unique()
-travelers_opt2_card_options['travelers_opt2-board4-menu-top-year'] = list(map(layouts.create_options_dropdown, card3_menu_year))
-travelers_opt2_card_options['travelers_opt2-board4-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card3_menu_year))
+card4_menu_year = data.df_viajeros['AÑO'].unique()
+travelers_opt2_card_options['travelers_opt2-board4-menu-top-year'] = list(map(layouts.create_options_dropdown, card4_menu_year))
+travelers_opt2_card_options['travelers_opt2-board4-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card4_menu_year))
 #Loading origin
-card3_menu_origin = data.df_viajeros['ORIGEN'].unique()
-travelers_opt2_card_options['travelers_opt2-board4-bottom-origin'] = list(map(layouts.create_options_dropdown, card3_menu_origin))
+card4_menu_origin = data.df_viajeros['ORIGEN'].unique()
+travelers_opt2_card_options['travelers_opt2-board4-bottom-origin'] = list(map(layouts.create_options_dropdown, card4_menu_origin))
 
 # --------Card 5 ------
 travelers_opt2_card5_title = "Where do travelers stay in Bogotá?"

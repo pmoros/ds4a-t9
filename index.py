@@ -9,55 +9,17 @@ import dash_bootstrap_components as dbc
 
 import layouts
 
-#header_height, footer_height = "8rem", "8rem"
-header_height, footer_height = "6rem", "6rem"
 MAIN_COLOR_CONTRAST = "#20284D"
 MAIN_COLOR_BACKGROUND = "white"
 
-HEADER_STYLE = {
-    "height": header_height,
-    "paddingBottom": "1rem",
-    "backgroundColor": MAIN_COLOR_BACKGROUND,
-    "marginBottom": "1rem",
-}
-
-FOOTER_STYLE = {
-    # "position": "relative",
-    # "position": "fixed",
-    "bottom": 0,
-    # "left": 0,
-    # "right": 0,
-    "height": footer_height,
-    "padding": "1rem 1rem",
-    # "padding-bottom": "1rem",
-    "backgroundColor": MAIN_COLOR_CONTRAST,
-}
-
-
 # Header
-header = html.Div([
-
-    dbc.Row(
-        dbc.Col(
-            html.Span(
-                [
-                    html.Img(
-                        src="https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/header-top-logo-idt.png", className="header-banner"),
-                    #html.Img(src="assets/header-top-logo-idt.png", className="header-banner"),
-                    # https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/header-top-logo-idt.png
-                ],
-                className="align-top",
-            ),
-            md={"size": 8, "offset": 2},
-            lg={"size": 6, "offset": 2},
-            xl={"size": 4, "offset": 2},
-        )
-    )
-
-],
-    style=HEADER_STYLE,
-    className="container-fluid d-none d-sm-block"
+header = html.Div(html.Div("",
+        className="header-image"
+    ),
+    className="header-banner",
+    id="header-app"
 )
+    
 
 # Navbar
 options_navBar = ["Home", "Travelers", "Indicators", "About Us"]
@@ -115,18 +77,27 @@ navBar = dbc.NavbarSimple(
 )
 
 # Footer
+
+LOGOS_FOOTER = {}
+LOGOS_FOOTER['correlation'] = "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/footer-logo-correlation.png"
+LOGOS_FOOTER['mintic'] = "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/footer-logo-mintic.png"
+
 footer = html.Div([
-    dbc.Row(children=[
-        dbc.Col(
-            children=[
-                html.P("District Tourism Institute of Bogotá", id="footer-idt")
-            ],
-            xs={"size": 5, "offset": 1},
-            md={"size": 3, "offset": 1},
-        )
-    ]
+    html.P("District Tourism Institute of Bogotá", \
+        className="footer-text-right",
+        id="footer-app-text"),
+    html.Div([
+        html.Img(src=LOGOS_FOOTER['correlation'],\
+            style={'width': "153px", 'height': "36px"}),
+        html.Img(src=LOGOS_FOOTER['mintic'],\
+            style={'width': "167px", 'height': "36px", 'height': "100%"}),
+    ],
+    className="footer-logos-container"
     )
-], style=FOOTER_STYLE)
+],
+className="footer-container",
+id="footer-app"
+)
 
 # Containers for pages
 content = dbc.Container(

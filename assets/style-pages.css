@@ -1,3 +1,11 @@
+.row-full {
+    max-width: 100vw !important;
+    width: 100vw !important;
+    position: relative !important;
+    margin-left: -50vw !important;
+    left: 50% !important;
+}
+
 .margin-space-1-top {
     margin-top: 4.3rem;
 }
@@ -17,6 +25,12 @@
 .content-center-left {
     padding-left: 12%;
     padding-right: 12%;
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover;
+    height: 100%; /* only if you want fixed height */
 }
 
 

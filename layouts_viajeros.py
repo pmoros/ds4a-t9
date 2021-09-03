@@ -13,8 +13,6 @@ MAIN_COLOR_SELECTOR = "#6C7BC4"
 # Alternative 2
 MAIN_COLOR_SELECTOR = "#7484d4"
 
-
-CURR_CATEGORY = 'BOTH'
 # Ideal
 # MAIN_COLOR_SELECTOR = "#E6F0FF"
 
@@ -23,7 +21,7 @@ CURR_CATEGORY = 'BOTH'
 
 # --- Layout general
 main_selector_choices = ["National Travelers",
-                         "International Travelers", "Both"]
+                         "International Travelers"]
 
 main_selector_choices_label = "Interact with each of the filters and discover the information of your interest"
 
@@ -63,7 +61,7 @@ def get_main_selector_category():
                                    className="main-primary-selector-subpage btn-block"),
                     ], style={'textAlign': "center"}),
                     xs={"size": 12},
-                    md={"size": 3},
+                    md={"size": 4}
                 ),
                 dbc.Col(
                     html.Div([
@@ -73,18 +71,9 @@ def get_main_selector_category():
                                    className="main-primary-selector-subpage btn-block"),
                     ], style={'textAlign': "center"}),
                     xs={"size": 12},
-                    md={"size": 3},
+                    md={"size": 4},
                 ),
-                dbc.Col(
-                    html.Div([
-                        # Botón Both
-                        dbc.Button("Both",n_clicks_timestamp='0',\
-                                   id="viajeros-selector-both", \
-                                   className="main-primary-selector-subpage btn-block"),
-                    ], style={'textAlign': "center"}),
-                    xs={"size": 12},
-                    md={"size": 3},
-                ),
+
                 ],
                 justify="center",
                 ),

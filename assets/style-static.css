@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
+/* LINK IMAGE HEADER */
+/* https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/header-top-logo-idt.png */
+
 :root {
   font-size: 16px;
   /* Font family */
   font-family: "Roboto";
-  --font-family-1: "Roboto";
-  /*--font-family-1: "HelveticaNeue-Light";*/
   --font-family-2: 'Poppins', sans-serif;
+  --font-family-3: 'Avenir';
   /* Font size */
   --font-size-title-3: 3.125rem;
   --font-size-subtitle-3: 1.25rem;
@@ -22,18 +24,31 @@
   --third-color-contrast: #e6f0ff;
 }
 
-.row-full {
-  max-width: 100vw !important;
-  width: 100vw !important;
-  position: relative !important;
-  margin-left: -50vw !important;
-  left: 50% !important;
-}
+/* -----Landing page----- */
 
 .header-banner {
-  max-width: 100%;
-  height: auto;
+  height: 95px;
+  max-height: 95px;
+  overflow: auto;
+  margin-bottom: 5px;
 }
+
+.header-image {
+  z-index: 2;
+  position: absolute;
+  width: 421px;
+  height: 88px;
+  left: 195px;
+  top: 0px;
+
+  background-size: cover;
+  object-fit: cover;
+
+  background-position: top;
+
+  background-image: url(https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/header-top-logo-idt.png);
+}
+
 
 .landing-banner {
   max-height: 600px;
@@ -153,29 +168,86 @@
   border: 1px;
 }
 
-.logo-image {
+.footer-container {
+  position: absolute;
   width: 100%;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-top: -6px;
+  max-height: auto;
+  height: 82px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  background-color: var(--main-color-contrast);
+  font-family: var(--font-family-3);
 }
 
-#footer-idt {
-  font-family: Avenir;
-  font-size: 15px;
-  font-weight: 400;
+.footer-logos-container {
+  margin-right: 12%;   
+  display: flex;
+  align-items: center;
+  gap: 2rem; 
+}
+
+.footer-text-right {
+  font-family: var(--font-family-3);
   color: var(--main-color-background);
+  margin-left: 12%;   
 }
 
-.fit-image {
-  width: 100%;
-  object-fit: cover;
-  height: 100%; /* only if you want fixed height */
-}
-
-
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 992px) {
   .navbar .navbar-nav .nav-item:not(:last-child) {
     border-right: 2px solid var(--main-color-background);
   }
+
 }
+
+@media only screen and (max-width: 992px) {
+  .header-banner {
+    display:flex;
+    justify-content: center;
+  }
+
+  .header-image {
+    position:relative;
+    left: auto;
+    top: auto;    
+  }
+
+}
+
+@media only screen and (max-width: 992px) {
+  .header-banner {
+    display:flex;
+    justify-content: center;
+  }
+
+  .header-image {
+    position:relative;
+    left: auto;
+    top: auto;    
+  }  
+
+}
+
+@media only screen and (max-width: 768px) {
+  #header-app {
+    display: none;
+  }
+
+  #footer-app-text {
+    display: none;
+  }
+
+  .footer-logos-container {
+    margin-left: auto;   
+    margin-right: auto;   
+    
+    display: flex;
+    justify-content: space-between;
+
+    gap: 6rem; 
+  }  
+
+}
+

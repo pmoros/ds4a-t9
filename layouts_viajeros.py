@@ -145,6 +145,15 @@ opt1_card2_label_right = "Comparison of the age distribution of travelers who vi
 #Pass options to the menus ---- Card2
 #card2_menu_right_origin = data.df_viajeros
 
+#Loading years
+# card1_menu_year = data.df_viajeros_nacional['AÑO'].unique()
+# opt1_card_options['board1-menu-year'] = list(map(layouts.create_options_dropdown, card1_menu_year))
+#
+# #Loading months
+# card1_menu_month = data.df_viajeros['MES'].unique()
+# opt1_card_options['board1-menu-month'] = list(map(layouts.create_options_dropdown, card1_menu_month))
+
+
 
 # --------Card 3 ------
 opt1_card3_title = "What is the predominant gender among travelers?"
@@ -691,7 +700,7 @@ opt1 = dbc.Container(
                     ],
                         # className=""
                     ),
-                    #Board 4 Plot 2 (Bottom)                  
+                    #Board 4 Plot 2 (Bottom)
                     html.Div([
                         #"my plot "
                         dbc.Row([
@@ -726,15 +735,15 @@ opt1 = dbc.Container(
                         )
                     ],
                         # className=""
-                    )                    
+                    )
                 ],
                 fluid=True,
                 ),
 
             ]),
             className="mb-3 main-board-subpage",
-        ),        
-        
+        ),
+
 # ------CARD 5---------------
         dbc.Card(
             dbc.CardBody(children=[
@@ -759,7 +768,7 @@ opt1 = dbc.Container(
                     ],
                         # className=""
                     ),
-                    #Board 5 Plot 2 (Bottom)                  
+                    #Board 5 Plot 2 (Bottom)
                     html.Div([
                         #"my plot "
                         dbc.Row([
@@ -794,7 +803,7 @@ opt1 = dbc.Container(
                         )
                     ],
                         # className=""
-                    )                    
+                    )
                 ],
                 fluid=True,
                 ),
@@ -802,9 +811,9 @@ opt1 = dbc.Container(
             ]),
             className="mb-3 main-board-subpage",
 
-        ),                
+        ),
 
-        
+
 
     ],
     fluid=True,
@@ -852,6 +861,18 @@ opt2_card1_subtitle = "Get to learn why travelers visit Bogotá city"
 opt2_card1_label_top = "Trip purpose of the total number of travelers who visited Bogotá in the selected years"
 opt2_card1_label_bottom = "Comparison of the reason for travel of travelers who visited Bogotá according to their origin"
 
+#Pass options to the menus ---- Card1
+
+#Loading years
+card1_menu_year = data.df_viajeros['AÑO'].unique()
+opt2_card_options['opt2-board1-menu-top-year'] = list(map(layouts.create_options_dropdown, card1_menu_year))
+opt2_card_options['opt2-board1-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card1_menu_year))
+
+#Loading origin
+card1_menu_origin = data.df_viajeros['ORIGEN'].unique()
+opt2_card_options['opt2-board1-bottom-origin'] = list(map(layouts.create_options_dropdown, card1_menu_origin))
+
+
 # --------Card 2 ------
 opt2_card2_title = "What tourist attractions do travelers visit in Bogotá city?"
 opt2_card2_subtitle = "Discover which tourist attractions are the most frequented by travelers"
@@ -859,6 +880,10 @@ opt2_card2_subtitle = "Discover which tourist attractions are the most frequente
 opt2_card2_label_top = "Tourist attractions that travelers visited in the selected years"
 opt2_card2_label_bottom = "Comparison of the reason for travel of travelers who visited Bogotá according to their origin"
 
+
+#Loading months
+# card1_menu_month = data.df_viajeros['MES'].unique()
+# opt2_card_options['board1-menu-month'] = list(map(layouts.create_options_dropdown, card1_menu_month))
 
 
 
@@ -868,6 +893,17 @@ opt2_card3_subtitle = "Get to know the distribution of travelers' spending"
 
 opt2_card3_label_left = "Expenditure distribution of the total number of travelers who visited Bogotá in the selected years"
 opt2_card3_label_right = "Comparison of the distribution of spending by travelers who visited Bogotá according to their origin"
+
+#Loading years
+card3_menu_year = data.df_viajeros['AÑO'].unique()
+print(card3_menu_year)
+opt2_card_options['opt2-board3-row1-menu-left-year'] = list(map(layouts.create_options_dropdown, card3_menu_year))
+opt2_card_options['opt2-board3-row1-menu-right-year'] = list(map(layouts.create_options_dropdown, card3_menu_year))
+#Loading origin
+card3_menu_origin = data.df_viajeros['ORIGEN'].unique()
+opt2_card_options['opt2-board3-row1-menu-right-origin'] = list(map(layouts.create_options_dropdown, card3_menu_origin))
+
+
 
 # --------Card 4 ------
 opt2_card4_title = "Who do travelers visit Bogotá with?"
@@ -1141,7 +1177,7 @@ opt2 = dbc.Container(
                 className="mb-3 main-board-subpage",
             ),
 
-        # ------CARD 1---------------
+        # ------CARD 1--------------- Trip purpose ------
         dbc.Card(
             dbc.CardBody(children=[
                 # Card 1 header
@@ -1153,8 +1189,11 @@ opt2 = dbc.Container(
                     html.Div([
                         dcc.Dropdown(
                             # Menu Year segundo tablero
+                            options=opt2_card_options['opt2-board1-menu-top-year'],
+                            #BE AWARE OF SQUARE BRACKETS IN MULTI DROPDOWNS
+                            value=[opt2_card_options['opt2-board1-menu-top-year'][0]['value']],
                             placeholder="Select the year",
-                            id="opt1-board1-menu-top-year",
+                            id="opt2-board1-menu-top-year",
                             multi=True,
                         ),
                         html.P(opt2_card1_label_top, className="board-standard-label-graph"),
@@ -1165,13 +1204,17 @@ opt2 = dbc.Container(
                     ],
                         # className=""
                     ),
-                    #Board 1 Plot 2 (Bottom)                  
+                    #Board 1 Plot 2 (Bottom)
                     html.Div([
                         #"my plot "
                         dbc.Row([
                             dbc.Col([
                                 dcc.Dropdown(
                                     # Menu Year segundo tablero
+                                    options=opt2_card_options['opt2-board1-menu-bottom-year'],
+                                    #BE AWARE OF SQUARE BRACKETS IN MULTI DROPDOWNS
+                                    value=[opt2_card_options['opt2-board1-menu-bottom-year'][0]['value']],
+
                                     placeholder="Select the year",
                                     id="opt2-board1-menu-bottom-year",
                                     multi=True,
@@ -1183,6 +1226,9 @@ opt2 = dbc.Container(
                             dbc.Col([
                                 dcc.Dropdown(
                                     # Menu Year segundo tablero
+                                    options=opt2_card_options['opt2-board1-bottom-origin'],
+                                    #BE AWARE OF SQUARE BRACKETS IN MULTI DROPDOWNS
+                                    value=[opt2_card_options['opt2-board1-bottom-origin'][0]['value']],
                                     placeholder="Select the origin",
                                     id="opt2-board1-bottom-origin",
                                     multi=True,
@@ -1200,16 +1246,16 @@ opt2 = dbc.Container(
                         )
                     ],
                         # className=""
-                    )                    
+                    )
                 ],
                 fluid=True,
                 ),
 
             ]),
             className="mb-3 main-board-subpage",
-        ),        
+        ),
 
-        # ------CARD 2---------------
+        # ------CARD 2--------------- Tourist attractions ---
         dbc.Card(
             dbc.CardBody(children=[
                 # Card 2 header
@@ -1226,7 +1272,7 @@ opt2 = dbc.Container(
                     html.P(opt2_card2_label_top, className="board-standard-label-graph"),
                 ],
                     # className=""
-                ),                
+                ),
                 dbc.Container([
                 #Board 2 Plot 1 (Top)
                 dbc.Row([
@@ -1262,7 +1308,7 @@ opt2 = dbc.Container(
                     )
                 ]
                 ),
-                    #Board 2 Plot 2 (Bottom)                  
+                    #Board 2 Plot 2 (Bottom)
                     html.Div([
                         #"my plot "
                         dbc.Row([
@@ -1297,16 +1343,16 @@ opt2 = dbc.Container(
                         )
                     ],
                         # className=""
-                    )                    
+                    )
                 ],
                 fluid=True,
                 ),
 
             ]),
             className="mb-3 main-board-subpage",
-        ),  
+        ),
 
-        # -------CARD 3 ------
+        # -------CARD 3 ------ Traveler Expenditure -----
         dbc.Card(
             dbc.CardBody(children=[
                 # Card 3 header
@@ -1319,6 +1365,9 @@ opt2 = dbc.Container(
                         html.Div([
                             dcc.Dropdown(
                                 # Menu Year segundo tablero
+                                options=opt2_card_options['opt2-board3-row1-menu-left-year'],
+                                #BE AWARE OF SQUARE BRACKETS IN MULTI DROPDOWNS
+                                value=[opt2_card_options['opt2-board3-row1-menu-left-year'][0]['value']],
                                 placeholder="Select the year",
                                 id="opt2-board3-row1-menu-left-year",
                                 multi=True,
@@ -1344,6 +1393,9 @@ opt2 = dbc.Container(
                                 dbc.Col([
                                     dcc.Dropdown(
                                         # Menu Year segundo tablero
+                                        options=opt2_card_options['opt2-board3-row1-menu-right-year'],
+                                        #BE AWARE OF SQUARE BRACKETS IN MULTI DROPDOWNS
+                                        value=[opt2_card_options['opt2-board3-row1-menu-right-year'][0]['value']],
                                         placeholder="Select the year",
                                         id="opt2-board3-row1-menu-right-year",
                                         #multi=True,
@@ -1357,6 +1409,9 @@ opt2 = dbc.Container(
                                         # Menu Year segundo tablero
                                         #options= ,
                                         #value=whatever_options[0]['value']
+                                        options=opt2_card_options['opt2-board3-row1-menu-right-origin'],
+                                        #BE AWARE OF SQUARE BRACKETS IN MULTI DROPDOWNS
+                                        value=[opt2_card_options['opt2-board3-row1-menu-right-origin'][0]['value']],
                                         placeholder="Select the origin",
                                         id="opt2-board3-row1-menu-right-origin",
                                         multi=True,

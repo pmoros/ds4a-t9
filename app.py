@@ -560,19 +560,18 @@ def update_travelers_opt1_b1_g2(national_bt, international_bt, years, months):
 ,[
     Input("viajeros-selector-national", "n_clicks_timestamp"),
     Input("viajeros-selector-international", "n_clicks_timestamp"),
-    Input("viajeros-selector-both", "n_clicks_timestamp"),
+    
 
     Input("travelers_opt2-board1-menu-top-year", "value"),
 ])
-def update_travelers_travelers_opt2_b1_g1(national_bt, international_bt, both_bt,selected_year):
+def update_travelers_travelers_opt2_b1_g1(national_bt, international_bt, selected_year):
     # USING TYPE OF TOURIST FILTER
     category = "TURISTAS INTERNACIONALES"
-    if int(national_bt) > int(international_bt) and int(national_bt) > int(both_bt):
+    if int(national_bt) > int(international_bt) :
         category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) and int(international_bt) > int(both_bt):
+    elif int(international_bt) > int(national_bt) :
         category = "TURISTAS INTERNACIONALES"
-    elif int(both_bt) > int(national_bt) and int(both_bt) > int(international_bt):
-        category = "BOTH"
+
 
     #Creating the right graph
     if category == "TURISTAS NACIONALES":
@@ -612,19 +611,18 @@ def update_travelers_travelers_opt2_b1_g1(national_bt, international_bt, both_bt
 ,[
     Input("viajeros-selector-national", "n_clicks_timestamp"),
     Input("viajeros-selector-international", "n_clicks_timestamp"),
-    Input("viajeros-selector-both", "n_clicks_timestamp"),
+    
     Input("travelers_opt2-board1-menu-bottom-year", "value"),
     Input("travelers_opt2-board1-bottom-origin", "value"),
 ])
-def update_travelers_travelers_opt2_b1_g2(national_bt, international_bt, both_bt,selected_year,selected_origin):
+def update_travelers_travelers_opt2_b1_g2(national_bt, international_bt, selected_year,selected_origin):
     # USING TYPE OF TOURIST FILTER
     category = "TURISTAS INTERNACIONALES"
-    if int(national_bt) > int(international_bt) and int(national_bt) > int(both_bt):
+    if int(national_bt) > int(international_bt) :
         category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) and int(international_bt) > int(both_bt):
+    elif int(international_bt) > int(national_bt) :
         category = "TURISTAS INTERNACIONALES"
-    elif int(both_bt) > int(national_bt) and int(both_bt) > int(international_bt):
-        category = "BOTH"
+
 
     #Creating the right graph
     if category == "TURISTAS NACIONALES":
@@ -672,19 +670,18 @@ def update_travelers_travelers_opt2_b1_g2(national_bt, international_bt, both_bt
 ,[
     Input("viajeros-selector-national", "n_clicks_timestamp"),
     Input("viajeros-selector-international", "n_clicks_timestamp"),
-    Input("viajeros-selector-both", "n_clicks_timestamp"),
+    
     Input("travelers_opt2-board2-menu-bottom-year", "value"),
     Input("travelers_opt2-board2-bottom-origin", "value"),
 ])
-def update_travelers_travelers_opt2_b2_g3(national_bt, international_bt, both_bt,selected_year,selected_origin):
+def update_travelers_travelers_opt2_b2_g3(national_bt, international_bt, selected_year,selected_origin):
     # USING TYPE OF TOURIST FILTER
     category = "TURISTAS INTERNACIONALES"
-    if int(national_bt) > int(international_bt) and int(national_bt) > int(both_bt):
+    if int(national_bt) > int(international_bt) :
         category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) and int(international_bt) > int(both_bt):
+    elif int(international_bt) > int(national_bt) :
         category = "TURISTAS INTERNACIONALES"
-    elif int(both_bt) > int(national_bt) and int(both_bt) > int(international_bt):
-        category = "BOTH"
+
 
     #Creating the right graph
     if category == "TURISTAS NACIONALES":
@@ -727,18 +724,17 @@ def update_travelers_travelers_opt2_b2_g3(national_bt, international_bt, both_bt
 ,[
     Input("viajeros-selector-national", "n_clicks_timestamp"),
     Input("viajeros-selector-international", "n_clicks_timestamp"),
-    Input("viajeros-selector-both", "n_clicks_timestamp"),
+    
     Input("travelers_opt2-board3-menu-top-year", "value"),
 ])
-def update_travelers_travelers_opt2_b3_g1(national_bt, international_bt, both_bt,selected_year):
+def update_travelers_travelers_opt2_b3_g1(national_bt, international_bt, selected_year):
     # USING TYPE OF TOURIST FILTER
     category = "TURISTAS INTERNACIONALES"
-    if int(national_bt) > int(international_bt) and int(national_bt) > int(both_bt):
+    if int(national_bt) > int(international_bt) :
         category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) and int(international_bt) > int(both_bt):
+    elif int(international_bt) > int(national_bt) :
         category = "TURISTAS INTERNACIONALES"
-    elif int(both_bt) > int(national_bt) and int(both_bt) > int(international_bt):
-        category = "BOTH"
+
 
     #Creating the right graph
     if category == "TURISTAS NACIONALES":
@@ -783,19 +779,18 @@ def update_travelers_travelers_opt2_b3_g1(national_bt, international_bt, both_bt
 ,[
     Input("viajeros-selector-national", "n_clicks_timestamp"),
     Input("viajeros-selector-international", "n_clicks_timestamp"),
-    Input("viajeros-selector-both", "n_clicks_timestamp"),
+    
     Input("travelers_opt2-board3-menu-bottom-year", "value"),
     Input("travelers_opt2-board3-bottom-origin", "value"),
 ])
-def update_travelers_travelers_opt2_b3_g2(national_bt, international_bt, both_bt,selected_year,selected_origin):
+def update_travelers_travelers_opt2_b3_g2(national_bt, international_bt, selected_year,selected_origin):
     # USING TYPE OF TOURIST FILTER
     category = "TURISTAS INTERNACIONALES"
-    if int(national_bt) > int(international_bt) and int(national_bt) > int(both_bt):
+    if int(national_bt) > int(international_bt) :
         category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) and int(international_bt) > int(both_bt):
+    elif int(international_bt) > int(national_bt) :
         category = "TURISTAS INTERNACIONALES"
-    elif int(both_bt) > int(national_bt) and int(both_bt) > int(international_bt):
-        category = "BOTH"
+
 
     #Creating the right graph
     if category == "TURISTAS NACIONALES":

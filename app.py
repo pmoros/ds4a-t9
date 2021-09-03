@@ -676,7 +676,7 @@ def update_travelers_opt2_b1_g2(national_bt, international_bt, both_bt,selected_
     Input("opt2-board2-menu-bottom-year", "value"),
     Input("opt2-board2-bottom-origin", "value"),
 ])
-def update_travelers_opt2_b2_g2(national_bt, international_bt, both_bt,selected_year,selected_origin):
+def update_travelers_opt2_b2_g3(national_bt, international_bt, both_bt,selected_year,selected_origin):
     # USING TYPE OF TOURIST FILTER
     category = "TURISTAS INTERNACIONALES"
     if int(national_bt) > int(international_bt) and int(national_bt) > int(both_bt):
@@ -719,17 +719,16 @@ def update_travelers_opt2_b2_g2(national_bt, international_bt, both_bt,selected_
     )
     return fig
 
-#------------------ BOARD 4 ----------------
+#------------------ BOARD 3 ----------------
 
-#Travelers -> OPT2 -> BOARD 3 -> SPENDING: GRAPH 1 (TOP lEFT)
+#Travelers -> OPT2 -> BOARD 3 -> SPENDING: GRAPH 1 (TOP)
 @app.callback(
-    Output("opt2-board3-row1-graph-left", "figure")
+    Output("opt2-board3-graph-top", "figure")
 ,[
     Input("viajeros-selector-national", "n_clicks_timestamp"),
     Input("viajeros-selector-international", "n_clicks_timestamp"),
     Input("viajeros-selector-both", "n_clicks_timestamp"),
-    Input("opt2-board3-row1-menu-left-year", "value"),
-    # Input("opt2-board1-bottom-origin", "value"),
+    Input("opt2-board3-menu-top-year", "value"),
 ])
 def update_travelers_opt2_b3_g1(national_bt, international_bt, both_bt,selected_year):
     # USING TYPE OF TOURIST FILTER
@@ -777,17 +776,16 @@ def update_travelers_opt2_b3_g1(national_bt, international_bt, both_bt,selected_
     return fig
 
 
-#Travelers -> OPT2 -> BOARD 3 -> SPENDING: GRAPH 2 (TOP RIGHT)
+#Travelers -> OPT2 -> BOARD 3 -> SPENDING: GRAPH 2 (BOTTOM)
 
 @app.callback(
-    Output("opt2-board3-row1-graph-right", "figure")
+    Output("opt2-board3-graph-bottom", "figure")
 ,[
     Input("viajeros-selector-national", "n_clicks_timestamp"),
     Input("viajeros-selector-international", "n_clicks_timestamp"),
     Input("viajeros-selector-both", "n_clicks_timestamp"),
-    Input("opt2-board3-row1-menu-right-year", "value"),
-    Input("opt2-board3-row1-menu-right-origin", "value"),
-    # Input("opt2-board1-bottom-origin", "value"),
+    Input("opt2-board3-menu-bottom-year", "value"),
+    Input("opt2-board3-menu-bottom-origin", "value"),
 ])
 def update_travelers_opt2_b3_g2(national_bt, international_bt, both_bt,selected_year,selected_origin):
     # USING TYPE OF TOURIST FILTER

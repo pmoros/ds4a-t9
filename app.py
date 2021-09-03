@@ -588,12 +588,16 @@ def update_travelers_travelers_opt2_b1_g1(national_bt, international_bt, selecte
     df_plot = df_plot[df_plot['SUBTEMA'] == "MOTIVO"]
     df_plot = df_plot.drop(index = df_plot.loc[df_plot['MES']=='TOTAL'].index)
     df_plot = df_plot.groupby(['MES','ITEM']).sum().reset_index()
-    fig = px.bar(df_plot, x='MES', y='VIAJEROS', color='ITEM',
-             labels = {'VIAJEROS':'TRAVELERS','MES':'MONTH',
-                           'ITEM':''},
-             # color_discrete_sequence=["#20284D", "#4A589B","#D4D4E9" "#BADA55", "#FFE787", "#B8B97E","#D36135","#F49D6E"],
-             color_discrete_sequence=COLOR_PALETTE_DISCRETE,
-                )
+
+    fig = px.bar(df_plot,
+                       X = 'MES', y = 'VIAJEROS', color = 'ITEM',
+                       color_discrete_sequence = COLOR_PALETTE_DISCRETE,
+                       category_orders = {
+                       "MES":['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
+                              'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE']},
+                       labels = {'VIAJEROS':'TRAVELERS','MES':'MONTH',
+                           'ITEM':'','ORIGEN':'ORIGIN'},
+            )
     fig.update_layout(
         xaxis = dict(
             tickmode = 'array',
@@ -603,7 +607,8 @@ def update_travelers_travelers_opt2_b1_g1(national_bt, international_bt, selecte
                               'AUG','SEP','OCT','NOV','DEC']
         )
     )
-    return fig
+    return fig       
+
 
 #Travelers -> OPT2 -> BOARD 1 -> trip purpose: GRAPH 2 (BOTTON)
 @app.callback(
@@ -854,8 +859,8 @@ def update_travelers_travelers_opt2_b4_g1(national_bt, international_bt, selecte
         pass
 
     selected_year = [int(x) for x in selected_year]
-    # selected_origin = [str(x) for x in selected_origin]
-    df_plot = df_plot.loc[df_plot['AÑO'].isin(selected_year)].loc[df_plot['SUBTEMA'] == 'GRUPO']
+    df_plot=df_plot[df_plot['AÑO'].isin(selected_year)]
+    df_plot = df_plot[df_plot['SUBTEMA'] == "GRUPO"]
     df_plot = df_plot.drop(index = df_plot.loc[df_plot['MES']=='TOTAL'].index)
     df_plot = df_plot.groupby(['MES','ITEM']).sum().reset_index()
 

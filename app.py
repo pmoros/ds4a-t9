@@ -16,6 +16,7 @@ import plotly.express as px
 from index import *
 import layouts_viajeros
 import layouts_indicators
+import layouts_about_us
 
 import data
 
@@ -118,6 +119,8 @@ def display_page(pathname):
         return layouts_indicators.opt3
     elif pathname.endswith(options_drop_navBar[options_navBar[2]][3]["value"]):
         return layouts_indicators.opt4
+    elif pathname.endswith("/about-us"):
+        return layouts_about_us.about_us_layout
     else:
         return "ERROR 404: Page not found!"
 
@@ -516,28 +519,25 @@ def update_indicators_opt4_b3_g1(selected_year):
 ,[
     Input("viajeros-selector-national", "n_clicks_timestamp"),
     Input("viajeros-selector-international", "n_clicks_timestamp"),
-    Input("viajeros-selector-both", "n_clicks_timestamp"),
     #DANGER: THE YEAR/MONTH BUTTON SHOULD TAKE VALUES BASED ON THE ORIGIN
     Input("board1-menu-year", "value"),
     Input("board1-menu-month", "value")
 ])
-def update_travelers_travelers_opt1_b1_g2(national_bt, international_bt, both_bt, years, months):
+
+def update_travelers_opt1_b1_g2(national_bt, international_bt, years, months):
     # USING TYPE OF TOURIST FILTER
     category = "TURISTAS INTERNACIONALES"
-    if int(national_bt) > int(international_bt) and int(national_bt) > int(both_bt):
+    if int(national_bt) > int(international_bt):
         category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) and int(international_bt) > int(both_bt):
+    elif int(international_bt) > int(national_bt):
         category = "TURISTAS INTERNACIONALES"
-    elif int(both_bt) > int(national_bt) and int(both_bt) > int(international_bt):
-        category = "BOTH"
+
 
     #Creating the right graph
     if category == "TURISTAS NACIONALES":
         my_plot = data.viajeros_region_nacional_plot(years, months)
     elif category == "TURISTAS INTERNACIONALES":
         my_plot = data.viajeros_region_internacional_plot(years, months)
-    else:
-        pass
 
     return my_plot
 

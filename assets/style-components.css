@@ -1,0 +1,56 @@
+
+/* -----Layout About Us----- */
+.quote-right {
+    border-style: solid;
+    border-width: 0px;
+    border-right-width: 3px;
+    border-right-color: var(--border-color-2);
+    padding: 10px;
+    padding-right: 20px;
+}
+
+.thumbnail-team-dimension {
+    /* width: 200px;
+    height: 200px;     */
+    max-width: 200px;
+    max-height: 200px;
+    height: auto;
+    border-radius: 2%;
+}
+
+.team-member-info {
+    margin: auto;
+}
+
+.team-member-container {
+    display: flex;
+    gap: 2rem;    
+}
+
+/* Common components for options in navbar */
+.main-banner {
+    max-height: 400px;
+    height: 400px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center bottom;
+    object-fit: cover;
+  }
+
+
+@media only screen and (max-width: 960px) {
+    .team-member-container {
+        flex-direction: column;   
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 1.5rem;
+        border-bottom: solid;
+        border-bottom-width: 2px;
+        border-bottom-color: var(--border-color-2);
+    }
+    
+  }

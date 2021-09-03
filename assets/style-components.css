@@ -43,6 +43,13 @@
 @media only screen and (max-width: 960px) {
     .team-member-container {
         flex-direction: column;   
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 1.5rem;
+        border-bottom: solid;
+        border-bottom-width: 2px;
+        border-bottom-color: var(--border-color-2);
     }
     
   }

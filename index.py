@@ -80,9 +80,9 @@ navBar = dbc.NavbarSimple(
             dbc.DropdownMenu(
                 label=options_navBar[1],
                 children=[
-                    dbc.DropdownMenuItem(html.A(children=[options_drop_navBar[options_navBar[1]][0]["label"]],
+                    dbc.DropdownMenuItem(dbc.NavLink(children=[options_drop_navBar[options_navBar[1]][0]["label"]],
                                                 href=options_drop_navBar[options_navBar[1]][0]["value"])),
-                    dbc.DropdownMenuItem(html.A(children=[options_drop_navBar[options_navBar[1]][1]["label"]],
+                    dbc.DropdownMenuItem(dbc.NavLink(children=[options_drop_navBar[options_navBar[1]][1]["label"]],
                                                 href=options_drop_navBar[options_navBar[1]][1]["value"])),
                 ],
             ),
@@ -91,15 +91,15 @@ navBar = dbc.NavbarSimple(
             dbc.DropdownMenu(
                 label=options_navBar[2],
                 children=[
-                    dbc.DropdownMenuItem(html.A(children=[options_drop_navBar[options_navBar[2]][0]["label"]],
+                    dbc.DropdownMenuItem(dbc.NavLink(children=[options_drop_navBar[options_navBar[2]][0]["label"]],
                                                 href=options_drop_navBar[options_navBar[2]][0]["value"])),
                     # dbc.DropdownMenuItem(dbc.NavLink(options_drop_navBar[options_navBar[2]][0]["label"],\
                     #      href=options_drop_navBar[options_navBar[2]][0]["value"])),
-                    dbc.DropdownMenuItem(html.A(children=[options_drop_navBar[options_navBar[2]][1]["label"]],
+                    dbc.DropdownMenuItem(dbc.NavLink(children=[options_drop_navBar[options_navBar[2]][1]["label"]],
                                                 href=options_drop_navBar[options_navBar[2]][1]["value"])),
-                    dbc.DropdownMenuItem(html.A(children=[options_drop_navBar[options_navBar[2]][2]["label"]],
+                    dbc.DropdownMenuItem(dbc.NavLink(children=[options_drop_navBar[options_navBar[2]][2]["label"]],
                                                 href=options_drop_navBar[options_navBar[2]][2]["value"])),
-                    dbc.DropdownMenuItem(html.A(children=[options_drop_navBar[options_navBar[2]][3]["label"]],
+                    dbc.DropdownMenuItem(dbc.NavLink(children=[options_drop_navBar[options_navBar[2]][3]["label"]],
                                                 href=options_drop_navBar[options_navBar[2]][3]["value"])),
                 ],
             ),

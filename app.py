@@ -590,7 +590,7 @@ def update_travelers_travelers_opt2_b1_g1(national_bt, international_bt, selecte
     df_plot = df_plot.groupby(['MES','ITEM']).sum().reset_index()
 
     fig = px.bar(df_plot,
-                       X = 'MES', y = 'VIAJEROS', color = 'ITEM',
+                       x = 'MES', y = 'VIAJEROS', color = 'ITEM',
                        color_discrete_sequence = COLOR_PALETTE_DISCRETE,
                        category_orders = {
                        "MES":['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
@@ -865,7 +865,7 @@ def update_travelers_travelers_opt2_b4_g1(national_bt, international_bt, selecte
     df_plot = df_plot.groupby(['MES','ITEM']).sum().reset_index()
 
     fig = px.bar(df_plot,
-                       X = 'MES', y = 'VIAJEROS', color = 'ITEM',
+                       x = 'MES', y = 'VIAJEROS', color = 'ITEM',
                        color_discrete_sequence = COLOR_PALETTE_DISCRETE,
                        category_orders = {
                        "MES":['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',

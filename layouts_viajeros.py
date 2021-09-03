@@ -1376,7 +1376,7 @@ opt2 = dbc.Container(
                         html.Div([
                             dcc.Dropdown(
                                 # Menu Year tercer tablero
-                                options=opt2_card_options['opt2-board3-row1-menu-top-year'],
+                                options=opt2_card_options['opt2-board3-menu-top-year'],
                                 #BE AWARE OF SQUARE BRACKETS IN MULTI DROPDOWNS
                                 value=[opt2_card_options['opt2-board3-menu-top-year'][0]['value']],
                                 placeholder="Select the year",

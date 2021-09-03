@@ -1315,6 +1315,9 @@ opt2 = dbc.Container(
                             dbc.Col([
                                 dcc.Dropdown(
                                     # Menu Year segundo tablero
+                                    options=opt2_card_options['opt2-board2-menu-bottom-year'],
+                                    #BE AWARE OF SQUARE BRACKETS IN MULTI DROPDOWNS
+                                    value=[opt2_card_options['opt2-board2-menu-bottom-year'][0]['value']],
                                     placeholder="Select the year",
                                     id="opt2-board2-menu-bottom-year",
                                     multi=True,
@@ -1326,6 +1329,9 @@ opt2 = dbc.Container(
                             dbc.Col([
                                 dcc.Dropdown(
                                     # Menu Year segundo tablero
+                                    options=opt2_card_options['opt2-board2-bottom-origin'],
+                                    #BE AWARE OF SQUARE BRACKETS IN MULTI DROPDOWNS
+                                    value=[opt2_card_options['opt2-board2-bottom-origin'][0]['value']],
                                     placeholder="Select the origin",
                                     id="opt2-board2-bottom-origin",
                                     multi=True,

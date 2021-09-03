@@ -583,9 +583,11 @@ def update_travelers_travelers_opt2_b1_g1(national_bt, international_bt, selecte
 
 
     selected_year = [int(x) for x in selected_year]
+    df_plot = df_plot.loc[df_plot['AÑO'].isin(selected_year)].loc[df_plot['SUBTEMA'] == 'MOTIVO']
+    #df_plot = df_plot.loc[df_plot['AÑO'].isin(selected_year)].loc[df_plot['ORIGEN'].isin(selected_origin)].loc[df_plot['SUBTEMA'] == 'MOTIVO']
     # df_plot = data.df_cert_turismo_sostenible[data.df_cert_turismo_sostenible['AÑO'].isin(selected_year)]
-    df_plot=df_plot[df_plot['AÑO'].isin(selected_year)]
-    df_plot = df_plot[df_plot['SUBTEMA'] == "MOTIVO"]
+    #df_plot=df_plot[df_plot['AÑO'].isin(selected_year)]
+    #df_plot = df_plot[df_plot['SUBTEMA'] == "MOTIVO"]
     df_plot = df_plot.drop(index = df_plot.loc[df_plot['MES']=='TOTAL'].index)
     df_plot = df_plot.groupby(['MES','ITEM']).sum().reset_index()
 

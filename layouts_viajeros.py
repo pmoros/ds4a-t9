@@ -1398,7 +1398,7 @@ opt2 = dbc.Container(
                                         value=[opt2_card_options['opt2-board3-row1-menu-right-year'][0]['value']],
                                         placeholder="Select the year",
                                         id="opt2-board3-row1-menu-right-year",
-                                        #multi=True,
+                                        multi=True,
                                     )
                                 ],
                                     xs={'size': 12},

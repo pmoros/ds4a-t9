@@ -902,8 +902,8 @@ travelers_opt2_card_options['travelers_opt2-board3-bottom-origin'] = list(map(la
 travelers_opt2_card4_title = "Who do travelers visit Bogotá with?"
 travelers_opt2_card4_subtitle = "Discover how the travel group of travelers visiting Bogotá is made up"
 
-travelers_opt2_card4_label_left = "Travel group of the total number of travelers who visited Bogotá in the selected years"
-travelers_opt2_card4_label_right = "Comparison of the travel group of travelers who visited Bogotá according to their origin"
+travelers_opt2_card4_label_top = "Travel group of the total number of travelers who visited Bogotá in the selected years"
+travelers_opt2_card4_label_bottom = "Comparison of the travel group of travelers who visited Bogotá according to their origin"
 
 #Pass options to the menus ---- Card4
 

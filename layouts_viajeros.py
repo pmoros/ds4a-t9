@@ -869,7 +869,6 @@ travelers_opt2_card2_subtitle = "Discover which tourist attractions are the most
 travelers_opt2_card2_label_top = "Tourist attractions that travelers visited in the selected years"
 travelers_opt2_card2_label_bottom = "Comparison of the reason for travel of travelers who visited Bogotá according to their origin"
 
-
 #Pass options to the menus ---- Card2
 
 #Loading years
@@ -889,6 +888,8 @@ travelers_opt2_card3_subtitle = "Get to know the distribution of travelers' spen
 travelers_opt2_card3_label_top = "Expenditure distribution of the total number of travelers who visited Bogotá in the selected years"
 travelers_opt2_card3_label_bottom = "Comparison of the distribution of spending by travelers who visited Bogotá according to their origin"
 
+#Pass options to the menus ---- Card3
+
 #Loading years
 card3_menu_year = data.df_viajeros['AÑO'].unique()
 travelers_opt2_card_options['travelers_opt2-board3-menu-top-year'] = list(map(layouts.create_options_dropdown, card3_menu_year))
@@ -897,14 +898,22 @@ travelers_opt2_card_options['travelers_opt2-board3-menu-bottom-year'] = list(map
 card3_menu_origin = data.df_viajeros['ORIGEN'].unique()
 travelers_opt2_card_options['travelers_opt2-board3-bottom-origin'] = list(map(layouts.create_options_dropdown, card3_menu_origin))
 
-
-
 # --------Card 4 ------
 travelers_opt2_card4_title = "Who do travelers visit Bogotá with?"
 travelers_opt2_card4_subtitle = "Discover how the travel group of travelers visiting Bogotá is made up"
 
 travelers_opt2_card4_label_left = "Travel group of the total number of travelers who visited Bogotá in the selected years"
 travelers_opt2_card4_label_right = "Comparison of the travel group of travelers who visited Bogotá according to their origin"
+
+#Pass options to the menus ---- Card4
+
+#Loading years
+card3_menu_year = data.df_viajeros['AÑO'].unique()
+travelers_opt2_card_options['travelers_opt2-board4-menu-top-year'] = list(map(layouts.create_options_dropdown, card3_menu_year))
+travelers_opt2_card_options['travelers_opt2-board4-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card3_menu_year))
+#Loading origin
+card3_menu_origin = data.df_viajeros['ORIGEN'].unique()
+travelers_opt2_card_options['travelers_opt2-board4-bottom-origin'] = list(map(layouts.create_options_dropdown, card3_menu_origin))
 
 # --------Card 5 ------
 travelers_opt2_card5_title = "Where do travelers stay in Bogotá?"
@@ -1438,39 +1447,38 @@ opt2 = dbc.Container(
                 layouts.get_board_header(
                     travelers_opt2_card4_title, travelers_opt2_card4_subtitle),
                 # Board 4 PLOTS
-                dbc.Row([
-                    # Board 4 Plot Left
-                    dbc.Col([
+                dbc.Container([
+                    # Board 4 Plot 1 (Top)
                         html.Div([
                             dcc.Dropdown(
-                                # Menu Year segundo tablero
+                                # Menu Year cuarto tablero
+                                options=travelers_opt2_card_options['travelers_opt2-board4-menu-top-year'],
+                                #BE AWARE OF SQUARE BRACKETS IN MULTI DROPDOWNS
+                                value=[travelers_opt2_card_options['travelers_opt2-board4-menu-top-year'][0]['value']],
                                 placeholder="Select the year",
-                                id="travelers_opt2-board4-row1-menu-left-year",
+                                id="travelers_opt2-board4-menu-top-year",
                                 multi=True,
                             ),
-                            html.P(travelers_opt2_card4_label_left, className="board-standard-label-graph"),
+                            html.P(travelers_opt2_card4_label_top, className="board-standard-label-graph"),
                             #"my plot "
                             dcc.Graph(
-                                id="travelers_opt2-board4-row1-graph-left",
+                                id="travelers_opt2-board4-graph-top",
                             )
                         ],
                             # className=""
-                        )
-                    ],
-                        xs={'size': 12},
-                        md={'size': 12}
-
                     ),
-                    # Board 4 Plot Right
-                    dbc.Col([
+                    # Board 4 Plot 2 (Bottom)
                         html.Div([
                             #"my plot "
                             dbc.Row([
                                 dbc.Col([
                                     dcc.Dropdown(
-                                        # Menu Year segundo tablero
+                                        # Menu Year cuarto tablero
+                                        options=travelers_opt2_card_options['travelers_opt2-board4-menu-bottom-year'],
+                                        #BE AWARE OF SQUARE BRACKETS IN MULTI DROPDOWNS
+                                        value=[travelers_opt2_card_options['travelers_opt2-board4-menu-bottom-year'][0]['value']],
                                         placeholder="Select the year",
-                                        id="travelers_opt2-board4-row1-menu-right-year",
+                                        id="travelers_opt2-board4-menu-bottom-year",
                                         #multi=True,
                                     )
                                 ],
@@ -1479,11 +1487,14 @@ opt2 = dbc.Container(
                                 ),
                                 dbc.Col([
                                     dcc.Dropdown(
-                                        # Menu Year segundo tablero
+                                        # Menu Year cuarto tablero
                                         #options= ,
                                         #value=whatever_options[0]['value']
+                                        options=travelers_opt2_card_options['travelers_opt2-board4-bottom-origin'],
+                                        #BE AWARE OF SQUARE BRACKETS IN MULTI DROPDOWNS
+                                        value=[travelers_opt2_card_options['travelers_opt2-board4-bottom-origin'][0]['value']],                                     
                                         placeholder="Select the origin",
-                                        id="travelers_opt2-board4-row1-menu-right-origin",
+                                        id="travelers_opt2-board4-bottom-origin",
                                         multi=True,
                                     )
                                 ],
@@ -1493,20 +1504,16 @@ opt2 = dbc.Container(
 
                             ],
                             ),
-                            html.P(travelers_opt2_card4_label_right, className="board-standard-label-graph"),
+                            html.P(travelers_opt2_card4_label_bottom, className="board-standard-label-graph"),
                             dcc.Graph(
-                                id="travelers_opt2-board4-row1-graph-right",
+                                id="travelers_opt2-board4-graph-bottom",
                             )
                         ],
                             # className=""
                         )
                     ],
-                        xs={'size': 12},
-                        md={'size': 12}
-
-                    )
-                ]
-                ),
+                    fluid=True,
+                    ),
 
             ]),
             className="mb-3 main-board-subpage",

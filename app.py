@@ -1079,7 +1079,7 @@ def update_travelers_travelers_opt1_b4_g2(national_bt, international_bt, selecte
                        category_orders = {
                        "MES":['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
                               'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE']},
-                       labels = {'VIAJEROS':'TRAVELERS','MES':'MONTH','ITEM':'','ORIGEN':'ORIGIN'
+                       labels = {'VIAJEROS':'TRAVELERS','MES':'MONTH','ITEM':''
                                 },
             )
     fig.update_layout(

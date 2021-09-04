@@ -1031,17 +1031,19 @@ def update_travelers_travelers_opt2_b1_g1(national_bt, international_bt, selecte
 
 
     selected_year = [int(x) for x in selected_year]
-    # df_plot = data.df_cert_turismo_sostenible[data.df_cert_turismo_sostenible['AÑO'].isin(selected_year)]
-    df_plot=df_plot[df_plot['AÑO'].isin(selected_year)]
-    df_plot = df_plot[df_plot['SUBTEMA'] == "MOTIVO"]
+    df_plot = df_plot.loc[df_plot['AÑO'].isin(selected_year)].loc[df_plot['SUBTEMA'] == 'MOTIVO']
     df_plot = df_plot.drop(index = df_plot.loc[df_plot['MES']=='TOTAL'].index)
     df_plot = df_plot.groupby(['MES','ITEM']).sum().reset_index()
-    fig = px.bar(df_plot, x='MES', y='VIAJEROS', color='ITEM',
-             labels = {'VIAJEROS':'TRAVELERS','MES':'MONTH',
+
+    fig = px.bar(df_plot,
+                       x = 'MES', y = 'VIAJEROS', color = 'ITEM',
+                       color_discrete_sequence = COLOR_PALETTE_DISCRETE,
+                       category_orders = {
+                       "MES":['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
+                              'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE']},
+                       labels = {'VIAJEROS':'TRAVELERS','MES':'MONTH',
                            'ITEM':''},
-             # color_discrete_sequence=["#20284D", "#4A589B","#D4D4E9" "#BADA55", "#FFE787", "#B8B97E","#D36135","#F49D6E"],
-             color_discrete_sequence=COLOR_PALETTE_DISCRETE,
-                )
+            )
     fig.update_layout(
         xaxis = dict(
             tickmode = 'array',
@@ -1051,7 +1053,8 @@ def update_travelers_travelers_opt2_b1_g1(national_bt, international_bt, selecte
                               'AUG','SEP','OCT','NOV','DEC']
         )
     )
-    return fig
+    return fig       
+
 
 #Travelers -> OPT2 -> BOARD 1 -> trip purpose: GRAPH 2 (BOTTON)
 @app.callback(
@@ -1298,6 +1301,275 @@ def update_travelers_travelers_opt2_b3_g2(national_bt, international_bt, selecte
                               'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE']},
                   labels = {'VIAJEROS':'TRAVELERS','MES':'MONTH',
                            'ITEM':'','ORIGEN':'ORIGIN'},
+            )
+    fig.update_layout(
+        xaxis = dict(
+            tickmode = 'array',
+            tickvals = ['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
+                              'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'],
+            ticktext = ['JAN','FEB','MAR','APR','MAY','JUN','JUL',
+                              'AUG','SEP','OCT','NOV','DEC']
+        )
+    )
+    return fig
+
+#------------------ BOARD 4 ----------------
+
+#Travelers -> OPT2 -> BOARD 4 -> GRAPH 1 (TOP)
+@app.callback(
+    Output("travelers_opt2-board4-graph-top", "figure")
+,[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+    
+    Input("travelers_opt2-board4-menu-top-year", "value"),
+])
+def update_travelers_travelers_opt2_b4_g1(national_bt, international_bt, selected_year):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt) :
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt) :
+        category = "TURISTAS INTERNACIONALES"
+
+
+    #Creating the right graph
+    if category == "TURISTAS NACIONALES":
+        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
+    elif category == "TURISTAS INTERNACIONALES":
+        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
+    else:
+        pass
+
+    selected_year = [int(x) for x in selected_year]
+    df_plot = df_plot.loc[df_plot['AÑO'].isin(selected_year)].loc[df_plot['SUBTEMA'] == 'GRUPO']
+    df_plot = df_plot.drop(index = df_plot.loc[df_plot['MES']=='TOTAL'].index)
+    df_plot = df_plot.groupby(['MES','ITEM']).sum().reset_index()
+
+    fig = px.bar(df_plot,
+                       x = 'MES', y = 'VIAJEROS', color = 'ITEM',
+                       color_discrete_sequence = COLOR_PALETTE_DISCRETE,
+                       category_orders = {
+                       "MES":['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
+                              'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE']},
+                       labels = {'VIAJEROS':'TRAVELERS','MES':'MONTH',
+                           'ITEM':'',},
+            )
+    fig.update_layout(
+        xaxis = dict(
+            tickmode = 'array',
+            tickvals = ['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
+                              'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'],
+            ticktext = ['JAN','FEB','MAR','APR','MAY','JUN','JUL',
+                              'AUG','SEP','OCT','NOV','DEC']
+        )
+    )
+    return fig
+
+
+#Travelers -> OPT2 -> BOARD 4 -> GRAPH 2 (BOTTOM)
+
+@app.callback(
+    Output("travelers_opt2-board4-graph-bottom", "figure")
+,[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+    
+    Input("travelers_opt2-board4-menu-bottom-year", "value"),
+    Input("travelers_opt2-board4-bottom-origin", "value"),
+])
+def update_travelers_travelers_opt2_b4_g2(national_bt, international_bt, selected_year,selected_origin):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt) :
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt) :
+        category = "TURISTAS INTERNACIONALES"
+
+
+    #Creating the right graph
+    if category == "TURISTAS NACIONALES":
+        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
+    elif category == "TURISTAS INTERNACIONALES":
+        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
+    else:
+        pass
+
+    selected_year = [int(x) for x in selected_year]
+    selected_origin = [str(x) for x in selected_origin]
+
+    df_plot = df_plot.loc[df_plot['AÑO'].isin(selected_year)].loc[df_plot['ORIGEN'].isin(selected_origin)].loc[df_plot['SUBTEMA'] == 'GRUPO']
+    df_plot = df_plot.drop(index = df_plot.loc[df_plot['MES']=='TOTAL'].index)
+
+    fig = px.line(df_plot, x = "MES", y = "VIAJEROS", color = "ITEM", line_dash = 'ORIGEN',
+                 color_discrete_sequence = COLOR_PALETTE_DISCRETE,
+                 category_orders = {
+                       "MES":['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
+                              'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE']},
+                  labels = {'VIAJEROS':'TRAVELERS','MES':'MONTH',
+                           'ITEM':'','ORIGEN':'ORIGIN'},
+            )
+    fig.update_layout(
+        xaxis = dict(
+            tickmode = 'array',
+            tickvals = ['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
+                              'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'],
+            ticktext = ['JAN','FEB','MAR','APR','MAY','JUN','JUL',
+                              'AUG','SEP','OCT','NOV','DEC']
+        )
+    )
+    return fig
+
+
+#------------------ BOARD 5 ----------------
+
+#Travelers -> OPT2 -> BOARD 5 -> GRAPH 1 (TOP)
+@app.callback(
+    Output("travelers_opt2-board5-graph-top", "figure")
+,[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+    
+    Input("travelers_opt2-board5-menu-top-year", "value"),
+])
+def update_travelers_travelers_opt2_b5_g1(national_bt, international_bt, selected_year):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt) :
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt) :
+        category = "TURISTAS INTERNACIONALES"
+
+
+    #Creating the right graph
+    if category == "TURISTAS NACIONALES":
+        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
+    elif category == "TURISTAS INTERNACIONALES":
+        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
+    else:
+        pass
+
+    selected_year = [int(x) for x in selected_year]
+    df_plot = df_plot.loc[df_plot['AÑO'].isin(selected_year)].loc[df_plot['SUBTEMA'] == 'ALOJAMIENTO']
+    df_plot = df_plot.drop(index = df_plot.loc[df_plot['MES']=='TOTAL'].index)
+    df_plot = df_plot.drop(index = df_plot.loc[df_plot['ITEM']=='G. NS/NR'].index)
+    df_plot = df_plot.groupby(['MES','ITEM']).sum().reset_index()
+
+    fig = px.bar(df_plot,
+                       x = 'MES', y = 'VIAJEROS', color = 'ITEM',
+                       color_discrete_sequence = COLOR_PALETTE_DISCRETE,
+                       category_orders = {
+                       "MES":['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
+                              'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE']},
+                       labels = {'VIAJEROS':'TRAVELERS','MES':'MONTH',
+                           'ITEM':'',},
+            )
+    fig.update_layout(
+        xaxis = dict(
+            tickmode = 'array',
+            tickvals = ['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
+                              'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'],
+            ticktext = ['JAN','FEB','MAR','APR','MAY','JUN','JUL',
+                              'AUG','SEP','OCT','NOV','DEC']
+        )
+    )
+    return fig
+
+
+#Travelers -> OPT2 -> BOARD 5 -> GRAPH 2 (BOTTOM)
+
+@app.callback(
+    Output("travelers_opt2-board5-graph-bottom", "figure")
+,[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+    
+    Input("travelers_opt2-board5-menu-bottom-year", "value"),
+    Input("travelers_opt2-board5-bottom-origin", "value"),
+])
+def update_travelers_travelers_opt2_b5_g2(national_bt, international_bt, selected_year,selected_origin):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt) :
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt) :
+        category = "TURISTAS INTERNACIONALES"
+
+
+    #Creating the right graph
+    if category == "TURISTAS NACIONALES":
+        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
+    elif category == "TURISTAS INTERNACIONALES":
+        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
+    else:
+        pass
+
+    selected_year = [int(x) for x in selected_year]
+    selected_origin = [str(x) for x in selected_origin]
+
+    df_plot = df_plot.loc[df_plot['AÑO'].isin(selected_year)].loc[df_plot['ORIGEN'].isin(selected_origin)].loc[df_plot['SUBTEMA'] == 'ALOJAMIENTO']
+    df_plot = df_plot.drop(index = df_plot.loc[df_plot['MES']=='TOTAL'].index)
+
+    fig = px.line(df_plot, x = "MES", y = "VIAJEROS", color = "ITEM", line_dash = 'ORIGEN',
+                 color_discrete_sequence = COLOR_PALETTE_DISCRETE,
+                 category_orders = {
+                       "MES":['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
+                              'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE']},
+                  labels = {'VIAJEROS':'TRAVELERS','MES':'MONTH',
+                           'ITEM':'','ORIGEN':'ORIGIN'},
+            )
+    fig.update_layout(
+        xaxis = dict(
+            tickmode = 'array',
+            tickvals = ['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
+                              'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'],
+            ticktext = ['JAN','FEB','MAR','APR','MAY','JUN','JUL',
+                              'AUG','SEP','OCT','NOV','DEC']
+        )
+    )
+    return fig
+
+#------------------ BOARD 6 ----------------
+
+#Travelers -> OPT2 -> BOARD 6 -> GRAPH 1 (TOP)
+@app.callback(
+    Output("travelers_opt2-board6-graph-top", "figure")
+,[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+    
+    Input("travelers_opt2-board6-menu-top-year", "value"),
+])
+def update_travelers_travelers_opt2_b6_g1(national_bt, international_bt, selected_year):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt) :
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt) :
+        category = "TURISTAS INTERNACIONALES"
+
+
+    #Creating the right graph
+    if category == "TURISTAS NACIONALES":
+        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
+    elif category == "TURISTAS INTERNACIONALES":
+        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
+    else:
+        pass
+
+    selected_year = [int(x) for x in selected_year]
+    df_plot = df_plot.loc[df_plot['AÑO'].isin(selected_year)].loc[df_plot['SUBTEMA'] == 'Noches Pernoctadas']
+    df_plot = df_plot.drop(index = df_plot.loc[df_plot['MES']=='TOTAL'].index)
+    df_plot = df_plot.groupby(['MES','ITEM']).sum().reset_index()
+
+    fig = px.bar(df_plot,
+                       x = 'MES', y = 'VIAJEROS', color = 'ITEM',
+                       color_discrete_sequence = COLOR_PALETTE_DISCRETE,
+                       category_orders = {
+                       "MES":['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
+                              'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE']},
+                       labels = {'VIAJEROS':'TRAVELERS','MES':'MONTH',
+                           'ITEM':'',},
             )
     fig.update_layout(
         xaxis = dict(

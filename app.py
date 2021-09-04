@@ -694,7 +694,7 @@ def update_travelers_opt1_board5_menu(national_bt, international_bt):
     menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
 
     return menu_year, menu_year, menu_origin, \
-        [menu_year[0]['value']], menu_year[0]['value'], [menu_origin[0]['value']]
+        [menu_year[0]['value']], [menu_year[0]['value']], [menu_origin[0]['value']]
 
 #-------------------BOARDS WITHS GRAPHS---------------
 

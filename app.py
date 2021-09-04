@@ -908,7 +908,7 @@ def update_travelers_travelers_opt1_b3_g1(national_bt, international_bt, selecte
     df_plot = df_plot.groupby(['MES','ITEM']).sum().reset_index()
 
     fig = px.bar(df_plot,
-                       x = 'VIAJEROS', y = 'MES', color = 'ITEM', barmode="group",
+                       x = 'MES', y = 'VIAJEROS', color = 'ITEM', barmode="group",
                        color_discrete_sequence = COLOR_PALETTE_DISCRETE,
                        category_orders = {
                        "MES":['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
@@ -990,7 +990,7 @@ def update_travelers_travelers_opt1_b3_g2(national_bt, international_bt, selecte
     Input("viajeros-selector-international", "n_clicks_timestamp"),
     
 
-    Input("travelers_opt1-board3-menu-top-year", "value"),
+    Input("travelers_opt1-board4-menu-top-year", "value"),
 ])
 def update_travelers_travelers_opt1_b4_g1(national_bt, international_bt, selected_year):
     # USING TYPE OF TOURIST FILTER
@@ -1073,7 +1073,7 @@ def update_travelers_travelers_opt1_b4_g2(national_bt, international_bt, selecte
 
     fig = px.bar(df_plot,
                        x = 'MES', y = 'VIAJEROS', color = 'ITEM',
-                       pattern_shape="ORIGEN", 
+                       pattern_shape='ORIGEN', 
                        pattern_shape_sequence=[".", "+"],
                        color_discrete_sequence = COLOR_PALETTE_DISCRETE,
                        category_orders = {

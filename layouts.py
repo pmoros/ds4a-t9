@@ -1,6 +1,15 @@
 import dash_html_components as html
 import dash_bootstrap_components as dbc
 
+def get_main_banner_empty(img_url):
+    banner = html.Div(
+                className="container-fluid main-banner row-full",
+                style={'backgroundImage': '''url("{}")'''.format(img_url),
+                       'backgroundPosition': "center"},
+            )
+
+    return banner
+
 
 def get_main_banner(img_url, text_div):
     banner = dbc.Row(children=[
@@ -37,6 +46,7 @@ def get_main_banner_darker(img_url, text_div):
     )
 
     return banner    
+    
 
 def get_board_header(title, subtitle):
     my_header = dbc.Container([

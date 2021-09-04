@@ -952,8 +952,18 @@ travelers_opt2_card_options['travelers_opt2-board6-menu-top-year'] = list(map(la
 travelers_opt2_card7_title = "How are travelers transported in Bogotá?"
 travelers_opt2_card7_subtitle = "Get to know the number of travelers that visit Bogotá city by transport means"
 
-travelers_opt2_card7_label_left = "Means of transport frequented by the total number of travelers who visited Bogotá in the selected years"
-travelers_opt2_card7_label_right = "Comparison of the means of transport most frequented by travelers who visited Bogotá according to their origin"
+travelers_opt2_card7_label_top = "Means of transport frequented by the total number of travelers who visited Bogotá in the selected years"
+travelers_opt2_card7_label_bottom = "Comparison of the means of transport most frequented by travelers who visited Bogotá according to their origin"
+
+#Pass options to the menus ---- Card7
+
+#Loading years
+card7_menu_year = data.df_viajeros['AÑO'].unique()
+travelers_opt2_card_options['travelers_opt2-board7-menu-top-year'] = list(map(layouts.create_options_dropdown, car7_menu_year))
+travelers_opt2_card_options['travelers_opt2-board7-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card7_menu_year))
+#Loading origin
+card7_menu_origin = data.df_viajeros['ORIGEN'].unique()
+travelers_opt2_card_options['travelers_opt2-board7-bottom-origin'] = list(map(layouts.create_options_dropdown, card7_menu_origin))
 
 
 opt2 = dbc.Container(
@@ -1627,19 +1637,23 @@ opt2 = dbc.Container(
                     travelers_opt2_card7_title, travelers_opt2_card7_subtitle),
                 # Board 7 PLOTS
                 dbc.Row([
-                    # Board 7 Plot Left
+                    # Board 7 Plot Top
                     dbc.Col([
                         html.Div([
                             dcc.Dropdown(
-                                # Menu Year segundo tablero
+                                # Menu Year septimo tablero
+  
+                                options=travelers_opt2_card_options['travelers_opt2-board7-menu-top-year'],
+                                #BE AWARE OF SQUARE BRACKETS IN MULTI DROPDOWNS
+                                value=[travelers_opt2_card_options['travelers_opt2-board7-menu-top-year'][0]['value']],
                                 placeholder="Select the year",
-                                id="travelers_opt2-board7-row1-menu-left-year",
+                                id="travelers_opt2-board7-menu-top-year",
                                 multi=True,
                             ),
-                            html.P(travelers_opt2_card7_label_left, className="board-standard-label-graph"),
+                            html.P(travelers_opt2_card7_label_top, className="board-standard-label-graph"),
                             #"my plot "
                             dcc.Graph(
-                                id="travelers_opt2-board7-row1-graph-left",
+                                id="travelers_opt2-board5-graph-top",
                             )
                         ],
                             # className=""
@@ -1649,17 +1663,20 @@ opt2 = dbc.Container(
                         md={'size': 12}
 
                     ),
-                    # Board 7 Plot Right
+                    # Board 7 Plot Bottom
                     dbc.Col([
                         html.Div([
                             #"my plot "
                             dbc.Row([
                                 dbc.Col([
                                     dcc.Dropdown(
-                                        # Menu Year segundo tablero
+                                        # Menu Year septimo tablero
                                         placeholder="Select the year",
-                                        id="travelers_opt2-board7-row1-menu-right-year",
-                                        #multi=True,
+                                        options=travelers_opt2_card_options['travelers_opt2-board7-menu-bottom-year'],
+                                        #BE AWARE OF SQUARE BRACKETS IN MULTI DROPDOWNS
+                                        value=[travelers_opt2_card_options['travelers_opt2-board7-menu-bottom-year'][0]['value']],
+                                        id="travelers_opt2-board7-menu-bottom-year",
+                                        multi=True,
                                     )
                                 ],
                                     xs={'size': 12},
@@ -1667,11 +1684,12 @@ opt2 = dbc.Container(
                                 ),
                                 dbc.Col([
                                     dcc.Dropdown(
-                                        # Menu Year segundo tablero
-                                        #options= ,
-                                        #value=whatever_options[0]['value']
+                                        # Menu Year septimo tablero
                                         placeholder="Select the origin",
-                                        id="travelers_opt2-board7-row1-menu-right-origin",
+                                        options=travelers_opt2_card_options['travelers_opt2-board7-bottom-origin'],
+                                        #BE AWARE OF SQUARE BRACKETS IN MULTI DROPDOWNS
+                                        value=[travelers_opt2_card_options['travelers_opt2-board7-bottom-origin'][0]['value']],
+                                        id="travelers_opt2-board7-bottom-origin",
                                         multi=True,
                                     )
                                 ],
@@ -1683,7 +1701,7 @@ opt2 = dbc.Container(
                             ),
                             html.P(travelers_opt2_card7_label_right, className="board-standard-label-graph"),
                             dcc.Graph(
-                                id="travelers_opt2-board7-row1-graph-right",
+                                id="travelers_opt2-board7-graph-bottom",
                             )
                         ],
                             # className=""

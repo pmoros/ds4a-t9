@@ -959,7 +959,7 @@ travelers_opt2_card7_label_bottom = "Comparison of the means of transport most f
 
 #Loading years
 card7_menu_year = data.df_viajeros['AÑO'].unique()
-travelers_opt2_card_options['travelers_opt2-board7-menu-top-year'] = list(map(layouts.create_options_dropdown, car7_menu_year))
+travelers_opt2_card_options['travelers_opt2-board7-menu-top-year'] = list(map(layouts.create_options_dropdown, card7_menu_year))
 travelers_opt2_card_options['travelers_opt2-board7-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card7_menu_year))
 #Loading origin
 card7_menu_origin = data.df_viajeros['ORIGEN'].unique()
@@ -1699,7 +1699,7 @@ opt2 = dbc.Container(
 
                             ],
                             ),
-                            html.P(travelers_opt2_card7_label_right, className="board-standard-label-graph"),
+                            html.P(travelers_opt2_card7_label_bottom, className="board-standard-label-graph"),
                             dcc.Graph(
                                 id="travelers_opt2-board7-graph-bottom",
                             )

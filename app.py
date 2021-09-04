@@ -1365,12 +1365,12 @@ def update_travelers_opt2_board6_menu(national_bt, international_bt):
 
 #-----------Load menu OPT2->BOARD7
 @app.callback(
-    Output("travelers_opt2-board7-row1-menu-left-year", "options"),
-    Output("travelers_opt2-board7-row1-menu-right-year", "options"),
-    Output("travelers_opt2-board7-row1-menu-right-origin", "options"),
-    Output("travelers_opt2-board7-row1-menu-left-year", "value"),
-    Output("travelers_opt2-board7-row1-menu-right-year", "value"),
-    Output("travelers_opt2-board7-row1-menu-right-origin", "value"),
+    Output("travelers_opt2-board7-menu-top-year", "options"),
+    Output("travelers_opt2-board7-menu-bottom-year", "options"),
+    Output("travelers_opt2-board7-bottom-origin", "options"),
+    Output("travelers_opt2-board7-menu-top-year", "value"),
+    Output("travelers_opt2-board7-menu-bottom-year", "value"),
+    Output("travelers_opt2-board7-bottom-origin", "value"),
 [
     Input("viajeros-selector-national", "n_clicks_timestamp"),
     Input("viajeros-selector-international", "n_clicks_timestamp"),
@@ -1396,7 +1396,7 @@ def update_travelers_opt2_board7_menu(national_bt, international_bt):
     menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
 
     return menu_year, menu_year, menu_origin, \
-        [menu_year[0]['value']], menu_year[0]['value'], [menu_origin[0]['value']]
+        [menu_year[0]['value']], [menu_year[0]['value']], [menu_origin[0]['value']]
 
 
 #Travelers -> OPT1 -> BOARD 2 -> MENU -> RIGHT -> ORIGIN

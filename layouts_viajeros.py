@@ -1653,7 +1653,7 @@ opt2 = dbc.Container(
                             html.P(travelers_opt2_card7_label_top, className="board-standard-label-graph"),
                             #"my plot "
                             dcc.Graph(
-                                id="travelers_opt2-board5-graph-top",
+                                id="travelers_opt2-board7-graph-top",
                             )
                         ],
                             # className=""

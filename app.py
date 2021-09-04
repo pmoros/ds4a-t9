@@ -810,12 +810,12 @@ def update_travelers_opt2_board3_menu(national_bt, international_bt):
 
 #-----------Load menu OPT2->BOARD4
 @app.callback(
-    Output("travelers_opt2-board4-row1-menu-left-year", "options"),
-    Output("travelers_opt2-board4-row1-menu-right-year", "options"),
-    Output("travelers_opt2-board4-row1-menu-right-origin", "options"),
-    Output("travelers_opt2-board4-row1-menu-left-year", "value"),
-    Output("travelers_opt2-board4-row1-menu-right-year", "value"),
-    Output("travelers_opt2-board4-row1-menu-right-origin", "value"),
+    Output("travelers_opt2-board4-menu-top-year", "options"),
+    Output("travelers_opt2-board4-menu-bottom-year", "options"),
+    Output("travelers_opt2-board4-bottom-origin", "options"),
+    Output("travelers_opt2-board4-menu-top-year", "value"),
+    Output("travelers_opt2-board4-menu-bottom-year", "value"),
+    Output("travelers_opt2-board4-bottom-origin", "value"),
 [
     Input("viajeros-selector-national", "n_clicks_timestamp"),
     Input("viajeros-selector-international", "n_clicks_timestamp"),
@@ -848,12 +848,12 @@ def update_travelers_opt2_board4_menu(national_bt, international_bt):
 
 #-----------Load menu OPT2->BOARD5
 @app.callback(
-    Output("travelers_opt2-board5-row1-menu-left-year", "options"),
-    Output("travelers_opt2-board5-row1-menu-right-year", "options"),
-    Output("travelers_opt2-board5-row1-menu-right-origin", "options"),
-    Output("travelers_opt2-board5-row1-menu-left-year", "value"),
-    Output("travelers_opt2-board5-row1-menu-right-year", "value"),
-    Output("travelers_opt2-board5-row1-menu-right-origin", "value"),
+    Output("travelers_opt2-board5-menu-top-year", "options"),
+    Output("travelers_opt2-board5-menu-bottom-year", "options"),
+    Output("travelers_opt2-board5-bottom-origin", "options"),
+    Output("travelers_opt2-board5-menu-top-year", "value"),
+    Output("travelers_opt2-board5-menu-bottom-year", "value"),
+    Output("travelers_opt2-board5-bottom-origin", "value"),
 [
     Input("viajeros-selector-national", "n_clicks_timestamp"),
     Input("viajeros-selector-international", "n_clicks_timestamp"),

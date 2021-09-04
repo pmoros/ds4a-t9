@@ -800,7 +800,6 @@ def update_travelers_travelers_opt1_b2_g1(national_bt, international_bt, selecte
 
     fig = px.bar(df_plot,
                        x = 'VIAJEROS', y = 'MES', color = 'ITEM',
-                       orientation='h',
                        color_discrete_sequence = COLOR_PALETTE_DISCRETE,
                        category_orders = {
                        "MES":['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',

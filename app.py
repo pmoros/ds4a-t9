@@ -576,8 +576,8 @@ def update_travelers_opt1_card(national_bt, international_bt, selected_year, sel
         pass
 
     selected_year = [int(x) for x in selected_year]
-    selected_month = [int(x) for x in selected_month]
-    total_travelers = df.groupby(['AÑO','MES']).sum()
+    selected_month = [str(x) for x in selected_month]
+    total_travelers = df_plot.groupby(['AÑO','MES']).sum()
     total_travelers = total_travelers.reset_index(drop=True).VIAJEROS[0]
     #total_travelers = millify(total_travelers)
        

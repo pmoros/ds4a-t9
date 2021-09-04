@@ -1264,37 +1264,21 @@ opt2 = dbc.Container(
                 dbc.Container([
                 #Board 2 Plot 1 (Top)
                 dbc.Row([
-                    # Board 2 Plot Left
-                    dbc.Col([
-                        html.Div([
-                            #"my plot "
-                            dcc.Graph(
-                                id="travelers_opt2-board2-graph-left",
-                            )
-                        ],
-                            # className=""
-                        )
-                    ],
-                        xs={'size': 12},
-                        md={'size': 3}
-
-                    ),
+                    
                     # Board 2 Plot Right
-                    dbc.Col([
-                        html.Div([
-                            #"my plot "
-                            dcc.Graph(
-                                id="travelers_opt2-board2-graph-right",
-                            )
-                        ],
-                            # className=""
+                    html.Div([
+                        #"my plot "
+                        dcc.Graph(
+                            id="travelers_opt2-board2-graph-right",
                         )
                     ],
-                        xs={'size': 12},
-                        md={'size': 9}
+                        # className=""
+                        
+                    )                    
 
-                    )
-                ]
+                ],
+                justify="center",
+
                 ),
                     #Board 2 Plot 2 (Bottom)
                     html.Div([

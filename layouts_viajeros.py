@@ -929,7 +929,7 @@ card5_menu_year = data.df_viajeros['AÑO'].unique()
 travelers_opt2_card_options['travelers_opt2-board5-menu-top-year'] = list(map(layouts.create_options_dropdown, card5_menu_year))
 travelers_opt2_card_options['travelers_opt2-board5-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card5_menu_year))
 #Loading origin
-card4_menu_origin = data.df_viajeros['ORIGEN'].unique()
+card5_menu_origin = data.df_viajeros['ORIGEN'].unique()
 travelers_opt2_card_options['travelers_opt2-board5-bottom-origin'] = list(map(layouts.create_options_dropdown, card5_menu_origin))
 
 # --------Card 6 ------

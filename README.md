@@ -45,6 +45,7 @@ The application has a *Procfile* that defines properties that tools used by clou
 * Kelly Garcia
 * Paul Moros
 * Sergio Rairan
+* Diego Cabrera
 
 
 

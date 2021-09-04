@@ -1529,6 +1529,59 @@ def update_travelers_travelers_opt2_b5_g2(national_bt, international_bt, selecte
     )
     return fig
 
+#------------------ BOARD 6 ----------------
+
+#Travelers -> OPT2 -> BOARD 6 -> GRAPH 1 (TOP)
+@app.callback(
+    Output("travelers_opt2-board6-graph-top", "figure")
+,[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+    
+    Input("travelers_opt2-board6-menu-top-year", "value"),
+])
+def update_travelers_travelers_opt2_b6_g1(national_bt, international_bt, selected_year):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt) :
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt) :
+        category = "TURISTAS INTERNACIONALES"
+
+
+    #Creating the right graph
+    if category == "TURISTAS NACIONALES":
+        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
+    elif category == "TURISTAS INTERNACIONALES":
+        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
+    else:
+        pass
+
+    selected_year = [int(x) for x in selected_year]
+    df_plot = df_plot.loc[df_plot['AÑO'].isin(selected_year)].loc[df_plot['SUBTEMA'] == 'Noches Pernoctadas']
+    df_plot = df_plot.drop(index = df_plot.loc[df_plot['MES']=='TOTAL'].index)
+    df_plot = df_plot.groupby(['MES','ITEM']).sum().reset_index()
+
+    fig = px.bar(df_plot,
+                       x = 'MES', y = 'VIAJEROS', color = 'ITEM',
+                       color_discrete_sequence = COLOR_PALETTE_DISCRETE,
+                       category_orders = {
+                       "MES":['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
+                              'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE']},
+                       labels = {'VIAJEROS':'TRAVELERS','MES':'MONTH',
+                           'ITEM':'',},
+            )
+    fig.update_layout(
+        xaxis = dict(
+            tickmode = 'array',
+            tickvals = ['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
+                              'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'],
+            ticktext = ['JAN','FEB','MAR','APR','MAY','JUN','JUL',
+                              'AUG','SEP','OCT','NOV','DEC']
+        )
+    )
+    return fig
+
 #--------------------LAYOUT DECLARATION-------------------------
 
 app.layout = index()

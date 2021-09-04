@@ -168,6 +168,15 @@ travelers_opt1_card4_subtitle = "Find out the number of travelers that visit Bog
 travelers_opt1_card4_label_top = "Distribution of the educational level of the total number of travelers who visited Bogotá in the selected years"
 travelers_opt1_card4_label_bottom = "Comparison of the educational level of travelers who visited Bogotá according to their origin"
 
+#Loading years
+card4_menu_year = data.df_viajeros['AÑO'].unique()
+travelers_opt1_card_options['travelers_opt1-board4-menu-top-year'] = list(map(layouts.create_options_dropdown, card4_menu_year))
+travelers_opt1_card_options['travelers_opt1-board4-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card4_menu_year))
+
+#Loading origin
+card4_menu_origin = data.df_viajeros['ORIGEN'].unique()
+travelers_opt1_card_options['travelers_opt1-board4-bottom-origin'] = list(map(layouts.create_options_dropdown, card4_menu_origin))
+
 # --------Card 5 ------
 travelers_opt1_card5_title = "What is the occupation of the travelers?"
 travelers_opt1_card5_subtitle = "Get to know the number of travelers that visit Bogota city by occupation"
@@ -696,8 +705,10 @@ opt1 = dbc.Container(
                     #Board 4 Plot 1 (Top)
                     html.Div([
                         dcc.Dropdown(
-                            # Menu Year segundo tablero
+                            # Menu Year cuarto tablero
                             placeholder="Select the year",
+                            options=travelers_opt1_card_options['travelers_opt1-board4-menu-top-year'],
+                            value=[travelers_opt1_card_options['travelers_opt1-board4-menu-top-year'][0]['value']],
                             id="travelers_opt1-board4-menu-top-year",
                             multi=True,
                         ),
@@ -715,8 +726,10 @@ opt1 = dbc.Container(
                         dbc.Row([
                             dbc.Col([
                                 dcc.Dropdown(
-                                    # Menu Year segundo tablero
+                                    # Menu Year cuarto tablero
                                     placeholder="Select the year",
+                                    options=travelers_opt1_card_options['travelers_opt1-board4-menu-bottom-year'],
+                                    value=[travelers_opt1_card_options['travelers_opt1-board4-menu-bottom-year'][0]['value']],
                                     id="travelers_opt1-board4-menu-bottom-year",
                                     multi=True,
                                 )
@@ -728,6 +741,8 @@ opt1 = dbc.Container(
                                 dcc.Dropdown(
                                     # Menu Year segundo tablero
                                     placeholder="Select the origin",
+                                    options=travelers_opt1_card_options['travelers_opt1-board4-bottom-origin'],
+                                    value=[travelers_opt1_card_options['travelers_opt1-board4-bottom-origin'][0]['value']],  
                                     id="travelers_opt1-board4-bottom-origin",
                                     multi=True,
                                 )

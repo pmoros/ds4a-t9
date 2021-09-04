@@ -61,7 +61,7 @@ about_us_page_title = html.Div([
         dbc.Row([
             dbc.Col([
                 html.Div([
-                    html.Img(src="https://static.wixstatic.com/media/a3c153_ea643fa0bec04606b8e22e51e7d510b4~mv2.jpg/v1/fill/w_336,h_404,al_c,q_80,usm_0.66_1.00_0.01/2.webp", className="thumbnail-team-dimension"),
+                    html.Img(src="https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/ElizabethRendonPic.png", className="thumbnail-team-dimension"),
                     html.Div([html.P(html.B("Elizabeth Rendón")),
                             html.P("Medellín"),
                             html.P("PhD. Mechanical Engineer"),
@@ -83,7 +83,7 @@ about_us_page_title = html.Div([
 
             dbc.Col([
                 html.Div([
-                    html.Img(src="https://static.wixstatic.com/media/a3c153_ea643fa0bec04606b8e22e51e7d510b4~mv2.jpg/v1/fill/w_336,h_404,al_c,q_80,usm_0.66_1.00_0.01/2.webp", className="thumbnail-team-dimension"),
+                    html.Img(src="https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/SergioRairanPic.png", className="thumbnail-team-dimension"),
                     html.Div([html.P(html.B("Sergio Rairán")),
                             html.P("Bogotá"),
                             html.P("Statistician"),
@@ -105,7 +105,7 @@ about_us_page_title = html.Div([
 
             dbc.Col([
                 html.Div([
-                    html.Img(src="https://static.wixstatic.com/media/a3c153_ea643fa0bec04606b8e22e51e7d510b4~mv2.jpg/v1/fill/w_336,h_404,al_c,q_80,usm_0.66_1.00_0.01/2.webp", className="thumbnail-team-dimension"),
+                    html.Img(src="https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/AlbertoCortesPic.png", className="thumbnail-team-dimension"),
                     html.Div([html.P(html.B("Alberto Cortés")),
                             html.P("Valledupar"),
                             html.P("Electronic Engineer"),
@@ -130,7 +130,7 @@ about_us_page_title = html.Div([
         dbc.Row([
             dbc.Col([
                 html.Div([
-                    html.Img(src="https://static.wixstatic.com/media/a3c153_ea643fa0bec04606b8e22e51e7d510b4~mv2.jpg/v1/fill/w_336,h_404,al_c,q_80,usm_0.66_1.00_0.01/2.webp", className="thumbnail-team-dimension"),
+                    html.Img(src="https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/DiegoCabreraPic.png", className="thumbnail-team-dimension"),
                     html.Div([html.P(html.B("Diego Cabrera")),
                             html.P("Manizales"),
                             html.P("Electronic Engineer"),
@@ -152,7 +152,7 @@ about_us_page_title = html.Div([
 
             dbc.Col([
                 html.Div([
-                    html.Img(src="https://static.wixstatic.com/media/a3c153_ea643fa0bec04606b8e22e51e7d510b4~mv2.jpg/v1/fill/w_336,h_404,al_c,q_80,usm_0.66_1.00_0.01/2.webp", className="thumbnail-team-dimension"),
+                    html.Img(src="https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/PaulMorosPic.png", className="thumbnail-team-dimension"),
                     html.Div([html.P(html.B("Paul Moros")),
                             html.P("Bogotá"),
                             html.P("Systems Engineering Student at Universidad Nacional de Colombia"),
@@ -173,7 +173,7 @@ about_us_page_title = html.Div([
 
             dbc.Col([
                 html.Div([
-                    html.Img(src="https://static.wixstatic.com/media/a3c153_ea643fa0bec04606b8e22e51e7d510b4~mv2.jpg/v1/fill/w_336,h_404,al_c,q_80,usm_0.66_1.00_0.01/2.webp", className="thumbnail-team-dimension"),
+                    html.Img(src="https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/KellyGarciaPic.png", className="thumbnail-team-dimension"),
                     html.Div([html.P(html.B("Kelly García")),
                             html.P("Garzón-Huila"),
                             html.P("Economist"),

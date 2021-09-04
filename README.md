@@ -36,10 +36,6 @@ The application has a *Procfile* that defines properties that tools used by clou
 * [AWS](https://austinlasseter.medium.com/deploying-a-dash-app-with-elastic-beanstalk-console-27a834ebe91d)
   * *You might have to meet costs.*
 
-## Resources
-
-* 
-
 ## Authors
 
 ### DS4A Cohort 5 - Team 9

@@ -1399,7 +1399,6 @@ def update_travelers_opt2_board7_menu(national_bt, international_bt):
         [menu_year[0]['value']], menu_year[0]['value'], [menu_origin[0]['value']]
 
 
-
 #Travelers -> OPT1 -> BOARD 2 -> MENU -> RIGHT -> ORIGIN
 
 

@@ -60,7 +60,7 @@ def get_main_selector_category():
                                    id="viajeros-selector-national", \
                                    className="main-primary-selector-subpage btn-block"),
                     ], style={'textAlign': "center"}),
-                    xs={"size": 12},
+                    xs={"size": 10},
                     md={"size": 4}
                 ),
                 dbc.Col(
@@ -70,7 +70,7 @@ def get_main_selector_category():
                                    id="viajeros-selector-international", \
                                    className="main-primary-selector-subpage btn-block"),
                     ], style={'textAlign': "center"}),
-                    xs={"size": 12},
+                    xs={"size": 10},
                     md={"size": 4},
                 ),
 
@@ -265,9 +265,10 @@ opt1 = dbc.Container(
 
                                 ],
                                     className="main-board-container-standard-h",
-                                    style={'paddingRight': "0.5rem",
-                                           'borderRight': "4px solid var(--third-color-contrast)"}
+                                    
                                 ),
+                                html.P(travelers_opt1_main_board_labels[0],
+                                       className="main-board-label"),
                             ],
 
                             )
@@ -318,13 +319,13 @@ opt1 = dbc.Container(
                                         ],
                                         )
                                     ],
-                                        className="main-board-container-standard-h",
+                                        className="main-board-container-standard-h-last",
 
                                     ),
 
                                 ],
-                                    style={"display": "flex",
-                                           "justifyContent": "space-around"}
+                                    className="gender-container",
+                                    
                                 ),
 
                             ],
@@ -341,30 +342,6 @@ opt1 = dbc.Container(
                     ),
                     dbc.Row([
                         dbc.Col([
-                            html.Div(
-                                html.P(travelers_opt1_main_board_labels[0],
-                                       className="main-board-label"),
-                                style={'textAlign': "right",
-                                       'marginTop': "0.5rem"}
-                            )
-                        ],
-                            md={"size": 4},
-                        ),
-                        dbc.Col([
-                            html.Div(
-                                html.P(travelers_opt1_main_board_labels[1],
-                                       className="main-board-label"),
-                                style={'textAlign': "right",
-                                       'marginTop': "0.5rem"}
-                            )
-                        ],
-                            md={"size": 12},
-                        ),
-                    ],
-
-                    ),
-                    dbc.Row([
-                        dbc.Col([
                             html.Div([
                                 html.Img(
                                     src=travelers_opt1_main_board_icons['travelers_origin'],
@@ -377,9 +354,11 @@ opt1 = dbc.Container(
                                        className="main-board-content-small"),
                             ],
                                 className="main-board-container-standard-v",
-                                style={
-                                'borderRight': "4px solid var(--third-color-contrast)"}
+
                             ),
+                            html.P(travelers_opt1_main_board_labels[2],
+                                    className="main-board-label"),
+
                         ],
                             md={"size": 4},
                         ),
@@ -396,9 +375,11 @@ opt1 = dbc.Container(
                                        className="main-board-content-small"),
                             ],
                                 className="main-board-container-standard-v",
-                                style={
-                                'borderRight': "4px solid var(--third-color-contrast)"}
+                            
                             ),
+                            html.P(travelers_opt1_main_board_labels[3],
+                                    className="main-board-label"),
+
                         ],
                             md={"size": 4},
                         ),
@@ -414,45 +395,17 @@ opt1 = dbc.Container(
                                 html.P("18-30 years", id="main-board-content-age",
                                        className="main-board-content-small"),
                             ],
-                                className="main-board-container-standard-v",
+                                className="main-board-container-standard-v-last",
                             ),
+                            html.P(travelers_opt1_main_board_labels[4],
+                                className="main-board-label"),                            
+
                         ],
                             md={"size": 4},
                         ),
                     ],
                         justify="center",
                     ),
-                    dbc.Row([
-                        dbc.Col([
-                            html.Div(
-                                html.P(travelers_opt1_main_board_labels[2],
-                                       className="main-board-label"),
-                                style={'textAlign': "center"}
-                            )
-                        ],
-                            md={"size": 4},
-                        ),
-                        dbc.Col([
-                            html.Div(
-                                html.P(travelers_opt1_main_board_labels[3],
-                                       className="main-board-label"),
-                                style={'textAlign': "center"}
-                            )
-                        ],
-                            md={"size": 4},
-                        ),
-                        dbc.Col([
-                            html.Div(
-                                html.P(travelers_opt1_main_board_labels[4],
-                                       className="main-board-label"),
-                                style={'textAlign': "center"}
-                            )
-                        ],
-                            md={"size": 4},
-                        ),
-                    ],
-                    ),
-
 
                 ]
                 ),
@@ -1025,7 +978,8 @@ opt2 = dbc.Container(
                                 ],
                                 ),
                             ],
-                            width=4,
+                            xs={"size": 12},
+                            md={"size": 4},
                         ),
                         dbc.Col([
                             html.Div([
@@ -1038,8 +992,8 @@ opt2 = dbc.Container(
                             ],
                             ),
                         ],
-                            width=4,
-
+                            xs={"size": 12},
+                            md={"size": 4},
                         ),
                         dbc.Col([
                             html.Div([
@@ -1051,7 +1005,8 @@ opt2 = dbc.Container(
                                 ),
                             ])
                         ],
-                            width=4,
+                            xs={"size": 12},
+                            md={"size": 4},
                         ),
                     ],
 
@@ -1078,10 +1033,11 @@ opt2 = dbc.Container(
                                     ])
 
                                 ],
-                                    style={"display": "flex", "justifyContent": "center",
-                                           'borderRight': "4px solid var(--third-color-contrast)"}
+                                    className="main-board-container-standard-h"                                    
 
                                 ),
+                                html.P(travelers_opt2_main_board_labels[0],
+                                       className="main-board-label")                                
                             ],
 
                             )
@@ -1113,6 +1069,8 @@ opt2 = dbc.Container(
                                                "justifyContent": "center"}
 
                                     ),
+                                    html.P(travelers_opt2_main_board_labels[1],
+                                       className="main-board-label")                                    
 
                                 ],
 
@@ -1126,30 +1084,7 @@ opt2 = dbc.Container(
                         justify="center",
 
                     ),
-                    dbc.Row([
-                        dbc.Col([
-                            html.Div(
-                                html.P(travelers_opt2_main_board_labels[0],
-                                       className="main-board-label"),
-                                style={'textAlign': "center",
-                                       'marginTop': "0.5rem"}
-                            )
-                        ],
-                            md={"size": 12},
-                        ),
-                        dbc.Col([
-                            html.Div(
-                                html.P(travelers_opt2_main_board_labels[1],
-                                       className="main-board-label"),
-                                style={'textAlign': "center",
-                                       'marginTop': "0.5rem"}
-                            )
-                        ],
-                            md={"size": 12},
-                        ),
-                    ],
 
-                    ),
                     dbc.Row([
                         dbc.Col([
                             html.Div([
@@ -1164,9 +1099,10 @@ opt2 = dbc.Container(
                                        className="main-board-content-small"),
                             ],
                                 className="main-board-container-standard-v",
-                                style={
-                                'borderRight': "4px solid var(--third-color-contrast)"}
+                                
                             ),
+                            html.P(travelers_opt2_main_board_labels[2],
+                                className="main-board-label")                            
                         ],
                             md={"size": 4},
                         ),
@@ -1183,9 +1119,10 @@ opt2 = dbc.Container(
                                        className="main-board-content-small"),
                             ],
                                 className="main-board-container-standard-v",
-                                style={
-                                'borderRight': "4px solid var(--third-color-contrast)"}
+                                
                             ),
+                            html.P(travelers_opt2_main_board_labels[3],
+                                className="main-board-label")                             
                         ],
                             md={"size": 4},
                         ),
@@ -1201,45 +1138,17 @@ opt2 = dbc.Container(
                                 html.P("Internal transportation", id="main-board-content-expense",
                                        className="main-board-content-small"),
                             ],
-                                className="main-board-container-standard-v",
+                                className="main-board-container-standard-v-last",
                             ),
+                            html.P(travelers_opt2_main_board_labels[3],
+                                className="main-board-label") 
+
                         ],
                             md={"size": 4},
                         ),
                     ],
                         justify="center",
                     ),
-                    dbc.Row([
-                        dbc.Col([
-                            html.Div(
-                                html.P(travelers_opt2_main_board_labels[2],
-                                       className="main-board-label"),
-                                style={'textAlign': "center"}
-                            )
-                        ],
-                            md={"size": 4},
-                        ),
-                        dbc.Col([
-                            html.Div(
-                                html.P(travelers_opt2_main_board_labels[3],
-                                       className="main-board-label"),
-                                style={'textAlign': "center"}
-                            )
-                        ],
-                            md={"size": 4},
-                        ),
-                        dbc.Col([
-                            html.Div(
-                                html.P(travelers_opt2_main_board_labels[4],
-                                       className="main-board-label"),
-                                style={'textAlign': "center"}
-                            )
-                        ],
-                            md={"size": 4},
-                        ),
-                    ],
-                    ),
-
 
                 ]
                 ),

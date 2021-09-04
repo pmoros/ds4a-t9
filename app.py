@@ -579,6 +579,7 @@ def update_travelers_opt1_card(national_bt, international_bt, selected_year, sel
     selected_month = [str(x) for x in selected_month]
     total_travelers = df_plot.groupby(['AÑO','MES']).sum()
     total_travelers = total_travelers.reset_index(drop=True).VIAJEROS[0]
+    total_travelers = str(total_travelers)
     #total_travelers = millify(total_travelers)
        
     return total_travelers

@@ -1881,6 +1881,8 @@ def update_travelers_travelers_opt2_b5_g1(national_bt, international_bt, selecte
         category = "TURISTAS INTERNACIONALES"
 
 
+    df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
+
     #Creating the right graph
     if category == "TURISTAS NACIONALES":
         df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
@@ -1913,7 +1915,10 @@ def update_travelers_travelers_opt2_b5_g1(national_bt, international_bt, selecte
                               'AUG','SEP','OCT','NOV','DEC']
         )
     )
+
     return fig
+
+    
 
 
 #Travelers -> OPT2 -> BOARD 5 -> GRAPH 2 (BOTTOM)

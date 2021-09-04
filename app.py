@@ -26,7 +26,7 @@ MAIN_COLOR_SELECTOR = "#6C7BC4"
 MAIN_COLOR_SELECTOR = "#7484d4"
 
 COLOR_PALETTE_DISCRETE = ["#20284D", "#4A589B","#D4D4E9", "#BADA55", "#FFE787", "#B8B97E","#D36135","#F49D6E","#4C8577"]#px.colors.qualitative.T10
-COLOR_PALETTE_DISCRETE_2 = ["#20284D", "#D4D4E9", "#4A589B","#BADA55", "#FFE787", "#B8B97E","#D36135","#F49D6E","#4C8577"]#px.colors.qualitative.T10
+COLOR_PALETTE_DISCRETE_2 = ["#20284D", " #BADA55", "#4A589B","#BADA55", "#FFE787", "#B8B97E","#D36135","#F49D6E","#4C8577"]#px.colors.qualitative.T10
 COLOR_PALETTE_CONTINUOUS = ["#20284D", "#4A589B","#D4D4E9", "#BADA55"]
 
 MESES_ORDEN = {'Enero':1, 'Febrero':2, 'Marzo':3, 'Abril':4, 'Mayo':5,'Junio':6,
@@ -556,12 +556,12 @@ def update_travelers_main_board_menu(national_bt, international_bt):
 
 #-----------Load menu OPT1->BOARD2
 @app.callback(
-    Output("travelers_opt1-board2-row1-menu-left-year", "options"),
-    Output("travelers_opt1-board2-row1-menu-right-year", "options"),
-    Output("travelers_opt1-board2-row1-menu-right-origin", "options"),
-    Output("travelers_opt1-board2-row1-menu-left-year", "value"),
-    Output("travelers_opt1-board2-row1-menu-right-year", "value"),
-    Output("travelers_opt1-board2-row1-menu-right-origin", "value"),
+    Output("travelers_opt1-board2-menu-top-year", "options"),
+    Output("travelers_opt1-board2-menu-bottom-year", "options"),
+    Output("travelers_opt1-board2-bottom-origin", "options"),
+    Output("travelers_opt1-board2-menu-top-year", "value"),
+    Output("travelers_opt1-board2-menu-bottom-year", "value"),
+    Output("travelers_opt1-board2-bottom-origin", "value"),
 [
     Input("viajeros-selector-national", "n_clicks_timestamp"),
     Input("viajeros-selector-international", "n_clicks_timestamp"),
@@ -587,16 +587,16 @@ def update_travelers_opt1_board2_menu(national_bt, international_bt):
     menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
 
     return menu_year, menu_year, menu_origin, \
-        [menu_year[0]['value']], menu_year[0]['value'], [menu_origin[0]['value']]
+        [menu_year[0]['value']], [menu_year[0]['value']], [menu_origin[0]['value']]
 
 #-----------Load menu OPT1->BOARD3
 @app.callback(
-    Output("travelers_opt1-board3-row1-menu-left-year", "options"),
-    Output("travelers_opt1-board3-row1-menu-right-year", "options"),
-    Output("travelers_opt1-board3-row1-right-origin", "options"),
-    Output("travelers_opt1-board3-row1-menu-left-year", "value"),
-    Output("travelers_opt1-board3-row1-menu-right-year", "value"),
-    Output("travelers_opt1-board3-row1-right-origin", "value"),
+    Output("travelers_opt1-board3-menu-top-year", "options"),
+    Output("travelers_opt1-board3-menu-bottom-year", "options"),
+    Output("travelers_opt1-board3-bottom-origin", "options"),
+    Output("travelers_opt1-board3-menu-top-year", "value"),
+    Output("travelers_opt1-board3-menu-bottom-year", "value"),
+    Output("travelers_opt1-board3-bottom-origin", "value"),
 [
     Input("viajeros-selector-national", "n_clicks_timestamp"),
     Input("viajeros-selector-international", "n_clicks_timestamp"),
@@ -622,7 +622,7 @@ def update_travelers_opt1_board3_menu(national_bt, international_bt):
     menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
 
     return menu_year, menu_year, menu_origin, \
-        [menu_year[0]['value']], menu_year[0]['value'], [menu_origin[0]['value']]
+        [menu_year[0]['value']], [menu_year[0]['value']], [menu_origin[0]['value']]
 
 
 
@@ -1365,12 +1365,12 @@ def update_travelers_opt2_board6_menu(national_bt, international_bt):
 
 #-----------Load menu OPT2->BOARD7
 @app.callback(
-    Output("travelers_opt2-board7-row1-menu-left-year", "options"),
-    Output("travelers_opt2-board7-row1-menu-right-year", "options"),
-    Output("travelers_opt2-board7-row1-menu-right-origin", "options"),
-    Output("travelers_opt2-board7-row1-menu-left-year", "value"),
-    Output("travelers_opt2-board7-row1-menu-right-year", "value"),
-    Output("travelers_opt2-board7-row1-menu-right-origin", "value"),
+    Output("travelers_opt2-board7-menu-top-year", "options"),
+    Output("travelers_opt2-board7-menu-bottom-year", "options"),
+    Output("travelers_opt2-board7-bottom-origin", "options"),
+    Output("travelers_opt2-board7-menu-top-year", "value"),
+    Output("travelers_opt2-board7-menu-bottom-year", "value"),
+    Output("travelers_opt2-board7-bottom-origin", "value"),
 [
     Input("viajeros-selector-national", "n_clicks_timestamp"),
     Input("viajeros-selector-international", "n_clicks_timestamp"),
@@ -1396,8 +1396,7 @@ def update_travelers_opt2_board7_menu(national_bt, international_bt):
     menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
 
     return menu_year, menu_year, menu_origin, \
-        [menu_year[0]['value']], menu_year[0]['value'], [menu_origin[0]['value']]
-
+        [menu_year[0]['value']], [menu_year[0]['value']], [menu_origin[0]['value']]
 
 
 #Travelers -> OPT1 -> BOARD 2 -> MENU -> RIGHT -> ORIGIN
@@ -2011,6 +2010,114 @@ def update_travelers_travelers_opt2_b6_g1(national_bt, international_bt, selecte
                               'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE']},
                        labels = {'VIAJEROS':'TRAVELERS','MES':'MONTH',
                            'ITEM':'',},
+            )
+    fig.update_layout(
+        xaxis = dict(
+            tickmode = 'array',
+            tickvals = ['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
+                              'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'],
+            ticktext = ['JAN','FEB','MAR','APR','MAY','JUN','JUL',
+                              'AUG','SEP','OCT','NOV','DEC']
+        )
+    )
+    return fig
+
+
+#------------------ BOARD 7 ----------------
+
+#Travelers -> OPT2 -> BOARD 7 -> GRAPH 1 (TOP)
+@app.callback(
+    Output("travelers_opt2-board7-graph-top", "figure")
+,[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+    
+    Input("travelers_opt2-board7-menu-top-year", "value"),
+])
+def update_travelers_travelers_opt2_b7_g1(national_bt, international_bt, selected_year):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt) :
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt) :
+        category = "TURISTAS INTERNACIONALES"
+
+
+    #Creating the right graph
+    if category == "TURISTAS NACIONALES":
+        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
+    elif category == "TURISTAS INTERNACIONALES":
+        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
+    else:
+        pass
+
+    selected_year = [int(x) for x in selected_year]
+    df_plot = df_plot.loc[df_plot['AÑO'].isin(selected_year)].loc[df_plot['SUBTEMA'] == 'TRANSPORTE']
+    df_plot = df_plot.drop(index = df_plot.loc[df_plot['MES']=='TOTAL'].index)
+    df_plot = df_plot.groupby(['MES','ITEM']).sum().reset_index()
+
+    fig = px.bar(df_plot,
+                       x = 'MES', y = 'VIAJEROS', color = 'ITEM',
+                       color_discrete_sequence = COLOR_PALETTE_DISCRETE,
+                       category_orders = {
+                       "MES":['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
+                              'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE']},
+                       labels = {'VIAJEROS':'TRAVELERS','MES':'MONTH',
+                           'ITEM':'','ORIGEN':'ORIGIN'},
+            )
+    fig.update_layout(
+        xaxis = dict(
+            tickmode = 'array',
+            tickvals = ['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
+                              'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'],
+            ticktext = ['JAN','FEB','MAR','APR','MAY','JUN','JUL',
+                              'AUG','SEP','OCT','NOV','DEC']
+        )
+    )
+    return fig
+
+
+#Travelers -> OPT2 -> BOARD 7 -> GRAPH 2 (BOTTOM)
+
+@app.callback(
+    Output("travelers_opt2-board7-graph-bottom", "figure")
+,[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+    
+    Input("travelers_opt2-board7-menu-bottom-year", "value"),
+    Input("travelers_opt2-board7-bottom-origin", "value"),
+])
+def update_travelers_travelers_opt2_b7_g2(national_bt, international_bt, selected_year,selected_origin):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt) :
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt) :
+        category = "TURISTAS INTERNACIONALES"
+
+
+    #Creating the right graph
+    if category == "TURISTAS NACIONALES":
+        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
+    elif category == "TURISTAS INTERNACIONALES":
+        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
+    else:
+        pass
+
+    selected_year = [int(x) for x in selected_year]
+    selected_origin = [str(x) for x in selected_origin]
+
+    df_plot = df_plot.loc[df_plot['AÑO'].isin(selected_year)].loc[df_plot['ORIGEN'].isin(selected_origin)].loc[df_plot['SUBTEMA'] == 'TRANSPORTE']
+    df_plot = df_plot.drop(index = df_plot.loc[df_plot['MES']=='TOTAL'].index)
+
+    fig = px.line(df_plot, x = "MES", y = "VIAJEROS", color = "ITEM", line_dash = 'ORIGEN',
+                 color_discrete_sequence = COLOR_PALETTE_DISCRETE,
+                 category_orders = {
+                       "MES":['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
+                              'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE']},
+                  labels = {'VIAJEROS':'TRAVELERS','MES':'MONTH',
+                           'ITEM':'','ORIGEN':'ORIGIN'},
             )
     fig.update_layout(
         xaxis = dict(

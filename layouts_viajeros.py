@@ -1538,7 +1538,7 @@ opt2 = dbc.Container(
                     travelers_opt2_card5_title, travelers_opt2_card5_subtitle),
                 # Board 5 PLOTS
                 dbc.Row([
-                    # Board 5 Plot Left
+                    # Board 5 Plot Top
                     dbc.Col([
                         html.Div([
                             dcc.Dropdown(
@@ -1599,7 +1599,7 @@ opt2 = dbc.Container(
 
                             ],
                             ),
-                            html.P(travelers_opt2_card5_label_right, className="board-standard-label-graph"),
+                            html.P(travelers_opt2_card5_label_bottom, className="board-standard-label-graph"),
                             dcc.Graph(
                                 id="travelers_opt2-board5-graph-bottom",
                             )

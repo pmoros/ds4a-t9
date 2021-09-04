@@ -1,3 +1,5 @@
+
+
 import os
 import pandas as pd
 
@@ -8,7 +10,7 @@ DATA_DIRECTORY = "data"
 DATABASE_NAMES = ["base_viajeros.xlsx", "base_indicadores"]
 GEOJSON_FILES = ["colombia.geojson"]
 
-def clean_database_viajeros():
+def clean_database_travelers():
     '''
         Wrangles the misspelling, repeated values, etc.
 
@@ -29,7 +31,13 @@ def clean_database_viajeros():
     return df_cleaned
 
 
-def clean_database_indicadores():
+def clean_database_indicators():
+    '''
+        Wrangles the misspelling, repeated values, etc.
+
+        return:
+            df_cleaned: cleaned data frame ready to use.        
+    '''
 
     df = pd.read_csv("data/2. Base de Indicadores de Turismo 2.csv")
     
@@ -47,8 +55,8 @@ def read__file_databases():
             DATABASE_NAMES can be used to access each one.
     '''
     databases = {}
-    databases[DATABASE_NAMES[0]] = clean_database_viajeros()
-    databases[DATABASE_NAMES[1]] = clean_database_indicadores()
+    databases[DATABASE_NAMES[0]] = clean_database_travelers()
+    databases[DATABASE_NAMES[1]] = clean_database_indicators()
 
     return databases
 

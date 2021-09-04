@@ -507,19 +507,241 @@ def update_indicators_opt4_b3_g1(selected_year):
 
     return fig
 
+#-----------Travelers - Common selectors ----------
+
+
+#----------SELECTOR VALUES LOAD---------------
+
+#----------LOAD MAIN CARD--------------
+#Same main card for all OPT, this works for all of them
+
+@app.callback(
+    Output("main-board-menu-year", "options"),
+    Output("main-board-menu-month", "options"),
+    Output("main-board-menu-year", "value"),
+    Output("main-board-menu-month", "value")
+,[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+])
+
+def update_travelers_main_board_menu(national_bt, international_bt):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt):
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt):
+        category = "TURISTAS INTERNACIONALES"
+
+
+    if category == "TURISTAS NACIONALES":
+        menu_year = data.df_viajeros_nacional['AÑO'].unique()
+        menu_month = data.df_viajeros_nacional['MES'].unique()
+    elif category == "TURISTAS INTERNACIONALES":
+        menu_year = data.df_viajeros_internacional['AÑO'].unique()
+        menu_month = data.df_viajeros_internacional['MES'].unique()
+
+    menu_year = list(map(layouts.create_options_dropdown, menu_year))
+    menu_month = list(map(layouts.create_options_dropdown, menu_month))
+
+    return menu_year, menu_month, [menu_year[0]['value']], [menu_month[0]['value']]
+
+
+
 
 #-----------Travelers - OPT1 (WHO THEY ARE) -----------------------
 
+#-----------MENUS LOAD -------------------
+
+#-----------Load menu OPT1->BOARD2
+@app.callback(
+    Output("travelers_opt1-board2-row1-menu-left-year", "options"),
+    Output("travelers_opt1-board2-row1-menu-right-year", "options"),
+    Output("travelers_opt1-board2-row1-menu-right-origin", "options"),
+    Output("travelers_opt1-board2-row1-menu-left-year", "value"),
+    Output("travelers_opt1-board2-row1-menu-right-year", "value"),
+    Output("travelers_opt1-board2-row1-menu-right-origin", "value"),
+[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+])
+
+def update_travelers_opt1_board2_menu(national_bt, international_bt):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt):
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt):
+        category = "TURISTAS INTERNACIONALES"
+
+
+    if category == "TURISTAS NACIONALES":
+        menu_year = data.df_viajeros_nacional['AÑO'].unique()
+        menu_origin = data.df_viajeros_nacional['ORIGEN'].unique()
+    elif category == "TURISTAS INTERNACIONALES":
+        menu_year = data.df_viajeros_internacional['AÑO'].unique()
+        menu_origin = data.df_viajeros_internacional['ORIGEN'].unique()
+
+    menu_year = list(map(layouts.create_options_dropdown, menu_year))
+    menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
+
+    return menu_year, menu_year, menu_origin, \
+        [menu_year[0]['value']], menu_year[0]['value'], [menu_origin[0]['value']]
+
+#-----------Load menu OPT1->BOARD3
+@app.callback(
+    Output("travelers_opt1-board3-row1-menu-left-year", "options"),
+    Output("travelers_opt1-board3-row1-menu-right-year", "options"),
+    Output("travelers_opt1-board3-row1-right-origin", "options"),
+    Output("travelers_opt1-board3-row1-menu-left-year", "value"),
+    Output("travelers_opt1-board3-row1-menu-right-year", "value"),
+    Output("travelers_opt1-board3-row1-right-origin", "value"),
+[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+])
+
+def update_travelers_opt1_board3_menu(national_bt, international_bt):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt):
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt):
+        category = "TURISTAS INTERNACIONALES"
+
+
+    if category == "TURISTAS NACIONALES":
+        menu_year = data.df_viajeros_nacional['AÑO'].unique()
+        menu_origin = data.df_viajeros_nacional['ORIGEN'].unique()
+    elif category == "TURISTAS INTERNACIONALES":
+        menu_year = data.df_viajeros_internacional['AÑO'].unique()
+        menu_origin = data.df_viajeros_internacional['ORIGEN'].unique()
+
+    menu_year = list(map(layouts.create_options_dropdown, menu_year))
+    menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
+
+    return menu_year, menu_year, menu_origin, \
+        [menu_year[0]['value']], menu_year[0]['value'], [menu_origin[0]['value']]
+
+
+
+#-----------Load menu OPT1->BOARD4
+@app.callback(
+    Output("travelers_opt1-board4-menu-top-year", "options"),
+    Output("travelers_opt1-board4-menu-bottom-year", "options"),
+    Output("travelers_opt1-board4-bottom-origin", "options"),
+    Output("travelers_opt1-board4-menu-top-year", "value"),
+    Output("travelers_opt1-board4-menu-bottom-year", "value"),
+    Output("travelers_opt1-board4-bottom-origin", "value"),
+[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+])
+
+def update_travelers_opt1_board4_menu(national_bt, international_bt):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt):
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt):
+        category = "TURISTAS INTERNACIONALES"
+
+
+    if category == "TURISTAS NACIONALES":
+        menu_year = data.df_viajeros_nacional['AÑO'].unique()
+        menu_origin = data.df_viajeros_nacional['ORIGEN'].unique()
+    elif category == "TURISTAS INTERNACIONALES":
+        menu_year = data.df_viajeros_internacional['AÑO'].unique()
+        menu_origin = data.df_viajeros_internacional['ORIGEN'].unique()
+
+    menu_year = list(map(layouts.create_options_dropdown, menu_year))
+    menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
+
+    return menu_year, menu_year, menu_origin, \
+        [menu_year[0]['value']], [menu_year[0]['value']], [menu_origin[0]['value']]
+
+
+#-----------Load menu OPT1->BOARD5
+@app.callback(
+    Output("travelers_opt1-board5-menu-top-year", "options"),
+    Output("travelers_opt1-board5-menu-bottom-year", "options"),
+    Output("travelers_opt1-board5-bottom-origin", "options"),
+    Output("travelers_opt1-board5-menu-top-year", "value"),
+    Output("travelers_opt1-board5-menu-bottom-year", "value"),
+    Output("travelers_opt1-board5-bottom-origin", "value"),
+[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+])
+
+def update_travelers_opt1_board5_menu(national_bt, international_bt):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt):
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt):
+        category = "TURISTAS INTERNACIONALES"
+
+
+    if category == "TURISTAS NACIONALES":
+        menu_year = data.df_viajeros_nacional['AÑO'].unique()
+        menu_origin = data.df_viajeros_nacional['ORIGEN'].unique()
+    elif category == "TURISTAS INTERNACIONALES":
+        menu_year = data.df_viajeros_internacional['AÑO'].unique()
+        menu_origin = data.df_viajeros_internacional['ORIGEN'].unique()
+
+    menu_year = list(map(layouts.create_options_dropdown, menu_year))
+    menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
+
+    return menu_year, menu_year, menu_origin, \
+        [menu_year[0]['value']], menu_year[0]['value'], [menu_origin[0]['value']]
+
+#-------------------BOARDS WITHS GRAPHS---------------
 
 #------------- BOARD 1 -------------------
 
-#Travelers -> OPT1 -> BOARD 1 -> GRAPH 1 (RIGHT)
+#-----------Load menu OPT1->BOARD1
+@app.callback(
+    Output("board1-menu-year", "options"),
+    Output("board1-menu-month", "options"),
+    Output("board1-menu-year", "value"),
+    Output("board1-menu-month", "value")
+,[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+])
+
+def update_travelers_board1_menu(national_bt, international_bt):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt):
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt):
+        category = "TURISTAS INTERNACIONALES"
+
+
+    if category == "TURISTAS NACIONALES":
+        menu_year = data.df_viajeros_nacional['AÑO'].unique()
+        menu_month = data.df_viajeros_nacional['MES'].unique()
+    elif category == "TURISTAS INTERNACIONALES":
+        menu_year = data.df_viajeros_internacional['AÑO'].unique()
+        menu_month = data.df_viajeros_internacional['MES'].unique()
+
+    menu_year = list(map(layouts.create_options_dropdown, menu_year))
+    menu_month = list(map(layouts.create_options_dropdown, menu_month))
+
+    return menu_year, menu_month, [menu_year[0]['value']], [menu_month[0]['value']]
+
+
+
+
+#Travelers -> OPT1 -> BOARD 1 -> GRAPH
+
 @app.callback(
     Output("travelers_opt1-board1-graph-right", "figure")
 ,[
     Input("viajeros-selector-national", "n_clicks_timestamp"),
     Input("viajeros-selector-international", "n_clicks_timestamp"),
-    #DANGER: THE YEAR/MONTH BUTTON SHOULD TAKE VALUES BASED ON THE ORIGIN
     Input("board1-menu-year", "value"),
     Input("board1-menu-month", "value")
 ])
@@ -543,16 +765,242 @@ def update_travelers_opt1_b1_g2(national_bt, international_bt, years, months):
 
 #------------------ BOARD 2 ----------------
 
+
+#--------------LOAD MENU BOARDS-----------
+
+#------------------ BOARD 3 ----------------
+
+#-----------Load menu OPT2->BOARD3
+@app.callback(
+    Output("travelers_opt2-board3-menu-top-year", "options"),
+    Output("travelers_opt2-board3-menu-bottom-year", "options"),
+    Output("travelers_opt2-board3-bottom-origin", "options"),
+    Output("travelers_opt2-board3-menu-top-year", "value"),
+    Output("travelers_opt2-board3-menu-bottom-year", "value"),
+    Output("travelers_opt2-board3-bottom-origin", "value"),
+[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+])
+
+def update_travelers_opt2_board3_menu(national_bt, international_bt):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt):
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt):
+        category = "TURISTAS INTERNACIONALES"
+
+
+    if category == "TURISTAS NACIONALES":
+        menu_year = data.df_viajeros_nacional['AÑO'].unique()
+        menu_origin = data.df_viajeros_nacional['ORIGEN'].unique()
+    elif category == "TURISTAS INTERNACIONALES":
+        menu_year = data.df_viajeros_internacional['AÑO'].unique()
+        menu_origin = data.df_viajeros_internacional['ORIGEN'].unique()
+
+    menu_year = list(map(layouts.create_options_dropdown, menu_year))
+    menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
+
+    return menu_year, menu_year, menu_origin, \
+        [menu_year[0]['value']], [menu_year[0]['value']], [menu_origin[0]['value']]
+
+
+#------------------ BOARD 4 ----------------
+
+#-----------Load menu OPT2->BOARD4
+@app.callback(
+    Output("travelers_opt2-board4-row1-menu-left-year", "options"),
+    Output("travelers_opt2-board4-row1-menu-right-year", "options"),
+    Output("travelers_opt2-board4-row1-menu-right-origin", "options"),
+    Output("travelers_opt2-board4-row1-menu-left-year", "value"),
+    Output("travelers_opt2-board4-row1-menu-right-year", "value"),
+    Output("travelers_opt2-board4-row1-menu-right-origin", "value"),
+[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+])
+
+def update_travelers_opt2_board4_menu(national_bt, international_bt):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt):
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt):
+        category = "TURISTAS INTERNACIONALES"
+
+
+    if category == "TURISTAS NACIONALES":
+        menu_year = data.df_viajeros_nacional['AÑO'].unique()
+        menu_origin = data.df_viajeros_nacional['ORIGEN'].unique()
+    elif category == "TURISTAS INTERNACIONALES":
+        menu_year = data.df_viajeros_internacional['AÑO'].unique()
+        menu_origin = data.df_viajeros_internacional['ORIGEN'].unique()
+
+    menu_year = list(map(layouts.create_options_dropdown, menu_year))
+    menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
+
+    return menu_year, menu_year, menu_origin, \
+        [menu_year[0]['value']], menu_year[0]['value'], [menu_origin[0]['value']]
+
+
+#------------------ BOARD 5 ----------------
+
+#-----------Load menu OPT2->BOARD5
+@app.callback(
+    Output("travelers_opt2-board5-row1-menu-left-year", "options"),
+    Output("travelers_opt2-board5-row1-menu-right-year", "options"),
+    Output("travelers_opt2-board5-row1-menu-right-origin", "options"),
+    Output("travelers_opt2-board5-row1-menu-left-year", "value"),
+    Output("travelers_opt2-board5-row1-menu-right-year", "value"),
+    Output("travelers_opt2-board5-row1-menu-right-origin", "value"),
+[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+])
+
+def update_travelers_opt2_board5_menu(national_bt, international_bt):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt):
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt):
+        category = "TURISTAS INTERNACIONALES"
+
+
+    if category == "TURISTAS NACIONALES":
+        menu_year = data.df_viajeros_nacional['AÑO'].unique()
+        menu_origin = data.df_viajeros_nacional['ORIGEN'].unique()
+    elif category == "TURISTAS INTERNACIONALES":
+        menu_year = data.df_viajeros_internacional['AÑO'].unique()
+        menu_origin = data.df_viajeros_internacional['ORIGEN'].unique()
+
+    menu_year = list(map(layouts.create_options_dropdown, menu_year))
+    menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
+
+    return menu_year, menu_year, menu_origin, \
+        [menu_year[0]['value']], menu_year[0]['value'], [menu_origin[0]['value']]
+
+
+#------------------ BOARD 6 ----------------
+
+#-----------Load menu OPT2->BOARD6
+@app.callback(
+    Output("travelers_opt2-board6-row1-menu-left-year", "options"),
+    Output("travelers_opt2-board6-row1-menu-right-year", "options"),
+    Output("travelers_opt2-board6-row1-menu-right-origin", "options"),
+    Output("travelers_opt2-board6-row1-menu-left-year", "value"),
+    Output("travelers_opt2-board6-row1-menu-right-year", "value"),
+    Output("travelers_opt2-board6-row1-menu-right-origin", "value"),
+[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+])
+
+def update_travelers_opt2_board6_menu(national_bt, international_bt):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt):
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt):
+        category = "TURISTAS INTERNACIONALES"
+
+
+    if category == "TURISTAS NACIONALES":
+        menu_year = data.df_viajeros_nacional['AÑO'].unique()
+        menu_origin = data.df_viajeros_nacional['ORIGEN'].unique()
+    elif category == "TURISTAS INTERNACIONALES":
+        menu_year = data.df_viajeros_internacional['AÑO'].unique()
+        menu_origin = data.df_viajeros_internacional['ORIGEN'].unique()
+
+    menu_year = list(map(layouts.create_options_dropdown, menu_year))
+    menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
+
+    return menu_year, menu_year, menu_origin, \
+        [menu_year[0]['value']], menu_year[0]['value'], [menu_origin[0]['value']]
+
+
+#------------------ BOARD 7 ----------------
+
+#-----------Load menu OPT2->BOARD7
+@app.callback(
+    Output("travelers_opt2-board7-row1-menu-left-year", "options"),
+    Output("travelers_opt2-board7-row1-menu-right-year", "options"),
+    Output("travelers_opt2-board7-row1-menu-right-origin", "options"),
+    Output("travelers_opt2-board7-row1-menu-left-year", "value"),
+    Output("travelers_opt2-board7-row1-menu-right-year", "value"),
+    Output("travelers_opt2-board7-row1-menu-right-origin", "value"),
+[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+])
+
+def update_travelers_opt2_board7_menu(national_bt, international_bt):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt):
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt):
+        category = "TURISTAS INTERNACIONALES"
+
+
+    if category == "TURISTAS NACIONALES":
+        menu_year = data.df_viajeros_nacional['AÑO'].unique()
+        menu_origin = data.df_viajeros_nacional['ORIGEN'].unique()
+    elif category == "TURISTAS INTERNACIONALES":
+        menu_year = data.df_viajeros_internacional['AÑO'].unique()
+        menu_origin = data.df_viajeros_internacional['ORIGEN'].unique()
+
+    menu_year = list(map(layouts.create_options_dropdown, menu_year))
+    menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
+
+    return menu_year, menu_year, menu_origin, \
+        [menu_year[0]['value']], menu_year[0]['value'], [menu_origin[0]['value']]
+
+
+
 #Travelers -> OPT1 -> BOARD 2 -> MENU -> RIGHT -> ORIGIN
 
 
 #-----------Travelers - OPT2 (WHAT THEY PREFER) -----------------------
 
 #------------------ BOARD 1 ----------------
+#-----------Load menu OPT2->BOARD1
+@app.callback(
+    Output("travelers_opt2-board1-menu-top-year", "options"),
+    Output("travelers_opt2-board1-menu-bottom-year", "options"),
+    Output("travelers_opt2-board1-bottom-origin", "options"),
+    Output("travelers_opt2-board1-menu-top-year", "value"),
+    Output("travelers_opt2-board1-menu-bottom-year", "value"),
+    Output("travelers_opt2-board1-bottom-origin", "value"),
+[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+])
 
-#Travelers -> OPT2 -> BOARD 0 -> General information
+def update_travelers_opt2_board1_menu(national_bt, international_bt):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt):
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt):
+        category = "TURISTAS INTERNACIONALES"
 
-#------------------ BOARD 1 ----------------
+
+    if category == "TURISTAS NACIONALES":
+        menu_year = data.df_viajeros_nacional['AÑO'].unique()
+        menu_origin = data.df_viajeros_nacional['ORIGEN'].unique()
+    elif category == "TURISTAS INTERNACIONALES":
+        menu_year = data.df_viajeros_internacional['AÑO'].unique()
+        menu_origin = data.df_viajeros_internacional['ORIGEN'].unique()
+
+    menu_year = list(map(layouts.create_options_dropdown, menu_year))
+    menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
+
+    return menu_year, menu_year, menu_origin, \
+        [menu_year[0]['value']], [menu_year[0]['value']], [menu_origin[0]['value']]
+
+
 
 #Travelers -> OPT2 -> BOARD 1 -> trip purpose: GRAPH 1 (TOP)
 @app.callback(
@@ -661,6 +1109,43 @@ def update_travelers_travelers_opt2_b1_g2(national_bt, international_bt, selecte
     return fig
 
 #------------------ BOARD 2 ----------------
+
+#-----------Load menu OPT2->BOARD2
+@app.callback(
+    Output("travelers_opt2-board2-menu-top-year", "options"),
+    Output("travelers_opt2-board2-menu-bottom-year", "options"),
+    Output("travelers_opt2-board2-bottom-origin", "options"),
+    Output("travelers_opt2-board2-menu-top-year", "value"),
+    Output("travelers_opt2-board2-menu-bottom-year", "value"),
+    Output("travelers_opt2-board2-bottom-origin", "value"),
+[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+])
+
+def update_travelers_opt2_board1_menu(national_bt, international_bt):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt):
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt):
+        category = "TURISTAS INTERNACIONALES"
+
+
+    if category == "TURISTAS NACIONALES":
+        menu_year = data.df_viajeros_nacional['AÑO'].unique()
+        menu_origin = data.df_viajeros_nacional['ORIGEN'].unique()
+    elif category == "TURISTAS INTERNACIONALES":
+        menu_year = data.df_viajeros_internacional['AÑO'].unique()
+        menu_origin = data.df_viajeros_internacional['ORIGEN'].unique()
+
+    menu_year = list(map(layouts.create_options_dropdown, menu_year))
+    menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
+
+    return menu_year, menu_year, menu_origin, \
+        [menu_year[0]['value']], [menu_year[0]['value']], [menu_origin[0]['value']]
+
+
 
 #Travelers -> OPT2 -> BOARD 2 -> attractions: GRAPH 1 (TOP lEFT)
 

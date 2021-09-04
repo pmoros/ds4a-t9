@@ -261,7 +261,7 @@ opt1 = dbc.Container(
                                     # This element gotta be reached using a call back with the id to load content
                                     # That text is burned
                                     html.Span(html.P(
-                                        "23M", id="main-board-content-cantidad"), className="main-board-content-big"),
+                                        id="main-board-content-cantidad"), className="main-board-content-big"),
 
                                 ],
                                     className="main-board-container-standard-h",

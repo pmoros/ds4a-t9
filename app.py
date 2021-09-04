@@ -26,6 +26,7 @@ MAIN_COLOR_SELECTOR = "#6C7BC4"
 MAIN_COLOR_SELECTOR = "#7484d4"
 
 COLOR_PALETTE_DISCRETE = ["#20284D", "#4A589B","#D4D4E9", "#BADA55", "#FFE787", "#B8B97E","#D36135","#F49D6E","#4C8577"]#px.colors.qualitative.T10
+COLOR_PALETTE_DISCRETE_2 = ["#20284D", "#D4D4E9", "#4A589B","#BADA55", "#FFE787", "#B8B97E","#D36135","#F49D6E","#4C8577"]#px.colors.qualitative.T10
 COLOR_PALETTE_CONTINUOUS = ["#20284D", "#4A589B","#D4D4E9", "#BADA55"]
 
 MESES_ORDEN = {'Enero':1, 'Febrero':2, 'Marzo':3, 'Abril':4, 'Mayo':5,'Junio':6,
@@ -909,7 +910,7 @@ def update_travelers_travelers_opt1_b3_g1(national_bt, international_bt, selecte
 
     fig = px.bar(df_plot,
                        x = 'MES', y = 'VIAJEROS', color = 'ITEM', barmode="group",
-                       color_discrete_sequence = COLOR_PALETTE_DISCRETE,
+                       color_discrete_sequence = COLOR_PALETTE_DISCRETE_2,
                        category_orders = {
                        "MES":['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
                               'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE']},
@@ -963,7 +964,7 @@ def update_travelers_travelers_opt1_b3_g2(national_bt, international_bt, selecte
     df_plot = df_plot.drop(index = df_plot.loc[df_plot['ITEM']=='C. NS/NR'].index)
 
     fig = px.line(df_plot, x = 'MES', y = 'VIAJEROS', color = 'ITEM', line_dash = 'ORIGEN',
-                 color_discrete_sequence = COLOR_PALETTE_DISCRETE,
+                 color_discrete_sequence = COLOR_PALETTE_DISCRETE_2,
                  category_orders = {
                        "MES":['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO',
                               'AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE']},
@@ -1281,7 +1282,7 @@ def update_travelers_opt2_board4_menu(national_bt, international_bt):
     menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
 
     return menu_year, menu_year, menu_origin, \
-        [menu_year[0]['value']], menu_year[0]['value'], [menu_origin[0]['value']]
+        [menu_year[0]['value']], [menu_year[0]['value']], [menu_origin[0]['value']]
 
 
 #------------------ BOARD 5 ----------------
@@ -1319,7 +1320,7 @@ def update_travelers_opt2_board5_menu(national_bt, international_bt):
     menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
 
     return menu_year, menu_year, menu_origin, \
-        [menu_year[0]['value']], menu_year[0]['value'], [menu_origin[0]['value']]
+        [menu_year[0]['value']], [menu_year[0]['value']], [menu_origin[0]['value']]
 
 
 #------------------ BOARD 6 ----------------

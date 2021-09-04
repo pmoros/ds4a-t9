@@ -120,7 +120,8 @@ opt1 = dbc.Container(
                                     # Menu Year primer tablero
                                     placeholder="Select the location",
                                     options=opt1_card_options['opt1-board1-menu-bottom-year'],
-                                    value=[opt1_card_options['opt1-board1-menu-bottom-year'][0]['value']],
+                                    value=[opt1_card_options['opt1-board1-menu-bottom-year'][0]['value'], \
+                                        opt1_card_options['opt1-board1-menu-bottom-year'][1]['value']],
                                     id="opt1-board1-menu-bottom-year",
                                     multi=True,
                                 )

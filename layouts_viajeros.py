@@ -127,9 +127,19 @@ travelers_opt1_card_options['board1-menu-month'] = list(map(layouts.create_optio
 travelers_opt1_card2_title = "How old are the travelers?"
 travelers_opt1_card2_subtitle = "Get to know the number of travelers that visit Bogotá city by age"
 
-travelers_opt1_card2_label_left = "Age distribution of the total number of travelers who visited Bogotá in the selected years"
-travelers_opt1_card2_label_right = "Comparison of the age distribution of travelers who visited Bogotá according to their origin"
+travelers_opt1_card2_label_top = "Age distribution of the total number of travelers who visited Bogotá in the selected years"
+travelers_opt1_card2_label_bottom = "Comparison of the age distribution of travelers who visited Bogotá according to their origin"
 
+#Pass options to the menus ---- Card2
+
+#Loading years
+card2_menu_year = data.df_viajeros['AÑO'].unique()
+travelers_opt1_card_options['travelers_opt1-board2-menu-top-year'] = list(map(layouts.create_options_dropdown, card2_menu_year))
+travelers_opt1_card_options['travelers_opt1-board2-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card2_menu_year))
+
+#Loading origin
+card2_menu_origin = data.df_viajeros['ORIGEN'].unique()
+travelers_opt1_card_options['travelers_opt1-board2-bottom-origin'] = list(map(layouts.create_options_dropdown, card2_menu_origin))
 
 #Pass options to the menus ---- Card2
 #card2_menu_right_origin = data.df_viajeros
@@ -511,19 +521,21 @@ opt1 = dbc.Container(
                     travelers_opt1_card2_title, travelers_opt1_card2_subtitle),
                 # Board 2 PLOTS
                 dbc.Row([
-                    # Board 2 Plot Left
+                    # Board 2 Plot Top
                     dbc.Col([
                         html.Div([
                             dcc.Dropdown(
                                 # Menu Year segundo tablero
                                 placeholder="Select the year",
-                                id="travelers_opt1-board2-row1-menu-left-year",
+                                options=travelers_opt1_card_options['travelers_opt1-board2-menu-top-year'],
+                                value=[travelers_opt1_card_options['travelers_opt1-board2-menu-top-year'][0]['value']],
+                                id="travelers_opt1-board2-menu-top-year",
                                 multi=True,
                             ),
-                            html.P(travelers_opt1_card2_label_left, className="board-standard-label-graph"),
+                            html.P(travelers_opt1_card2_label_top, className="board-standard-label-graph"),
                             #"my plot "
                             dcc.Graph(
-                                id="travelers_opt1-board2-row1-graph-left",
+                                id="travelers_opt1-board2-graph-top",
                             )
                         ],
                             # className=""
@@ -533,7 +545,7 @@ opt1 = dbc.Container(
                         md={'size': 12}
 
                     ),
-                    # Board 2 Plot Right
+                    # Board 2 Plot Bottom
                     dbc.Col([
                         html.Div([
                             #"my plot "
@@ -542,8 +554,10 @@ opt1 = dbc.Container(
                                     dcc.Dropdown(
                                         # Menu Year segundo tablero
                                         placeholder="Select the year",
-                                        id="travelers_opt1-board2-row1-menu-right-year",
-                                        #multi=True,
+                                        options=travelers_opt1_card_options['travelers_opt1-board2-menu-bottom-year'],
+                                        value=[travelers_opt1_card_options['travelers_opt1-board2-menu-bottom-year'][0]['value']],
+                                        id="travelers_opt1-board2-menu-bottom-year",
+                                        multi=True,
                                     )
                                 ],
                                     xs={'size': 12},
@@ -552,10 +566,10 @@ opt1 = dbc.Container(
                                 dbc.Col([
                                     dcc.Dropdown(
                                         # Menu Year segundo tablero
-                                        #options= ,
-                                        #value=whatever_options[0]['value']
                                         placeholder="Select the origin",
-                                        id="travelers_opt1-board2-row1-menu-right-origin",
+                                        options=travelers_opt1_card_options['travelers_opt1-board2-bottom-origin'],
+                                        value=[travelers_opt1_card_options['travelers_opt1-board2-bottom-origin'][0]['value']],
+                                        id="travelers_opt1-board2-bottom-origin",
                                         multi=True,
                                     )
                                 ],
@@ -565,9 +579,9 @@ opt1 = dbc.Container(
 
                             ],
                             ),
-                            html.P(travelers_opt1_card2_label_right, className="board-standard-label-graph"),
+                            html.P(travelers_opt1_card2_label_bottom, className="board-standard-label-graph"),
                             dcc.Graph(
-                                id="travelers_opt1-board2-row1-graph-right",
+                                id="travelers_opt1-board2-graph-bottom",
                             )
                         ],
                             # className=""

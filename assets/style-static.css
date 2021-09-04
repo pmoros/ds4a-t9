@@ -126,6 +126,7 @@
 
 
 .navbar .navbar-nav .nav-item .dropdown .btn {
+  border-width: 0px;
   font-family: var(--font-family-1);
   font-size: 19px;
   font-weight: 400;
@@ -140,7 +141,6 @@
   
   color: #ffffff !important;
   background-color: #1f232c;
-  border-bottom: 1px solid rgb(255, 255, 255);
   margin:0px;
 }
 
@@ -157,18 +157,15 @@
 
 .navbar .navbar-nav .nav-item .dropdown .dropdown-menu {
   background-color: #1f232c;
-  border: 1px;
 }
 
 .navbar .navbar-nav .nav-item .dropdown .dropdown-menu .dropdown-item {
   color: #ffff !important;
   background-color: #1f232c;
-  border: 1px;
 }
 
 .navbar .navbar-nav .nav-item .dropdown .dropdown-menu .dropdown-item:hover {
   background-color: #454750;
-  border: 1px;
 }
 
 .footer-container {
@@ -192,8 +189,8 @@
   gap: 2rem; 
 }
 
-.footer-text-right {
-  font-family: var(--font-family-3);
+.footer-text-right {  
+  font-family: "Roboto";
   color: var(--main-color-background);
   margin-left: 12%;   
 }

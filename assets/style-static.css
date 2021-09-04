@@ -124,12 +124,7 @@
   padding-left: 2rem;
 }
 
-/*Maybe use it with target*/
-/*
-.navbar .navbar-nav .nav-item .nav-link:hover {
-    border-bottom: 2px solid rgb(118, 150, 13);
-}  
-*/
+
 .navbar .navbar-nav .nav-item .dropdown .btn {
   font-family: var(--font-family-1);
   font-size: 19px;
@@ -243,6 +238,29 @@
   .landing-title {
     font-size: 3rem;    
   }  
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    max-width: auto;
+    position: absolute;
+    left: 0px;    
+    margin-left: 0px !important;
+
+    justify-content: center;
+
+    background-color: #1F232C;
+    border-radius: 5% 5%;
+  }
+
+  .navbar .navbar-nav .nav-item .dropdown .btn {
+    background-color: #1F232C;
+    padding-left: 20%;
+    border-width: 0px;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
 
 }
 

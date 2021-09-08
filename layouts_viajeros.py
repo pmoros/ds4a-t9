@@ -261,7 +261,7 @@ opt1 = dbc.Container(
                                     # This element gotta be reached using a call back with the id to load content
                                     # That text is burned
                                     html.Span(html.P(
-                                        "23M", id="main-board-content-cantidad"), className="main-board-content-big"),
+                                       "23M", id="main-board-content-cantidad"), className="main-board-content-big"),
 
                                 ],
                                     className="main-board-container-standard-h",
@@ -1264,37 +1264,21 @@ opt2 = dbc.Container(
                 dbc.Container([
                 #Board 2 Plot 1 (Top)
                 dbc.Row([
-                    # Board 2 Plot Left
-                    dbc.Col([
-                        html.Div([
-                            #"my plot "
-                            dcc.Graph(
-                                id="travelers_opt2-board2-graph-left",
-                            )
-                        ],
-                            # className=""
-                        )
-                    ],
-                        xs={'size': 12},
-                        md={'size': 3}
-
-                    ),
+                    
                     # Board 2 Plot Right
-                    dbc.Col([
-                        html.Div([
-                            #"my plot "
-                            dcc.Graph(
-                                id="travelers_opt2-board2-graph-right",
-                            )
-                        ],
-                            # className=""
+                    html.Div([
+                        #"my plot "
+                        dcc.Graph(
+                            id="travelers_opt2-board2-graph-right",
                         )
                     ],
-                        xs={'size': 12},
-                        md={'size': 9}
+                        # className=""
+                        
+                    )                    
 
-                    )
-                ]
+                ],
+                justify="center",
+
                 ),
                     #Board 2 Plot 2 (Bottom)
                     html.Div([

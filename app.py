@@ -547,7 +547,42 @@ def update_travelers_main_board_menu(national_bt, international_bt):
 
     return menu_year, menu_month, [menu_year[0]['value']], [menu_month[0]['value']]
 
+#------------------ CARDS ----------------
 
+#Travelers -> OPT1 -> CARD
+@app.callback(
+    Output("main-board-content-cantidad", "value")
+,[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+    Input("main-board-menu-year", "value"),
+    Input("main-board-menu-month", "value"),
+])
+def update_travelers_opt1_card(national_bt, international_bt, selected_year, selected_month):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    if int(national_bt) > int(international_bt) :
+        category = "TURISTAS NACIONALES"
+    elif int(international_bt) > int(national_bt) :
+        category = "TURISTAS INTERNACIONALES"
+
+
+    #Creating the right graph
+    if category == "TURISTAS NACIONALES":
+        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
+    elif category == "TURISTAS INTERNACIONALES":
+        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
+    else:
+        pass
+
+    selected_year = [int(x) for x in selected_year]
+    selected_month = [str(x) for x in selected_month]
+    total_travelers = df_plot.groupby(['AÑO','MES']).sum()
+    total_travelers = total_travelers.reset_index(drop=True).VIAJEROS[0]
+    total_travelers = str(total_travelers)
+    #total_travelers = millify(total_travelers)
+       
+    return total_travelers
 
 
 #-----------Travelers - OPT1 (WHO THEY ARE) -----------------------
@@ -1588,6 +1623,40 @@ def update_travelers_opt2_board1_menu(national_bt, international_bt):
 
 
 #Travelers -> OPT2 -> BOARD 2 -> attractions: GRAPH 1 (TOP lEFT)
+@app.callback(
+    Output("travelers_opt2-board2-graph-right", "figure")
+,[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+    
+    Input("travelers_opt2-board2-menu-bottom-year", "value"),    
+])
+def update_travelers_travelers_opt2_b2_g3(national_bt, international_bt, selected_year):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    df_plot = data.df_viajeros_nacional[data.df_viajeros_nacional['SUBTEMA'] == "ATRACTIVOS"]
+    if int(national_bt) > int(international_bt) :
+        category = "TURISTAS NACIONALES"
+        df_plot = data.df_viajeros_nacional[data.df_viajeros_nacional['SUBTEMA'] == "ATRACTIVOS"]
+    elif int(international_bt) > int(national_bt) :
+        category = "TURISTAS INTERNACIONALES"
+        df_plot = data.df_viajeros_internacional[data.df_viajeros_internacional['SUBTEMA'] == "ATRACTIVOS"]
+
+    selected_year = [int(x) for x in selected_year]
+    df_plot = df_plot[df_plot['AÑO'].isin(selected_year)]
+
+    df_plot = df_plot.groupby("ITEM").sum().reset_index()
+
+    fig = px.bar(df_plot, x='ITEM', y='VIAJEROS',color='ITEM',
+             labels={
+                'VALOR': "Value", 'ITEM': "Atraction"
+            },
+             color_discrete_sequence=COLOR_PALETTE_DISCRETE,
+
+            )
+    fig.update_xaxes(showticklabels=True) # hide all the xticks
+    fig.update_layout(showlegend=False)
+    return fig
 
 
 #Travelers -> OPT2 -> BOARD 2 -> attractions: GRAPH 2 (TOP RIGHT)

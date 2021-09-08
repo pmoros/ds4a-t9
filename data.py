@@ -242,3 +242,58 @@ def get_indicators_opt4_b4_g1():
             )
 
     return fig    
+
+
+#Main card functions    
+
+def prefCard(df, año, mes, flag):
+    card = {}
+    
+    # Flag == 0: Internacionales, Flag == 1: Nacionales, Otro: Ambos
+    if (flag == 0):
+        df = df.loc[df['AÑO'] == año].loc[df['MES'] == mes].loc[df['TEMA'] == 'TURISTAS INTERNACIONALES']
+    elif (flag == 1):
+        df = df.loc[df['AÑO'] == año].loc[df['MES'] == mes].loc[df['TEMA'] == 'TURISTAS NACIONALES'] 
+    else:
+        df = df.loc[df['AÑO'] == año].loc[df['MES'] == mes]
+    
+    # Selecting information
+    purpose_travelers = df.loc[df['SUBTEMA'] == 'MOTIVO']
+    purpose_travelers = purpose_travelers.groupby('ITEM').sum().sort_values(by='VIAJEROS',ascending=False).reset_index()
+    purpose_travelers_2 = purpose_travelers[['ITEM','VIAJEROS']].iloc[0].ITEM
+    purpose_travelers_2 = purpose_travelers_2[3:]
+    total_travelers_pur = purpose_travelers.VIAJEROS.sum()
+    purpose_travelers = int(purpose_travelers.iloc[0].VIAJEROS/total_travelers_pur*100)
+    purpose_travelers = str(int(purpose_travelers))+"%"
+    
+    atract_travelers= df.loc[df['SUBTEMA'] == 'ATRACTIVOS']
+    atract_travelers = atract_travelers.groupby('ITEM').sum().sort_values(by='VIAJEROS',ascending=False).reset_index()
+    atract_travelers_2 = atract_travelers[['ITEM','VIAJEROS']].iloc[0].ITEM
+    atract_travelers_2 = atract_travelers_2[3:]
+    total_travelers_atract = atract_travelers.VIAJEROS.sum()
+    atract_travelers = int(atract_travelers.iloc[0].VIAJEROS/total_travelers_atract*100)
+    atract_travelers = str(int(atract_travelers))+"%"
+    
+    group_travelers= df.loc[df['SUBTEMA'] == 'GRUPO']
+    group_travelers = group_travelers.groupby('ITEM').sum().sort_values(by='VIAJEROS',ascending=False).reset_index()
+    group_travelers = group_travelers[['ITEM','VIAJEROS']].iloc[0].ITEM
+    group_travelers = group_travelers[3:]
+    
+    accom_travelers= df.loc[df['SUBTEMA'] == 'ALOJAMIENTO']
+    accom_travelers = accom_travelers.groupby('ITEM').sum().sort_values(by='VIAJEROS',ascending=False).reset_index()
+    accom_travelers = accom_travelers[['ITEM','VIAJEROS']].iloc[0].ITEM
+    accom_travelers = accom_travelers[3:]
+    
+    expen_travelers= df.loc[df['SUBTEMA'] == 'GASTO DISTRI']
+    expen_travelers = expen_travelers.groupby('ITEM').sum().sort_values(by='VIAJEROS',ascending=False).reset_index()
+    expen_travelers = expen_travelers[['ITEM','VIAJEROS']].iloc[0].ITEM
+    expen_travelers = expen_travelers[3:]
+     
+    card = {}
+    card['Trip purpose'] = [purpose_travelers,purpose_travelers_2]
+    card['Most visited tourist attraction'] = [atract_travelers,atract_travelers_2]
+    card['Travel group'] = group_travelers
+    card['accommodation'] = accom_travelers 
+    card['Higher expense'] = expen_travelers
+    
+    return card

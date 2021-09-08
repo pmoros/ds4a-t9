@@ -92,15 +92,16 @@
 .main-board-subtitle {
   font-family: "Montserrat";
   font-weight: 700;
-  font-size: 32px;
+  font-size: 20px;
 }
 
 .main-board-content-big {
   color: var(--main-color-selector);
   font-family: var(--font-family-2);
   font-weight: 700;
-  font-size: 60px;
+  font-size: 40px;
   margin-bottom: 0px;
+  text-align: center;
 }
 
 .main-board-content-small {

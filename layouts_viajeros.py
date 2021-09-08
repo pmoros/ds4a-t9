@@ -224,7 +224,7 @@ opt1 = dbc.Container(
                                     # Menu Year main tablero
                                     placeholder="Year",
                                     id="main-board-menu-year",
-                                    multi=True,
+                                    #multi=True,
                                 ),
                             ],
                             ),
@@ -238,7 +238,7 @@ opt1 = dbc.Container(
                                     # Menu Year main tablero
                                     placeholder="Month",
                                     id="main-board-menu-month",
-                                    multi=True,
+                                    # multi=True,
                                 ),
                             ])
                         ],
@@ -997,7 +997,7 @@ opt2 = dbc.Container(
                                     # Menu Year segundo tablero
                                     placeholder="Year",
                                     id="main-board-menu-year",
-                                    multi=True,
+                                    #multi=True,
                                 ),
                             ],
                             ),
@@ -1011,7 +1011,7 @@ opt2 = dbc.Container(
                                     # Menu Year segundo tablero
                                     placeholder="Month",
                                     id="main-board-menu-month",
-                                    multi=True,
+                                    # multi=True,
                                 ),
                             ])
                         ],
@@ -1034,11 +1034,11 @@ opt2 = dbc.Container(
                                     # This element gotta be reached using a call back with the id to load content
                                     # That text is burned
                                     html.Div([
-                                        html.Span(html.P(
-                                            "65%", id="main-board-content-purpose"), className="main-board-content-big"),
+                                        html.P(
+                                            id="main-board-content-purpose-0", className="main-board-content-big"),
                                         # Burned label
-                                        html.Span(html.P(
-                                            "Sightseeing", className="main-board-subtitle"))
+                                        html.P(
+                                            id="main-board-content-purpose-1", className="main-board-subtitle")
 
                                     ])
 
@@ -1047,7 +1047,7 @@ opt2 = dbc.Container(
 
                                 ),
                                 html.P(travelers_opt2_main_board_labels[0],
-                                       className="main-board-label")                                
+                                       className="main-board-label", style={'paddingLeft': "15%"})                                
                             ],
 
                             )
@@ -1068,10 +1068,10 @@ opt2 = dbc.Container(
                                             # This element gotta be reached using a call back with the id to load content
                                             # That text is burned
                                             html.P(
-                                                "32%", id="main-board-content-genero-hombre", className="main-board-content-big"),
+                                                id="most-visited-content-0", className="main-board-content-big"),
                                             # Burnt label
                                             html.P(
-                                                "Malls", className="main-board-subtitle")
+                                                id="most-visited-content-1", className="main-board-subtitle")
                                         ],
                                         )
                                     ],
@@ -1105,7 +1105,7 @@ opt2 = dbc.Container(
                                 ),
                                 # This element gotta be reached using a call back with the id to load content
                                 # That text is burned
-                                html.P("Work and / or study colleagues", id="main-board-content-travelgroup",
+                                html.P(id="main-board-content-travelgroup",
                                        className="main-board-content-small"),
                             ],
                                 className="main-board-container-standard-v",
@@ -1125,7 +1125,7 @@ opt2 = dbc.Container(
                                 ),
                                 # This element gotta be reached using a call back with the id to load content
                                 # That text is burned
-                                html.P("own holiday home", id="main-board-content-accomodation",
+                                html.P(id="main-board-content-accomodation",
                                        className="main-board-content-small"),
                             ],
                                 className="main-board-container-standard-v",
@@ -1145,12 +1145,12 @@ opt2 = dbc.Container(
                                 ),
                                 # This element gotta be reached using a call back with the id to load content
                                 # That text is burned
-                                html.P("Internal transportation", id="main-board-content-expense",
+                                html.P(id="main-board-content-expense",
                                        className="main-board-content-small"),
                             ],
                                 className="main-board-container-standard-v-last",
                             ),
-                            html.P(travelers_opt2_main_board_labels[3],
+                            html.P(travelers_opt2_main_board_labels[4],
                                 className="main-board-label") 
 
                         ],

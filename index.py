@@ -87,9 +87,9 @@ footer = html.Div([
         className="footer-text-right",
         id="footer-app-text"),
     html.Div([
-        html.Img(src=LOGOS_FOOTER['correlation'],\
+        html.Img(id="correlation-footer-logo", src=LOGOS_FOOTER['correlation'],\
             style={'width': "153px", 'height': "36px"}),
-        html.Img(src=LOGOS_FOOTER['mintic'],\
+        html.Img(id="mintic-footer-logo", src=LOGOS_FOOTER['mintic'],\
             style={'width': "167px", 'height': "36px", 'height': "100%"}),
     ],
     className="footer-logos-container"

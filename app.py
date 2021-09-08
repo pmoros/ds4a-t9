@@ -549,6 +549,47 @@ def update_travelers_main_board_menu(national_bt, international_bt):
 
 #------------------ CARDS ----------------
 
+#Travelers -> OPT1 -> MAIN CARD
+@app.callback(
+    Output("main-board-content-cantidad", "children"),
+    Output("main-board-content-genero-hombre", "children"),
+    Output("main-board-content-genero-mujer", "children"),
+    Output("main-board-content-origin", "children"),
+    Output("main-board-content-education", "children"),
+    Output("main-board-content-age", "children")    
+,[
+    Input("viajeros-selector-national", "n_clicks_timestamp"),
+    Input("viajeros-selector-international", "n_clicks_timestamp"),
+    Input("main-board-menu-year", "value"),
+    Input("main-board-menu-month", "value"),
+])
+def update_travelers_travel_card(national_bt, international_bt, selected_year, selected_month):
+    # USING TYPE OF TOURIST FILTER
+    category = "TURISTAS NACIONALES"
+    category_flag = 1
+    if int(national_bt) > int(international_bt) :
+        category = "TURISTAS NACIONALES"
+        category_flag = 1
+    elif int(international_bt) > int(national_bt) :
+        category = "TURISTAS INTERNACIONALES"
+        category_flag = 0
+
+    # pref_values = data.prefCard(data.df_viajeros, str(selected_year), selected_month, category_flag)
+    print("VAL", selected_year)
+    print("TYPE", type(selected_year))
+
+    print("VAL", selected_month)
+    print("TYPE", type(selected_month))
+
+    travel_values = data.travelCard(data.df_viajeros, int(selected_year), selected_month, category_flag)
+
+    
+
+    return travel_values['Total travelers'], travel_values['Travelers gender'][0], travel_values['Travelers gender'][1],\
+        travel_values['Origin'], travel_values['Education level'], travel_values['Age']
+
+
+
 #Travelers -> OPT2 -> MAIN CARD
 @app.callback(
     Output("main-board-content-purpose-0", "children"),
@@ -567,13 +608,13 @@ def update_travelers_main_board_menu(national_bt, international_bt):
 def update_travelers_pref_card(national_bt, international_bt, selected_year, selected_month):
     # USING TYPE OF TOURIST FILTER
     category = "TURISTAS NACIONALES"
-    category_flag = 0
+    category_flag = 1
     if int(national_bt) > int(international_bt) :
         category = "TURISTAS NACIONALES"
-        category_flag = 0
+        category_flag = 1
     elif int(international_bt) > int(national_bt) :
         category = "TURISTAS INTERNACIONALES"
-        category_flag = 1
+        category_flag = 0
 
     # pref_values = data.prefCard(data.df_viajeros, str(selected_year), selected_month, category_flag)
     print("VAL", selected_year)
@@ -583,7 +624,7 @@ def update_travelers_pref_card(national_bt, international_bt, selected_year, sel
     print("TYPE", type(selected_month))
 
     # pref_values = data.prefCard(data.df_viajeros, 2019, "ENERO", 0)
-    pref_values = data.prefCard(data.df_viajeros, int(selected_year), selected_month, 0)
+    pref_values = data.prefCard(data.df_viajeros, int(selected_year), selected_month, category_flag)
 
     
 

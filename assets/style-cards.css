@@ -196,6 +196,15 @@
     flex-direction: column;
   }
 
+  .main-board-container-standard-h {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .main-board-label {
+    padding-left: 0px !important;
+  }
+
 }
 
 @media only screen and (max-width: 992px) {

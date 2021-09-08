@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import plotly.express as px
 
 # Plotly graph objects to render graph plots
@@ -245,6 +246,14 @@ def get_indicators_opt4_b4_g1():
 
 
 #Main card functions    
+millnames = ['',' K',' M',' B',' T']
+
+def millify(n):
+    n = float(n)
+    millidx = max(0,min(len(millnames)-1,
+                        int(np.floor(0 if n == 0 else np.log10(abs(n))/3))))
+
+    return '{:.0f}{}'.format(n / 10**(3 * millidx), millnames[millidx])
 
 def prefCard(df, año, mes, flag):
     card = {}
@@ -295,5 +304,58 @@ def prefCard(df, año, mes, flag):
     card['Travel group'] = group_travelers
     card['accommodation'] = accom_travelers 
     card['Higher expense'] = expen_travelers
+    
+    return card
+
+
+def travelCard(df, año, mes, flag):
+    card = {}
+    
+    # Flag == 0: Internacionales, Flag == 1: Nacionales, Otro: Ambos
+    if (flag == 0):
+        df = df.loc[df['AÑO'] == año].loc[df['MES'] == mes].loc[df['TEMA'] == 'TURISTAS INTERNACIONALES']
+    elif (flag == 1):
+        df = df.loc[df['AÑO'] == año].loc[df['MES'] == mes].loc[df['TEMA'] == 'TURISTAS NACIONALES'] 
+    else:
+        df = df.loc[df['AÑO'] == año].loc[df['MES'] == mes]
+    
+    # Selecting information
+    total_travelers = df.groupby(['AÑO','MES']).sum()
+    total_travelers = total_travelers.reset_index(drop=True).VIAJEROS[0]
+    total_travelers = millify(total_travelers)
+
+    total_travelers_gen = df.loc[df['SUBTEMA'] == 'GENERO']
+    male_travelers = total_travelers_gen.loc[df['ITEM'] == 'A. HOMBRE']
+    total_travelers_gen = total_travelers_gen.drop(index = total_travelers_gen.loc[total_travelers_gen['ITEM']==
+                                                                                   'C. NS/NR'].index)
+    total_travelers_gen = total_travelers_gen.groupby(['AÑO','MES']).sum().reset_index(drop=True).VIAJEROS[0]
+    male_travelers = male_travelers.groupby(['AÑO','MES']).sum()
+    male_travelers = int((male_travelers.reset_index(drop=True).VIAJEROS[0]/total_travelers_gen)*100)
+    female_travelers = 100 - male_travelers
+    male_travelers = str(int(male_travelers))+"%"
+    female_travelers = str(int(female_travelers))+"%"
+    
+    origin_travelers = df.groupby('ORIGEN').sum().sort_values(by='VIAJEROS',ascending=False).reset_index()
+    origin_travelers = origin_travelers[['ORIGEN','VIAJEROS']].iloc[0].ORIGEN
+
+    education_travelers = df.loc[df['SUBTEMA'] == 'EDUCACION']
+    education_travelers = education_travelers.drop(index = education_travelers.loc[education_travelers['ITEM']==
+                                                                                   'G. NS/NR'].index)
+    education_travelers = education_travelers.groupby('ITEM').sum().sort_values(by='VIAJEROS',ascending=False).reset_index()
+    education_travelers = education_travelers[['ITEM','VIAJEROS']].iloc[0].ITEM
+    education_travelers = education_travelers[3:]
+
+    age_travelers = df.loc[df['SUBTEMA'] == 'EDAD']
+    age_travelers = age_travelers.drop(index = age_travelers.loc[age_travelers['ITEM']=='A. NS/NR'].index)
+    age_travelers = age_travelers.groupby('ITEM').sum().sort_values(by='VIAJEROS',ascending=False).reset_index()
+    age_travelers = age_travelers[['ITEM','VIAJEROS']].iloc[0].ITEM
+    age_travelers = age_travelers[3:]
+    
+    card = {}
+    card['Total travelers'] = total_travelers
+    card['Travelers gender'] = [male_travelers,'Men',female_travelers,'Women']
+    card['Origin'] = origin_travelers
+    card['Education level'] = education_travelers 
+    card['Age'] = age_travelers
     
     return card

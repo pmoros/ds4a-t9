@@ -261,7 +261,7 @@ opt1 = dbc.Container(
                                     # This element gotta be reached using a call back with the id to load content
                                     # That text is burned
                                     html.Span(html.P(
-                                       "23M", id="main-board-content-cantidad"), className="main-board-content-big"),
+                                       id="main-board-content-cantidad"), className="main-board-content-big"),
 
                                 ],
                                     className="main-board-container-standard-h",
@@ -290,7 +290,7 @@ opt1 = dbc.Container(
                                             # This element gotta be reached using a call back with the id to load content
                                             # That text is burned
                                             html.P(
-                                                "32%", id="main-board-content-genero-hombre", className="main-board-content-big"),
+                                                id="main-board-content-genero-hombre", className="main-board-content-big"),
                                             # Burnt label
                                             html.P(
                                                 "Men", className="main-board-subtitle")
@@ -312,7 +312,7 @@ opt1 = dbc.Container(
                                             # This element gotta be reached using a call back with the id to load content
                                             # That text is burned
                                             html.P(
-                                                "68%", id="main-board-content-genero-hombre", className="main-board-content-big"),
+                                                id="main-board-content-genero-mujer", className="main-board-content-big"),
                                             # Burnt label
                                             html.P(
                                                 "Women", className="main-board-subtitle")
@@ -350,7 +350,7 @@ opt1 = dbc.Container(
                                 ),
                                 # This element gotta be reached using a call back with the id to load content
                                 # That text is burned
-                                html.P("Valle del Cauca", id="main-board-content-origin",
+                                html.P(id="main-board-content-origin",
                                        className="main-board-content-small"),
                             ],
                                 className="main-board-container-standard-v",
@@ -371,7 +371,7 @@ opt1 = dbc.Container(
                                 ),
                                 # This element gotta be reached using a call back with the id to load content
                                 # That text is burned
-                                html.P("Undergraduate degree", id="main-board-content-education",
+                                html.P(id="main-board-content-education",
                                        className="main-board-content-small"),
                             ],
                                 className="main-board-container-standard-v",
@@ -392,7 +392,7 @@ opt1 = dbc.Container(
                                 ),
                                 # This element gotta be reached using a call back with the id to load content
                                 # That text is burned
-                                html.P("18-30 years", id="main-board-content-age",
+                                html.P(id="main-board-content-age",
                                        className="main-board-content-small"),
                             ],
                                 className="main-board-container-standard-v-last",

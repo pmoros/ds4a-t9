@@ -277,7 +277,19 @@
     display: flex;
     justify-content: space-between;
 
-    gap: 6rem; 
+    gap: auto; 
   }  
+
+
+  #correlation-footer-logo {
+    padding-left: 5%;
+    transform: scale(0.8,0.8);
+  }
+
+  #mintic-footer-logo {
+    transform: scale(0.8,0.8);
+
+  }
+
 
 }

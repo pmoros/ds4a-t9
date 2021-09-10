@@ -575,11 +575,6 @@ def update_travelers_travel_card(national_bt, international_bt, selected_year, s
         category_flag = 0
 
     # pref_values = data.prefCard(data.df_viajeros, str(selected_year), selected_month, category_flag)
-    print("VAL", selected_year)
-    print("TYPE", type(selected_year))
-
-    print("VAL", selected_month)
-    print("TYPE", type(selected_month))
 
     travel_values = data.travelCard(data.df_viajeros, int(selected_year), selected_month, category_flag)
 

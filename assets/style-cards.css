@@ -84,7 +84,7 @@
 .main-board-label {
   font-family: var(--font-family-1);
   font-weight: 400;
-  font-size: 20px;
+  font-size: 24px;
 
   text-align: center;
 }
@@ -168,13 +168,13 @@
 
 .board-standard-header-subtitle {
   font-family: "Helvetica";
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 400;  
 }
 
 .board-standard-label-graph {
   font-family: "Helvetica";
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;  
   margin-top: 1rem;
 }

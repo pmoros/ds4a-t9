@@ -580,7 +580,7 @@ def update_travelers_travel_card(national_bt, international_bt, selected_year, s
 
     
 
-    return travel_values['Total travelers'], travel_values['Travelers gender'][0], travel_values['Travelers gender'][1],\
+    return travel_values['Total travelers'], travel_values['Travelers gender'][0], travel_values['Travelers gender'][2],\
         travel_values['Origin'], travel_values['Education level'], travel_values['Age']
 
 

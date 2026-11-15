@@ -38,11 +38,11 @@ dependencies = [
 ]
 
 [dependency-groups]
+# Test dependencies must live in the project venv (they import the app).
+# Standalone CLIs (ruff, pre-commit) are managed by mise, see mise.toml.
 dev = [
-    "pre-commit==2.21.0",
     "pytest==7.4.4",
     "pytest-cov==4.1.0",
-    "ruff==0.8.6",
     "syrupy==3.0.6",
 ]
 

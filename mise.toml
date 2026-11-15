@@ -1,0 +1,72 @@
+# Local tooling, managed by mise (https://mise.jdx.dev).
+#
+#   mise install        # Python, uv, ruff, pre-commit at the pinned versions
+#   mise run setup      # create .venv with the app's pinned stack + test deps
+#   mise run test       # pytest (runs inside the project venv)
+#   mise run lint       # ruff check + format check
+#   mise tasks          # list everything
+#
+# Production still runs Python 3.7.11 (runtime.txt / Dockerfile); 3.8 is the
+# closest interpreter that installs the exact pinned stack.
+
+[tools]
+python = "3.8.20"
+uv = "0.13.8"
+# Standalone CLIs: they do not need the app's dependencies, so they live
+# outside the project venv. Keep ruff in sync with .pre-commit-config.yaml.
+ruff = "0.8.6"
+"pipx:pre-commit" = "2.21.0"
+
+[settings]
+# Let mise activate the uv-managed .venv when entering the directory.
+python.uv_venv_auto = true
+# Python 3.8 builds were published before python-build-standalone added GitHub
+# artifact attestations, so verification would always fail (checksums are still
+# verified). Scoped to Python only; remove when upgrading Python (Phase 3).
+python.github_attestations = false
+
+[env]
+# Make uv use the mise-provided interpreter (found on PATH) instead of
+# downloading or picking up its own managed Pythons.
+UV_PYTHON = "3.8"
+UV_PYTHON_PREFERENCE = "only-system"
+UV_PYTHON_DOWNLOADS = "never"
+
+[tasks.setup]
+description = "Create .venv with the pinned runtime stack and test dependencies"
+run = "uv sync --locked"
+
+[tasks.test]
+description = "Run the test-suite (extra args go to pytest)"
+depends = ["setup"]
+run = "uv run pytest"
+
+[tasks.cov]
+description = "Run the test-suite with coverage"
+depends = ["setup"]
+run = "uv run pytest --cov --cov-report=term --cov-report=xml"
+
+[tasks."snapshot-update"]
+description = "Regenerate characterization snapshots (review the diff!)"
+depends = ["setup"]
+run = "uv run pytest --snapshot-update"
+
+[tasks.lint]
+description = "Lint and check formatting"
+run = ["ruff check .", "ruff format --check ."]
+
+[tasks.fmt]
+description = "Auto-fix lint issues and format code"
+run = ["ruff check --fix .", "ruff format ."]
+
+[tasks.hooks]
+description = "Install the git pre-commit hooks"
+run = "pre-commit install"
+
+[tasks.precommit]
+description = "Run all pre-commit hooks on every file"
+run = "pre-commit run --all-files"
+
+[tasks.ci]
+description = "Everything CI runs"
+depends = ["lint", "cov"]

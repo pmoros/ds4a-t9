@@ -8,25 +8,28 @@ on:
 permissions:
   contents: read
 
+env:
+  # Tool versions come from mise.toml, same as local development.
+  MISE_TRUSTED_CONFIG_PATHS: ${{ github.workspace }}
+
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v6
-      - run: uv sync --locked --python 3.8
-      - run: uv run ruff check .
-      - run: uv run ruff format --check .
+      - uses: jdx/mise-action@v2
+        with:
+          version: 2026.11.8
+      - run: mise run lint
 
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v6
-      # Production runs 3.7.11, which uv cannot provision; 3.8 is the closest
-      # interpreter that installs the exact pinned stack.
-      - run: uv sync --locked --python 3.8
-      - run: uv run pytest --cov --cov-report=term --cov-report=xml
+      - uses: jdx/mise-action@v2
+        with:
+          version: 2026.11.8
+      - run: mise run cov
       - uses: actions/upload-artifact@v4
         if: always()
         with:

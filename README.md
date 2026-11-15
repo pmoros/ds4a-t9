@@ -38,13 +38,16 @@ The application has a *Procfile* that defines properties that tools used by clou
 
 ## Development
 
-The project uses [uv](https://docs.astral.sh/uv/) for a reproducible dev environment. Versions in `pyproject.toml` / `uv.lock` mirror `requirements.txt` (still used by the Dockerfile and Procfile).
+Local tooling is managed by [mise](https://mise.jdx.dev) (`mise.toml`): it pins Python, [uv](https://docs.astral.sh/uv/), ruff and pre-commit, and defines the common tasks. CI uses the same file. Python dependencies live in `pyproject.toml` / `uv.lock`, mirroring `requirements.txt` (still used by the Dockerfile and Procfile).
 
 ```bash
-uv sync --python 3.8          # create .venv with the pinned stack + dev tools
-uv run pre-commit install     # ruff lint/format on commit
-uv run pytest                 # run the test-suite
-uv run pytest --cov           # ...with coverage
+mise install                  # Python 3.8, uv, ruff, pre-commit
+mise run hooks                # install the git pre-commit hooks
+mise run test                 # create .venv if needed and run pytest
+mise run test -- -k millify   # extra args go to pytest
+mise run lint                 # ruff check + format check
+mise run ci                   # everything CI runs
+mise tasks                    # list all tasks
 ```
 
 ### Characterization tests
@@ -55,7 +58,7 @@ uv run pytest --cov           # ...with coverage
 * `test_pages.py` covers routing, page layouts and HTTP smoke tests.
 * `test_data.py` profiles every DataFrame built in `data.py` and snapshots the travelers/preferences cards.
 
-Snapshots live in `tests/__snapshots__/`. If a change in output is **intended**, regenerate them with `uv run pytest --snapshot-update` and review the diff.
+Snapshots live in `tests/__snapshots__/`. If a change in output is **intended**, regenerate them with `mise run snapshot-update` and review the diff.
 
 ## Authors
 

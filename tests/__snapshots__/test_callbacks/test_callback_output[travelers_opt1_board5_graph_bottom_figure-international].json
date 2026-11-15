@@ -1,0 +1,410 @@
+{
+  "data": [
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=A. EMPLEADO<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "A. EMPLEADO, ALEMANIA",
+      "marker": {
+        "color": "#20284D",
+        "pattern": {
+          "shape": "."
+        }
+      },
+      "name": "A. EMPLEADO, ALEMANIA",
+      "offsetgroup": "A. EMPLEADO, ALEMANIA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        382.0,
+        408.0,
+        456.0,
+        288.0,
+        463.53,
+        389.93,
+        0.0,
+        2086.0,
+        5766.380000000002,
+        2090.48,
+        2132.16,
+        3413.910000000001
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=B. PATRON O EMPLEADOR<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "B. PATRON O EMPLEADOR, ALEMANIA",
+      "marker": {
+        "color": "#4A589B",
+        "pattern": {
+          "shape": "."
+        }
+      },
+      "name": "B. PATRON O EMPLEADOR, ALEMANIA",
+      "offsetgroup": "B. PATRON O EMPLEADOR, ALEMANIA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=C. TRABAJADOR INDEPENDIENTE<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "C. TRABAJADOR INDEPENDIENTE, ALEMANIA",
+      "marker": {
+        "color": "#D4D4E9",
+        "pattern": {
+          "shape": "."
+        }
+      },
+      "name": "C. TRABAJADOR INDEPENDIENTE, ALEMANIA",
+      "offsetgroup": "C. TRABAJADOR INDEPENDIENTE, ALEMANIA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        777.0,
+        730.0,
+        944.0,
+        671.0,
+        544.62,
+        1147.54,
+        295.78,
+        228.51,
+        343.14,
+        1194.35,
+        0.0,
+        0.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=D. OFICIOS DEL HOGAR<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "D. OFICIOS DEL HOGAR, ALEMANIA",
+      "marker": {
+        "color": "#BADA55",
+        "pattern": {
+          "shape": "."
+        }
+      },
+      "name": "D. OFICIOS DEL HOGAR, ALEMANIA",
+      "offsetgroup": "D. OFICIOS DEL HOGAR, ALEMANIA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=E. RENTISTA Y/O PENSIONADO<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "E. RENTISTA Y/O PENSIONADO, ALEMANIA",
+      "marker": {
+        "color": "#FFE787",
+        "pattern": {
+          "shape": "."
+        }
+      },
+      "name": "E. RENTISTA Y/O PENSIONADO, ALEMANIA",
+      "offsetgroup": "E. RENTISTA Y/O PENSIONADO, ALEMANIA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        160.0,
+        122.0,
+        221.0,
+        140.0,
+        0.0,
+        414.28,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=F. ESTUDIANTE<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "F. ESTUDIANTE, ALEMANIA",
+      "marker": {
+        "color": "#B8B97E",
+        "pattern": {
+          "shape": "."
+        }
+      },
+      "name": "F. ESTUDIANTE, ALEMANIA",
+      "offsetgroup": "F. ESTUDIANTE, ALEMANIA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        696.0,
+        704.0,
+        595.0,
+        801.0,
+        688.1700000000001,
+        0.0,
+        1686.62,
+        0.0,
+        1451.36,
+        0.0,
+        2893.65,
+        0.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=G. OTRO<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "G. OTRO, ALEMANIA",
+      "marker": {
+        "color": "#D36135",
+        "pattern": {
+          "shape": "."
+        }
+      },
+      "name": "G. OTRO, ALEMANIA",
+      "offsetgroup": "G. OTRO, ALEMANIA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        622.46,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaxis": "y"
+    }
+  ],
+  "layout": {
+    "barmode": "relative",
+    "legend": {
+      "title": {
+        "text": ", ORIGIN"
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+    "xaxis": {
+      "anchor": "y",
+      "categoryarray": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "categoryorder": "array",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC"
+      ],
+      "tickvals": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "title": {
+        "text": "MONTH"
+      }
+    },
+    "yaxis": {
+      "anchor": "x",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "TRAVELERS"
+      }
+    }
+  }
+}

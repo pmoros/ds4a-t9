@@ -1,0 +1,282 @@
+{
+  "namespace": "dash_html_components",
+  "props": {
+    "children": [
+      {
+        "namespace": "dash_html_components",
+        "props": {
+          "children": {
+            "namespace": "dash_html_components",
+            "props": {
+              "children": "",
+              "className": "header-image"
+            },
+            "type": "Div"
+          },
+          "className": "header-banner",
+          "id": "header-app"
+        },
+        "type": "Div"
+      },
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": [
+            {
+              "namespace": "dash_bootstrap_components",
+              "props": {
+                "children": {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": "HOME",
+                    "href": "/"
+                  },
+                  "type": "NavLink"
+                }
+              },
+              "type": "NavItem"
+            },
+            {
+              "namespace": "dash_bootstrap_components",
+              "props": {
+                "children": {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": {
+                            "namespace": "dash_bootstrap_components",
+                            "props": {
+                              "children": [
+                                "Who are the travelers?"
+                              ],
+                              "href": "travelers/who"
+                            },
+                            "type": "NavLink"
+                          }
+                        },
+                        "type": "DropdownMenuItem"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": {
+                            "namespace": "dash_bootstrap_components",
+                            "props": {
+                              "children": [
+                                "What are their preferences?"
+                              ],
+                              "href": "travelers/preferences"
+                            },
+                            "type": "NavLink"
+                          }
+                        },
+                        "type": "DropdownMenuItem"
+                      }
+                    ],
+                    "label": "TRAVELERS"
+                  },
+                  "type": "DropdownMenu"
+                }
+              },
+              "type": "NavItem"
+            },
+            {
+              "namespace": "dash_bootstrap_components",
+              "props": {
+                "children": {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": {
+                            "namespace": "dash_bootstrap_components",
+                            "props": {
+                              "children": [
+                                "Accommodation"
+                              ],
+                              "href": "indicators/accomodation"
+                            },
+                            "type": "NavLink"
+                          }
+                        },
+                        "type": "DropdownMenuItem"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": {
+                            "namespace": "dash_bootstrap_components",
+                            "props": {
+                              "children": [
+                                "Connectivity"
+                              ],
+                              "href": "indicators/connectivity"
+                            },
+                            "type": "NavLink"
+                          }
+                        },
+                        "type": "DropdownMenuItem"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": {
+                            "namespace": "dash_bootstrap_components",
+                            "props": {
+                              "children": [
+                                "Economic"
+                              ],
+                              "href": "indicators/economic"
+                            },
+                            "type": "NavLink"
+                          }
+                        },
+                        "type": "DropdownMenuItem"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": {
+                            "namespace": "dash_bootstrap_components",
+                            "props": {
+                              "children": [
+                                "Sightseeing"
+                              ],
+                              "href": "indicators/sightseeing"
+                            },
+                            "type": "NavLink"
+                          }
+                        },
+                        "type": "DropdownMenuItem"
+                      }
+                    ],
+                    "label": "INDICATORS"
+                  },
+                  "type": "DropdownMenu"
+                }
+              },
+              "type": "NavItem"
+            },
+            {
+              "namespace": "dash_bootstrap_components",
+              "props": {
+                "children": {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": "ABOUT US",
+                    "href": "/about-us"
+                  },
+                  "type": "NavLink"
+                }
+              },
+              "type": "NavItem"
+            }
+          ],
+          "className": "mr-auto",
+          "color": "#20284D",
+          "dark": false,
+          "expand": "lg",
+          "id": "navbar",
+          "sticky": "top"
+        },
+        "type": "NavbarSimple"
+      },
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": [
+            {
+              "namespace": "dash_bootstrap_components",
+              "props": {
+                "children": [
+                  {
+                    "namespace": "dash_core_components",
+                    "props": {
+                      "id": "url"
+                    },
+                    "type": "Location"
+                  },
+                  {
+                    "namespace": "dash_html_components",
+                    "props": {
+                      "children": "None",
+                      "id": "page-content"
+                    },
+                    "type": "Div"
+                  }
+                ],
+                "fluid": true
+              },
+              "type": "Container"
+            }
+          ],
+          "fluid": true,
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "type": "Container"
+      },
+      {
+        "namespace": "dash_html_components",
+        "props": {
+          "children": [
+            {
+              "namespace": "dash_html_components",
+              "props": {
+                "children": "District Tourism Institute of Bogotá",
+                "className": "footer-text-right",
+                "id": "footer-app-text"
+              },
+              "type": "P"
+            },
+            {
+              "namespace": "dash_html_components",
+              "props": {
+                "children": [
+                  {
+                    "namespace": "dash_html_components",
+                    "props": {
+                      "children": "None",
+                      "id": "correlation-footer-logo",
+                      "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/footer-logo-correlation.png",
+                      "style": {
+                        "height": "36px",
+                        "width": "153px"
+                      }
+                    },
+                    "type": "Img"
+                  },
+                  {
+                    "namespace": "dash_html_components",
+                    "props": {
+                      "children": "None",
+                      "id": "mintic-footer-logo",
+                      "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/footer-logo-mintic.png",
+                      "style": {
+                        "height": "100%",
+                        "width": "167px"
+                      }
+                    },
+                    "type": "Img"
+                  }
+                ],
+                "className": "footer-logos-container"
+              },
+              "type": "Div"
+            }
+          ],
+          "className": "footer-container",
+          "id": "footer-app"
+        },
+        "type": "Div"
+      }
+    ]
+  },
+  "type": "Div"
+}

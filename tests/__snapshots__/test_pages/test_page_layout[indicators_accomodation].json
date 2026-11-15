@@ -1,0 +1,799 @@
+{
+  "namespace": "dash_bootstrap_components",
+  "props": {
+    "children": [
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": [
+            {
+              "namespace": "dash_bootstrap_components",
+              "props": {
+                "children": {
+                  "namespace": "dash_html_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": {
+                                  "namespace": "dash_html_components",
+                                  "props": {
+                                    "children": "Get to know some ",
+                                    "className": "main-title"
+                                  },
+                                  "type": "H1"
+                                }
+                              },
+                              "type": "Span"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": {
+                                  "namespace": "dash_html_components",
+                                  "props": {
+                                    "children": "ACCOMMODATION",
+                                    "className": "main-title-bold"
+                                  },
+                                  "type": "H1"
+                                }
+                              },
+                              "type": "Span"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": {
+                                  "namespace": "dash_html_components",
+                                  "props": {
+                                    "children": "indicators",
+                                    "className": "main-title"
+                                  },
+                                  "type": "H1"
+                                }
+                              },
+                              "type": "Span"
+                            }
+                          ],
+                          "style": {
+                            "marginLeft": "10%",
+                            "marginRight": "10%"
+                          }
+                        },
+                        "type": "Div"
+                      }
+                    ],
+                    "className": "container-fluid main-banner-darker row-full",
+                    "style": {
+                      "backgroundImage": "url(\"https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/indicators-banner.jpg\")",
+                      "backgroundPosition": "center"
+                    }
+                  },
+                  "type": "Div"
+                },
+                "width": 12
+              },
+              "type": "Col"
+            }
+          ]
+        },
+        "type": "Row"
+      },
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": {
+            "namespace": "dash_bootstrap_components",
+            "props": {
+              "children": [
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Average monthly listing of Airbnb & Homeaway properties by location",
+                                "className": "board-standard-header-title"
+                              },
+                              "type": "H3"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Get to know the average monthly offer of Airbnb and Homeaway properties by location",
+                                "className": "board-standard-header-subtitle"
+                              },
+                              "type": "P"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                },
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt1-board1-menu-top-year",
+                                "multi": true,
+                                "options": [
+                                  {
+                                    "label": "2015",
+                                    "value": "2015"
+                                  },
+                                  {
+                                    "label": "2016",
+                                    "value": "2016"
+                                  },
+                                  {
+                                    "label": "2017",
+                                    "value": "2017"
+                                  },
+                                  {
+                                    "label": "2018",
+                                    "value": "2018"
+                                  },
+                                  {
+                                    "label": "2019",
+                                    "value": "2019"
+                                  }
+                                ],
+                                "placeholder": "Select the year",
+                                "value": [
+                                  "2015"
+                                ]
+                              },
+                              "type": "Dropdown"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Total average monthly offer of Airbnb and Homeaway properties in selected years",
+                                "className": "board-standard-label-graph"
+                              },
+                              "type": "P"
+                            },
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt1-board1-graph-top"
+                              },
+                              "type": "Graph"
+                            }
+                          ]
+                        },
+                        "type": "Div"
+                      },
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_bootstrap_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_bootstrap_components",
+                                    "props": {
+                                      "children": [
+                                        {
+                                          "namespace": "dash_core_components",
+                                          "props": {
+                                            "id": "opt1-board1-menu-bottom-year",
+                                            "multi": true,
+                                            "options": [
+                                              {
+                                                "label": "Barrios Unidos",
+                                                "value": "Barrios Unidos"
+                                              },
+                                              {
+                                                "label": "Bosa",
+                                                "value": "Bosa"
+                                              },
+                                              {
+                                                "label": "Candelaria",
+                                                "value": "Candelaria"
+                                              },
+                                              {
+                                                "label": "Chapinero",
+                                                "value": "Chapinero"
+                                              },
+                                              {
+                                                "label": "Engativá",
+                                                "value": "Engativá"
+                                              },
+                                              {
+                                                "label": "Fontibón",
+                                                "value": "Fontibón"
+                                              },
+                                              {
+                                                "label": "Kennedy",
+                                                "value": "Kennedy"
+                                              },
+                                              {
+                                                "label": "Los Martires",
+                                                "value": "Los Martires"
+                                              },
+                                              {
+                                                "label": "Puente Aranda",
+                                                "value": "Puente Aranda"
+                                              },
+                                              {
+                                                "label": "Rafael Uribe Uribe",
+                                                "value": "Rafael Uribe Uribe"
+                                              },
+                                              {
+                                                "label": "San Cristobal",
+                                                "value": "San Cristobal"
+                                              },
+                                              {
+                                                "label": "Santa Fe",
+                                                "value": "Santa Fe"
+                                              },
+                                              {
+                                                "label": "Suba",
+                                                "value": "Suba"
+                                              },
+                                              {
+                                                "label": "Teusaquillo",
+                                                "value": "Teusaquillo"
+                                              },
+                                              {
+                                                "label": "Usaquén",
+                                                "value": "Usaquén"
+                                              },
+                                              {
+                                                "label": "Usme",
+                                                "value": "Usme"
+                                              }
+                                            ],
+                                            "placeholder": "Select the location",
+                                            "value": [
+                                              "Barrios Unidos",
+                                              "Bosa"
+                                            ]
+                                          },
+                                          "type": "Dropdown"
+                                        }
+                                      ],
+                                      "xs": {
+                                        "size": 12
+                                      }
+                                    },
+                                    "type": "Col"
+                                  }
+                                ]
+                              },
+                              "type": "Row"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Comparison of the monthly average offer of Airbnb and Homeaway properties among the selected locations",
+                                "className": "board-standard-label-graph"
+                              },
+                              "type": "P"
+                            },
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt1-board1-graph-bottom"
+                              },
+                              "type": "Graph"
+                            }
+                          ]
+                        },
+                        "type": "Div"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                }
+              ]
+            },
+            "type": "CardBody"
+          },
+          "className": "mb-3 main-board-subpage"
+        },
+        "type": "Card"
+      },
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": {
+            "namespace": "dash_bootstrap_components",
+            "props": {
+              "children": [
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Hotel occupancy rate",
+                                "className": "board-standard-header-title"
+                              },
+                              "type": "H3"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Find out what is the hotel occupancy rate in the city of Bogotá",
+                                "className": "board-standard-header-subtitle"
+                              },
+                              "type": "P"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                },
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt1-board2-menu-top-year",
+                                "multi": true,
+                                "options": [
+                                  {
+                                    "label": "2008",
+                                    "value": "2008"
+                                  },
+                                  {
+                                    "label": "2009",
+                                    "value": "2009"
+                                  },
+                                  {
+                                    "label": "2010",
+                                    "value": "2010"
+                                  },
+                                  {
+                                    "label": "2011",
+                                    "value": "2011"
+                                  },
+                                  {
+                                    "label": "2012",
+                                    "value": "2012"
+                                  },
+                                  {
+                                    "label": "2013",
+                                    "value": "2013"
+                                  },
+                                  {
+                                    "label": "2014",
+                                    "value": "2014"
+                                  },
+                                  {
+                                    "label": "2015",
+                                    "value": "2015"
+                                  },
+                                  {
+                                    "label": "2016",
+                                    "value": "2016"
+                                  },
+                                  {
+                                    "label": "2017",
+                                    "value": "2017"
+                                  },
+                                  {
+                                    "label": "2018",
+                                    "value": "2018"
+                                  },
+                                  {
+                                    "label": "2019",
+                                    "value": "2019"
+                                  },
+                                  {
+                                    "label": "2020",
+                                    "value": "2020"
+                                  }
+                                ],
+                                "placeholder": "Select the year",
+                                "value": [
+                                  "2008"
+                                ]
+                              },
+                              "type": "Dropdown"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Average hotel occupancy rate in selected years",
+                                "className": "board-standard-label-graph"
+                              },
+                              "type": "P"
+                            },
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt1-board2-graph-top"
+                              },
+                              "type": "Graph"
+                            }
+                          ]
+                        },
+                        "type": "Div"
+                      },
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_bootstrap_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_bootstrap_components",
+                                    "props": {
+                                      "children": [
+                                        {
+                                          "namespace": "dash_core_components",
+                                          "props": {
+                                            "id": "opt1-board2-menu-bottom-year",
+                                            "multi": true,
+                                            "options": [
+                                              {
+                                                "label": "2008",
+                                                "value": "2008"
+                                              },
+                                              {
+                                                "label": "2009",
+                                                "value": "2009"
+                                              },
+                                              {
+                                                "label": "2010",
+                                                "value": "2010"
+                                              },
+                                              {
+                                                "label": "2011",
+                                                "value": "2011"
+                                              },
+                                              {
+                                                "label": "2012",
+                                                "value": "2012"
+                                              },
+                                              {
+                                                "label": "2013",
+                                                "value": "2013"
+                                              },
+                                              {
+                                                "label": "2014",
+                                                "value": "2014"
+                                              },
+                                              {
+                                                "label": "2015",
+                                                "value": "2015"
+                                              },
+                                              {
+                                                "label": "2016",
+                                                "value": "2016"
+                                              },
+                                              {
+                                                "label": "2017",
+                                                "value": "2017"
+                                              },
+                                              {
+                                                "label": "2018",
+                                                "value": "2018"
+                                              },
+                                              {
+                                                "label": "2019",
+                                                "value": "2019"
+                                              },
+                                              {
+                                                "label": "2020",
+                                                "value": "2020"
+                                              }
+                                            ],
+                                            "placeholder": "Select the year",
+                                            "value": [
+                                              "2008"
+                                            ]
+                                          },
+                                          "type": "Dropdown"
+                                        }
+                                      ],
+                                      "xs": {
+                                        "size": 12
+                                      }
+                                    },
+                                    "type": "Col"
+                                  }
+                                ]
+                              },
+                              "type": "Row"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Comparison of the hotel occupancy rate among the selected years",
+                                "className": "board-standard-label-graph"
+                              },
+                              "type": "P"
+                            },
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt1-board2-graph-bottom"
+                              },
+                              "type": "Graph"
+                            }
+                          ]
+                        },
+                        "type": "Div"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                }
+              ]
+            },
+            "type": "CardBody"
+          },
+          "className": "mb-3 main-board-subpage"
+        },
+        "type": "Card"
+      },
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": {
+            "namespace": "dash_bootstrap_components",
+            "props": {
+              "children": [
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Airbnb occupancy rate",
+                                "className": "board-standard-header-title"
+                              },
+                              "type": "H3"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Find out what is the occupancy rate of Airbnb properties in the city of Bogotá",
+                                "className": "board-standard-header-subtitle"
+                              },
+                              "type": "P"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                },
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt1-board3-menu-top-year",
+                                "multi": true,
+                                "options": [
+                                  {
+                                    "label": "2015",
+                                    "value": "2015"
+                                  },
+                                  {
+                                    "label": "2016",
+                                    "value": "2016"
+                                  },
+                                  {
+                                    "label": "2017",
+                                    "value": "2017"
+                                  },
+                                  {
+                                    "label": "2018",
+                                    "value": "2018"
+                                  },
+                                  {
+                                    "label": "2019",
+                                    "value": "2019"
+                                  }
+                                ],
+                                "placeholder": "Select the year",
+                                "value": [
+                                  "2015"
+                                ]
+                              },
+                              "type": "Dropdown"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Average Airbnb occupancy rate in selected years",
+                                "className": "board-standard-label-graph"
+                              },
+                              "type": "P"
+                            },
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt1-board3-graph-top"
+                              },
+                              "type": "Graph"
+                            }
+                          ]
+                        },
+                        "type": "Div"
+                      },
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_bootstrap_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_bootstrap_components",
+                                    "props": {
+                                      "children": [
+                                        {
+                                          "namespace": "dash_core_components",
+                                          "props": {
+                                            "id": "opt1-board3-menu-bottom-year",
+                                            "multi": true,
+                                            "options": [
+                                              {
+                                                "label": "2015",
+                                                "value": "2015"
+                                              },
+                                              {
+                                                "label": "2016",
+                                                "value": "2016"
+                                              },
+                                              {
+                                                "label": "2017",
+                                                "value": "2017"
+                                              },
+                                              {
+                                                "label": "2018",
+                                                "value": "2018"
+                                              },
+                                              {
+                                                "label": "2019",
+                                                "value": "2019"
+                                              }
+                                            ],
+                                            "placeholder": "Select the year",
+                                            "value": [
+                                              "2015"
+                                            ]
+                                          },
+                                          "type": "Dropdown"
+                                        }
+                                      ],
+                                      "xs": {
+                                        "size": 12
+                                      }
+                                    },
+                                    "type": "Col"
+                                  }
+                                ]
+                              },
+                              "type": "Row"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Airbnb occupancy rate comparison among selected years",
+                                "className": "board-standard-label-graph"
+                              },
+                              "type": "P"
+                            },
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt1-board3-graph-bottom"
+                              },
+                              "type": "Graph"
+                            }
+                          ]
+                        },
+                        "type": "Div"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                }
+              ]
+            },
+            "type": "CardBody"
+          },
+          "className": "mb-3 main-board-subpage"
+        },
+        "type": "Card"
+      }
+    ]
+  },
+  "type": "Container"
+}

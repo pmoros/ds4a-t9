@@ -1,0 +1,19 @@
+{
+  "columns": [
+    "AÑO",
+    "VALOR"
+  ],
+  "content_hash": "-8314457912719916631",
+  "dtypes": {
+    "AÑO": "int64",
+    "VALOR": "float64"
+  },
+  "numeric_sums": {
+    "AÑO": 22165.0,
+    "VALOR": 13.3
+  },
+  "shape": [
+    11,
+    2
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "data": [
+    {
+      "coloraxis": "coloraxis",
+      "featureidkey": "properties.NOMBRE_DPT",
+      "geojson": "sha256:bb26baccf785bb7f5ce3fcdce34691c0998a56c2e537468662f7e7584a7e1d4c",
+      "hovertemplate": "ORIGEN=%{location}<br>VIAJEROS=%{z}<extra></extra>",
+      "locations": [
+        "ANTIOQUIA",
+        "ATLANTICO",
+        "BOLIVAR",
+        "BOYACA",
+        "CUNDINAMARCA",
+        "HUILA",
+        "META",
+        "NORTE DE SANTANDER",
+        "QUINDIO",
+        "RISARALDA",
+        "SANTANDER",
+        "TOLIMA",
+        "VALLE DEL CAUCA"
+      ],
+      "marker": {
+        "opacity": 0.5
+      },
+      "name": "",
+      "subplot": "mapbox",
+      "type": "choroplethmapbox",
+      "z": [
+        2451997.7832561727,
+        4808104.113827161,
+        7601190.261959877,
+        2517767.5507253087,
+        1489943.566574074,
+        1614854.5503703703,
+        779340.3343865265,
+        612523.5700632526,
+        545477.5188888889,
+        1169149.5032253086,
+        2346803.602546296,
+        1759131.0047839505,
+        1222403.8838271606
+      ]
+    }
+  ],
+  "layout": {
+    "coloraxis": {
+      "colorbar": {
+        "title": {
+          "text": "VIAJEROS"
+        }
+      },
+      "colorscale": [
+        [
+          0.0,
+          "#440154"
+        ],
+        [
+          0.1111111111111111,
+          "#482878"
+        ],
+        [
+          0.2222222222222222,
+          "#3e4989"
+        ],
+        [
+          0.3333333333333333,
+          "#31688e"
+        ],
+        [
+          0.4444444444444444,
+          "#26828e"
+        ],
+        [
+          0.5555555555555556,
+          "#1f9e89"
+        ],
+        [
+          0.6666666666666666,
+          "#35b779"
+        ],
+        [
+          0.7777777777777778,
+          "#6ece58"
+        ],
+        [
+          0.8888888888888888,
+          "#b5de2b"
+        ],
+        [
+          1.0,
+          "#fde725"
+        ]
+      ]
+    },
+    "legend": {
+      "tracegroupgap": 0
+    },
+    "mapbox": {
+      "center": {
+        "lat": 4.824335,
+        "lon": -74.063644
+      },
+      "domain": {
+        "x": [
+          0.0,
+          1.0
+        ],
+        "y": [
+          0.0,
+          1.0
+        ]
+      },
+      "style": "carto-positron",
+      "zoom": 4.1
+    },
+    "margin": {
+      "t": 60
+    },
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28"
+  }
+}

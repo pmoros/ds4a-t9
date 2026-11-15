@@ -1,0 +1,117 @@
+{
+  "data": [
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Year=%{marker.color}<br>Total=%{y}<extra></extra>",
+      "legendgroup": "",
+      "marker": {
+        "color": [
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019
+        ],
+        "coloraxis": "coloraxis",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "",
+      "offsetgroup": "",
+      "orientation": "v",
+      "showlegend": false,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ],
+      "xaxis": "x",
+      "y": [
+        31.0,
+        34.0,
+        33.0,
+        36.0,
+        39.0,
+        43.0,
+        45.0,
+        47.0,
+        49.0,
+        50.0
+      ],
+      "yaxis": "y"
+    }
+  ],
+  "layout": {
+    "barmode": "relative",
+    "coloraxis": {
+      "colorbar": {
+        "title": {
+          "text": "Year"
+        }
+      },
+      "colorscale": [
+        [
+          0.0,
+          "#20284D"
+        ],
+        [
+          0.3333333333333333,
+          "#4A589B"
+        ],
+        [
+          0.6666666666666666,
+          "#D4D4E9"
+        ],
+        [
+          1.0,
+          "#BADA55"
+        ]
+      ]
+    },
+    "legend": {
+      "title": {
+        "text": "Continent"
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+    "xaxis": {
+      "anchor": "y",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "Year"
+      }
+    },
+    "yaxis": {
+      "anchor": "x",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "Total"
+      }
+    }
+  }
+}

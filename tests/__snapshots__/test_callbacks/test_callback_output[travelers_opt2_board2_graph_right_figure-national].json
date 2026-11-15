@@ -1,0 +1,276 @@
+{
+  "data": [
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Atraction=%{x}<br>VIAJEROS=%{y}<extra></extra>",
+      "legendgroup": "A. MONSERRATE",
+      "marker": {
+        "color": "#20284D",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "A. MONSERRATE",
+      "offsetgroup": "A. MONSERRATE",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "A. MONSERRATE"
+      ],
+      "xaxis": "x",
+      "y": [
+        1934655.4945679014
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Atraction=%{x}<br>VIAJEROS=%{y}<extra></extra>",
+      "legendgroup": "B. CABLE",
+      "marker": {
+        "color": "#4A589B",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "B. CABLE",
+      "offsetgroup": "B. CABLE",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "B. CABLE"
+      ],
+      "xaxis": "x",
+      "y": [
+        535921.8017710715
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Atraction=%{x}<br>VIAJEROS=%{y}<extra></extra>",
+      "legendgroup": "C. CORFERIAS",
+      "marker": {
+        "color": "#D4D4E9",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "C. CORFERIAS",
+      "offsetgroup": "C. CORFERIAS",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "C. CORFERIAS"
+      ],
+      "xaxis": "x",
+      "y": [
+        644125.106419753
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Atraction=%{x}<br>VIAJEROS=%{y}<extra></extra>",
+      "legendgroup": "D. ZONAS",
+      "marker": {
+        "color": "#BADA55",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "D. ZONAS",
+      "offsetgroup": "D. ZONAS",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "D. ZONAS"
+      ],
+      "xaxis": "x",
+      "y": [
+        1120311.0750617285
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Atraction=%{x}<br>VIAJEROS=%{y}<extra></extra>",
+      "legendgroup": "E. USAQUEN",
+      "marker": {
+        "color": "#FFE787",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "E. USAQUEN",
+      "offsetgroup": "E. USAQUEN",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "E. USAQUEN"
+      ],
+      "xaxis": "x",
+      "y": [
+        603827.7014814814
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Atraction=%{x}<br>VIAJEROS=%{y}<extra></extra>",
+      "legendgroup": "F. HUMEDAL",
+      "marker": {
+        "color": "#B8B97E",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "F. HUMEDAL",
+      "offsetgroup": "F. HUMEDAL",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "F. HUMEDAL"
+      ],
+      "xaxis": "x",
+      "y": [
+        110430.12
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Atraction=%{x}<br>VIAJEROS=%{y}<extra></extra>",
+      "legendgroup": "G. PARQUES",
+      "marker": {
+        "color": "#D36135",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "G. PARQUES",
+      "offsetgroup": "G. PARQUES",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "G. PARQUES"
+      ],
+      "xaxis": "x",
+      "y": [
+        1048207.2488888889
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Atraction=%{x}<br>VIAJEROS=%{y}<extra></extra>",
+      "legendgroup": "H. CCOMERCIAL",
+      "marker": {
+        "color": "#F49D6E",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "H. CCOMERCIAL",
+      "offsetgroup": "H. CCOMERCIAL",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "H. CCOMERCIAL"
+      ],
+      "xaxis": "x",
+      "y": [
+        5842091.98345679
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Atraction=%{x}<br>VIAJEROS=%{y}<extra></extra>",
+      "legendgroup": "I. OTRO",
+      "marker": {
+        "color": "#4C8577",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "I. OTRO",
+      "offsetgroup": "I. OTRO",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "I. OTRO"
+      ],
+      "xaxis": "x",
+      "y": [
+        9367073.297037037
+      ],
+      "yaxis": "y"
+    }
+  ],
+  "layout": {
+    "barmode": "relative",
+    "legend": {
+      "title": {
+        "text": "Atraction"
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "showlegend": false,
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+    "xaxis": {
+      "anchor": "y",
+      "categoryarray": [
+        "A. MONSERRATE",
+        "B. CABLE",
+        "C. CORFERIAS",
+        "D. ZONAS",
+        "E. USAQUEN",
+        "F. HUMEDAL",
+        "G. PARQUES",
+        "H. CCOMERCIAL",
+        "I. OTRO"
+      ],
+      "categoryorder": "array",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "showticklabels": true,
+      "title": {
+        "text": "Atraction"
+      }
+    },
+    "yaxis": {
+      "anchor": "x",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "VIAJEROS"
+      }
+    }
+  }
+}

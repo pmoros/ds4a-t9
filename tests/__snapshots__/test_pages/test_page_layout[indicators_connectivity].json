@@ -1,0 +1,501 @@
+{
+  "namespace": "dash_bootstrap_components",
+  "props": {
+    "children": [
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": [
+            {
+              "namespace": "dash_bootstrap_components",
+              "props": {
+                "children": {
+                  "namespace": "dash_html_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": {
+                                  "namespace": "dash_html_components",
+                                  "props": {
+                                    "children": "Get to know some ",
+                                    "className": "main-title"
+                                  },
+                                  "type": "H1"
+                                }
+                              },
+                              "type": "Span"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": {
+                                  "namespace": "dash_html_components",
+                                  "props": {
+                                    "children": "CONNECTIVITY",
+                                    "className": "main-title-bold"
+                                  },
+                                  "type": "H1"
+                                }
+                              },
+                              "type": "Span"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": {
+                                  "namespace": "dash_html_components",
+                                  "props": {
+                                    "children": "indicators",
+                                    "className": "main-title"
+                                  },
+                                  "type": "H1"
+                                }
+                              },
+                              "type": "Span"
+                            }
+                          ],
+                          "style": {
+                            "marginLeft": "10%",
+                            "marginRight": "10%"
+                          }
+                        },
+                        "type": "Div"
+                      }
+                    ],
+                    "className": "container-fluid main-banner-darker row-full",
+                    "style": {
+                      "backgroundImage": "url(\"https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/indicators-banner.jpg\")",
+                      "backgroundPosition": "center"
+                    }
+                  },
+                  "type": "Div"
+                },
+                "width": 12
+              },
+              "type": "Col"
+            }
+          ]
+        },
+        "type": "Row"
+      },
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": {
+            "namespace": "dash_bootstrap_components",
+            "props": {
+              "children": [
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Flight capacity and flight reservations by travelers country of origin",
+                                "className": "board-standard-header-title"
+                              },
+                              "type": "H3"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Discover the flight capacity and flight reservations according to the travelers country of origin",
+                                "className": "board-standard-header-subtitle"
+                              },
+                              "type": "P"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                },
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt2-board1-menu-year",
+                                "multi": true,
+                                "options": [
+                                  {
+                                    "label": "2018",
+                                    "value": "2018"
+                                  },
+                                  {
+                                    "label": "2019",
+                                    "value": "2019"
+                                  }
+                                ],
+                                "placeholder": "Select the year",
+                                "value": [
+                                  "2018"
+                                ]
+                              },
+                              "type": "Dropdown"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Distribution of flight capacity and total flight reservations in the selected years",
+                                "className": "board-standard-label-graph"
+                              },
+                              "type": "P"
+                            },
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt2-board1-graph"
+                              },
+                              "type": "Graph"
+                            }
+                          ]
+                        },
+                        "type": "Div"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                }
+              ]
+            },
+            "type": "CardBody"
+          },
+          "className": "mb-3 main-board-subpage"
+        },
+        "type": "Card"
+      },
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": {
+            "namespace": "dash_bootstrap_components",
+            "props": {
+              "children": [
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Direct international connectivity indicators",
+                                "className": "board-standard-header-title"
+                              },
+                              "type": "H3"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Get to know important indicators per year about international conectivity",
+                                "className": "board-standard-header-subtitle"
+                              },
+                              "type": "P"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                },
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt2-board2-menu-year",
+                                "options": [
+                                  {
+                                    "label": "Ciudades",
+                                    "value": "Ciudades"
+                                  },
+                                  {
+                                    "label": "Aerolíneas",
+                                    "value": "Aerolíneas"
+                                  },
+                                  {
+                                    "label": "Vuelos",
+                                    "value": "Vuelos"
+                                  },
+                                  {
+                                    "label": "Sillas",
+                                    "value": "Sillas"
+                                  },
+                                  {
+                                    "label": "Pasajeros",
+                                    "value": "Pasajeros"
+                                  }
+                                ],
+                                "placeholder": "Select the category",
+                                "value": "Ciudades"
+                              },
+                              "type": "Dropdown"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "",
+                                "className": "board-standard-label-graph"
+                              },
+                              "type": "P"
+                            },
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt2-board2-graph"
+                              },
+                              "type": "Graph"
+                            }
+                          ]
+                        },
+                        "type": "Div"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                }
+              ]
+            },
+            "type": "CardBody"
+          },
+          "className": "mb-3 main-board-subpage"
+        },
+        "type": "Card"
+      },
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": {
+            "namespace": "dash_bootstrap_components",
+            "props": {
+              "children": [
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Outstanding information on international tourism",
+                                "className": "board-standard-header-title"
+                              },
+                              "type": "H3"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Discover relevant information about international tourism among the years",
+                                "className": "board-standard-header-subtitle"
+                              },
+                              "type": "P"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                },
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt2-board3-menu-top-year",
+                                "options": [
+                                  {
+                                    "label": "Llegadas de Turistas Internacionales",
+                                    "value": "Llegadas de Turistas Internacionales"
+                                  },
+                                  {
+                                    "label": "Exportaciones Totales de Turismo Internacional",
+                                    "value": "Exportaciones Totales de Turismo Internacional"
+                                  },
+                                  {
+                                    "label": "Transporte Internacional de Pasajeros",
+                                    "value": "Transporte Internacional de Pasajeros"
+                                  },
+                                  {
+                                    "label": "Ingresos por turismo internacional",
+                                    "value": "Ingresos por turismo internacional"
+                                  }
+                                ],
+                                "placeholder": "Select the category",
+                                "value": "Llegadas de Turistas Internacionales"
+                              },
+                              "type": "Dropdown"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "",
+                                "className": "board-standard-label-graph"
+                              },
+                              "type": "P"
+                            },
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt2-board3-graph-top"
+                              },
+                              "type": "Graph"
+                            }
+                          ]
+                        },
+                        "type": "Div"
+                      },
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_bootstrap_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_bootstrap_components",
+                                    "props": {
+                                      "children": [
+                                        {
+                                          "namespace": "dash_core_components",
+                                          "props": {
+                                            "id": "opt2-board3-menu-bottom-year",
+                                            "options": [
+                                              {
+                                                "label": "Proposito del Viaje",
+                                                "value": "Proposito del Viaje"
+                                              },
+                                              {
+                                                "label": "Medio de Transporte",
+                                                "value": "Medio de Transporte"
+                                              }
+                                            ],
+                                            "placeholder": "Select the category",
+                                            "value": "Proposito del Viaje"
+                                          },
+                                          "type": "Dropdown"
+                                        }
+                                      ],
+                                      "xs": {
+                                        "size": 12
+                                      }
+                                    },
+                                    "type": "Col"
+                                  }
+                                ]
+                              },
+                              "type": "Row"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "",
+                                "className": "board-standard-label-graph"
+                              },
+                              "type": "P"
+                            },
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt2-board3-graph-bottom"
+                              },
+                              "type": "Graph"
+                            }
+                          ]
+                        },
+                        "type": "Div"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                }
+              ]
+            },
+            "type": "CardBody"
+          },
+          "className": "mb-3 main-board-subpage"
+        },
+        "type": "Card"
+      }
+    ]
+  },
+  "type": "Container"
+}

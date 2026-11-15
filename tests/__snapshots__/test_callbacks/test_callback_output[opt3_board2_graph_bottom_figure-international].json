@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "hovertemplate": "Year=2007<br>Quarter=%{x}<br>Jobs=%{y}<extra></extra>",
+      "legendgroup": "2007",
+      "line": {
+        "color": "#20284D",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "markers+lines",
+      "name": "2007",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "TRIM I",
+        "TRIM II",
+        "TRIM III",
+        "TRIM IV"
+      ],
+      "xaxis": "x",
+      "y": [
+        150476.0,
+        176527.0,
+        213839.0,
+        208100.0
+      ],
+      "yaxis": "y"
+    }
+  ],
+  "layout": {
+    "legend": {
+      "title": {
+        "text": "Year"
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+    "xaxis": {
+      "anchor": "y",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "Quarter"
+      }
+    },
+    "yaxis": {
+      "anchor": "x",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "Jobs"
+      }
+    }
+  }
+}

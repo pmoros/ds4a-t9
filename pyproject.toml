@@ -1,0 +1,88 @@
+[project]
+name = "idt-dashboard"
+version = "0.1.0"
+description = "DS4A Team 9 - IDT Bogotá tourism dashboard (Dash)"
+readme = "README.md"
+# Production still runs Python 3.7.11 (runtime.txt / Dockerfile). The upper
+# bound keeps the resolver on versions that ship wheels for the pinned stack.
+requires-python = ">=3.7.1,<3.10"
+# Runtime dependencies mirror requirements.txt exactly (minus dev-only tools),
+# with Werkzeug pinned to 2.0.3 as the Dockerfile installs it.
+# Upgrades are intentionally out of scope until the characterization tests
+# in tests/ are in place (see refactor plan, Phase 3).
+dependencies = [
+    "Brotli==1.0.9",
+    "click==8.0.1",
+    "dash==1.21.0",
+    "dash-bootstrap-components==0.13.0",
+    "dash-core-components==1.17.1",
+    "dash-html-components==1.1.4",
+    "dash-table==4.12.0",
+    "et-xmlfile==1.1.0",
+    "Flask==2.0.1",
+    "Flask-Compress==1.10.1",
+    "future==0.18.2",
+    "gunicorn==20.1.0",
+    "itsdangerous==2.0.1",
+    "Jinja2==3.0.1",
+    "MarkupSafe==2.0.1",
+    "numpy==1.21.2",
+    "openpyxl==3.0.7",
+    "pandas==1.3.2",
+    "plotly==5.2.2",
+    "python-dateutil==2.8.2",
+    "pytz==2021.1",
+    "six==1.16.0",
+    "tenacity==8.0.1",
+    "Werkzeug==2.0.3",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit==2.21.0",
+    "pytest==7.4.4",
+    "pytest-cov==4.1.0",
+    "ruff==0.8.6",
+    "syrupy==3.0.6",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+
+[tool.coverage.run]
+source = ["."]
+omit = ["tests/*", "Temp.py"]
+
+[tool.ruff]
+target-version = "py37"
+line-length = 100
+# Temp.py is unused scratch code with undefined names; it is removed in a later PR.
+extend-exclude = ["Temp.py"]
+
+[tool.ruff.lint]
+# Deliberately narrow for the legacy modules: only rules that catch real bugs
+# (syntax errors, undefined names, invalid comparisons). The rule set grows as
+# modules are refactored.
+select = ["E9", "F63", "F7", "F82"]
+
+[tool.ruff.lint.per-file-ignores]
+# index.py symbols are pulled in through `from index import *`.
+"app.py" = ["F405"]
+
+[tool.ruff.format]
+# Formatting is enforced on new code only, to keep this PR free of churn in
+# the legacy modules (they are restructured in later PRs).
+exclude = [
+    "app.py",
+    "data.py",
+    "index.py",
+    "layouts.py",
+    "layouts_about_us.py",
+    "layouts_indicators.py",
+    "layouts_viajeros.py",
+    "wrangler.py",
+]

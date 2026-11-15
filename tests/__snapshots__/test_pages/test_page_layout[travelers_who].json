@@ -1,0 +1,2565 @@
+{
+  "namespace": "dash_bootstrap_components",
+  "props": {
+    "children": [
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": [
+            {
+              "namespace": "dash_bootstrap_components",
+              "props": {
+                "children": {
+                  "namespace": "dash_html_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": {
+                                  "namespace": "dash_html_components",
+                                  "props": {
+                                    "children": "Meet",
+                                    "className": "main-title"
+                                  },
+                                  "type": "H1"
+                                }
+                              },
+                              "type": "Span"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": {
+                                  "namespace": "dash_html_components",
+                                  "props": {
+                                    "children": "THE TRAVELERS",
+                                    "className": "main-title-bold"
+                                  },
+                                  "type": "H1"
+                                }
+                              },
+                              "type": "Span"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": {
+                                  "namespace": "dash_html_components",
+                                  "props": {
+                                    "children": "who visit Bogotá city",
+                                    "className": "main-title"
+                                  },
+                                  "type": "H1"
+                                }
+                              },
+                              "type": "Span"
+                            }
+                          ],
+                          "style": {
+                            "marginLeft": "10%",
+                            "marginRight": "10%"
+                          }
+                        },
+                        "type": "Div"
+                      }
+                    ],
+                    "className": "container-fluid main-banner row-full",
+                    "style": {
+                      "backgroundImage": "url(\"https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-travelers_opt1-main.jpg\")",
+                      "backgroundPosition": "center"
+                    }
+                  },
+                  "type": "Div"
+                },
+                "width": 12
+              },
+              "type": "Col"
+            }
+          ]
+        },
+        "type": "Row"
+      },
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": [
+            {
+              "namespace": "dash_bootstrap_components",
+              "props": {
+                "children": [
+                  {
+                    "namespace": "dash_bootstrap_components",
+                    "props": {
+                      "children": {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_bootstrap_components",
+                              "props": {
+                                "children": "National travelers",
+                                "className": "main-primary-selector-subpage btn-block",
+                                "id": "viajeros-selector-national",
+                                "n_clicks_timestamp": "0"
+                              },
+                              "type": "Button"
+                            }
+                          ],
+                          "style": {
+                            "textAlign": "center"
+                          }
+                        },
+                        "type": "Div"
+                      },
+                      "md": {
+                        "size": 4
+                      },
+                      "xs": {
+                        "size": 10
+                      }
+                    },
+                    "type": "Col"
+                  },
+                  {
+                    "namespace": "dash_bootstrap_components",
+                    "props": {
+                      "children": {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_bootstrap_components",
+                              "props": {
+                                "children": "International travelers",
+                                "className": "main-primary-selector-subpage btn-block",
+                                "id": "viajeros-selector-international",
+                                "n_clicks_timestamp": "0"
+                              },
+                              "type": "Button"
+                            }
+                          ],
+                          "style": {
+                            "textAlign": "center"
+                          }
+                        },
+                        "type": "Div"
+                      },
+                      "md": {
+                        "size": 4
+                      },
+                      "xs": {
+                        "size": 10
+                      }
+                    },
+                    "type": "Col"
+                  }
+                ],
+                "justify": "center"
+              },
+              "type": "Row"
+            },
+            {
+              "namespace": "dash_bootstrap_components",
+              "props": {
+                "children": [
+                  {
+                    "namespace": "dash_bootstrap_components",
+                    "props": {
+                      "children": {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": {
+                            "namespace": "dash_html_components",
+                            "props": {
+                              "children": "Interact with each of the filters and discover the information of your interest"
+                            },
+                            "type": "P"
+                          },
+                          "style": {
+                            "fontSize": "20px",
+                            "marginBottom": "2.5rem",
+                            "textAlign": "center"
+                          }
+                        },
+                        "type": "Div"
+                      }
+                    },
+                    "type": "Col"
+                  }
+                ],
+                "justify": "center"
+              },
+              "type": "Row"
+            }
+          ],
+          "fluid": true
+        },
+        "type": "Container"
+      },
+      {
+        "namespace": "dash_html_components",
+        "props": {
+          "children": [
+            {
+              "namespace": "dash_bootstrap_components",
+              "props": {
+                "children": {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_bootstrap_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_html_components",
+                                    "props": {
+                                      "children": [
+                                        {
+                                          "namespace": "dash_html_components",
+                                          "props": {
+                                            "children": "General Information",
+                                            "className": "main-board-title-subpage"
+                                          },
+                                          "type": "H3"
+                                        }
+                                      ]
+                                    },
+                                    "type": "Div"
+                                  }
+                                ],
+                                "md": {
+                                  "size": 4
+                                },
+                                "xs": {
+                                  "size": 12
+                                }
+                              },
+                              "type": "Col"
+                            },
+                            {
+                              "namespace": "dash_bootstrap_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_html_components",
+                                    "props": {
+                                      "children": [
+                                        {
+                                          "namespace": "dash_core_components",
+                                          "props": {
+                                            "id": "main-board-menu-year",
+                                            "placeholder": "Year"
+                                          },
+                                          "type": "Dropdown"
+                                        }
+                                      ]
+                                    },
+                                    "type": "Div"
+                                  }
+                                ],
+                                "md": {
+                                  "size": 4
+                                },
+                                "xs": {
+                                  "size": 12
+                                }
+                              },
+                              "type": "Col"
+                            },
+                            {
+                              "namespace": "dash_bootstrap_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_html_components",
+                                    "props": {
+                                      "children": [
+                                        {
+                                          "namespace": "dash_core_components",
+                                          "props": {
+                                            "id": "main-board-menu-month",
+                                            "placeholder": "Month"
+                                          },
+                                          "type": "Dropdown"
+                                        }
+                                      ]
+                                    },
+                                    "type": "Div"
+                                  }
+                                ],
+                                "md": {
+                                  "size": 4
+                                },
+                                "xs": {
+                                  "size": 12
+                                }
+                              },
+                              "type": "Col"
+                            }
+                          ]
+                        },
+                        "type": "Row"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_bootstrap_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_html_components",
+                                    "props": {
+                                      "children": [
+                                        {
+                                          "namespace": "dash_html_components",
+                                          "props": {
+                                            "children": [
+                                              {
+                                                "namespace": "dash_html_components",
+                                                "props": {
+                                                  "children": "None",
+                                                  "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-board-logo1.png",
+                                                  "style": {
+                                                    "height": "6rem",
+                                                    "marginRight": "1rem",
+                                                    "width": "6rem"
+                                                  }
+                                                },
+                                                "type": "Img"
+                                              },
+                                              {
+                                                "namespace": "dash_html_components",
+                                                "props": {
+                                                  "children": {
+                                                    "namespace": "dash_html_components",
+                                                    "props": {
+                                                      "children": "None",
+                                                      "id": "main-board-content-cantidad"
+                                                    },
+                                                    "type": "P"
+                                                  },
+                                                  "className": "main-board-content-big"
+                                                },
+                                                "type": "Span"
+                                              }
+                                            ],
+                                            "className": "main-board-container-standard-h"
+                                          },
+                                          "type": "Div"
+                                        },
+                                        {
+                                          "namespace": "dash_html_components",
+                                          "props": {
+                                            "children": "Total travelers",
+                                            "className": "main-board-label"
+                                          },
+                                          "type": "P"
+                                        }
+                                      ]
+                                    },
+                                    "type": "Div"
+                                  }
+                                ],
+                                "md": {
+                                  "size": 4
+                                },
+                                "style": {
+                                  "marginTop": "3rem"
+                                }
+                              },
+                              "type": "Col"
+                            },
+                            {
+                              "namespace": "dash_bootstrap_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_html_components",
+                                    "props": {
+                                      "children": [
+                                        {
+                                          "namespace": "dash_html_components",
+                                          "props": {
+                                            "children": [
+                                              {
+                                                "namespace": "dash_html_components",
+                                                "props": {
+                                                  "children": [
+                                                    {
+                                                      "namespace": "dash_html_components",
+                                                      "props": {
+                                                        "children": "None",
+                                                        "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-genero-hombre.png",
+                                                        "style": {
+                                                          "height": "6rem",
+                                                          "marginRight": "1rem",
+                                                          "width": "6rem"
+                                                        }
+                                                      },
+                                                      "type": "Img"
+                                                    },
+                                                    {
+                                                      "namespace": "dash_html_components",
+                                                      "props": {
+                                                        "children": [
+                                                          {
+                                                            "namespace": "dash_html_components",
+                                                            "props": {
+                                                              "children": "None",
+                                                              "className": "main-board-content-big",
+                                                              "id": "main-board-content-genero-hombre"
+                                                            },
+                                                            "type": "P"
+                                                          },
+                                                          {
+                                                            "namespace": "dash_html_components",
+                                                            "props": {
+                                                              "children": "Men",
+                                                              "className": "main-board-subtitle"
+                                                            },
+                                                            "type": "P"
+                                                          }
+                                                        ]
+                                                      },
+                                                      "type": "Div"
+                                                    }
+                                                  ],
+                                                  "style": {
+                                                    "display": "flex",
+                                                    "justifyContent": "center"
+                                                  }
+                                                },
+                                                "type": "Div"
+                                              },
+                                              {
+                                                "namespace": "dash_html_components",
+                                                "props": {
+                                                  "children": [
+                                                    {
+                                                      "namespace": "dash_html_components",
+                                                      "props": {
+                                                        "children": "None",
+                                                        "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-genero-mujer.png",
+                                                        "style": {
+                                                          "height": "6rem",
+                                                          "marginRight": "1rem",
+                                                          "width": "6rem"
+                                                        }
+                                                      },
+                                                      "type": "Img"
+                                                    },
+                                                    {
+                                                      "namespace": "dash_html_components",
+                                                      "props": {
+                                                        "children": [
+                                                          {
+                                                            "namespace": "dash_html_components",
+                                                            "props": {
+                                                              "children": "None",
+                                                              "className": "main-board-content-big",
+                                                              "id": "main-board-content-genero-mujer"
+                                                            },
+                                                            "type": "P"
+                                                          },
+                                                          {
+                                                            "namespace": "dash_html_components",
+                                                            "props": {
+                                                              "children": "Women",
+                                                              "className": "main-board-subtitle"
+                                                            },
+                                                            "type": "P"
+                                                          }
+                                                        ]
+                                                      },
+                                                      "type": "Div"
+                                                    }
+                                                  ],
+                                                  "className": "main-board-container-standard-h-last"
+                                                },
+                                                "type": "Div"
+                                              }
+                                            ],
+                                            "className": "gender-container"
+                                          },
+                                          "type": "Div"
+                                        }
+                                      ]
+                                    },
+                                    "type": "Div"
+                                  }
+                                ],
+                                "md": {
+                                  "size": 6
+                                },
+                                "style": {
+                                  "marginTop": "3rem"
+                                }
+                              },
+                              "type": "Col"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_bootstrap_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_html_components",
+                                    "props": {
+                                      "children": [
+                                        {
+                                          "namespace": "dash_html_components",
+                                          "props": {
+                                            "children": "None",
+                                            "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-origin.png",
+                                            "style": {
+                                              "height": "6rem",
+                                              "marginRight": "1rem",
+                                              "width": "6rem"
+                                            }
+                                          },
+                                          "type": "Img"
+                                        },
+                                        {
+                                          "namespace": "dash_html_components",
+                                          "props": {
+                                            "children": "None",
+                                            "className": "main-board-content-small",
+                                            "id": "main-board-content-origin"
+                                          },
+                                          "type": "P"
+                                        }
+                                      ],
+                                      "className": "main-board-container-standard-v"
+                                    },
+                                    "type": "Div"
+                                  },
+                                  {
+                                    "namespace": "dash_html_components",
+                                    "props": {
+                                      "children": "Origin",
+                                      "className": "main-board-label"
+                                    },
+                                    "type": "P"
+                                  }
+                                ],
+                                "md": {
+                                  "size": 4
+                                }
+                              },
+                              "type": "Col"
+                            },
+                            {
+                              "namespace": "dash_bootstrap_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_html_components",
+                                    "props": {
+                                      "children": [
+                                        {
+                                          "namespace": "dash_html_components",
+                                          "props": {
+                                            "children": "None",
+                                            "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-education.png",
+                                            "style": {
+                                              "height": "6rem",
+                                              "marginRight": "1rem",
+                                              "width": "6rem"
+                                            }
+                                          },
+                                          "type": "Img"
+                                        },
+                                        {
+                                          "namespace": "dash_html_components",
+                                          "props": {
+                                            "children": "None",
+                                            "className": "main-board-content-small",
+                                            "id": "main-board-content-education"
+                                          },
+                                          "type": "P"
+                                        }
+                                      ],
+                                      "className": "main-board-container-standard-v"
+                                    },
+                                    "type": "Div"
+                                  },
+                                  {
+                                    "namespace": "dash_html_components",
+                                    "props": {
+                                      "children": "Education level",
+                                      "className": "main-board-label"
+                                    },
+                                    "type": "P"
+                                  }
+                                ],
+                                "md": {
+                                  "size": 4
+                                }
+                              },
+                              "type": "Col"
+                            },
+                            {
+                              "namespace": "dash_bootstrap_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_html_components",
+                                    "props": {
+                                      "children": [
+                                        {
+                                          "namespace": "dash_html_components",
+                                          "props": {
+                                            "children": "None",
+                                            "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-age.png",
+                                            "style": {
+                                              "height": "6rem",
+                                              "marginRight": "1rem",
+                                              "width": "6rem"
+                                            }
+                                          },
+                                          "type": "Img"
+                                        },
+                                        {
+                                          "namespace": "dash_html_components",
+                                          "props": {
+                                            "children": "None",
+                                            "className": "main-board-content-small",
+                                            "id": "main-board-content-age"
+                                          },
+                                          "type": "P"
+                                        }
+                                      ],
+                                      "className": "main-board-container-standard-v-last"
+                                    },
+                                    "type": "Div"
+                                  },
+                                  {
+                                    "namespace": "dash_html_components",
+                                    "props": {
+                                      "children": "Age",
+                                      "className": "main-board-label"
+                                    },
+                                    "type": "P"
+                                  }
+                                ],
+                                "md": {
+                                  "size": 4
+                                }
+                              },
+                              "type": "Col"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      }
+                    ]
+                  },
+                  "type": "CardBody"
+                },
+                "className": "mb-3 main-board-subpage"
+              },
+              "type": "Card"
+            }
+          ],
+          "id": "travelers_opt1-main-board-travelers"
+        },
+        "type": "Div"
+      },
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": {
+            "namespace": "dash_bootstrap_components",
+            "props": {
+              "children": [
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Where do the travelers who visit Bogotá come from?",
+                                "className": "board-standard-header-title"
+                              },
+                              "type": "H3"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Get to know the number of travelers that visit Bogotá city by origin",
+                                "className": "board-standard-header-subtitle"
+                              },
+                              "type": "P"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                },
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "align": "center",
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_core_components",
+                                    "props": {
+                                      "id": "board1-menu-year",
+                                      "multi": true,
+                                      "options": [
+                                        {
+                                          "label": "2019",
+                                          "value": "2019"
+                                        },
+                                        {
+                                          "label": "2018",
+                                          "value": "2018"
+                                        },
+                                        {
+                                          "label": "2010",
+                                          "value": "2010"
+                                        },
+                                        {
+                                          "label": "2011",
+                                          "value": "2011"
+                                        },
+                                        {
+                                          "label": "2012",
+                                          "value": "2012"
+                                        },
+                                        {
+                                          "label": "2013",
+                                          "value": "2013"
+                                        },
+                                        {
+                                          "label": "2014",
+                                          "value": "2014"
+                                        },
+                                        {
+                                          "label": "2015",
+                                          "value": "2015"
+                                        },
+                                        {
+                                          "label": "2016",
+                                          "value": "2016"
+                                        },
+                                        {
+                                          "label": "2017",
+                                          "value": "2017"
+                                        }
+                                      ],
+                                      "placeholder": "Select the year",
+                                      "value": [
+                                        "2019"
+                                      ]
+                                    },
+                                    "type": "Dropdown"
+                                  }
+                                ]
+                              },
+                              "type": "Div"
+                            }
+                          ],
+                          "md": {
+                            "offset": 2,
+                            "size": 4
+                          },
+                          "xs": {
+                            "size": 6
+                          }
+                        },
+                        "type": "Col"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_core_components",
+                                    "props": {
+                                      "id": "board1-menu-month",
+                                      "multi": true,
+                                      "options": [
+                                        {
+                                          "label": "ENERO",
+                                          "value": "ENERO"
+                                        },
+                                        {
+                                          "label": "FEBRERO",
+                                          "value": "FEBRERO"
+                                        },
+                                        {
+                                          "label": "MARZO",
+                                          "value": "MARZO"
+                                        },
+                                        {
+                                          "label": "ABRIL",
+                                          "value": "ABRIL"
+                                        },
+                                        {
+                                          "label": "MAYO",
+                                          "value": "MAYO"
+                                        },
+                                        {
+                                          "label": "JUNIO",
+                                          "value": "JUNIO"
+                                        },
+                                        {
+                                          "label": "JULIO",
+                                          "value": "JULIO"
+                                        },
+                                        {
+                                          "label": "AGOSTO",
+                                          "value": "AGOSTO"
+                                        },
+                                        {
+                                          "label": "SEPTIEMBRE",
+                                          "value": "SEPTIEMBRE"
+                                        },
+                                        {
+                                          "label": "OCTUBRE",
+                                          "value": "OCTUBRE"
+                                        },
+                                        {
+                                          "label": "NOVIEMBRE",
+                                          "value": "NOVIEMBRE"
+                                        },
+                                        {
+                                          "label": "DICIEMBRE",
+                                          "value": "DICIEMBRE"
+                                        },
+                                        {
+                                          "label": "TOTAL",
+                                          "value": "TOTAL"
+                                        }
+                                      ],
+                                      "placeholder": "Select the month",
+                                      "value": [
+                                        "ENERO"
+                                      ]
+                                    },
+                                    "type": "Dropdown"
+                                  }
+                                ]
+                              },
+                              "type": "Div"
+                            }
+                          ],
+                          "md": {
+                            "size": 4
+                          },
+                          "xs": {
+                            "size": 6
+                          }
+                        },
+                        "type": "Col"
+                      }
+                    ]
+                  },
+                  "type": "Row"
+                },
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_core_components",
+                                    "props": {
+                                      "id": "travelers_opt1-board1-graph-right"
+                                    },
+                                    "type": "Graph"
+                                  }
+                                ]
+                              },
+                              "type": "Div"
+                            }
+                          ],
+                          "md": {
+                            "offset": 1,
+                            "size": 10
+                          },
+                          "xs": {
+                            "size": 12
+                          }
+                        },
+                        "type": "Col"
+                      }
+                    ]
+                  },
+                  "type": "Row"
+                }
+              ]
+            },
+            "type": "CardBody"
+          },
+          "className": "mb-3 main-board-subpage"
+        },
+        "type": "Card"
+      },
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": {
+            "namespace": "dash_bootstrap_components",
+            "props": {
+              "children": [
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "How old are the travelers?",
+                                "className": "board-standard-header-title"
+                              },
+                              "type": "H3"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Get to know the number of travelers that visit Bogotá city by age",
+                                "className": "board-standard-header-subtitle"
+                              },
+                              "type": "P"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                },
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_core_components",
+                                    "props": {
+                                      "id": "travelers_opt1-board2-menu-top-year",
+                                      "multi": true,
+                                      "options": [
+                                        {
+                                          "label": "2019",
+                                          "value": "2019"
+                                        },
+                                        {
+                                          "label": "2018",
+                                          "value": "2018"
+                                        },
+                                        {
+                                          "label": "2010",
+                                          "value": "2010"
+                                        },
+                                        {
+                                          "label": "2011",
+                                          "value": "2011"
+                                        },
+                                        {
+                                          "label": "2012",
+                                          "value": "2012"
+                                        },
+                                        {
+                                          "label": "2013",
+                                          "value": "2013"
+                                        },
+                                        {
+                                          "label": "2014",
+                                          "value": "2014"
+                                        },
+                                        {
+                                          "label": "2015",
+                                          "value": "2015"
+                                        },
+                                        {
+                                          "label": "2016",
+                                          "value": "2016"
+                                        },
+                                        {
+                                          "label": "2017",
+                                          "value": "2017"
+                                        }
+                                      ],
+                                      "placeholder": "Select the year",
+                                      "value": [
+                                        "2019"
+                                      ]
+                                    },
+                                    "type": "Dropdown"
+                                  },
+                                  {
+                                    "namespace": "dash_html_components",
+                                    "props": {
+                                      "children": "Age distribution of the total number of travelers who visited Bogotá in the selected years",
+                                      "className": "board-standard-label-graph"
+                                    },
+                                    "type": "P"
+                                  },
+                                  {
+                                    "namespace": "dash_core_components",
+                                    "props": {
+                                      "id": "travelers_opt1-board2-graph-top"
+                                    },
+                                    "type": "Graph"
+                                  }
+                                ]
+                              },
+                              "type": "Div"
+                            }
+                          ],
+                          "md": {
+                            "size": 12
+                          },
+                          "xs": {
+                            "size": 12
+                          }
+                        },
+                        "type": "Col"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_bootstrap_components",
+                                    "props": {
+                                      "children": [
+                                        {
+                                          "namespace": "dash_bootstrap_components",
+                                          "props": {
+                                            "children": [
+                                              {
+                                                "namespace": "dash_core_components",
+                                                "props": {
+                                                  "id": "travelers_opt1-board2-menu-bottom-year",
+                                                  "multi": true,
+                                                  "options": [
+                                                    {
+                                                      "label": "2019",
+                                                      "value": "2019"
+                                                    },
+                                                    {
+                                                      "label": "2018",
+                                                      "value": "2018"
+                                                    },
+                                                    {
+                                                      "label": "2010",
+                                                      "value": "2010"
+                                                    },
+                                                    {
+                                                      "label": "2011",
+                                                      "value": "2011"
+                                                    },
+                                                    {
+                                                      "label": "2012",
+                                                      "value": "2012"
+                                                    },
+                                                    {
+                                                      "label": "2013",
+                                                      "value": "2013"
+                                                    },
+                                                    {
+                                                      "label": "2014",
+                                                      "value": "2014"
+                                                    },
+                                                    {
+                                                      "label": "2015",
+                                                      "value": "2015"
+                                                    },
+                                                    {
+                                                      "label": "2016",
+                                                      "value": "2016"
+                                                    },
+                                                    {
+                                                      "label": "2017",
+                                                      "value": "2017"
+                                                    }
+                                                  ],
+                                                  "placeholder": "Select the year",
+                                                  "value": [
+                                                    "2019"
+                                                  ]
+                                                },
+                                                "type": "Dropdown"
+                                              }
+                                            ],
+                                            "md": {
+                                              "size": 6
+                                            },
+                                            "xs": {
+                                              "size": 12
+                                            }
+                                          },
+                                          "type": "Col"
+                                        },
+                                        {
+                                          "namespace": "dash_bootstrap_components",
+                                          "props": {
+                                            "children": [
+                                              {
+                                                "namespace": "dash_core_components",
+                                                "props": {
+                                                  "id": "travelers_opt1-board2-bottom-origin",
+                                                  "multi": true,
+                                                  "options": [
+                                                    {
+                                                      "label": "ALEMANIA",
+                                                      "value": "ALEMANIA"
+                                                    },
+                                                    {
+                                                      "label": "ARGENTINA",
+                                                      "value": "ARGENTINA"
+                                                    },
+                                                    {
+                                                      "label": "BOLIVIA",
+                                                      "value": "BOLIVIA"
+                                                    },
+                                                    {
+                                                      "label": "BRASIL",
+                                                      "value": "BRASIL"
+                                                    },
+                                                    {
+                                                      "label": "CHILE",
+                                                      "value": "CHILE"
+                                                    },
+                                                    {
+                                                      "label": "COSTA RICA",
+                                                      "value": "COSTA RICA"
+                                                    },
+                                                    {
+                                                      "label": "ECUADOR",
+                                                      "value": "ECUADOR"
+                                                    },
+                                                    {
+                                                      "label": "ESPAÑA",
+                                                      "value": "ESPAÑA"
+                                                    },
+                                                    {
+                                                      "label": "ESTADOS UNIDOS",
+                                                      "value": "ESTADOS UNIDOS"
+                                                    },
+                                                    {
+                                                      "label": "FRANCIA",
+                                                      "value": "FRANCIA"
+                                                    },
+                                                    {
+                                                      "label": "ITALIA",
+                                                      "value": "ITALIA"
+                                                    },
+                                                    {
+                                                      "label": "MEXICO",
+                                                      "value": "MEXICO"
+                                                    },
+                                                    {
+                                                      "label": "PANAMA",
+                                                      "value": "PANAMA"
+                                                    },
+                                                    {
+                                                      "label": "PERU",
+                                                      "value": "PERU"
+                                                    },
+                                                    {
+                                                      "label": "REINO UNIDO",
+                                                      "value": "REINO UNIDO"
+                                                    },
+                                                    {
+                                                      "label": "ANTIOQUIA",
+                                                      "value": "ANTIOQUIA"
+                                                    },
+                                                    {
+                                                      "label": "ATLANTICO",
+                                                      "value": "ATLANTICO"
+                                                    },
+                                                    {
+                                                      "label": "BOLIVAR",
+                                                      "value": "BOLIVAR"
+                                                    },
+                                                    {
+                                                      "label": "BOYACA",
+                                                      "value": "BOYACA"
+                                                    },
+                                                    {
+                                                      "label": "CUNDINAMARCA",
+                                                      "value": "CUNDINAMARCA"
+                                                    },
+                                                    {
+                                                      "label": "HUILA",
+                                                      "value": "HUILA"
+                                                    },
+                                                    {
+                                                      "label": "META",
+                                                      "value": "META"
+                                                    },
+                                                    {
+                                                      "label": "NORTE DE SANTANDER",
+                                                      "value": "NORTE DE SANTANDER"
+                                                    },
+                                                    {
+                                                      "label": "QUINDIO",
+                                                      "value": "QUINDIO"
+                                                    },
+                                                    {
+                                                      "label": "RISARALDA",
+                                                      "value": "RISARALDA"
+                                                    },
+                                                    {
+                                                      "label": "SANTANDER",
+                                                      "value": "SANTANDER"
+                                                    },
+                                                    {
+                                                      "label": "TOLIMA",
+                                                      "value": "TOLIMA"
+                                                    },
+                                                    {
+                                                      "label": "VALLE DEL CAUCA",
+                                                      "value": "VALLE DEL CAUCA"
+                                                    },
+                                                    {
+                                                      "label": "nan",
+                                                      "value": "nan"
+                                                    }
+                                                  ],
+                                                  "placeholder": "Select the origin",
+                                                  "value": [
+                                                    "ALEMANIA"
+                                                  ]
+                                                },
+                                                "type": "Dropdown"
+                                              }
+                                            ],
+                                            "md": {
+                                              "size": 6
+                                            },
+                                            "xs": {
+                                              "size": 12
+                                            }
+                                          },
+                                          "type": "Col"
+                                        }
+                                      ]
+                                    },
+                                    "type": "Row"
+                                  },
+                                  {
+                                    "namespace": "dash_html_components",
+                                    "props": {
+                                      "children": "Comparison of the age distribution of travelers who visited Bogotá according to their origin",
+                                      "className": "board-standard-label-graph"
+                                    },
+                                    "type": "P"
+                                  },
+                                  {
+                                    "namespace": "dash_core_components",
+                                    "props": {
+                                      "id": "travelers_opt1-board2-graph-bottom"
+                                    },
+                                    "type": "Graph"
+                                  }
+                                ]
+                              },
+                              "type": "Div"
+                            }
+                          ],
+                          "md": {
+                            "size": 12
+                          },
+                          "xs": {
+                            "size": 12
+                          }
+                        },
+                        "type": "Col"
+                      }
+                    ]
+                  },
+                  "type": "Row"
+                }
+              ]
+            },
+            "type": "CardBody"
+          },
+          "className": "mb-3 main-board-subpage"
+        },
+        "type": "Card"
+      },
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": {
+            "namespace": "dash_bootstrap_components",
+            "props": {
+              "children": [
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "What is the predominant gender among travelers?",
+                                "className": "board-standard-header-title"
+                              },
+                              "type": "H3"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Discover the number of travelers that visit Bogotá city by gender",
+                                "className": "board-standard-header-subtitle"
+                              },
+                              "type": "P"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                },
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_core_components",
+                                    "props": {
+                                      "id": "travelers_opt1-board3-menu-top-year",
+                                      "multi": true,
+                                      "options": [
+                                        {
+                                          "label": "2019",
+                                          "value": "2019"
+                                        },
+                                        {
+                                          "label": "2018",
+                                          "value": "2018"
+                                        },
+                                        {
+                                          "label": "2010",
+                                          "value": "2010"
+                                        },
+                                        {
+                                          "label": "2011",
+                                          "value": "2011"
+                                        },
+                                        {
+                                          "label": "2012",
+                                          "value": "2012"
+                                        },
+                                        {
+                                          "label": "2013",
+                                          "value": "2013"
+                                        },
+                                        {
+                                          "label": "2014",
+                                          "value": "2014"
+                                        },
+                                        {
+                                          "label": "2015",
+                                          "value": "2015"
+                                        },
+                                        {
+                                          "label": "2016",
+                                          "value": "2016"
+                                        },
+                                        {
+                                          "label": "2017",
+                                          "value": "2017"
+                                        }
+                                      ],
+                                      "placeholder": "Select the year",
+                                      "value": [
+                                        "2019"
+                                      ]
+                                    },
+                                    "type": "Dropdown"
+                                  },
+                                  {
+                                    "namespace": "dash_html_components",
+                                    "props": {
+                                      "children": "Gender distribution of the total number of travelers who visited Bogotá in the selected years",
+                                      "className": "board-standard-label-graph"
+                                    },
+                                    "type": "P"
+                                  },
+                                  {
+                                    "namespace": "dash_core_components",
+                                    "props": {
+                                      "id": "travelers_opt1-board3-graph-top"
+                                    },
+                                    "type": "Graph"
+                                  }
+                                ]
+                              },
+                              "type": "Div"
+                            }
+                          ],
+                          "md": {
+                            "size": 12
+                          },
+                          "xs": {
+                            "size": 12
+                          }
+                        },
+                        "type": "Col"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_bootstrap_components",
+                                    "props": {
+                                      "children": [
+                                        {
+                                          "namespace": "dash_bootstrap_components",
+                                          "props": {
+                                            "children": [
+                                              {
+                                                "namespace": "dash_core_components",
+                                                "props": {
+                                                  "id": "travelers_opt1-board3-menu-bottom-year",
+                                                  "multi": true,
+                                                  "options": [
+                                                    {
+                                                      "label": "2019",
+                                                      "value": "2019"
+                                                    },
+                                                    {
+                                                      "label": "2018",
+                                                      "value": "2018"
+                                                    },
+                                                    {
+                                                      "label": "2010",
+                                                      "value": "2010"
+                                                    },
+                                                    {
+                                                      "label": "2011",
+                                                      "value": "2011"
+                                                    },
+                                                    {
+                                                      "label": "2012",
+                                                      "value": "2012"
+                                                    },
+                                                    {
+                                                      "label": "2013",
+                                                      "value": "2013"
+                                                    },
+                                                    {
+                                                      "label": "2014",
+                                                      "value": "2014"
+                                                    },
+                                                    {
+                                                      "label": "2015",
+                                                      "value": "2015"
+                                                    },
+                                                    {
+                                                      "label": "2016",
+                                                      "value": "2016"
+                                                    },
+                                                    {
+                                                      "label": "2017",
+                                                      "value": "2017"
+                                                    }
+                                                  ],
+                                                  "placeholder": "Select the year",
+                                                  "value": [
+                                                    "2019"
+                                                  ]
+                                                },
+                                                "type": "Dropdown"
+                                              }
+                                            ],
+                                            "md": {
+                                              "size": 6
+                                            },
+                                            "xs": {
+                                              "size": 12
+                                            }
+                                          },
+                                          "type": "Col"
+                                        },
+                                        {
+                                          "namespace": "dash_bootstrap_components",
+                                          "props": {
+                                            "children": [
+                                              {
+                                                "namespace": "dash_core_components",
+                                                "props": {
+                                                  "id": "travelers_opt1-board3-bottom-origin",
+                                                  "multi": true,
+                                                  "options": [
+                                                    {
+                                                      "label": "ALEMANIA",
+                                                      "value": "ALEMANIA"
+                                                    },
+                                                    {
+                                                      "label": "ARGENTINA",
+                                                      "value": "ARGENTINA"
+                                                    },
+                                                    {
+                                                      "label": "BOLIVIA",
+                                                      "value": "BOLIVIA"
+                                                    },
+                                                    {
+                                                      "label": "BRASIL",
+                                                      "value": "BRASIL"
+                                                    },
+                                                    {
+                                                      "label": "CHILE",
+                                                      "value": "CHILE"
+                                                    },
+                                                    {
+                                                      "label": "COSTA RICA",
+                                                      "value": "COSTA RICA"
+                                                    },
+                                                    {
+                                                      "label": "ECUADOR",
+                                                      "value": "ECUADOR"
+                                                    },
+                                                    {
+                                                      "label": "ESPAÑA",
+                                                      "value": "ESPAÑA"
+                                                    },
+                                                    {
+                                                      "label": "ESTADOS UNIDOS",
+                                                      "value": "ESTADOS UNIDOS"
+                                                    },
+                                                    {
+                                                      "label": "FRANCIA",
+                                                      "value": "FRANCIA"
+                                                    },
+                                                    {
+                                                      "label": "ITALIA",
+                                                      "value": "ITALIA"
+                                                    },
+                                                    {
+                                                      "label": "MEXICO",
+                                                      "value": "MEXICO"
+                                                    },
+                                                    {
+                                                      "label": "PANAMA",
+                                                      "value": "PANAMA"
+                                                    },
+                                                    {
+                                                      "label": "PERU",
+                                                      "value": "PERU"
+                                                    },
+                                                    {
+                                                      "label": "REINO UNIDO",
+                                                      "value": "REINO UNIDO"
+                                                    },
+                                                    {
+                                                      "label": "ANTIOQUIA",
+                                                      "value": "ANTIOQUIA"
+                                                    },
+                                                    {
+                                                      "label": "ATLANTICO",
+                                                      "value": "ATLANTICO"
+                                                    },
+                                                    {
+                                                      "label": "BOLIVAR",
+                                                      "value": "BOLIVAR"
+                                                    },
+                                                    {
+                                                      "label": "BOYACA",
+                                                      "value": "BOYACA"
+                                                    },
+                                                    {
+                                                      "label": "CUNDINAMARCA",
+                                                      "value": "CUNDINAMARCA"
+                                                    },
+                                                    {
+                                                      "label": "HUILA",
+                                                      "value": "HUILA"
+                                                    },
+                                                    {
+                                                      "label": "META",
+                                                      "value": "META"
+                                                    },
+                                                    {
+                                                      "label": "NORTE DE SANTANDER",
+                                                      "value": "NORTE DE SANTANDER"
+                                                    },
+                                                    {
+                                                      "label": "QUINDIO",
+                                                      "value": "QUINDIO"
+                                                    },
+                                                    {
+                                                      "label": "RISARALDA",
+                                                      "value": "RISARALDA"
+                                                    },
+                                                    {
+                                                      "label": "SANTANDER",
+                                                      "value": "SANTANDER"
+                                                    },
+                                                    {
+                                                      "label": "TOLIMA",
+                                                      "value": "TOLIMA"
+                                                    },
+                                                    {
+                                                      "label": "VALLE DEL CAUCA",
+                                                      "value": "VALLE DEL CAUCA"
+                                                    },
+                                                    {
+                                                      "label": "nan",
+                                                      "value": "nan"
+                                                    }
+                                                  ],
+                                                  "placeholder": "Select the origin",
+                                                  "value": [
+                                                    "ALEMANIA"
+                                                  ]
+                                                },
+                                                "type": "Dropdown"
+                                              }
+                                            ],
+                                            "md": {
+                                              "size": 6
+                                            },
+                                            "xs": {
+                                              "size": 12
+                                            }
+                                          },
+                                          "type": "Col"
+                                        }
+                                      ]
+                                    },
+                                    "type": "Row"
+                                  },
+                                  {
+                                    "namespace": "dash_html_components",
+                                    "props": {
+                                      "children": "Comparison of the gender of travelers who visited Bogotá according to their origin",
+                                      "className": "board-standard-label-graph"
+                                    },
+                                    "type": "P"
+                                  },
+                                  {
+                                    "namespace": "dash_core_components",
+                                    "props": {
+                                      "id": "travelers_opt1-board3-graph-bottom"
+                                    },
+                                    "type": "Graph"
+                                  }
+                                ]
+                              },
+                              "type": "Div"
+                            }
+                          ],
+                          "md": {
+                            "size": 12
+                          },
+                          "xs": {
+                            "size": 12
+                          }
+                        },
+                        "type": "Col"
+                      }
+                    ]
+                  },
+                  "type": "Row"
+                }
+              ]
+            },
+            "type": "CardBody"
+          },
+          "className": "mb-3 main-board-subpage"
+        },
+        "type": "Card"
+      },
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": {
+            "namespace": "dash_bootstrap_components",
+            "props": {
+              "children": [
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "What is the educational level of the travelers?",
+                                "className": "board-standard-header-title"
+                              },
+                              "type": "H3"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Find out the number of travelers that visit Bogotá city according to their educational level",
+                                "className": "board-standard-header-subtitle"
+                              },
+                              "type": "P"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                },
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "travelers_opt1-board4-menu-top-year",
+                                "multi": true,
+                                "options": [
+                                  {
+                                    "label": "2019",
+                                    "value": "2019"
+                                  },
+                                  {
+                                    "label": "2018",
+                                    "value": "2018"
+                                  },
+                                  {
+                                    "label": "2010",
+                                    "value": "2010"
+                                  },
+                                  {
+                                    "label": "2011",
+                                    "value": "2011"
+                                  },
+                                  {
+                                    "label": "2012",
+                                    "value": "2012"
+                                  },
+                                  {
+                                    "label": "2013",
+                                    "value": "2013"
+                                  },
+                                  {
+                                    "label": "2014",
+                                    "value": "2014"
+                                  },
+                                  {
+                                    "label": "2015",
+                                    "value": "2015"
+                                  },
+                                  {
+                                    "label": "2016",
+                                    "value": "2016"
+                                  },
+                                  {
+                                    "label": "2017",
+                                    "value": "2017"
+                                  }
+                                ],
+                                "placeholder": "Select the year",
+                                "value": [
+                                  "2019"
+                                ]
+                              },
+                              "type": "Dropdown"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Distribution of the educational level of the total number of travelers who visited Bogotá in the selected years",
+                                "className": "board-standard-label-graph"
+                              },
+                              "type": "P"
+                            },
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "travelers_opt1-board4-graph-top"
+                              },
+                              "type": "Graph"
+                            }
+                          ]
+                        },
+                        "type": "Div"
+                      },
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_bootstrap_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_bootstrap_components",
+                                    "props": {
+                                      "children": [
+                                        {
+                                          "namespace": "dash_core_components",
+                                          "props": {
+                                            "id": "travelers_opt1-board4-menu-bottom-year",
+                                            "multi": true,
+                                            "options": [
+                                              {
+                                                "label": "2019",
+                                                "value": "2019"
+                                              },
+                                              {
+                                                "label": "2018",
+                                                "value": "2018"
+                                              },
+                                              {
+                                                "label": "2010",
+                                                "value": "2010"
+                                              },
+                                              {
+                                                "label": "2011",
+                                                "value": "2011"
+                                              },
+                                              {
+                                                "label": "2012",
+                                                "value": "2012"
+                                              },
+                                              {
+                                                "label": "2013",
+                                                "value": "2013"
+                                              },
+                                              {
+                                                "label": "2014",
+                                                "value": "2014"
+                                              },
+                                              {
+                                                "label": "2015",
+                                                "value": "2015"
+                                              },
+                                              {
+                                                "label": "2016",
+                                                "value": "2016"
+                                              },
+                                              {
+                                                "label": "2017",
+                                                "value": "2017"
+                                              }
+                                            ],
+                                            "placeholder": "Select the year",
+                                            "value": [
+                                              "2019"
+                                            ]
+                                          },
+                                          "type": "Dropdown"
+                                        }
+                                      ],
+                                      "md": {
+                                        "size": 6
+                                      },
+                                      "xs": {
+                                        "size": 12
+                                      }
+                                    },
+                                    "type": "Col"
+                                  },
+                                  {
+                                    "namespace": "dash_bootstrap_components",
+                                    "props": {
+                                      "children": [
+                                        {
+                                          "namespace": "dash_core_components",
+                                          "props": {
+                                            "id": "travelers_opt1-board4-bottom-origin",
+                                            "multi": true,
+                                            "options": [
+                                              {
+                                                "label": "ALEMANIA",
+                                                "value": "ALEMANIA"
+                                              },
+                                              {
+                                                "label": "ARGENTINA",
+                                                "value": "ARGENTINA"
+                                              },
+                                              {
+                                                "label": "BOLIVIA",
+                                                "value": "BOLIVIA"
+                                              },
+                                              {
+                                                "label": "BRASIL",
+                                                "value": "BRASIL"
+                                              },
+                                              {
+                                                "label": "CHILE",
+                                                "value": "CHILE"
+                                              },
+                                              {
+                                                "label": "COSTA RICA",
+                                                "value": "COSTA RICA"
+                                              },
+                                              {
+                                                "label": "ECUADOR",
+                                                "value": "ECUADOR"
+                                              },
+                                              {
+                                                "label": "ESPAÑA",
+                                                "value": "ESPAÑA"
+                                              },
+                                              {
+                                                "label": "ESTADOS UNIDOS",
+                                                "value": "ESTADOS UNIDOS"
+                                              },
+                                              {
+                                                "label": "FRANCIA",
+                                                "value": "FRANCIA"
+                                              },
+                                              {
+                                                "label": "ITALIA",
+                                                "value": "ITALIA"
+                                              },
+                                              {
+                                                "label": "MEXICO",
+                                                "value": "MEXICO"
+                                              },
+                                              {
+                                                "label": "PANAMA",
+                                                "value": "PANAMA"
+                                              },
+                                              {
+                                                "label": "PERU",
+                                                "value": "PERU"
+                                              },
+                                              {
+                                                "label": "REINO UNIDO",
+                                                "value": "REINO UNIDO"
+                                              },
+                                              {
+                                                "label": "ANTIOQUIA",
+                                                "value": "ANTIOQUIA"
+                                              },
+                                              {
+                                                "label": "ATLANTICO",
+                                                "value": "ATLANTICO"
+                                              },
+                                              {
+                                                "label": "BOLIVAR",
+                                                "value": "BOLIVAR"
+                                              },
+                                              {
+                                                "label": "BOYACA",
+                                                "value": "BOYACA"
+                                              },
+                                              {
+                                                "label": "CUNDINAMARCA",
+                                                "value": "CUNDINAMARCA"
+                                              },
+                                              {
+                                                "label": "HUILA",
+                                                "value": "HUILA"
+                                              },
+                                              {
+                                                "label": "META",
+                                                "value": "META"
+                                              },
+                                              {
+                                                "label": "NORTE DE SANTANDER",
+                                                "value": "NORTE DE SANTANDER"
+                                              },
+                                              {
+                                                "label": "QUINDIO",
+                                                "value": "QUINDIO"
+                                              },
+                                              {
+                                                "label": "RISARALDA",
+                                                "value": "RISARALDA"
+                                              },
+                                              {
+                                                "label": "SANTANDER",
+                                                "value": "SANTANDER"
+                                              },
+                                              {
+                                                "label": "TOLIMA",
+                                                "value": "TOLIMA"
+                                              },
+                                              {
+                                                "label": "VALLE DEL CAUCA",
+                                                "value": "VALLE DEL CAUCA"
+                                              },
+                                              {
+                                                "label": "nan",
+                                                "value": "nan"
+                                              }
+                                            ],
+                                            "placeholder": "Select the origin",
+                                            "value": [
+                                              "ALEMANIA"
+                                            ]
+                                          },
+                                          "type": "Dropdown"
+                                        }
+                                      ],
+                                      "md": {
+                                        "size": 6
+                                      },
+                                      "xs": {
+                                        "size": 12
+                                      }
+                                    },
+                                    "type": "Col"
+                                  }
+                                ]
+                              },
+                              "type": "Row"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Comparison of the educational level of travelers who visited Bogotá according to their origin",
+                                "className": "board-standard-label-graph"
+                              },
+                              "type": "P"
+                            },
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "travelers_opt1-board4-graph-bottom"
+                              },
+                              "type": "Graph"
+                            }
+                          ]
+                        },
+                        "type": "Div"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                }
+              ]
+            },
+            "type": "CardBody"
+          },
+          "className": "mb-3 main-board-subpage"
+        },
+        "type": "Card"
+      },
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": {
+            "namespace": "dash_bootstrap_components",
+            "props": {
+              "children": [
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "What is the occupation of the travelers?",
+                                "className": "board-standard-header-title"
+                              },
+                              "type": "H3"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Get to know the number of travelers that visit Bogota city by occupation",
+                                "className": "board-standard-header-subtitle"
+                              },
+                              "type": "P"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                },
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "travelers_opt1-board5-menu-top-year",
+                                "multi": true,
+                                "options": [
+                                  {
+                                    "label": "2019",
+                                    "value": "2019"
+                                  },
+                                  {
+                                    "label": "2018",
+                                    "value": "2018"
+                                  },
+                                  {
+                                    "label": "2010",
+                                    "value": "2010"
+                                  },
+                                  {
+                                    "label": "2011",
+                                    "value": "2011"
+                                  },
+                                  {
+                                    "label": "2012",
+                                    "value": "2012"
+                                  },
+                                  {
+                                    "label": "2013",
+                                    "value": "2013"
+                                  },
+                                  {
+                                    "label": "2014",
+                                    "value": "2014"
+                                  },
+                                  {
+                                    "label": "2015",
+                                    "value": "2015"
+                                  },
+                                  {
+                                    "label": "2016",
+                                    "value": "2016"
+                                  },
+                                  {
+                                    "label": "2017",
+                                    "value": "2017"
+                                  }
+                                ],
+                                "placeholder": "Select the year",
+                                "value": [
+                                  "2019"
+                                ]
+                              },
+                              "type": "Dropdown"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Distribution of the occupation of the total number of travelers who visited Bogotá in the selected years",
+                                "className": "board-standard-label-graph"
+                              },
+                              "type": "P"
+                            },
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "travelers_opt1-board5-graph-top"
+                              },
+                              "type": "Graph"
+                            }
+                          ]
+                        },
+                        "type": "Div"
+                      },
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_bootstrap_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_bootstrap_components",
+                                    "props": {
+                                      "children": [
+                                        {
+                                          "namespace": "dash_core_components",
+                                          "props": {
+                                            "id": "travelers_opt1-board5-menu-bottom-year",
+                                            "multi": true,
+                                            "options": [
+                                              {
+                                                "label": "2019",
+                                                "value": "2019"
+                                              },
+                                              {
+                                                "label": "2018",
+                                                "value": "2018"
+                                              },
+                                              {
+                                                "label": "2010",
+                                                "value": "2010"
+                                              },
+                                              {
+                                                "label": "2011",
+                                                "value": "2011"
+                                              },
+                                              {
+                                                "label": "2012",
+                                                "value": "2012"
+                                              },
+                                              {
+                                                "label": "2013",
+                                                "value": "2013"
+                                              },
+                                              {
+                                                "label": "2014",
+                                                "value": "2014"
+                                              },
+                                              {
+                                                "label": "2015",
+                                                "value": "2015"
+                                              },
+                                              {
+                                                "label": "2016",
+                                                "value": "2016"
+                                              },
+                                              {
+                                                "label": "2017",
+                                                "value": "2017"
+                                              }
+                                            ],
+                                            "placeholder": "Select the year",
+                                            "value": [
+                                              "2019"
+                                            ]
+                                          },
+                                          "type": "Dropdown"
+                                        }
+                                      ],
+                                      "md": {
+                                        "size": 6
+                                      },
+                                      "xs": {
+                                        "size": 12
+                                      }
+                                    },
+                                    "type": "Col"
+                                  },
+                                  {
+                                    "namespace": "dash_bootstrap_components",
+                                    "props": {
+                                      "children": [
+                                        {
+                                          "namespace": "dash_core_components",
+                                          "props": {
+                                            "id": "travelers_opt1-board5-bottom-origin",
+                                            "multi": true,
+                                            "options": [
+                                              {
+                                                "label": "ALEMANIA",
+                                                "value": "ALEMANIA"
+                                              },
+                                              {
+                                                "label": "ARGENTINA",
+                                                "value": "ARGENTINA"
+                                              },
+                                              {
+                                                "label": "BOLIVIA",
+                                                "value": "BOLIVIA"
+                                              },
+                                              {
+                                                "label": "BRASIL",
+                                                "value": "BRASIL"
+                                              },
+                                              {
+                                                "label": "CHILE",
+                                                "value": "CHILE"
+                                              },
+                                              {
+                                                "label": "COSTA RICA",
+                                                "value": "COSTA RICA"
+                                              },
+                                              {
+                                                "label": "ECUADOR",
+                                                "value": "ECUADOR"
+                                              },
+                                              {
+                                                "label": "ESPAÑA",
+                                                "value": "ESPAÑA"
+                                              },
+                                              {
+                                                "label": "ESTADOS UNIDOS",
+                                                "value": "ESTADOS UNIDOS"
+                                              },
+                                              {
+                                                "label": "FRANCIA",
+                                                "value": "FRANCIA"
+                                              },
+                                              {
+                                                "label": "ITALIA",
+                                                "value": "ITALIA"
+                                              },
+                                              {
+                                                "label": "MEXICO",
+                                                "value": "MEXICO"
+                                              },
+                                              {
+                                                "label": "PANAMA",
+                                                "value": "PANAMA"
+                                              },
+                                              {
+                                                "label": "PERU",
+                                                "value": "PERU"
+                                              },
+                                              {
+                                                "label": "REINO UNIDO",
+                                                "value": "REINO UNIDO"
+                                              },
+                                              {
+                                                "label": "ANTIOQUIA",
+                                                "value": "ANTIOQUIA"
+                                              },
+                                              {
+                                                "label": "ATLANTICO",
+                                                "value": "ATLANTICO"
+                                              },
+                                              {
+                                                "label": "BOLIVAR",
+                                                "value": "BOLIVAR"
+                                              },
+                                              {
+                                                "label": "BOYACA",
+                                                "value": "BOYACA"
+                                              },
+                                              {
+                                                "label": "CUNDINAMARCA",
+                                                "value": "CUNDINAMARCA"
+                                              },
+                                              {
+                                                "label": "HUILA",
+                                                "value": "HUILA"
+                                              },
+                                              {
+                                                "label": "META",
+                                                "value": "META"
+                                              },
+                                              {
+                                                "label": "NORTE DE SANTANDER",
+                                                "value": "NORTE DE SANTANDER"
+                                              },
+                                              {
+                                                "label": "QUINDIO",
+                                                "value": "QUINDIO"
+                                              },
+                                              {
+                                                "label": "RISARALDA",
+                                                "value": "RISARALDA"
+                                              },
+                                              {
+                                                "label": "SANTANDER",
+                                                "value": "SANTANDER"
+                                              },
+                                              {
+                                                "label": "TOLIMA",
+                                                "value": "TOLIMA"
+                                              },
+                                              {
+                                                "label": "VALLE DEL CAUCA",
+                                                "value": "VALLE DEL CAUCA"
+                                              },
+                                              {
+                                                "label": "nan",
+                                                "value": "nan"
+                                              }
+                                            ],
+                                            "placeholder": "Select the origin",
+                                            "value": [
+                                              "ALEMANIA"
+                                            ]
+                                          },
+                                          "type": "Dropdown"
+                                        }
+                                      ],
+                                      "md": {
+                                        "size": 6
+                                      },
+                                      "xs": {
+                                        "size": 12
+                                      }
+                                    },
+                                    "type": "Col"
+                                  }
+                                ]
+                              },
+                              "type": "Row"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Comparison of the occupation of travelers who visited Bogotá according to their origin",
+                                "className": "board-standard-label-graph"
+                              },
+                              "type": "P"
+                            },
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "travelers_opt1-board5-graph-bottom"
+                              },
+                              "type": "Graph"
+                            }
+                          ]
+                        },
+                        "type": "Div"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                }
+              ]
+            },
+            "type": "CardBody"
+          },
+          "className": "mb-3 main-board-subpage"
+        },
+        "type": "Card"
+      }
+    ],
+    "fluid": true
+  },
+  "type": "Container"
+}

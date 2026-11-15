@@ -1,0 +1,363 @@
+{
+  "data": [
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=A. PRIMARIA<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "A. PRIMARIA, ANTIOQUIA",
+      "marker": {
+        "color": "#20284D",
+        "pattern": {
+          "shape": "."
+        }
+      },
+      "name": "A. PRIMARIA, ANTIOQUIA",
+      "offsetgroup": "A. PRIMARIA, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        2811.0,
+        3254.0,
+        3564.0,
+        2245.0,
+        4639.26,
+        1977.51,
+        0.0,
+        4256.06,
+        2565.83,
+        870.54,
+        4051.11,
+        0.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=B. SECUNDARIA<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "B. SECUNDARIA, ANTIOQUIA",
+      "marker": {
+        "color": "#4A589B",
+        "pattern": {
+          "shape": "."
+        }
+      },
+      "name": "B. SECUNDARIA, ANTIOQUIA",
+      "offsetgroup": "B. SECUNDARIA, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        33652.0,
+        34012.0,
+        41667.0,
+        32822.0,
+        34725.16,
+        36051.62,
+        25964.88999999999,
+        30361.10999999999,
+        25487.28,
+        26654.07000000001,
+        30055.76,
+        30102.04
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=C. TECNICO O TECNOLOGICO<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "C. TECNICO O TECNOLOGICO, ANTIOQUIA",
+      "marker": {
+        "color": "#D4D4E9",
+        "pattern": {
+          "shape": "."
+        }
+      },
+      "name": "C. TECNICO O TECNOLOGICO, ANTIOQUIA",
+      "offsetgroup": "C. TECNICO O TECNOLOGICO, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        18455.0,
+        18496.0,
+        23902.0,
+        17104.0,
+        18384.72999999999,
+        23941.02,
+        8087.050000000001,
+        8460.51,
+        1978.55,
+        13871.52999999999,
+        6102.040000000001,
+        3229.429999999999
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=D. PROFESIONAL UNIVERSITARIO<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "D. PROFESIONAL UNIVERSITARIO, ANTIOQUIA",
+      "marker": {
+        "color": "#BADA55",
+        "pattern": {
+          "shape": "."
+        }
+      },
+      "name": "D. PROFESIONAL UNIVERSITARIO, ANTIOQUIA",
+      "offsetgroup": "D. PROFESIONAL UNIVERSITARIO, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        49672.0,
+        50226.0,
+        62056.0,
+        47871.0,
+        51351.20000000001,
+        55072.16999999993,
+        34675.35999999996,
+        43866.66999999994,
+        50872.0700000001,
+        42133.14000000006,
+        47170.06999999995,
+        34502.77
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=E. ESTUDIOS DE POSGRADO<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "E. ESTUDIOS DE POSGRADO, ANTIOQUIA",
+      "marker": {
+        "color": "#FFE787",
+        "pattern": {
+          "shape": "."
+        }
+      },
+      "name": "E. ESTUDIOS DE POSGRADO, ANTIOQUIA",
+      "offsetgroup": "E. ESTUDIOS DE POSGRADO, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        10810.0,
+        9980.0,
+        13155.0,
+        11719.0,
+        7170.969999999999,
+        13819.40000000002,
+        13552.43,
+        6118.430000000001,
+        8402.070000000002,
+        4668.59,
+        4702.29,
+        3721.43
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=F. NINGUNO<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "F. NINGUNO, ANTIOQUIA",
+      "marker": {
+        "color": "#B8B97E",
+        "pattern": {
+          "shape": "."
+        }
+      },
+      "name": "F. NINGUNO, ANTIOQUIA",
+      "offsetgroup": "F. NINGUNO, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        806.0,
+        805.0,
+        991.0,
+        802.0,
+        793.22,
+        869.6,
+        702.28,
+        425.73,
+        0.0,
+        1164.98,
+        0.0,
+        0.0
+      ],
+      "yaxis": "y"
+    }
+  ],
+  "layout": {
+    "barmode": "relative",
+    "legend": {
+      "title": {
+        "text": ", ORIGIN"
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+    "xaxis": {
+      "anchor": "y",
+      "categoryarray": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "categoryorder": "array",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC"
+      ],
+      "tickvals": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "title": {
+        "text": "MONTH"
+      }
+    },
+    "yaxis": {
+      "anchor": "x",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "TRAVELERS"
+      }
+    }
+  }
+}

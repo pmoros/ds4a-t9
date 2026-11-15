@@ -1,0 +1,705 @@
+{
+  "namespace": "dash_bootstrap_components",
+  "props": {
+    "children": [
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": [
+            {
+              "namespace": "dash_bootstrap_components",
+              "props": {
+                "children": {
+                  "namespace": "dash_html_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": {
+                                  "namespace": "dash_html_components",
+                                  "props": {
+                                    "children": "Get to know some ",
+                                    "className": "main-title"
+                                  },
+                                  "type": "H1"
+                                }
+                              },
+                              "type": "Span"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": {
+                                  "namespace": "dash_html_components",
+                                  "props": {
+                                    "children": "SIGHTSEEING",
+                                    "className": "main-title-bold"
+                                  },
+                                  "type": "H1"
+                                }
+                              },
+                              "type": "Span"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": {
+                                  "namespace": "dash_html_components",
+                                  "props": {
+                                    "children": "indicators",
+                                    "className": "main-title"
+                                  },
+                                  "type": "H1"
+                                }
+                              },
+                              "type": "Span"
+                            }
+                          ],
+                          "style": {
+                            "marginLeft": "10%",
+                            "marginRight": "10%"
+                          }
+                        },
+                        "type": "Div"
+                      }
+                    ],
+                    "className": "container-fluid main-banner-darker row-full",
+                    "style": {
+                      "backgroundImage": "url(\"https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/indicators-banner.jpg\")",
+                      "backgroundPosition": "center"
+                    }
+                  },
+                  "type": "Div"
+                },
+                "width": 12
+              },
+              "type": "Col"
+            }
+          ]
+        },
+        "type": "Row"
+      },
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": {
+            "namespace": "dash_bootstrap_components",
+            "props": {
+              "children": [
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Establishments with sustainable tourism certification",
+                                "className": "board-standard-header-title"
+                              },
+                              "type": "H3"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Get to know the number of establishments that have sustainable tourism certification",
+                                "className": "board-standard-header-subtitle"
+                              },
+                              "type": "P"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                },
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt4-board1-menu-year",
+                                "multi": true,
+                                "options": [
+                                  {
+                                    "label": "2019",
+                                    "value": "2019"
+                                  }
+                                ],
+                                "placeholder": "Select the year",
+                                "value": [
+                                  "2019"
+                                ]
+                              },
+                              "type": "Dropdown"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Total establishments with sustainable tourism certification in the selected years",
+                                "className": "board-standard-label-graph"
+                              },
+                              "type": "P"
+                            },
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt4-board1-graph"
+                              },
+                              "type": "Graph"
+                            }
+                          ]
+                        },
+                        "type": "Div"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                }
+              ]
+            },
+            "type": "CardBody"
+          },
+          "className": "mb-3 main-board-subpage"
+        },
+        "type": "Card"
+      },
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": {
+            "namespace": "dash_bootstrap_components",
+            "props": {
+              "children": [
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Tourism service providers",
+                                "className": "board-standard-header-title"
+                              },
+                              "type": "H3"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Find out who are the providers of tourist services in Bogotá city",
+                                "className": "board-standard-header-subtitle"
+                              },
+                              "type": "P"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                },
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt4-board2-menu-top-year",
+                                "multi": true,
+                                "options": [
+                                  {
+                                    "label": "Agencia de viajes",
+                                    "value": "Agencia de viajes"
+                                  },
+                                  {
+                                    "label": "Alojamiento",
+                                    "value": "Alojamiento"
+                                  },
+                                  {
+                                    "label": "Hotel",
+                                    "value": "Hotel"
+                                  },
+                                  {
+                                    "label": "Establecimiento gastronomico",
+                                    "value": "Establecimiento gastronomico"
+                                  }
+                                ],
+                                "placeholder": "Select the provider",
+                                "value": [
+                                  "Agencia de viajes"
+                                ]
+                              },
+                              "type": "Dropdown"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Tourism service providers",
+                                "className": "board-standard-label-graph"
+                              },
+                              "type": "P"
+                            },
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt4-board2-graph-top"
+                              },
+                              "type": "Graph"
+                            }
+                          ]
+                        },
+                        "type": "Div"
+                      },
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_bootstrap_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_bootstrap_components",
+                                    "props": {
+                                      "children": [
+                                        {
+                                          "namespace": "dash_core_components",
+                                          "props": {
+                                            "id": "opt4-board2-menu-bottom-year",
+                                            "multi": true,
+                                            "options": [
+                                              {
+                                                "label": "Arrendadores de vehiculos",
+                                                "value": "Arrendadores de vehiculos"
+                                              },
+                                              {
+                                                "label": "Empresa de tiempo compartido y multipropiedad",
+                                                "value": "Empresa de tiempo compartido y multipropiedad"
+                                              },
+                                              {
+                                                "label": "Empresa de transporte terrestre automotor",
+                                                "value": "Empresa de transporte terrestre automotor"
+                                              },
+                                              {
+                                                "label": "Empresas captadoras de ahorro para servicios turisticos",
+                                                "value": "Empresas captadoras de ahorro para servicios turisticos"
+                                              },
+                                              {
+                                                "label": "Guia de turismo",
+                                                "value": "Guia de turismo"
+                                              },
+                                              {
+                                                "label": "Oficina de representacion turistica",
+                                                "value": "Oficina de representacion turistica"
+                                              },
+                                              {
+                                                "label": "Operadores profesionales de congresos, ferias y convenciones",
+                                                "value": "Operadores profesionales de congresos, ferias y convenciones"
+                                              },
+                                              {
+                                                "label": "Parques temáticos",
+                                                "value": "Parques temáticos"
+                                              },
+                                              {
+                                                "label": "Concesionarios de servicios turisticos en parque",
+                                                "value": "Concesionarios de servicios turisticos en parque"
+                                              },
+                                              {
+                                                "label": "Usuarios operadores en zonas francas turísticas",
+                                                "value": "Usuarios operadores en zonas francas turísticas"
+                                              },
+                                              {
+                                                "label": "Intercambio vacacional",
+                                                "value": "Intercambio vacacional"
+                                              }
+                                            ],
+                                            "placeholder": "Select the provider",
+                                            "value": [
+                                              "Arrendadores de vehiculos"
+                                            ]
+                                          },
+                                          "type": "Dropdown"
+                                        }
+                                      ],
+                                      "xs": {
+                                        "size": 12
+                                      }
+                                    },
+                                    "type": "Col"
+                                  }
+                                ]
+                              },
+                              "type": "Row"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Tourism service providers",
+                                "className": "board-standard-label-graph"
+                              },
+                              "type": "P"
+                            },
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt4-board2-graph-bottom"
+                              },
+                              "type": "Graph"
+                            }
+                          ]
+                        },
+                        "type": "Div"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                }
+              ]
+            },
+            "type": "CardBody"
+          },
+          "className": "mb-3 main-board-subpage"
+        },
+        "type": "Card"
+      },
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": {
+            "namespace": "dash_bootstrap_components",
+            "props": {
+              "children": [
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Regional Travel & Tourism Competitiveness Index (RTTCI)",
+                                "className": "board-standard-header-title"
+                              },
+                              "type": "H3"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Get to know the index of tourist competitiveness of the city. This index is made up of several sub-indices. It registers and measures the factors associated with the competitiveness of tourist activity. In other words, it measures the capacity of a destination to enter markets in a sustainable way",
+                                "className": "board-standard-header-subtitle"
+                              },
+                              "type": "P"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                },
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt4-board3-menu-year",
+                                "multi": true,
+                                "options": [
+                                  {
+                                    "label": "2016",
+                                    "value": "2016"
+                                  },
+                                  {
+                                    "label": "2017",
+                                    "value": "2017"
+                                  },
+                                  {
+                                    "label": "2018",
+                                    "value": "2018"
+                                  },
+                                  {
+                                    "label": "2019",
+                                    "value": "2019"
+                                  }
+                                ],
+                                "placeholder": "Select the year",
+                                "value": [
+                                  "2016"
+                                ]
+                              },
+                              "type": "Dropdown"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Comparison of the regional travel and tourism competitiveness indices among the selected years",
+                                "className": "board-standard-label-graph"
+                              },
+                              "type": "P"
+                            },
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt4-board3-graph"
+                              },
+                              "type": "Graph"
+                            }
+                          ]
+                        },
+                        "type": "Div"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                }
+              ]
+            },
+            "type": "CardBody"
+          },
+          "className": "mb-3 main-board-subpage"
+        },
+        "type": "Card"
+      },
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": {
+            "namespace": "dash_bootstrap_components",
+            "props": {
+              "children": [
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Tourist pressure index",
+                                "className": "board-standard-header-title"
+                              },
+                              "type": "H3"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Discover the index of tourist pressure of the city. This index corresponds to the percentage of average travelers in relation to the resident population of a given destination",
+                                "className": "board-standard-header-subtitle"
+                              },
+                              "type": "P"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                },
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Tourist pressure index",
+                                "className": "board-standard-label-graph"
+                              },
+                              "type": "P"
+                            },
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "figure": {
+                                  "data": [
+                                    {
+                                      "hovertemplate": "Year=%{x}<br>Value=%{y}<extra></extra>",
+                                      "legendgroup": "",
+                                      "line": {
+                                        "color": "#4C78A8",
+                                        "dash": "solid"
+                                      },
+                                      "marker": {
+                                        "symbol": "circle"
+                                      },
+                                      "mode": "lines",
+                                      "name": "",
+                                      "orientation": "v",
+                                      "showlegend": false,
+                                      "type": "scatter",
+                                      "x": [
+                                        2010,
+                                        2011,
+                                        2012,
+                                        2013,
+                                        2014,
+                                        2015,
+                                        2016,
+                                        2017,
+                                        2018,
+                                        2019,
+                                        2020
+                                      ],
+                                      "xaxis": "x",
+                                      "y": [
+                                        1.1,
+                                        1.1,
+                                        1.2,
+                                        1.1,
+                                        1.3,
+                                        1.1,
+                                        1.2,
+                                        1.4,
+                                        1.7,
+                                        1.6,
+                                        0.5
+                                      ],
+                                      "yaxis": "y"
+                                    }
+                                  ],
+                                  "layout": {
+                                    "legend": {
+                                      "tracegroupgap": 0
+                                    },
+                                    "margin": {
+                                      "t": 60
+                                    },
+                                    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+                                    "xaxis": {
+                                      "anchor": "y",
+                                      "domain": [
+                                        0.0,
+                                        1.0
+                                      ],
+                                      "title": {
+                                        "text": "Year"
+                                      }
+                                    },
+                                    "yaxis": {
+                                      "anchor": "x",
+                                      "domain": [
+                                        0.0,
+                                        1.0
+                                      ],
+                                      "title": {
+                                        "text": "Value"
+                                      }
+                                    }
+                                  }
+                                },
+                                "id": "opt4-board4-graph"
+                              },
+                              "type": "Graph"
+                            }
+                          ]
+                        },
+                        "type": "Div"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                }
+              ]
+            },
+            "type": "CardBody"
+          },
+          "className": "mb-3 main-board-subpage"
+        },
+        "type": "Card"
+      }
+    ]
+  },
+  "type": "Container"
+}

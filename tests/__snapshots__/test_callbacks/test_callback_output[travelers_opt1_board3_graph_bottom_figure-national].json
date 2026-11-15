@@ -1,0 +1,172 @@
+{
+  "data": [
+    {
+      "hovertemplate": "=A. HOMBRE<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "A. HOMBRE, ANTIOQUIA",
+      "line": {
+        "color": "#20284D",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "A. HOMBRE, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        124702.0,
+        104.0,
+        6298500.0,
+        716043.0,
+        237125.0,
+        114282.0,
+        8474178.0,
+        219628.0,
+        66787.46000000008,
+        70350.69999999998,
+        72420.54000000005,
+        59404.91999999998
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "=B. MUJER<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "B. MUJER, ANTIOQUIA",
+      "line": {
+        "color": " #BADA55",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "B. MUJER, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        141264.0,
+        392283.0,
+        5399932.0,
+        766609.0,
+        1929062.0,
+        83081.0,
+        8924161.0,
+        205926.0,
+        23173.83,
+        19012.14999999999,
+        17373.21,
+        10379.13
+      ],
+      "yaxis": "y"
+    }
+  ],
+  "layout": {
+    "legend": {
+      "title": {
+        "text": ", ORIGIN"
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+    "xaxis": {
+      "anchor": "y",
+      "categoryarray": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "categoryorder": "array",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC"
+      ],
+      "tickvals": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "title": {
+        "text": "MONTH"
+      }
+    },
+    "yaxis": {
+      "anchor": "x",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "TRAVELERS"
+      }
+    }
+  }
+}

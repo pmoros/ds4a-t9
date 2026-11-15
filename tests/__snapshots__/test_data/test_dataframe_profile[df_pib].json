@@ -1,0 +1,20 @@
+{
+  "columns": [
+    "CLASE",
+    "AÑO",
+    "VALOR"
+  ],
+  "content_hash": "-1951814126003253215",
+  "dtypes": {
+    "AÑO": "int64",
+    "CLASE": "object",
+    "VALOR": "object"
+  },
+  "numeric_sums": {
+    "AÑO": 32244.0
+  },
+  "shape": [
+    16,
+    3
+  ]
+}

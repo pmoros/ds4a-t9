@@ -1,0 +1,171 @@
+{
+  "data": [
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Establishment Type=%{x}<br>Total=%{y}<extra></extra>",
+      "legendgroup": "Establecimientos gastronómicos",
+      "marker": {
+        "color": "#20284D",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Establecimientos gastronómicos",
+      "offsetgroup": "Establecimientos gastronómicos",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "Establecimientos gastronómicos"
+      ],
+      "xaxis": "x",
+      "y": [
+        6.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Establishment Type=%{x}<br>Total=%{y}<extra></extra>",
+      "legendgroup": "Empresas de transporte terrestre",
+      "marker": {
+        "color": "#4A589B",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Empresas de transporte terrestre",
+      "offsetgroup": "Empresas de transporte terrestre",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "Empresas de transporte terrestre"
+      ],
+      "xaxis": "x",
+      "y": [
+        10.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Establishment Type=%{x}<br>Total=%{y}<extra></extra>",
+      "legendgroup": "Sedes para eventos",
+      "marker": {
+        "color": "#D4D4E9",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Sedes para eventos",
+      "offsetgroup": "Sedes para eventos",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "Sedes para eventos"
+      ],
+      "xaxis": "x",
+      "y": [
+        11.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Establishment Type=%{x}<br>Total=%{y}<extra></extra>",
+      "legendgroup": "Establecimientos de alojamiento",
+      "marker": {
+        "color": "#BADA55",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Establecimientos de alojamiento",
+      "offsetgroup": "Establecimientos de alojamiento",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "Establecimientos de alojamiento"
+      ],
+      "xaxis": "x",
+      "y": [
+        63.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Establishment Type=%{x}<br>Total=%{y}<extra></extra>",
+      "legendgroup": "Agencias de viajes",
+      "marker": {
+        "color": "#FFE787",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Agencias de viajes",
+      "offsetgroup": "Agencias de viajes",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "Agencias de viajes"
+      ],
+      "xaxis": "x",
+      "y": [
+        96.0
+      ],
+      "yaxis": "y"
+    }
+  ],
+  "layout": {
+    "barmode": "relative",
+    "legend": {
+      "title": {
+        "text": "Establishment Type"
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+    "xaxis": {
+      "anchor": "y",
+      "categoryarray": [
+        "Establecimientos gastronómicos",
+        "Empresas de transporte terrestre",
+        "Sedes para eventos",
+        "Establecimientos de alojamiento",
+        "Agencias de viajes"
+      ],
+      "categoryorder": "array",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "showticklabels": false,
+      "title": {
+        "text": "Establishment Type"
+      }
+    },
+    "yaxis": {
+      "anchor": "x",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "Total"
+      }
+    }
+  }
+}

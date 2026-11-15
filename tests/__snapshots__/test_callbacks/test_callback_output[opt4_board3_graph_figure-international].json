@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "hovertemplate": "Indice=%{r}<br>Category=%{theta}<br>Year=%{marker.color}<extra></extra>",
+      "legendgroup": "",
+      "marker": {
+        "color": [
+          2016,
+          2016,
+          2016,
+          2016,
+          2016,
+          2016,
+          2016,
+          2016,
+          2016
+        ],
+        "coloraxis": "coloraxis",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "",
+      "r": [
+        6.82,
+        8.38,
+        8.84,
+        8.55,
+        6.86,
+        6.4,
+        6.84,
+        5.06,
+        5.18
+      ],
+      "showlegend": false,
+      "subplot": "polar",
+      "theta": [
+        "índice",
+        "Estrategia de mercado",
+        "Infraestructura",
+        "Económico",
+        "Cultural",
+        "Social",
+        "Empresarial",
+        "Ambiental",
+        "Gestión de destino"
+      ],
+      "type": "barpolar"
+    }
+  ],
+  "layout": {
+    "barmode": "relative",
+    "coloraxis": {
+      "colorbar": {
+        "title": {
+          "text": "Year"
+        }
+      },
+      "colorscale": [
+        [
+          0.0,
+          "#20284D"
+        ],
+        [
+          0.3333333333333333,
+          "#4A589B"
+        ],
+        [
+          0.6666666666666666,
+          "#D4D4E9"
+        ],
+        [
+          1.0,
+          "#BADA55"
+        ]
+      ]
+    },
+    "legend": {
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "polar": {
+      "angularaxis": {
+        "direction": "clockwise",
+        "rotation": 90
+      },
+      "domain": {
+        "x": [
+          0.0,
+          1.0
+        ],
+        "y": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    "template": "sha256:51b4256f1864dc770bb0cb6ce3ce8a0507951fe9e000c51853d7c8aa9b7d2c46",
+    "xaxis": {
+      "linecolor": "black",
+      "linewidth": 2,
+      "mirror": true,
+      "showline": true
+    },
+    "yaxis": {
+      "linecolor": "black",
+      "linewidth": 2,
+      "mirror": true,
+      "showline": true
+    }
+  }
+}

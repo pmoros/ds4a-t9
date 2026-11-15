@@ -1,0 +1,521 @@
+{
+  "namespace": "dash_bootstrap_components",
+  "props": {
+    "children": [
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": [
+            {
+              "namespace": "dash_bootstrap_components",
+              "props": {
+                "children": {
+                  "namespace": "dash_html_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": {
+                                  "namespace": "dash_html_components",
+                                  "props": {
+                                    "children": "Get to know some ",
+                                    "className": "main-title"
+                                  },
+                                  "type": "H1"
+                                }
+                              },
+                              "type": "Span"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": {
+                                  "namespace": "dash_html_components",
+                                  "props": {
+                                    "children": "ECONOMIC",
+                                    "className": "main-title-bold"
+                                  },
+                                  "type": "H1"
+                                }
+                              },
+                              "type": "Span"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": {
+                                  "namespace": "dash_html_components",
+                                  "props": {
+                                    "children": "indicators",
+                                    "className": "main-title"
+                                  },
+                                  "type": "H1"
+                                }
+                              },
+                              "type": "Span"
+                            }
+                          ],
+                          "style": {
+                            "marginLeft": "10%",
+                            "marginRight": "10%"
+                          }
+                        },
+                        "type": "Div"
+                      }
+                    ],
+                    "className": "container-fluid main-banner-darker row-full",
+                    "style": {
+                      "backgroundImage": "url(\"https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/indicators-banner.jpg\")",
+                      "backgroundPosition": "center"
+                    }
+                  },
+                  "type": "Div"
+                },
+                "width": 12
+              },
+              "type": "Col"
+            }
+          ]
+        },
+        "type": "Row"
+      },
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": {
+            "namespace": "dash_bootstrap_components",
+            "props": {
+              "children": [
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Tourism share in gross domestic product",
+                                "className": "board-standard-header-title"
+                              },
+                              "type": "H3"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Learn how Bogotá tourism participates in the gross domestic product (GDP). GDP is the monetary value of all goods and services produced by a country in a given period of time",
+                                "className": "board-standard-header-subtitle"
+                              },
+                              "type": "P"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                },
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Tourism share in gross domestic product",
+                                "className": "board-standard-label-graph"
+                              },
+                              "type": "P"
+                            },
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "figure": {
+                                  "data": [
+                                    {
+                                      "hovertemplate": "=Subsector: Alojamiento y comida<br>Year=%{x}<br>GDP (%)=%{y}<extra></extra>",
+                                      "legendgroup": "Subsector: Alojamiento y comida",
+                                      "line": {
+                                        "color": "#4C78A8",
+                                        "dash": "solid"
+                                      },
+                                      "marker": {
+                                        "symbol": "circle"
+                                      },
+                                      "mode": "markers+lines",
+                                      "name": "Subsector: Alojamiento y comida",
+                                      "orientation": "h",
+                                      "showlegend": true,
+                                      "type": "scatter",
+                                      "x": [
+                                        2014,
+                                        2015,
+                                        2016,
+                                        2017,
+                                        2018,
+                                        2019
+                                      ],
+                                      "xaxis": "x",
+                                      "y": [
+                                        "2.8%",
+                                        "2.8%",
+                                        "2.8%",
+                                        "2.8%",
+                                        "2.8%",
+                                        "2.9%"
+                                      ],
+                                      "yaxis": "y"
+                                    },
+                                    {
+                                      "hovertemplate": "=Sector: Alojamiento y comida<br>Year=%{x}<br>GDP (%)=%{y}<extra></extra>",
+                                      "legendgroup": "Sector: Alojamiento y comida",
+                                      "line": {
+                                        "color": "#F58518",
+                                        "dash": "solid"
+                                      },
+                                      "marker": {
+                                        "symbol": "circle"
+                                      },
+                                      "mode": "markers+lines",
+                                      "name": "Sector: Alojamiento y comida",
+                                      "orientation": "h",
+                                      "showlegend": true,
+                                      "type": "scatter",
+                                      "x": [
+                                        2010,
+                                        2011,
+                                        2012,
+                                        2013,
+                                        2014,
+                                        2015,
+                                        2016,
+                                        2017,
+                                        2018,
+                                        2019
+                                      ],
+                                      "xaxis": "x",
+                                      "y": [
+                                        "18.2%",
+                                        "18.7%",
+                                        "19.1%",
+                                        "19.4%",
+                                        "19.4%",
+                                        "19.3%",
+                                        "19.3%",
+                                        "19.2%",
+                                        "19.3%",
+                                        "19.6%"
+                                      ],
+                                      "yaxis": "y"
+                                    }
+                                  ],
+                                  "layout": {
+                                    "legend": {
+                                      "title": {
+                                        "text": ""
+                                      },
+                                      "tracegroupgap": 0
+                                    },
+                                    "margin": {
+                                      "t": 60
+                                    },
+                                    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+                                    "xaxis": {
+                                      "anchor": "y",
+                                      "domain": [
+                                        0.0,
+                                        1.0
+                                      ],
+                                      "title": {
+                                        "text": "Year"
+                                      }
+                                    },
+                                    "yaxis": {
+                                      "anchor": "x",
+                                      "domain": [
+                                        0.0,
+                                        1.0
+                                      ],
+                                      "title": {
+                                        "text": "GDP (%)"
+                                      }
+                                    }
+                                  }
+                                },
+                                "id": "opt3-board1-graph"
+                              },
+                              "type": "Graph"
+                            }
+                          ]
+                        },
+                        "type": "Div"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                }
+              ]
+            },
+            "type": "CardBody"
+          },
+          "className": "mb-3 main-board-subpage"
+        },
+        "type": "Card"
+      },
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": {
+            "namespace": "dash_bootstrap_components",
+            "props": {
+              "children": [
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Jobs generated by tourism",
+                                "className": "board-standard-header-title"
+                              },
+                              "type": "H3"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      },
+                      {
+                        "namespace": "dash_bootstrap_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Discover the number of jobs generated by tourism each year in Bogotá city",
+                                "className": "board-standard-header-subtitle"
+                              },
+                              "type": "P"
+                            }
+                          ],
+                          "justify": "center"
+                        },
+                        "type": "Row"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                },
+                {
+                  "namespace": "dash_bootstrap_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt3-board2-menu-top-year",
+                                "options": [
+                                  {
+                                    "label": "Empleo Turismo Bogotá",
+                                    "value": "Empleo Turismo Bogotá"
+                                  },
+                                  {
+                                    "label": "Sectores directos",
+                                    "value": "Sectores directos"
+                                  },
+                                  {
+                                    "label": "Sectores conexos",
+                                    "value": "Sectores conexos"
+                                  },
+                                  {
+                                    "label": "Participación % ",
+                                    "value": "Participación % "
+                                  }
+                                ],
+                                "placeholder": "Select the category",
+                                "value": "Empleo Turismo Bogotá"
+                              },
+                              "type": "Dropdown"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Total number of jobs generated by tourism among the years of the selected category",
+                                "className": "board-standard-label-graph"
+                              },
+                              "type": "P"
+                            },
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt3-board2-graph-top"
+                              },
+                              "type": "Graph"
+                            }
+                          ]
+                        },
+                        "type": "Div"
+                      },
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_bootstrap_components",
+                              "props": {
+                                "children": [
+                                  {
+                                    "namespace": "dash_bootstrap_components",
+                                    "props": {
+                                      "children": [
+                                        {
+                                          "namespace": "dash_core_components",
+                                          "props": {
+                                            "id": "opt3-board2-menu-bottom-year",
+                                            "multi": true,
+                                            "options": [
+                                              {
+                                                "label": "2007",
+                                                "value": "2007"
+                                              },
+                                              {
+                                                "label": "2008",
+                                                "value": "2008"
+                                              },
+                                              {
+                                                "label": "2009",
+                                                "value": "2009"
+                                              },
+                                              {
+                                                "label": "2010",
+                                                "value": "2010"
+                                              },
+                                              {
+                                                "label": "2011",
+                                                "value": "2011"
+                                              },
+                                              {
+                                                "label": "2012",
+                                                "value": "2012"
+                                              },
+                                              {
+                                                "label": "2013",
+                                                "value": "2013"
+                                              },
+                                              {
+                                                "label": "2014",
+                                                "value": "2014"
+                                              },
+                                              {
+                                                "label": "2015",
+                                                "value": "2015"
+                                              },
+                                              {
+                                                "label": "2016",
+                                                "value": "2016"
+                                              },
+                                              {
+                                                "label": "2017",
+                                                "value": "2017"
+                                              },
+                                              {
+                                                "label": "2018",
+                                                "value": "2018"
+                                              },
+                                              {
+                                                "label": "2019",
+                                                "value": "2019"
+                                              },
+                                              {
+                                                "label": "2020",
+                                                "value": "2020"
+                                              }
+                                            ],
+                                            "placeholder": "Select the year",
+                                            "value": [
+                                              "2007"
+                                            ]
+                                          },
+                                          "type": "Dropdown"
+                                        }
+                                      ],
+                                      "xs": {
+                                        "size": 12
+                                      }
+                                    },
+                                    "type": "Col"
+                                  }
+                                ]
+                              },
+                              "type": "Row"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "Comparison of the number of jobs generated by tourism among the quarters of the selected years",
+                                "className": "board-standard-label-graph"
+                              },
+                              "type": "P"
+                            },
+                            {
+                              "namespace": "dash_core_components",
+                              "props": {
+                                "id": "opt3-board2-graph-bottom"
+                              },
+                              "type": "Graph"
+                            }
+                          ]
+                        },
+                        "type": "Div"
+                      }
+                    ],
+                    "fluid": true
+                  },
+                  "type": "Container"
+                }
+              ]
+            },
+            "type": "CardBody"
+          },
+          "className": "mb-3 main-board-subpage"
+        },
+        "type": "Card"
+      }
+    ]
+  },
+  "type": "Container"
+}

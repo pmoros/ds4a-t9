@@ -1,0 +1,356 @@
+{
+  "data": [
+    {
+      "hovertemplate": "=A. HOTEL<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "A. HOTEL, ANTIOQUIA",
+      "line": {
+        "color": "#20284D",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "A. HOTEL, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        52617.0,
+        51848.0,
+        65924.0,
+        51875.0,
+        48688.54999999998,
+        63347.23999999983,
+        40866.65999999993,
+        34577.37,
+        40798.74000000005,
+        32673.72999999999,
+        41446.53999999996,
+        29742.66
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "=B. HOSTAL<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "B. HOSTAL, ANTIOQUIA",
+      "line": {
+        "color": "#4A589B",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "B. HOSTAL, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        1292.0,
+        1357.0,
+        1724.0,
+        1086.0,
+        1546.42,
+        1655.04,
+        0.0,
+        1107.51,
+        0.0,
+        587.61,
+        68.74,
+        0.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "=C. APARTAHOTEL<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "C. APARTAHOTEL, ANTIOQUIA",
+      "line": {
+        "color": "#D4D4E9",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "C. APARTAHOTEL, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        1616.0,
+        1855.0,
+        2036.0,
+        1318.0,
+        2603.62,
+        1140.64,
+        141.32,
+        212.87,
+        1793.66,
+        1458.17,
+        201.92,
+        698.5799999999999
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "=D. INMUEBLE DE ALQUILER AIRBNB<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "D. INMUEBLE DE ALQUILER AIRBNB, ANTIOQUIA",
+      "line": {
+        "color": "#BADA55",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "D. INMUEBLE DE ALQUILER AIRBNB, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        868.0,
+        772.0,
+        1106.0,
+        919.0,
+        454.24,
+        1377.07,
+        878.6800000000001,
+        2107.08,
+        1357.21,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "=E. CASA PROPIA, DE FAMILIARES O AMIGOS<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "E. CASA PROPIA, DE FAMILIARES O AMIGOS, ANTIOQUIA",
+      "line": {
+        "color": "#FFE787",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "E. CASA PROPIA, DE FAMILIARES O AMIGOS, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        59777.0,
+        60815.0,
+        74594.0,
+        57322.0,
+        63364.44000000002,
+        64781.46999999991,
+        40809.41999999995,
+        54862.13999999998,
+        44252.53000000001,
+        51619.48000000002,
+        46565.83999999999,
+        40869.41
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "=F. OTRO<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "F. OTRO, ANTIOQUIA",
+      "line": {
+        "color": "#B8B97E",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "F. OTRO, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        915.0,
+        938.0,
+        1190.0,
+        822.0,
+        998.72,
+        1137.9,
+        285.93,
+        701.88,
+        2211.88,
+        3023.859999999999,
+        3798.23,
+        245.02
+      ],
+      "yaxis": "y"
+    }
+  ],
+  "layout": {
+    "legend": {
+      "title": {
+        "text": ", ORIGIN"
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+    "xaxis": {
+      "anchor": "y",
+      "categoryarray": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "categoryorder": "array",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC"
+      ],
+      "tickvals": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "title": {
+        "text": "MONTH"
+      }
+    },
+    "yaxis": {
+      "anchor": "x",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "TRAVELERS"
+      }
+    }
+  }
+}

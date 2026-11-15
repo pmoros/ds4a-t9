@@ -1,0 +1,598 @@
+{
+  "namespace": "dash_bootstrap_components",
+  "props": {
+    "children": [
+      {
+        "namespace": "dash_html_components",
+        "props": {
+          "children": [
+            {
+              "namespace": "dash_bootstrap_components",
+              "props": {
+                "children": [
+                  {
+                    "namespace": "dash_bootstrap_components",
+                    "props": {
+                      "children": [
+                        {
+                          "namespace": "dash_bootstrap_components",
+                          "props": {
+                            "children": [
+                              {
+                                "namespace": "dash_html_components",
+                                "props": {
+                                  "children": [
+                                    {
+                                      "namespace": "dash_html_components",
+                                      "props": {
+                                        "children": "Our ",
+                                        "className": "font-title-3-blue"
+                                      },
+                                      "type": "Span"
+                                    },
+                                    {
+                                      "namespace": "dash_html_components",
+                                      "props": {
+                                        "children": "work team",
+                                        "className": "font-title-3-green"
+                                      },
+                                      "type": "Span"
+                                    }
+                                  ]
+                                },
+                                "type": "H1"
+                              }
+                            ],
+                            "justify": "center"
+                          },
+                          "type": "Row"
+                        }
+                      ],
+                      "className": "margin-space-1-top",
+                      "id": "page-title",
+                      "lg": {
+                        "offset": 0,
+                        "size": 6
+                      },
+                      "md": {
+                        "offset": 0,
+                        "size": 6
+                      },
+                      "sm": {
+                        "offset": 3,
+                        "size": 6
+                      },
+                      "xs": {
+                        "offset": 3,
+                        "size": 6
+                      }
+                    },
+                    "type": "Col"
+                  }
+                ]
+              },
+              "type": "Row"
+            },
+            {
+              "namespace": "dash_bootstrap_components",
+              "props": {
+                "children": [
+                  {
+                    "namespace": "dash_html_components",
+                    "props": {
+                      "children": [
+                        {
+                          "namespace": "dash_html_components",
+                          "props": {
+                            "children": "We are an interdisciplinary group with a passion for data science.            We process information to make strategic decisions and solve society problems.",
+                            "className": "font-subtitle-2"
+                          },
+                          "type": "P"
+                        }
+                      ],
+                      "className": "content-center-left"
+                    },
+                    "type": "Div"
+                  }
+                ]
+              },
+              "type": "Row"
+            },
+            {
+              "namespace": "dash_bootstrap_components",
+              "props": {
+                "children": [
+                  {
+                    "namespace": "dash_html_components",
+                    "props": {
+                      "children": [
+                        {
+                          "namespace": "dash_html_components",
+                          "props": {
+                            "children": {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": "\"Without data you are just another person with an opinion\""
+                              },
+                              "type": "I"
+                            }
+                          },
+                          "type": "P"
+                        },
+                        {
+                          "namespace": "dash_html_components",
+                          "props": {
+                            "children": "W. Edwards deming"
+                          },
+                          "type": "P"
+                        }
+                      ],
+                      "className": "quote-right font-subtitle-3"
+                    },
+                    "type": "Div"
+                  }
+                ],
+                "className": "margin-space-1-top content-center-left d-flex justify-content-end"
+              },
+              "type": "Row"
+            },
+            {
+              "namespace": "dash_bootstrap_components",
+              "props": {
+                "children": [
+                  {
+                    "namespace": "dash_bootstrap_components",
+                    "props": {
+                      "children": [
+                        {
+                          "namespace": "dash_bootstrap_components",
+                          "props": {
+                            "children": [
+                              {
+                                "namespace": "dash_html_components",
+                                "props": {
+                                  "children": [
+                                    {
+                                      "namespace": "dash_html_components",
+                                      "props": {
+                                        "children": "None",
+                                        "className": "thumbnail-team-dimension",
+                                        "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/ElizabethRendonPic.png"
+                                      },
+                                      "type": "Img"
+                                    },
+                                    {
+                                      "namespace": "dash_html_components",
+                                      "props": {
+                                        "children": [
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": {
+                                                "namespace": "dash_html_components",
+                                                "props": {
+                                                  "children": "Elizabeth Rendón"
+                                                },
+                                                "type": "B"
+                                              }
+                                            },
+                                            "type": "P"
+                                          },
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": "Medellín"
+                                            },
+                                            "type": "P"
+                                          },
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": "PhD. Mechanical Engineer"
+                                            },
+                                            "type": "P"
+                                          },
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": "Working at Universidad EAFIT"
+                                            },
+                                            "type": "P"
+                                          }
+                                        ],
+                                        "className": "team-member-info"
+                                      },
+                                      "type": "Div"
+                                    }
+                                  ],
+                                  "className": "team-member-container"
+                                },
+                                "type": "Div"
+                              }
+                            ],
+                            "md": {
+                              "size": 4
+                            }
+                          },
+                          "type": "Col"
+                        },
+                        {
+                          "namespace": "dash_bootstrap_components",
+                          "props": {
+                            "children": [
+                              {
+                                "namespace": "dash_html_components",
+                                "props": {
+                                  "children": [
+                                    {
+                                      "namespace": "dash_html_components",
+                                      "props": {
+                                        "children": "None",
+                                        "className": "thumbnail-team-dimension",
+                                        "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/SergioRairanPic.png"
+                                      },
+                                      "type": "Img"
+                                    },
+                                    {
+                                      "namespace": "dash_html_components",
+                                      "props": {
+                                        "children": [
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": {
+                                                "namespace": "dash_html_components",
+                                                "props": {
+                                                  "children": "Sergio Rairán"
+                                                },
+                                                "type": "B"
+                                              }
+                                            },
+                                            "type": "P"
+                                          },
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": "Bogotá"
+                                            },
+                                            "type": "P"
+                                          },
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": "Statistician"
+                                            },
+                                            "type": "P"
+                                          },
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": "Working at Experian Colombia"
+                                            },
+                                            "type": "P"
+                                          }
+                                        ],
+                                        "className": "team-member-info"
+                                      },
+                                      "type": "Div"
+                                    }
+                                  ],
+                                  "className": "team-member-container"
+                                },
+                                "type": "Div"
+                              }
+                            ],
+                            "md": {
+                              "size": 4
+                            }
+                          },
+                          "type": "Col"
+                        },
+                        {
+                          "namespace": "dash_bootstrap_components",
+                          "props": {
+                            "children": [
+                              {
+                                "namespace": "dash_html_components",
+                                "props": {
+                                  "children": [
+                                    {
+                                      "namespace": "dash_html_components",
+                                      "props": {
+                                        "children": "None",
+                                        "className": "thumbnail-team-dimension",
+                                        "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/AlbertoCortesPic.png"
+                                      },
+                                      "type": "Img"
+                                    },
+                                    {
+                                      "namespace": "dash_html_components",
+                                      "props": {
+                                        "children": [
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": {
+                                                "namespace": "dash_html_components",
+                                                "props": {
+                                                  "children": "Alberto Cortés"
+                                                },
+                                                "type": "B"
+                                              }
+                                            },
+                                            "type": "P"
+                                          },
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": "Valledupar"
+                                            },
+                                            "type": "P"
+                                          },
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": "Electronic Engineer"
+                                            },
+                                            "type": "P"
+                                          },
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": "Control Specialist at Primax Colombia"
+                                            },
+                                            "type": "P"
+                                          }
+                                        ],
+                                        "className": "team-member-info"
+                                      },
+                                      "type": "Div"
+                                    }
+                                  ],
+                                  "className": "team-member-container"
+                                },
+                                "type": "Div"
+                              }
+                            ],
+                            "md": {
+                              "size": 4
+                            }
+                          },
+                          "type": "Col"
+                        }
+                      ]
+                    },
+                    "type": "Row"
+                  },
+                  {
+                    "namespace": "dash_bootstrap_components",
+                    "props": {
+                      "children": [
+                        {
+                          "namespace": "dash_bootstrap_components",
+                          "props": {
+                            "children": [
+                              {
+                                "namespace": "dash_html_components",
+                                "props": {
+                                  "children": [
+                                    {
+                                      "namespace": "dash_html_components",
+                                      "props": {
+                                        "children": "None",
+                                        "className": "thumbnail-team-dimension",
+                                        "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/DiegoCabreraPic.png"
+                                      },
+                                      "type": "Img"
+                                    },
+                                    {
+                                      "namespace": "dash_html_components",
+                                      "props": {
+                                        "children": [
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": {
+                                                "namespace": "dash_html_components",
+                                                "props": {
+                                                  "children": "Diego Cabrera"
+                                                },
+                                                "type": "B"
+                                              }
+                                            },
+                                            "type": "P"
+                                          },
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": "Manizales"
+                                            },
+                                            "type": "P"
+                                          },
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": "Electronic Engineer"
+                                            },
+                                            "type": "P"
+                                          },
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": "PhD. Student at Tecnológico de Monterrey"
+                                            },
+                                            "type": "P"
+                                          }
+                                        ],
+                                        "className": "team-member-info"
+                                      },
+                                      "type": "Div"
+                                    }
+                                  ],
+                                  "className": "team-member-container"
+                                },
+                                "type": "Div"
+                              }
+                            ],
+                            "md": {
+                              "size": 4
+                            }
+                          },
+                          "type": "Col"
+                        },
+                        {
+                          "namespace": "dash_bootstrap_components",
+                          "props": {
+                            "children": [
+                              {
+                                "namespace": "dash_html_components",
+                                "props": {
+                                  "children": [
+                                    {
+                                      "namespace": "dash_html_components",
+                                      "props": {
+                                        "children": "None",
+                                        "className": "thumbnail-team-dimension",
+                                        "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/PaulMorosPic.png"
+                                      },
+                                      "type": "Img"
+                                    },
+                                    {
+                                      "namespace": "dash_html_components",
+                                      "props": {
+                                        "children": [
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": {
+                                                "namespace": "dash_html_components",
+                                                "props": {
+                                                  "children": "Paul Moros"
+                                                },
+                                                "type": "B"
+                                              }
+                                            },
+                                            "type": "P"
+                                          },
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": "Bogotá"
+                                            },
+                                            "type": "P"
+                                          },
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": "Systems Engineering Student at Universidad Nacional de Colombia"
+                                            },
+                                            "type": "P"
+                                          }
+                                        ],
+                                        "className": "team-member-info"
+                                      },
+                                      "type": "Div"
+                                    }
+                                  ],
+                                  "className": "team-member-container"
+                                },
+                                "type": "Div"
+                              }
+                            ],
+                            "md": {
+                              "size": 4
+                            }
+                          },
+                          "type": "Col"
+                        },
+                        {
+                          "namespace": "dash_bootstrap_components",
+                          "props": {
+                            "children": [
+                              {
+                                "namespace": "dash_html_components",
+                                "props": {
+                                  "children": [
+                                    {
+                                      "namespace": "dash_html_components",
+                                      "props": {
+                                        "children": "None",
+                                        "className": "thumbnail-team-dimension",
+                                        "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/KellyGarciaPic.png"
+                                      },
+                                      "type": "Img"
+                                    },
+                                    {
+                                      "namespace": "dash_html_components",
+                                      "props": {
+                                        "children": [
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": {
+                                                "namespace": "dash_html_components",
+                                                "props": {
+                                                  "children": "Kelly García"
+                                                },
+                                                "type": "B"
+                                              }
+                                            },
+                                            "type": "P"
+                                          },
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": "Garzón-Huila"
+                                            },
+                                            "type": "P"
+                                          },
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": "Economist"
+                                            },
+                                            "type": "P"
+                                          },
+                                          {
+                                            "namespace": "dash_html_components",
+                                            "props": {
+                                              "children": "Working at Universidad Compensar"
+                                            },
+                                            "type": "P"
+                                          }
+                                        ],
+                                        "className": "team-member-info"
+                                      },
+                                      "type": "Div"
+                                    }
+                                  ],
+                                  "className": "team-member-container"
+                                },
+                                "type": "Div"
+                              }
+                            ],
+                            "md": {
+                              "size": 4
+                            }
+                          },
+                          "type": "Col"
+                        }
+                      ],
+                      "className": "margin-space-1-top"
+                    },
+                    "type": "Row"
+                  }
+                ],
+                "className": "margin-space-1-top margin-space-2-bottom content-center-left"
+              },
+              "type": "Row"
+            }
+          ]
+        },
+        "type": "Div"
+      }
+    ],
+    "fluid": true
+  },
+  "type": "Container"
+}

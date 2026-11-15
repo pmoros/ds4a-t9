@@ -1,0 +1,374 @@
+{
+  "data": [
+    {
+      "hovertemplate": "=A. ALOJAMIENTO<br>TRAVELERS=%{r}<br>MONTH=%{theta}<extra></extra>",
+      "legendgroup": "A. ALOJAMIENTO",
+      "marker": {
+        "color": "#20284D",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "A. ALOJAMIENTO",
+      "r": [
+        199.78364832234578,
+        202.00943194531948,
+        176.15510180137935,
+        201.47618510881853,
+        202.53980241079705,
+        199.33172562308349,
+        206.3874562377632,
+        202.2471922504119,
+        214.84119170998815,
+        134.12870849088293,
+        159.03962858048294,
+        147.70959840494027
+      ],
+      "showlegend": true,
+      "subplot": "polar",
+      "theta": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "type": "barpolar"
+    },
+    {
+      "hovertemplate": "=B. ALIMENTACIÓN<br>TRAVELERS=%{r}<br>MONTH=%{theta}<extra></extra>",
+      "legendgroup": "B. ALIMENTACIÓN",
+      "marker": {
+        "color": "#4A589B",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "B. ALIMENTACIÓN",
+      "r": [
+        193.40321320345933,
+        189.79773039334896,
+        312.94403021155364,
+        194.5310226536393,
+        195.37352744275321,
+        196.20375740910032,
+        197.6715248059546,
+        194.95380122896657,
+        205.7086269792348,
+        240.89487444533341,
+        180.0576118130108,
+        183.9581036427149
+      ],
+      "showlegend": true,
+      "subplot": "polar",
+      "theta": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "type": "barpolar"
+    },
+    {
+      "hovertemplate": "=C. BIENES DE USO PERSONAL<br>TRAVELERS=%{r}<br>MONTH=%{theta}<extra></extra>",
+      "legendgroup": "C. BIENES DE USO PERSONAL",
+      "marker": {
+        "color": "#D4D4E9",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "C. BIENES DE USO PERSONAL",
+      "r": [
+        188.35105751514826,
+        168.00829191467807,
+        114.46462105370111,
+        185.71424503816283,
+        181.80011726717,
+        196.20119274020007,
+        205.7373158043271,
+        186.82390344612892,
+        175.58780695808792,
+        240.46791978825462,
+        230.18097729357672,
+        201.03785505509785
+      ],
+      "showlegend": true,
+      "subplot": "polar",
+      "theta": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "type": "barpolar"
+    },
+    {
+      "hovertemplate": "=D. COMPRAS<br>TRAVELERS=%{r}<br>MONTH=%{theta}<extra></extra>",
+      "legendgroup": "D. COMPRAS",
+      "marker": {
+        "color": "#BADA55",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "D. COMPRAS",
+      "r": [
+        192.15583651340359,
+        191.21972097243824,
+        248.7835067045745,
+        190.09158003306212,
+        189.41343642950056,
+        206.46650852976367,
+        189.6023328073222,
+        188.62119750135355,
+        193.70067583640025,
+        240.0685615807036,
+        182.42482359490808,
+        206.4585385803975
+      ],
+      "showlegend": true,
+      "subplot": "polar",
+      "theta": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "type": "barpolar"
+    },
+    {
+      "hovertemplate": "=E. OTRO<br>TRAVELERS=%{r}<br>MONTH=%{theta}<extra></extra>",
+      "legendgroup": "E. OTRO",
+      "marker": {
+        "color": "#FFE787",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "E. OTRO",
+      "r": [
+        232.024041229656,
+        269.02407954883506,
+        149.17859587365905,
+        228.0880079620049,
+        226.8479942137211,
+        233.60911072662455,
+        199.67083914239515,
+        225.04196452511232,
+        182.37428460606208,
+        113.71771763997438,
+        180.6557139534273,
+        235.92552522280215
+      ],
+      "showlegend": true,
+      "subplot": "polar",
+      "theta": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "type": "barpolar"
+    },
+    {
+      "hovertemplate": "=F. SERVICIOS CULTURALES<br>TRAVELERS=%{r}<br>MONTH=%{theta}<extra></extra>",
+      "legendgroup": "F. SERVICIOS CULTURALES",
+      "marker": {
+        "color": "#B8B97E",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "F. SERVICIOS CULTURALES",
+      "r": [
+        134.59640294524158,
+        119.11772579856438,
+        113.13888214762036,
+        139.65383037151653,
+        142.5135299941807,
+        103.70315738362311,
+        141.6129145831746,
+        142.0570573289435,
+        156.80827113397092,
+        155.18335401488773,
+        209.87345254157236,
+        157.19068864756403
+      ],
+      "showlegend": true,
+      "subplot": "polar",
+      "theta": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "type": "barpolar"
+    },
+    {
+      "hovertemplate": "=G. TRANSPORTE INTERNO<br>TRAVELERS=%{r}<br>MONTH=%{theta}<extra></extra>",
+      "legendgroup": "G. TRANSPORTE INTERNO",
+      "marker": {
+        "color": "#D36135",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "G. TRANSPORTE INTERNO",
+      "r": [
+        159.68580027074543,
+        160.82301942681588,
+        185.33526220751205,
+        160.44512883279572,
+        161.5115922418773,
+        164.48454758760485,
+        159.31761661906313,
+        160.2548837190833,
+        170.97914277625588,
+        175.53886403996336,
+        157.7677922230218,
+        167.7196904464833
+      ],
+      "showlegend": true,
+      "subplot": "polar",
+      "theta": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "type": "barpolar"
+    }
+  ],
+  "layout": {
+    "barmode": "relative",
+    "barnorm": "percent",
+    "legend": {
+      "title": {
+        "text": ""
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "polar": {
+      "angularaxis": {
+        "categoryarray": [
+          "ENERO",
+          "FEBRERO",
+          "MARZO",
+          "ABRIL",
+          "MAYO",
+          "JUNIO",
+          "JULIO",
+          "AGOSTO",
+          "SEPTIEMBRE",
+          "OCTUBRE",
+          "NOVIEMBRE",
+          "DICIEMBRE"
+        ],
+        "categoryorder": "array",
+        "direction": "clockwise",
+        "rotation": 90
+      },
+      "domain": {
+        "x": [
+          0.0,
+          1.0
+        ],
+        "y": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    "template": "sha256:51b4256f1864dc770bb0cb6ce3ce8a0507951fe9e000c51853d7c8aa9b7d2c46",
+    "xaxis": {
+      "tickmode": "array",
+      "ticktext": [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC"
+      ],
+      "tickvals": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ]
+    }
+  }
+}

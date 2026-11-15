@@ -1,0 +1,111 @@
+{
+  "data": [
+    {
+      "hovertemplate": "Year=2008<br>Month=%{x}<br>Value (%)=%{y}<extra></extra>",
+      "legendgroup": "2008",
+      "line": {
+        "color": "#20284D",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "2008",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "Enero",
+        "Febrero",
+        "Marzo",
+        "Abril",
+        "Mayo",
+        "Junio",
+        "Julio",
+        "Agosto",
+        "Septiembre",
+        "Octubre",
+        "Noviembre",
+        "Diciembre"
+      ],
+      "xaxis": "x",
+      "y": [
+        52.8,
+        73.5,
+        59.1,
+        69.1,
+        62.6,
+        66.5,
+        68.1,
+        67.4,
+        68.5,
+        70.5,
+        66.6,
+        47.0
+      ],
+      "yaxis": "y"
+    }
+  ],
+  "layout": {
+    "legend": {
+      "title": {
+        "text": "Year"
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+    "xaxis": {
+      "anchor": "y",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC"
+      ],
+      "tickvals": [
+        "Enero",
+        "Febrero",
+        "Marzo",
+        "Abril",
+        "Mayo",
+        "Junio",
+        "Julio",
+        "Agosto",
+        "Septiembre",
+        "Octubre",
+        "Noviembre",
+        "Diciembre"
+      ],
+      "title": {
+        "text": "Month"
+      }
+    },
+    "yaxis": {
+      "anchor": "x",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "Value (%)"
+      }
+    }
+  }
+}

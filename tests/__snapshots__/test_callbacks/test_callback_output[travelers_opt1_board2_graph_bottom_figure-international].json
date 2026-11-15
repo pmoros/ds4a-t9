@@ -1,0 +1,264 @@
+{
+  "data": [
+    {
+      "hovertemplate": "PURPOSE, ORIGIN=B. DE 18 A 30<br>=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "B. DE 18 A 30, ALEMANIA",
+      "line": {
+        "color": "#20284D",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "B. DE 18 A 30, ALEMANIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        1001.0,
+        959.0,
+        956.0,
+        1104.0,
+        779.39,
+        509.61,
+        1982.4,
+        276.15,
+        2545.4,
+        272.58,
+        4323.83,
+        618.22
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "PURPOSE, ORIGIN=C. DE 31 A 45<br>=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "C. DE 31 A 45, ALEMANIA",
+      "line": {
+        "color": "#4A589B",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "C. DE 31 A 45, ALEMANIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        854.0,
+        883.0,
+        1039.0,
+        656.0,
+        916.9300000000001,
+        1027.86,
+        0.0,
+        2265.5,
+        1488.48,
+        3012.25,
+        440.68,
+        1770.24
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "PURPOSE, ORIGIN=D. DE 46 A 60<br>=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "D. DE 46 A 60, ALEMANIA",
+      "line": {
+        "color": "#D4D4E9",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "D. DE 46 A 60, ALEMANIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        160.0,
+        122.0,
+        221.0,
+        140.0,
+        0.0,
+        414.28,
+        0.0,
+        395.3200000000001,
+        3527.0,
+        0.0,
+        261.3,
+        1025.45
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "PURPOSE, ORIGIN=E. MAYOR A 60<br>=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "E. MAYOR A 60, ALEMANIA",
+      "line": {
+        "color": "#BADA55",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "E. MAYOR A 60, ALEMANIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaxis": "y"
+    }
+  ],
+  "layout": {
+    "legend": {
+      "title": {
+        "text": "PURPOSE, ORIGIN, "
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+    "xaxis": {
+      "anchor": "y",
+      "categoryarray": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "categoryorder": "array",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC"
+      ],
+      "tickvals": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "title": {
+        "text": "MONTH"
+      }
+    },
+    "yaxis": {
+      "anchor": "x",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "TRAVELERS"
+      }
+    }
+  }
+}

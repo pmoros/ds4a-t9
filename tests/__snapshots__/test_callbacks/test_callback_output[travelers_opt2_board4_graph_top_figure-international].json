@@ -1,0 +1,363 @@
+{
+  "data": [
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=A. SOLO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "A. SOLO",
+      "marker": {
+        "color": "#20284D",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "A. SOLO",
+      "offsetgroup": "A. SOLO",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        19048.0,
+        28418.48999999999,
+        13572.970000000001,
+        19908.0,
+        19821.0,
+        22399.009999999995,
+        15640.810000000001,
+        21218.0,
+        18403.66,
+        25197.33,
+        25794.299999999996,
+        38401.70000000001
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=B. FAMILIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "B. FAMILIA",
+      "marker": {
+        "color": "#4A589B",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "B. FAMILIA",
+      "offsetgroup": "B. FAMILIA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        33405.0,
+        19636.940000000002,
+        36232.01000000001,
+        33217.0,
+        31399.0,
+        43645.24000000001,
+        31258.26000000002,
+        35462.0,
+        24067.810000000005,
+        13057.09,
+        14682.77,
+        27398.06000000001
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=C. PAREJA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "C. PAREJA",
+      "marker": {
+        "color": "#D4D4E9",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "C. PAREJA",
+      "offsetgroup": "C. PAREJA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        9075.0,
+        7981.61,
+        16079.420000000002,
+        9751.0,
+        10172.0,
+        10481.009999999998,
+        5557.71,
+        10185.0,
+        10848.09,
+        13980.800000000001,
+        14149.34,
+        11402.44
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=D. AMIGOS<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "D. AMIGOS",
+      "marker": {
+        "color": "#BADA55",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "D. AMIGOS",
+      "offsetgroup": "D. AMIGOS",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        10105.0,
+        5163.62,
+        8022.0,
+        10764.0,
+        10758.0,
+        10954.95,
+        8875.85,
+        11627.0,
+        10109.1,
+        9434.99,
+        6420.86,
+        10963.230000000001
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=E. COMPAÑEROS DE TRABAJO Y ESTUDIO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "E. COMPAÑEROS DE TRABAJO Y ESTUDIO",
+      "marker": {
+        "color": "#FFE787",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "E. COMPAÑEROS DE TRABAJO Y ESTUDIO",
+      "offsetgroup": "E. COMPAÑEROS DE TRABAJO Y ESTUDIO",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        10333.0,
+        3407.23,
+        6465.88,
+        10785.0,
+        10741.0,
+        12225.93,
+        8416.93,
+        11480.0,
+        9974.1,
+        5220.45,
+        8287.77,
+        16668.79
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=F. OTRO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "F. OTRO",
+      "marker": {
+        "color": "#B8B97E",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "F. OTRO",
+      "offsetgroup": "F. OTRO",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        1335.0,
+        0.0,
+        0.0,
+        1600.0,
+        1755.0,
+        941.82,
+        898.12,
+        1739.0,
+        2117.01,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaxis": "y"
+    }
+  ],
+  "layout": {
+    "barmode": "relative",
+    "legend": {
+      "title": {
+        "text": ""
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+    "xaxis": {
+      "anchor": "y",
+      "categoryarray": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "categoryorder": "array",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC"
+      ],
+      "tickvals": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "title": {
+        "text": "MONTH"
+      }
+    },
+    "yaxis": {
+      "anchor": "x",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "TRAVELERS"
+      }
+    }
+  }
+}

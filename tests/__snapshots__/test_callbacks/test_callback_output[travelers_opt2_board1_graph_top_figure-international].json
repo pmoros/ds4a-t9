@@ -1,0 +1,504 @@
+{
+  "data": [
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=A. VACACIONES_RECREACION_OCIO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "A. VACACIONES_RECREACION_OCIO",
+      "marker": {
+        "color": "#20284D",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "A. VACACIONES_RECREACION_OCIO",
+      "offsetgroup": "A. VACACIONES_RECREACION_OCIO",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        118443.0,
+        97328.87,
+        121567.48000000001,
+        122106.0,
+        120175.0,
+        144226.42,
+        98113.59,
+        129583.0,
+        107317.4,
+        122722.39,
+        109475.15,
+        139678.87
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=B. VISITA A FAMILIARES Y AMIGOS<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "B. VISITA A FAMILIARES Y AMIGOS",
+      "marker": {
+        "color": "#4A589B",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "B. VISITA A FAMILIARES Y AMIGOS",
+      "offsetgroup": "B. VISITA A FAMILIARES Y AMIGOS",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        62540.0,
+        55167.10999999999,
+        77232.08,
+        67222.0,
+        66866.0,
+        63950.96,
+        58904.91000000001,
+        73332.0,
+        61873.53,
+        34399.170000000006,
+        59110.28,
+        57323.79000000001
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=C. EDUCACION Y FORMACION<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "C. EDUCACION Y FORMACION",
+      "marker": {
+        "color": "#D4D4E9",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "C. EDUCACION Y FORMACION",
+      "offsetgroup": "C. EDUCACION Y FORMACION",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        6285.0,
+        1879.96,
+        3836.26,
+        7435.0,
+        7678.0,
+        3702.25,
+        6909.25,
+        8461.0,
+        7962.37,
+        1004.9,
+        1808.82,
+        6465.71
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=D. SALUD Y ATENCION MEDICA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "D. SALUD Y ATENCION MEDICA",
+      "marker": {
+        "color": "#BADA55",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "D. SALUD Y ATENCION MEDICA",
+      "offsetgroup": "D. SALUD Y ATENCION MEDICA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        2734.0,
+        1387.65,
+        1107.0,
+        3006.0,
+        2827.0,
+        2044.24,
+        3906.14,
+        3505.0,
+        2120.87,
+        3508.8199999999997,
+        5231.98,
+        6355.92
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=E. RELIGION_PEREGRINACIONES<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "E. RELIGION_PEREGRINACIONES",
+      "marker": {
+        "color": "#FFE787",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "E. RELIGION_PEREGRINACIONES",
+      "offsetgroup": "E. RELIGION_PEREGRINACIONES",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        306.0,
+        1244.46,
+        0.0,
+        428.0,
+        501.0,
+        0.0,
+        212.48000000000002,
+        484.0,
+        691.76,
+        297.7,
+        1639.1100000000001,
+        348.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=F. COMPRAS<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "F. COMPRAS",
+      "marker": {
+        "color": "#B8B97E",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "F. COMPRAS",
+      "offsetgroup": "F. COMPRAS",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        666.0,
+        0.0,
+        0.0,
+        782.0,
+        640.0,
+        0.0,
+        1796.12,
+        1054.0,
+        172.44,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=G. NEGOCIOS Y MOTIVOS PROFESIONALES<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "G. NEGOCIOS Y MOTIVOS PROFESIONALES",
+      "marker": {
+        "color": "#D36135",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "G. NEGOCIOS Y MOTIVOS PROFESIONALES",
+      "offsetgroup": "G. NEGOCIOS Y MOTIVOS PROFESIONALES",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        33400.0,
+        28898.34,
+        18432.79,
+        33288.0,
+        33153.0,
+        47467.71,
+        20413.52,
+        33846.0,
+        30807.050000000003,
+        17738.78,
+        29875.839999999997,
+        31398.88
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=H. TRABAJO REMUNERADO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "H. TRABAJO REMUNERADO",
+      "marker": {
+        "color": "#F49D6E",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "H. TRABAJO REMUNERADO",
+      "offsetgroup": "H. TRABAJO REMUNERADO",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        10618.0,
+        7556.68,
+        18403.42,
+        11173.0,
+        10958.0,
+        11689.880000000001,
+        10004.44,
+        12120.0,
+        9669.48,
+        17044.65,
+        15740.130000000001,
+        25323.4
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=I. OTRO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "I. OTRO",
+      "marker": {
+        "color": "#4C8577",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "I. OTRO",
+      "offsetgroup": "I. OTRO",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        7980.0,
+        3387.4300000000003,
+        5589.25,
+        7764.0,
+        7370.0,
+        11401.5,
+        6404.23,
+        8059.0,
+        5754.87,
+        4147.25,
+        4836.73,
+        10517.65
+      ],
+      "yaxis": "y"
+    }
+  ],
+  "layout": {
+    "barmode": "relative",
+    "legend": {
+      "title": {
+        "text": ""
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+    "xaxis": {
+      "anchor": "y",
+      "categoryarray": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "categoryorder": "array",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC"
+      ],
+      "tickvals": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "title": {
+        "text": "MONTH"
+      }
+    },
+    "yaxis": {
+      "anchor": "x",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "TRAVELERS"
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "VARIABLE=Capacidad aérea<br>Year=2018<br>Country=%{x}<br>Total=%{y}<extra></extra>",
+      "legendgroup": "Capacidad aérea",
+      "marker": {
+        "color": "#20284D",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Capacidad aérea",
+      "offsetgroup": "Capacidad aérea",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "Estados Unidos",
+        "México",
+        "España",
+        "Brasil",
+        "Argentina",
+        "Alemania",
+        "Francia",
+        "Reino Unido",
+        "Países Bajos"
+      ],
+      "xaxis": "x",
+      "y": [
+        1387461.0,
+        736212.0,
+        586315.0,
+        469840.0,
+        169828.0,
+        94146.0,
+        99355.0,
+        91000.0,
+        59094.0
+      ],
+      "yaxis": "y"
+    }
+  ],
+  "layout": {
+    "annotations": [
+      {
+        "font": {},
+        "showarrow": false,
+        "text": "Year=2018",
+        "x": 0.5,
+        "xanchor": "center",
+        "xref": "paper",
+        "y": 1.0,
+        "yanchor": "bottom",
+        "yref": "paper"
+      }
+    ],
+    "barmode": "relative",
+    "legend": {
+      "title": {
+        "text": "Category"
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+    "xaxis": {
+      "anchor": "y",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "Country"
+      }
+    },
+    "yaxis": {
+      "anchor": "x",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "Total"
+      }
+    }
+  }
+}

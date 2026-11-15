@@ -1,0 +1,120 @@
+{
+  "data": [
+    {
+      "geo": "geo",
+      "hovertemplate": "<b>%{hovertext}</b><br><br>Continent=Europe<br>VIAJEROS=%{marker.size}<br>iso_alpha=%{location}<extra></extra>",
+      "hovertext": [
+        "ALEMANIA",
+        "ESPAÑA",
+        "FRANCIA",
+        "ITALIA",
+        "REINO UNIDO"
+      ],
+      "legendgroup": "Europe",
+      "locations": [
+        "DEU",
+        "ESP",
+        "FRA",
+        "ITA",
+        "GBR"
+      ],
+      "marker": {
+        "color": "#636efa",
+        "size": [
+          25297.143904010987,
+          81897.78394840666,
+          32784.635352712634,
+          9354.68,
+          6274.914175582833
+        ],
+        "sizemode": "area",
+        "sizeref": 784.4740503817018,
+        "symbol": "circle"
+      },
+      "mode": "markers",
+      "name": "Europe",
+      "showlegend": true,
+      "type": "scattergeo"
+    },
+    {
+      "geo": "geo",
+      "hovertemplate": "<b>%{hovertext}</b><br><br>Continent=Americas<br>VIAJEROS=%{marker.size}<br>iso_alpha=%{location}<extra></extra>",
+      "hovertext": [
+        "ARGENTINA",
+        "BOLIVIA",
+        "BRASIL",
+        "CHILE",
+        "COSTA RICA",
+        "ECUADOR",
+        "ESTADOS UNIDOS",
+        "MEXICO",
+        "PANAMA",
+        "PERU"
+      ],
+      "legendgroup": "Americas",
+      "locations": [
+        "ARG",
+        "BOL",
+        "BRA",
+        "CHL",
+        "CRI",
+        "ECU",
+        "USA",
+        "MEX",
+        "PAN",
+        "PER"
+      ],
+      "marker": {
+        "color": "#EF553B",
+        "size": [
+          74679.64954471211,
+          4593.1725,
+          34019.08789871502,
+          82599.4290973431,
+          21968.244544159552,
+          80411.54880076779,
+          313789.6201526807,
+          112602.0506269277,
+          71123.13773929053,
+          55690.141503597304
+        ],
+        "sizemode": "area",
+        "sizeref": 784.4740503817018,
+        "symbol": "circle"
+      },
+      "mode": "markers",
+      "name": "Americas",
+      "showlegend": true,
+      "type": "scattergeo"
+    }
+  ],
+  "layout": {
+    "geo": {
+      "center": {},
+      "domain": {
+        "x": [
+          0.0,
+          1.0
+        ],
+        "y": [
+          0.0,
+          1.0
+        ]
+      },
+      "projection": {
+        "type": "natural earth"
+      }
+    },
+    "legend": {
+      "itemsizing": "constant",
+      "title": {
+        "text": "Continent"
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28"
+  }
+}

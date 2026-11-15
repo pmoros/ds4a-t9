@@ -1,0 +1,448 @@
+{
+  "data": [
+    {
+      "hovertemplate": "=A. VEHICULO PROPIO<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "A. VEHICULO PROPIO, ANTIOQUIA",
+      "line": {
+        "color": "#20284D",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "A. VEHICULO PROPIO, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        2677.11975308642,
+        3132.944814814815,
+        2731.821111111111,
+        2166.593333333333,
+        4500.42,
+        1528.45,
+        470.91,
+        243.28,
+        2377.13,
+        3498.819999999999,
+        1146.22,
+        2583.46
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "=B. VEHICULO PARTICULAR UBER<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "B. VEHICULO PARTICULAR UBER, ANTIOQUIA",
+      "line": {
+        "color": "#4A589B",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "B. VEHICULO PARTICULAR UBER, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        10810.54580246914,
+        11145.91185185185,
+        11213.93888888889,
+        10071.78666666667,
+        12152.01,
+        11418.02,
+        6645.330000000002,
+        8605.360000000002,
+        6931.1,
+        9760.029999999997,
+        2902.27,
+        3928.809999999999
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "=D. VEHICULO DE ALQUILER<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "D. VEHICULO DE ALQUILER, ANTIOQUIA",
+      "line": {
+        "color": "#D4D4E9",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "D. VEHICULO DE ALQUILER, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        3636.518024691358,
+        3323.828518518518,
+        3780.788888888889,
+        3804.936666666667,
+        2385.76,
+        5151.67,
+        3877.380000000001,
+        1837.18,
+        919.84,
+        2182.75,
+        201.92,
+        255.01
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "=E. VEHICULO DE FAMILIARES<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "E. VEHICULO DE FAMILIARES, ANTIOQUIA",
+      "line": {
+        "color": "#BADA55",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "E. VEHICULO DE FAMILIARES, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        20831.20382716048,
+        21360.05037037035,
+        21844.13777777777,
+        19289.42333333332,
+        22946.58999999996,
+        23296.40000000001,
+        11625.28,
+        7671.34,
+        4542.03,
+        5151.060000000001,
+        8328.349999999999,
+        10528.49000000001
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "=F. TRANSPORTE PUBLICO<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "F. TRANSPORTE PUBLICO, ANTIOQUIA",
+      "line": {
+        "color": "#FFE787",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "F. TRANSPORTE PUBLICO, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        18176.14851851852,
+        19863.04888888889,
+        18731.05666666667,
+        15934.34,
+        24923.75,
+        15335.08,
+        7544.190000000001,
+        13235.89,
+        5058.0,
+        17535.80999999999,
+        11353.17999999999,
+        5027.820000000001
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "=G. TRANSPORTE EN TAXI<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "G. TRANSPORTE EN TAXI, ANTIOQUIA",
+      "line": {
+        "color": "#B8B97E",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "G. TRANSPORTE EN TAXI, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        35617.85962962961,
+        36020.62222222221,
+        36983.91666666663,
+        33849.03999999997,
+        37228.91000000002,
+        39873.7999999999,
+        24444.40999999999,
+        28313.71000000001,
+        29193.09,
+        20664.38999999998,
+        24743.68999999999,
+        11741.15000000001
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "=C. BICICLETA<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "C. BICICLETA, ANTIOQUIA",
+      "line": {
+        "color": "#D36135",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "C. BICICLETA, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        385.2655555555555,
+        343.8366666666666,
+        405.98,
+        405.98,
+        219.55,
+        592.41,
+        0.0,
+        0.0,
+        554.11,
+        1157.46,
+        0.0,
+        0.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "=H. OTRO<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "H. OTRO, ANTIOQUIA",
+      "line": {
+        "color": "#F49D6E",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "H. OTRO, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        3598.968765432099,
+        3002.534074074074,
+        3954.495555555557,
+        3839.876666666667,
+        1213.23,
+        6810.380000000002,
+        3496.02,
+        4002.11,
+        9995.489999999996,
+        2915.619999999999,
+        3960.35,
+        510.02
+      ],
+      "yaxis": "y"
+    }
+  ],
+  "layout": {
+    "legend": {
+      "title": {
+        "text": ", ORIGIN"
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+    "xaxis": {
+      "anchor": "y",
+      "categoryarray": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "categoryorder": "array",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC"
+      ],
+      "tickvals": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "title": {
+        "text": "MONTH"
+      }
+    },
+    "yaxis": {
+      "anchor": "x",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "TRAVELERS"
+      }
+    }
+  }
+}

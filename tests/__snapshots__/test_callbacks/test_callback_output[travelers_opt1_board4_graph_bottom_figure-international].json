@@ -1,0 +1,363 @@
+{
+  "data": [
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=A. PRIMARIA<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "A. PRIMARIA, ALEMANIA",
+      "marker": {
+        "color": "#20284D",
+        "pattern": {
+          "shape": "."
+        }
+      },
+      "name": "A. PRIMARIA, ALEMANIA",
+      "offsetgroup": "A. PRIMARIA, ALEMANIA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=B. SECUNDARIA<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "B. SECUNDARIA, ALEMANIA",
+      "marker": {
+        "color": "#4A589B",
+        "pattern": {
+          "shape": "."
+        }
+      },
+      "name": "B. SECUNDARIA, ALEMANIA",
+      "offsetgroup": "B. SECUNDARIA, ALEMANIA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        228.0,
+        226.0,
+        284.0,
+        179.0,
+        204.91,
+        326.82,
+        0.0,
+        0.0,
+        171.57,
+        0.0,
+        2893.65,
+        205.09
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=C. TECNICO O TECNOLOGICO<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "C. TECNICO O TECNOLOGICO, ALEMANIA",
+      "marker": {
+        "color": "#D4D4E9",
+        "pattern": {
+          "shape": "."
+        }
+      },
+      "name": "C. TECNICO O TECNOLOGICO, ALEMANIA",
+      "offsetgroup": "C. TECNICO O TECNOLOGICO, ALEMANIA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        99.0,
+        75.0,
+        64.0,
+        159.0,
+        0.0,
+        0.0,
+        470.91,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1360.06
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=D. PROFESIONAL UNIVERSITARIO<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "D. PROFESIONAL UNIVERSITARIO, ALEMANIA",
+      "marker": {
+        "color": "#BADA55",
+        "pattern": {
+          "shape": "."
+        }
+      },
+      "name": "D. PROFESIONAL UNIVERSITARIO, ALEMANIA",
+      "offsetgroup": "D. PROFESIONAL UNIVERSITARIO, ALEMANIA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        897.0,
+        971.0,
+        945.0,
+        790.0,
+        1139.14,
+        435.29,
+        766.6899999999999,
+        2403.34,
+        4017.510000000002,
+        3012.25,
+        1815.41,
+        1438.58
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=E. ESTUDIOS DE POSGRADO<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "E. ESTUDIOS DE POSGRADO, ALEMANIA",
+      "marker": {
+        "color": "#FFE787",
+        "pattern": {
+          "shape": "."
+        }
+      },
+      "name": "E. ESTUDIOS DE POSGRADO, ALEMANIA",
+      "offsetgroup": "E. ESTUDIOS DE POSGRADO, ALEMANIA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        746.0,
+        635.0,
+        876.0,
+        741.0,
+        261.98,
+        1189.64,
+        744.8,
+        533.63,
+        3371.8,
+        272.58,
+        316.75,
+        410.18
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=F. NINGUNO<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "F. NINGUNO, ALEMANIA",
+      "marker": {
+        "color": "#B8B97E",
+        "pattern": {
+          "shape": "."
+        }
+      },
+      "name": "F. NINGUNO, ALEMANIA",
+      "offsetgroup": "F. NINGUNO, ALEMANIA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaxis": "y"
+    }
+  ],
+  "layout": {
+    "barmode": "relative",
+    "legend": {
+      "title": {
+        "text": ", ORIGIN"
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+    "xaxis": {
+      "anchor": "y",
+      "categoryarray": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "categoryorder": "array",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC"
+      ],
+      "tickvals": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "title": {
+        "text": "MONTH"
+      }
+    },
+    "yaxis": {
+      "anchor": "x",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "TRAVELERS"
+      }
+    }
+  }
+}

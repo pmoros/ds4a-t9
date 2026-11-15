@@ -1,0 +1,21 @@
+{
+  "columns": [
+    "SUBTEMA",
+    "AÑO",
+    "VALOR"
+  ],
+  "content_hash": "4395903539719858895",
+  "dtypes": {
+    "AÑO": "int64",
+    "SUBTEMA": "object",
+    "VALOR": "float64"
+  },
+  "numeric_sums": {
+    "AÑO": 94800.0,
+    "VALOR": 3588.0
+  },
+  "shape": [
+    47,
+    3
+  ]
+}

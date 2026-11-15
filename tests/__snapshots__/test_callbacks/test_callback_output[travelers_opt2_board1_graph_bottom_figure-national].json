@@ -1,0 +1,494 @@
+{
+  "data": [
+    {
+      "hovertemplate": "PURPOSE, ORIGIN=A. VACACIONES_RECREACION_OCIO<br>=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "A. VACACIONES_RECREACION_OCIO, ANTIOQUIA",
+      "line": {
+        "color": "#20284D",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "A. VACACIONES_RECREACION_OCIO, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        168915.0,
+        96646.0,
+        641.0,
+        7527.0,
+        10092.0,
+        2412.0,
+        0.0,
+        380993.0,
+        10144.0,
+        123158.0,
+        189.0,
+        21839.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "PURPOSE, ORIGIN=B. VISITA A FAMILIARES Y AMIGOS<br>=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "B. VISITA A FAMILIARES Y AMIGOS, ANTIOQUIA",
+      "line": {
+        "color": "#4A589B",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "B. VISITA A FAMILIARES Y AMIGOS, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        139041.0,
+        118675.0,
+        450.0,
+        5924.0,
+        6160.0,
+        3301.0,
+        0.0,
+        300330.0,
+        21754.0,
+        4186.0,
+        477.0,
+        12843.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "PURPOSE, ORIGIN=C. EDUCACION Y FORMACION<br>=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "C. EDUCACION Y FORMACION, ANTIOQUIA",
+      "line": {
+        "color": "#D4D4E9",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "C. EDUCACION Y FORMACION, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        219940.0,
+        992695.0,
+        10101.0,
+        2062.0,
+        17807.0,
+        9103.0,
+        0.0,
+        318873.0,
+        29736.0,
+        3411.0,
+        13458.0,
+        19312.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "PURPOSE, ORIGIN=D. SALUD Y ATENCION MEDICA<br>=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "D. SALUD Y ATENCION MEDICA, ANTIOQUIA",
+      "line": {
+        "color": "#BADA55",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "D. SALUD Y ATENCION MEDICA, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        121093.0,
+        396511.0,
+        3756.0,
+        5393.0,
+        17404.0,
+        7886.0,
+        0.0,
+        277362.0,
+        19752.0,
+        1590.0,
+        59780.0,
+        250275.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "PURPOSE, ORIGIN=E. RELIGION_PEREGRINACIONES<br>=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "E. RELIGION_PEREGRINACIONES, ANTIOQUIA",
+      "line": {
+        "color": "#FFE787",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "E. RELIGION_PEREGRINACIONES, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        110780.0,
+        377050.0,
+        7118.0,
+        10229.0,
+        261.0,
+        7768.0,
+        1496.0,
+        441144.0,
+        3478.0,
+        7167.0,
+        1536.0,
+        10694.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "PURPOSE, ORIGIN=F. COMPRAS<br>=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "F. COMPRAS, ANTIOQUIA",
+      "line": {
+        "color": "#B8B97E",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "F. COMPRAS, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        159592.0,
+        424040.0,
+        32740.0,
+        12394.0,
+        7539.0,
+        4910.0,
+        0.0,
+        196034.0,
+        6733.0,
+        2278.0,
+        44.0,
+        8576.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "PURPOSE, ORIGIN=G. NEGOCIOS Y MOTIVOS PROFESIONALES<br>=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "G. NEGOCIOS Y MOTIVOS PROFESIONALES, ANTIOQUIA",
+      "line": {
+        "color": "#D36135",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "G. NEGOCIOS Y MOTIVOS PROFESIONALES, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        140488.0,
+        370659.0,
+        103371.0,
+        2902.0,
+        17500.0,
+        13758.0,
+        0.0,
+        475324.0,
+        11635.0,
+        663.0,
+        2194149.0,
+        11689.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "PURPOSE, ORIGIN=H. TRABAJO REMUNERADO<br>=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "H. TRABAJO REMUNERADO, ANTIOQUIA",
+      "line": {
+        "color": "#F49D6E",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "H. TRABAJO REMUNERADO, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        138543.0,
+        346397.0,
+        112040.0,
+        23568.0,
+        3947.0,
+        8744.0,
+        0.0,
+        3590993.0,
+        22702.0,
+        3574.0,
+        4195406.0,
+        0.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "PURPOSE, ORIGIN=I. OTRO<br>=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "I. OTRO, ANTIOQUIA",
+      "line": {
+        "color": "#4C8577",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "I. OTRO, ANTIOQUIA",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        96570.0,
+        374686.0,
+        137188.0,
+        86612.0,
+        18688.0,
+        10928.0,
+        0.0,
+        194365.0,
+        3720.0,
+        2093.0,
+        0.0,
+        7385.0
+      ],
+      "yaxis": "y"
+    }
+  ],
+  "layout": {
+    "legend": {
+      "title": {
+        "text": "PURPOSE, ORIGIN, "
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+    "xaxis": {
+      "anchor": "y",
+      "categoryarray": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "categoryorder": "array",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC"
+      ],
+      "tickvals": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "title": {
+        "text": "MONTH"
+      }
+    },
+    "yaxis": {
+      "anchor": "x",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "TRAVELERS"
+      }
+    }
+  }
+}

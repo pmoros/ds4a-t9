@@ -1,0 +1,410 @@
+{
+  "data": [
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=A. EMPLEADO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "A. EMPLEADO",
+      "marker": {
+        "color": "#20284D",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "A. EMPLEADO",
+      "offsetgroup": "A. EMPLEADO",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        434589.0,
+        352586.0,
+        773650.0,
+        439584.0,
+        429161.0,
+        553978.0,
+        425918.0,
+        567935.0,
+        419658.0,
+        820183.0,
+        1053198.0,
+        389012.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=B. PATRON O EMPLEADOR<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "B. PATRON O EMPLEADOR",
+      "marker": {
+        "color": "#4A589B",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "B. PATRON O EMPLEADOR",
+      "offsetgroup": "B. PATRON O EMPLEADOR",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        38485.0,
+        26459.0,
+        1448776.0,
+        56135.0,
+        107373.0,
+        144360.0,
+        181641.0,
+        112714.0,
+        33919.0,
+        783272.0,
+        574157.0,
+        37346.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=C. TRABAJADOR INDEPENDIENTE<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "C. TRABAJADOR INDEPENDIENTE",
+      "marker": {
+        "color": "#D4D4E9",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "C. TRABAJADOR INDEPENDIENTE",
+      "offsetgroup": "C. TRABAJADOR INDEPENDIENTE",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        281537.0,
+        217627.0,
+        576747.0,
+        340491.0,
+        302453.0,
+        433461.0,
+        274379.0,
+        408862.0,
+        307494.0,
+        907127.0,
+        1565594.0,
+        279250.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=D. OFICIOS DEL HOGAR<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "D. OFICIOS DEL HOGAR",
+      "marker": {
+        "color": "#BADA55",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "D. OFICIOS DEL HOGAR",
+      "offsetgroup": "D. OFICIOS DEL HOGAR",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        69881.0,
+        80895.0,
+        682609.0,
+        94442.0,
+        96797.0,
+        166311.0,
+        80356.0,
+        387982.0,
+        65390.0,
+        1219832.0,
+        1936379.0,
+        101513.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=E. RENTISTA Y/O PENSIONADO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "E. RENTISTA Y/O PENSIONADO",
+      "marker": {
+        "color": "#FFE787",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "E. RENTISTA Y/O PENSIONADO",
+      "offsetgroup": "E. RENTISTA Y/O PENSIONADO",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        59890.0,
+        51645.0,
+        2413469.0,
+        65021.0,
+        46151.0,
+        141701.0,
+        60602.0,
+        99516.0,
+        45284.0,
+        993472.0,
+        440928.0,
+        58390.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=F. ESTUDIANTE<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "F. ESTUDIANTE",
+      "marker": {
+        "color": "#B8B97E",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "F. ESTUDIANTE",
+      "offsetgroup": "F. ESTUDIANTE",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        63069.0,
+        21150.0,
+        395251.0,
+        188876.0,
+        70553.0,
+        612377.0,
+        73916.0,
+        150566.0,
+        57121.0,
+        310368.0,
+        967655.0,
+        64851.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=G. OTRO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "G. OTRO",
+      "marker": {
+        "color": "#D36135",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "G. OTRO",
+      "offsetgroup": "G. OTRO",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        40975.0,
+        49379.0,
+        939373.0,
+        31658.0,
+        38871.0,
+        98409.0,
+        53584.0,
+        172667.0,
+        19759.0,
+        351450.0,
+        558336.0,
+        50562.0
+      ],
+      "yaxis": "y"
+    }
+  ],
+  "layout": {
+    "barmode": "relative",
+    "legend": {
+      "title": {
+        "text": ""
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+    "xaxis": {
+      "anchor": "y",
+      "categoryarray": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "categoryorder": "array",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC"
+      ],
+      "tickvals": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "title": {
+        "text": "MONTH"
+      }
+    },
+    "yaxis": {
+      "anchor": "x",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "TRAVELERS"
+      }
+    }
+  }
+}

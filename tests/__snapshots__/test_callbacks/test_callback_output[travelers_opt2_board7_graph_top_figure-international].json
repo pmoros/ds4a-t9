@@ -1,0 +1,457 @@
+{
+  "data": [
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=A. VEHICULO PROPIO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "A. VEHICULO PROPIO",
+      "marker": {
+        "color": "#20284D",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "A. VEHICULO PROPIO",
+      "offsetgroup": "A. VEHICULO PROPIO",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        5313.683333333333,
+        1205.85,
+        10296.79,
+        5327.232345679012,
+        5409.019259259259,
+        1165.8300000000002,
+        1210.26,
+        5258.9944444444445,
+        4846.28,
+        6042.61,
+        3724.29,
+        7127.93
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=B. VEHICULO PARTICULAR UBER<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "B. VEHICULO PARTICULAR UBER",
+      "marker": {
+        "color": "#4A589B",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "B. VEHICULO PARTICULAR UBER",
+      "offsetgroup": "B. VEHICULO PARTICULAR UBER",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        24521.403333333335,
+        21442.57,
+        15774.1,
+        24031.516604938275,
+        24685.68870370371,
+        27376.92,
+        16446.219999999998,
+        22887.45777777778,
+        24533.97000000001,
+        21543.190000000002,
+        25882.56,
+        39074.11
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=C. BICICLETA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "C. BICICLETA",
+      "marker": {
+        "color": "#D4D4E9",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "C. BICICLETA",
+      "offsetgroup": "C. BICICLETA",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        442.19000000000005,
+        240.05,
+        0.0,
+        442.19000000000005,
+        442.19000000000005,
+        79.37,
+        362.82000000000005,
+        442.19000000000005,
+        0.0,
+        0.0,
+        0.0,
+        1022.34
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=D. VEHICULO DE ALQUILER<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "D. VEHICULO DE ALQUILER",
+      "marker": {
+        "color": "#BADA55",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "D. VEHICULO DE ALQUILER",
+      "offsetgroup": "D. VEHICULO DE ALQUILER",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        11987.323333333334,
+        3340.13,
+        3568.18,
+        12353.744567901234,
+        12643.280925925925,
+        7241.110000000001,
+        10435.39,
+        12430.629444444445,
+        9993.0,
+        2773.5,
+        3006.46,
+        8815.380000000001
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=E. VEHICULO DE FAMILIARES<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "E. VEHICULO DE FAMILIARES",
+      "marker": {
+        "color": "#FFE787",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "E. VEHICULO DE FAMILIARES",
+      "offsetgroup": "E. VEHICULO DE FAMILIARES",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        22803.438333333335,
+        16715.02,
+        17784.3,
+        20601.746697530863,
+        19775.68314814815,
+        29964.91,
+        15223.390000000001,
+        19226.118611111113,
+        14492.439999999999,
+        10897.320000000003,
+        12436.55,
+        13326.610000000002
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=F. TRANSPORTE PUBLICO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "F. TRANSPORTE PUBLICO",
+      "marker": {
+        "color": "#B8B97E",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "F. TRANSPORTE PUBLICO",
+      "offsetgroup": "F. TRANSPORTE PUBLICO",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        13631.188333333335,
+        11387.34,
+        20319.0,
+        14155.802438271605,
+        14841.413703703704,
+        11949.6,
+        8370.75,
+        13994.805277777778,
+        16633.39,
+        9616.73,
+        10553.93,
+        15156.9
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=G. TRANSPORTE EN TAXI<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "G. TRANSPORTE EN TAXI",
+      "marker": {
+        "color": "#D36135",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "G. TRANSPORTE EN TAXI",
+      "offsetgroup": "G. TRANSPORTE EN TAXI",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        36802.46666666666,
+        31462.219999999994,
+        49656.51,
+        36170.78580246913,
+        36647.59185185185,
+        40043.06,
+        28326.51,
+        35062.298888888894,
+        38078.01000000001,
+        36839.47,
+        37540.25,
+        46854.32000000001
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "=H. OTRO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
+      "legendgroup": "H. OTRO",
+      "marker": {
+        "color": "#F49D6E",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "H. OTRO",
+      "offsetgroup": "H. OTRO",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "ABRIL",
+        "AGOSTO",
+        "DICIEMBRE",
+        "ENERO",
+        "FEBRERO",
+        "JULIO",
+        "JUNIO",
+        "MARZO",
+        "MAYO",
+        "NOVIEMBRE",
+        "OCTUBRE",
+        "SEPTIEMBRE"
+      ],
+      "xaxis": "x",
+      "y": [
+        8240.101666666666,
+        6262.32,
+        4897.04,
+        6868.308950617283,
+        6592.065462962963,
+        14027.109999999997,
+        2474.7400000000002,
+        5772.759722222222,
+        4128.64,
+        4244.09,
+        5073.68,
+        8797.78
+      ],
+      "yaxis": "y"
+    }
+  ],
+  "layout": {
+    "barmode": "relative",
+    "legend": {
+      "title": {
+        "text": ""
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+    "xaxis": {
+      "anchor": "y",
+      "categoryarray": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "categoryorder": "array",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "tickmode": "array",
+      "ticktext": [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC"
+      ],
+      "tickvals": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "SEPTIEMBRE",
+        "OCTUBRE",
+        "NOVIEMBRE",
+        "DICIEMBRE"
+      ],
+      "title": {
+        "text": "MONTH"
+      }
+    },
+    "yaxis": {
+      "anchor": "x",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "TRAVELERS"
+      }
+    }
+  }
+}

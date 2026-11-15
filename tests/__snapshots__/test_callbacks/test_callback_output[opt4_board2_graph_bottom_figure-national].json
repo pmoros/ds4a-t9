@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "hovertemplate": "Provider=Arrendadores de vehiculos<br>Year=%{x}<br>Total=%{y}<extra></extra>",
+      "legendgroup": "Arrendadores de vehiculos",
+      "line": {
+        "color": "#20284D",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "Arrendadores de vehiculos",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ],
+      "xaxis": "x",
+      "y": [
+        39.0,
+        40.0,
+        39.0,
+        34.0,
+        58.0
+      ],
+      "yaxis": "y"
+    }
+  ],
+  "layout": {
+    "legend": {
+      "title": {
+        "text": "Provider"
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+    "xaxis": {
+      "anchor": "y",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "Year"
+      }
+    },
+    "yaxis": {
+      "anchor": "x",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "Total"
+      }
+    }
+  }
+}

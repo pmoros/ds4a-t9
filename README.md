@@ -36,6 +36,27 @@ The application has a *Procfile* that defines properties that tools used by clou
 * [AWS](https://austinlasseter.medium.com/deploying-a-dash-app-with-elastic-beanstalk-console-27a834ebe91d)
   * *You might have to meet costs.*
 
+## Development
+
+The project uses [uv](https://docs.astral.sh/uv/) for a reproducible dev environment. Versions in `pyproject.toml` / `uv.lock` mirror `requirements.txt` (still used by the Dockerfile and Procfile).
+
+```bash
+uv sync --python 3.8          # create .venv with the pinned stack + dev tools
+uv run pre-commit install     # ruff lint/format on commit
+uv run pytest                 # run the test-suite
+uv run pytest --cov           # ...with coverage
+```
+
+### Characterization tests
+
+`tests/` freezes the current behaviour of the app before refactoring:
+
+* `test_callbacks.py` runs all 54 Dash callbacks with first-load values, for national and international travelers, and snapshots their output (figures, card values, dropdown options, or the raised error).
+* `test_pages.py` covers routing, page layouts and HTTP smoke tests.
+* `test_data.py` profiles every DataFrame built in `data.py` and snapshots the travelers/preferences cards.
+
+Snapshots live in `tests/__snapshots__/`. If a change in output is **intended**, regenerate them with `uv run pytest --snapshot-update` and review the diff.
+
 ## Authors
 
 ### DS4A Cohort 5 - Team 9

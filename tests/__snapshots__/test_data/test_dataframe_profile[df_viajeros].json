@@ -1,0 +1,29 @@
+{
+  "columns": [
+    "AÑO",
+    "MES",
+    "TEMA",
+    "SUBTEMA",
+    "ITEM",
+    "VIAJEROS",
+    "ORIGEN"
+  ],
+  "content_hash": "-7726787750902102969",
+  "dtypes": {
+    "AÑO": "int64",
+    "ITEM": "object",
+    "MES": "object",
+    "ORIGEN": "object",
+    "SUBTEMA": "object",
+    "TEMA": "object",
+    "VIAJEROS": "float64"
+  },
+  "numeric_sums": {
+    "AÑO": 139837997.0,
+    "VIAJEROS": 7811489438.249508
+  },
+  "shape": [
+    69303,
+    7
+  ]
+}

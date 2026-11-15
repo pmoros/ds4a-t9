@@ -1,0 +1,105 @@
+{
+  "namespace": "dash_bootstrap_components",
+  "props": {
+    "children": [
+      {
+        "namespace": "dash_bootstrap_components",
+        "props": {
+          "children": [
+            {
+              "namespace": "dash_bootstrap_components",
+              "props": {
+                "children": {
+                  "namespace": "dash_html_components",
+                  "props": {
+                    "children": [
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": {
+                                  "namespace": "dash_html_components",
+                                  "props": {
+                                    "children": "Welcome",
+                                    "className": "landing-title-bold"
+                                  },
+                                  "type": "H1"
+                                }
+                              },
+                              "type": "Span"
+                            },
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": {
+                                  "namespace": "dash_html_components",
+                                  "props": {
+                                    "children": "to the Bogotá tourist information system",
+                                    "className": "landing-title"
+                                  },
+                                  "type": "H1"
+                                }
+                              },
+                              "type": "Span"
+                            }
+                          ],
+                          "id": "landing-title",
+                          "style": {
+                            "marginLeft": "10%",
+                            "marginRight": "10%"
+                          }
+                        },
+                        "type": "Div"
+                      },
+                      {
+                        "namespace": "dash_html_components",
+                        "props": {
+                          "children": [
+                            {
+                              "namespace": "dash_html_components",
+                              "props": {
+                                "children": {
+                                  "namespace": "dash_html_components",
+                                  "props": {
+                                    "children": "In this site you will find the main data on the tourist demand of Bogotá",
+                                    "className": "landing-subtitle"
+                                  },
+                                  "type": "P"
+                                }
+                              },
+                              "type": "Span"
+                            }
+                          ],
+                          "id": "landing-subtitle",
+                          "style": {
+                            "marginLeft": "10%",
+                            "marginRight": "10%"
+                          }
+                        },
+                        "type": "Div"
+                      }
+                    ],
+                    "className": "container-fluid landing-banner row-full",
+                    "id": "landing-text",
+                    "style": {
+                      "backgroundImage": "url(\"https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/landing-image.png\")"
+                    }
+                  },
+                  "type": "Div"
+                },
+                "width": 12
+              },
+              "type": "Col"
+            }
+          ]
+        },
+        "type": "Row"
+      }
+    ],
+    "fluid": true
+  },
+  "type": "Container"
+}

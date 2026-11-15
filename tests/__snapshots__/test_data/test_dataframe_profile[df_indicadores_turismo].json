@@ -1,0 +1,30 @@
+{
+  "columns": [
+    "TEMA",
+    "SUBTEMA",
+    "VARIABLE",
+    "CLASE",
+    "FUENTE",
+    "AÑO",
+    "MES",
+    "VALOR"
+  ],
+  "content_hash": "2090233640021082647",
+  "dtypes": {
+    "AÑO": "int64",
+    "CLASE": "object",
+    "FUENTE": "object",
+    "MES": "object",
+    "SUBTEMA": "object",
+    "TEMA": "object",
+    "VALOR": "object",
+    "VARIABLE": "object"
+  },
+  "numeric_sums": {
+    "AÑO": 1682817.0
+  },
+  "shape": [
+    835,
+    8
+  ]
+}

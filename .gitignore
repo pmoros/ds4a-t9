@@ -132,3 +132,6 @@ dmypy.json
 
 #Testing
 test/
+
+# Tooling
+.ruff_cache/

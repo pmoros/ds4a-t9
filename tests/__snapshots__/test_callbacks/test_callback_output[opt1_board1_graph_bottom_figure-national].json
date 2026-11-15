@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
+      "legendgroup": "Barrios Unidos",
+      "marker": {
+        "color": "#20284D",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Barrios Unidos",
+      "offsetgroup": "Barrios Unidos",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "width": 0.5,
+      "x": [
+        "Barrios Unidos"
+      ],
+      "xaxis": "x",
+      "y": [
+        107.52500000000059
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
+      "legendgroup": "Bosa",
+      "marker": {
+        "color": "#4A589B",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Bosa",
+      "offsetgroup": "Bosa",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "width": 0.5,
+      "x": [
+        "Bosa"
+      ],
+      "xaxis": "x",
+      "y": [
+        2.68181818181818
+      ],
+      "yaxis": "y"
+    }
+  ],
+  "layout": {
+    "barmode": "relative",
+    "legend": {
+      "title": {
+        "text": "Location"
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "showlegend": false,
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+    "xaxis": {
+      "anchor": "y",
+      "categoryarray": [
+        "Barrios Unidos",
+        "Bosa"
+      ],
+      "categoryorder": "array",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "Location"
+      }
+    },
+    "yaxis": {
+      "anchor": "x",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "Value"
+      }
+    }
+  }
+}

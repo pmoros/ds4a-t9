@@ -1,0 +1,276 @@
+{
+  "data": [
+    {
+      "hovertemplate": "SUBTEMA=Mundo Entero<br>Year=%{x}<br>Millones de Personas=%{y}<extra></extra>",
+      "legendgroup": "Mundo Entero",
+      "line": {
+        "color": "#20284D",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "Mundo Entero",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ],
+      "xaxis": "x",
+      "y": [
+        983.0,
+        1035.0,
+        1087.0,
+        1133.0,
+        1186.0,
+        1235.0,
+        1326.0,
+        1400.0,
+        1500.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "SUBTEMA=Europa<br>Year=%{x}<br>Millones de Personas=%{y}<extra></extra>",
+      "legendgroup": "Europa",
+      "line": {
+        "color": "#4A589B",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "Europa",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ],
+      "xaxis": "x",
+      "y": [
+        504.0,
+        534.0,
+        563.0,
+        582.0,
+        608.0,
+        616.0,
+        672.0,
+        710.0,
+        742.3
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "SUBTEMA=Americas<br>Year=%{x}<br>Millones de Personas=%{y}<extra></extra>",
+      "legendgroup": "Americas",
+      "line": {
+        "color": "#D4D4E9",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "Americas",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ],
+      "xaxis": "x",
+      "y": [
+        156.6,
+        163.0,
+        168.0,
+        181.0,
+        193.0,
+        199.0,
+        211.0,
+        216.0,
+        220.1
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "SUBTEMA=Asia y el Pacifico<br>Year=%{x}<br>Millones de Personas=%{y}<extra></extra>",
+      "legendgroup": "Asia y el Pacifico",
+      "line": {
+        "color": "#BADA55",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "Asia y el Pacifico",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ],
+      "xaxis": "x",
+      "y": [
+        217.0,
+        234.0,
+        248.0,
+        263.0,
+        279.0,
+        308.0,
+        323.0,
+        348.0,
+        363.6
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "SUBTEMA=Africa<br>Year=%{x}<br>Millones de Personas=%{y}<extra></extra>",
+      "legendgroup": "Africa",
+      "line": {
+        "color": "#FFE787",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "Africa",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ],
+      "xaxis": "x",
+      "y": [
+        50.2,
+        52.0,
+        56.0,
+        56.0,
+        53.0,
+        58.0,
+        63.0,
+        67.0,
+        71.2
+      ],
+      "yaxis": "y"
+    },
+    {
+      "hovertemplate": "SUBTEMA=Medio Oriente<br>Year=%{x}<br>Millones de Personas=%{y}<extra></extra>",
+      "legendgroup": "Medio Oriente",
+      "line": {
+        "color": "#B8B97E",
+        "dash": "solid"
+      },
+      "marker": {
+        "symbol": "circle"
+      },
+      "mode": "lines",
+      "name": "Medio Oriente",
+      "orientation": "v",
+      "showlegend": true,
+      "type": "scatter",
+      "x": [
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ],
+      "xaxis": "x",
+      "y": [
+        55.4,
+        52.0,
+        52.0,
+        51.0,
+        53.0,
+        54.0,
+        58.0,
+        60.0,
+        63.9
+      ],
+      "yaxis": "y"
+    }
+  ],
+  "layout": {
+    "legend": {
+      "title": {
+        "text": "Continent"
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+    "xaxis": {
+      "anchor": "y",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "Year"
+      }
+    },
+    "yaxis": {
+      "anchor": "x",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "Millones de Personas"
+      }
+    }
+  }
+}

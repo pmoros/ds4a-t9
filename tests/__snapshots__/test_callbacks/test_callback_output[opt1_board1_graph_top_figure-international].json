@@ -1,0 +1,458 @@
+{
+  "data": [
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
+      "legendgroup": "Barrios Unidos",
+      "marker": {
+        "color": "#20284D",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Barrios Unidos",
+      "offsetgroup": "Barrios Unidos",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "Barrios Unidos"
+      ],
+      "xaxis": "x",
+      "y": [
+        12.125
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
+      "legendgroup": "Bosa",
+      "marker": {
+        "color": "#4A589B",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Bosa",
+      "offsetgroup": "Bosa",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "Bosa"
+      ],
+      "xaxis": "x",
+      "y": [
+        1.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
+      "legendgroup": "Candelaria",
+      "marker": {
+        "color": "#D4D4E9",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Candelaria",
+      "offsetgroup": "Candelaria",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "Candelaria"
+      ],
+      "xaxis": "x",
+      "y": [
+        37.125
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
+      "legendgroup": "Chapinero",
+      "marker": {
+        "color": "#BADA55",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Chapinero",
+      "offsetgroup": "Chapinero",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "Chapinero"
+      ],
+      "xaxis": "x",
+      "y": [
+        232.5
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
+      "legendgroup": "Engativá",
+      "marker": {
+        "color": "#FFE787",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Engativá",
+      "offsetgroup": "Engativá",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "Engativá"
+      ],
+      "xaxis": "x",
+      "y": [
+        10.625
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
+      "legendgroup": "Fontibón",
+      "marker": {
+        "color": "#B8B97E",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Fontibón",
+      "offsetgroup": "Fontibón",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "Fontibón"
+      ],
+      "xaxis": "x",
+      "y": [
+        20.5
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
+      "legendgroup": "Kennedy",
+      "marker": {
+        "color": "#D36135",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Kennedy",
+      "offsetgroup": "Kennedy",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "Kennedy"
+      ],
+      "xaxis": "x",
+      "y": [
+        5.875
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
+      "legendgroup": "Los Martires",
+      "marker": {
+        "color": "#F49D6E",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Los Martires",
+      "offsetgroup": "Los Martires",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "Los Martires"
+      ],
+      "xaxis": "x",
+      "y": [
+        1.4
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
+      "legendgroup": "Puente Aranda",
+      "marker": {
+        "color": "#4C8577",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Puente Aranda",
+      "offsetgroup": "Puente Aranda",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "Puente Aranda"
+      ],
+      "xaxis": "x",
+      "y": [
+        1.75
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
+      "legendgroup": "Rafael Uribe Uribe",
+      "marker": {
+        "color": "#20284D",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Rafael Uribe Uribe",
+      "offsetgroup": "Rafael Uribe Uribe",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "Rafael Uribe Uribe"
+      ],
+      "xaxis": "x",
+      "y": [
+        1.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
+      "legendgroup": "San Cristobal",
+      "marker": {
+        "color": "#4A589B",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "San Cristobal",
+      "offsetgroup": "San Cristobal",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "San Cristobal"
+      ],
+      "xaxis": "x",
+      "y": [
+        1.0
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
+      "legendgroup": "Santa Fe",
+      "marker": {
+        "color": "#D4D4E9",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Santa Fe",
+      "offsetgroup": "Santa Fe",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "Santa Fe"
+      ],
+      "xaxis": "x",
+      "y": [
+        60.875
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
+      "legendgroup": "Suba",
+      "marker": {
+        "color": "#BADA55",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Suba",
+      "offsetgroup": "Suba",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "Suba"
+      ],
+      "xaxis": "x",
+      "y": [
+        48.125
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
+      "legendgroup": "Teusaquillo",
+      "marker": {
+        "color": "#FFE787",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Teusaquillo",
+      "offsetgroup": "Teusaquillo",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "Teusaquillo"
+      ],
+      "xaxis": "x",
+      "y": [
+        43.375
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
+      "legendgroup": "Usaquén",
+      "marker": {
+        "color": "#B8B97E",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Usaquén",
+      "offsetgroup": "Usaquén",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "Usaquén"
+      ],
+      "xaxis": "x",
+      "y": [
+        93.5
+      ],
+      "yaxis": "y"
+    },
+    {
+      "alignmentgroup": "True",
+      "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
+      "legendgroup": "Usme",
+      "marker": {
+        "color": "#D36135",
+        "pattern": {
+          "shape": ""
+        }
+      },
+      "name": "Usme",
+      "offsetgroup": "Usme",
+      "orientation": "v",
+      "showlegend": true,
+      "textposition": "auto",
+      "type": "bar",
+      "x": [
+        "Usme"
+      ],
+      "xaxis": "x",
+      "y": [
+        1.0
+      ],
+      "yaxis": "y"
+    }
+  ],
+  "layout": {
+    "barmode": "relative",
+    "legend": {
+      "title": {
+        "text": "Location"
+      },
+      "tracegroupgap": 0
+    },
+    "margin": {
+      "t": 60
+    },
+    "showlegend": false,
+    "template": "sha256:40cd255d5d5862717a5609eede2a4de90335a12c83813c0d5444c65d4fde3d28",
+    "xaxis": {
+      "anchor": "y",
+      "categoryarray": [
+        "Barrios Unidos",
+        "Bosa",
+        "Candelaria",
+        "Chapinero",
+        "Engativá",
+        "Fontibón",
+        "Kennedy",
+        "Los Martires",
+        "Puente Aranda",
+        "Rafael Uribe Uribe",
+        "San Cristobal",
+        "Santa Fe",
+        "Suba",
+        "Teusaquillo",
+        "Usaquén",
+        "Usme"
+      ],
+      "categoryorder": "array",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "showticklabels": true,
+      "title": {
+        "text": "Location"
+      }
+    },
+    "yaxis": {
+      "anchor": "x",
+      "domain": [
+        0.0,
+        1.0
+      ],
+      "title": {
+        "text": "Value"
+      }
+    }
+  }
+}

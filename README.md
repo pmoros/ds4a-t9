@@ -66,6 +66,21 @@ mise tasks                    # list all tasks
 
 Snapshots live in `tests/__snapshots__/`. If a change in output is **intended**, regenerate them with `mise run snapshot-update` and review the diff.
 
+### Data layer
+
+All data access goes through the `datalayer` package. Callbacks and layouts
+never read files or raw columns themselves; `tests/test_boundaries.py`
+enforces that.
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `IDT_DATA_DIR` | `<repo>/data` | Folder with `base_viajeros.xlsx` and the indicators CSV |
+| `IDT_GEOJSON_PATH` | `<repo>/assets/colombia.geojson` | Department shapes for the national map |
+
+Sources are read on first use and cached. A missing file or column fails with
+an error naming the file. New indicators are added as an `IndicatorSpec` in
+`datalayer/indicators.py`.
+
 ## Authors
 
 ### DS4A Cohort 5 - Team 9

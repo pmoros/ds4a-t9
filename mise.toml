@@ -1,6 +1,6 @@
 # Local tooling, managed by mise (https://mise.jdx.dev).
 #
-#   mise install        # Python, uv, ruff, pre-commit at the pinned versions
+#   mise install        # Python, uv, ruff, pre-commit, vermin at the pinned versions
 #   mise run setup      # create .venv with the app's pinned stack + test deps
 #   mise run test       # pytest (runs inside the project venv)
 #   mise run lint       # ruff check + format check
@@ -16,6 +16,8 @@ uv = "0.13.8"
 # outside the project venv. Keep ruff in sync with .pre-commit-config.yaml.
 ruff = "0.8.6"
 "pipx:pre-commit" = "2.21.0"
+# Production runs Python 3.7 while tests run on 3.8; vermin catches 3.8-only code.
+"pipx:vermin" = "1.9.1"
 
 [settings]
 # Let mise activate the uv-managed .venv when entering the directory.
@@ -71,8 +73,12 @@ depends = ["setup"]
 run = "uv run pytest -m 'not e2e' --snapshot-update"
 
 [tasks.lint]
-description = "Lint and check formatting"
-run = ["ruff check .", "ruff format --check ."]
+description = "Lint, check formatting and Python 3.7 compatibility"
+run = [
+  "ruff check .",
+  "ruff format --check .",
+  "vermin --target=3.7- --violations --no-tips --eval-annotations datalayer data.py app.py",
+]
 
 [tasks.fmt]
 description = "Auto-fix lint issues and format code"

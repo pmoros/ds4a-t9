@@ -7,7 +7,6 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 import datalayer
-from datalayer.formatting import millify  # noqa: F401  (re-exported)
 
 
 COLOR_PALETTE_DISCRETE = px.colors.qualitative.T10

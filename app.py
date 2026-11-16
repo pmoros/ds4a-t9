@@ -139,7 +139,8 @@ def display_page(pathname):
 ])
 def update_indicators_opt1_b1_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
-    df_plot = datalayer.indicator("airbnb_homeway")[datalayer.indicator("airbnb_homeway")['AÑO'].isin(selected_year)]
+    df_plot = datalayer.indicator("airbnb_homeway")
+    df_plot = df_plot[df_plot['AÑO'].isin(selected_year)]
     df_plot = df_plot.groupby('SUBTEMA').sum().reset_index()
 
     fig = px.bar(df_plot, x='SUBTEMA', y='VALOR',color='SUBTEMA',
@@ -161,7 +162,8 @@ def update_indicators_opt1_b1_g1(selected_year):
 ])
 def update_indicators_opt1_b1_g2(selected_locations):
 
-    df_plot = datalayer.indicator("airbnb_homeway")[datalayer.indicator("airbnb_homeway")['SUBTEMA'].isin(selected_locations)]
+    df_plot = datalayer.indicator("airbnb_homeway")
+    df_plot = df_plot[df_plot['SUBTEMA'].isin(selected_locations)]
     df_plot = df_plot.groupby('SUBTEMA').mean().reset_index()
 
     fig = px.bar(df_plot, x='SUBTEMA', y='VALOR',color='SUBTEMA',
@@ -185,7 +187,8 @@ def update_indicators_opt1_b1_g2(selected_locations):
 def update_indicators_opt1_b2_g1(selected_year):
 
     selected_year = [int(x) for x in selected_year]
-    df_plot = datalayer.indicator("tasa_ocupacion_hotelera")[datalayer.indicator("tasa_ocupacion_hotelera")['AÑO'].isin(selected_year)]
+    df_plot = datalayer.indicator("tasa_ocupacion_hotelera")
+    df_plot = df_plot[df_plot['AÑO'].isin(selected_year)]
     df_plot = df_plot.groupby('MES').mean().reset_index()
     df_plot['MESNO'] = df_plot['MES'].replace(MESES_ORDEN)
     df_plot = df_plot.sort_values(by=['MESNO'])
@@ -217,7 +220,8 @@ def update_indicators_opt1_b2_g1(selected_year):
 ])
 def update_indicators_opt1_b2_g2(selected_year):
     selected_year = [int(x) for x in selected_year]
-    df_plot = datalayer.indicator("tasa_ocupacion_hotelera")[datalayer.indicator("tasa_ocupacion_hotelera")['AÑO'].isin(selected_year)]
+    df_plot = datalayer.indicator("tasa_ocupacion_hotelera")
+    df_plot = df_plot[df_plot['AÑO'].isin(selected_year)]
 
     fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO',
              labels={
@@ -246,7 +250,8 @@ def update_indicators_opt1_b2_g2(selected_year):
 ])
 def update_indicators_opt1_b3_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
-    df_plot = datalayer.indicator("tasa_ocupacion_airbnb")[datalayer.indicator("tasa_ocupacion_airbnb")['AÑO'].isin(selected_year)]
+    df_plot = datalayer.indicator("tasa_ocupacion_airbnb")
+    df_plot = df_plot[df_plot['AÑO'].isin(selected_year)]
     df_plot = df_plot.groupby('MES').mean().reset_index()
     # print(df_plot)
 
@@ -276,7 +281,8 @@ def update_indicators_opt1_b3_g1(selected_year):
 ])
 def update_indicators_opt1_b3_g2(selected_year):
     selected_year = [int(x) for x in selected_year]
-    df_plot = datalayer.indicator("tasa_ocupacion_airbnb")[datalayer.indicator("tasa_ocupacion_airbnb")['AÑO'].isin(selected_year)]
+    df_plot = datalayer.indicator("tasa_ocupacion_airbnb")
+    df_plot = df_plot[df_plot['AÑO'].isin(selected_year)]
 
     fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO',
              labels={
@@ -308,7 +314,8 @@ def update_indicators_opt1_b3_g2(selected_year):
 ])
 def update_indicators_opt2_b1_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
-    df_plot = datalayer.indicator("bigdata")[datalayer.indicator("bigdata")['AÑO'].isin(selected_year)]
+    df_plot = datalayer.indicator("bigdata")
+    df_plot = df_plot[df_plot['AÑO'].isin(selected_year)]
 
     fig = px.bar(df_plot, x='SUBTEMA', y='VALOR', color='VARIABLE', facet_col='AÑO',
              labels={
@@ -330,7 +337,8 @@ def update_indicators_opt2_b1_g1(selected_year):
 ])
 def update_indicators_opt2_b2_g1(selected_item):
 
-    df_plot = datalayer.indicator("conect_internacional")[datalayer.indicator("conect_internacional")['SUBTEMA'] == selected_item]
+    df_plot = datalayer.indicator("conect_internacional")
+    df_plot = df_plot[df_plot['SUBTEMA'] == selected_item]
     variable = df_plot['VARIABLE'].iloc[0]
 
     fig = px.bar(df_plot, x='AÑO', y='VALOR', color='AÑO',
@@ -352,7 +360,8 @@ def update_indicators_opt2_b2_g1(selected_item):
 ])
 def update_indicators_opt2_b3_g1(selected_item):
 
-    df_plot = datalayer.indicator("turismo_internacional")[datalayer.indicator("turismo_internacional")['VARIABLE'] == selected_item]
+    df_plot = datalayer.indicator("turismo_internacional")
+    df_plot = df_plot[df_plot['VARIABLE'] == selected_item]
     clase = df_plot['CLASE'].iloc[0]
 
     fig = px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA',
@@ -374,7 +383,8 @@ def update_indicators_opt2_b3_g1(selected_item):
 ])
 def update_indicators_opt2_b3_g2(selected_item):
 
-    df_plot = datalayer.indicator("turismo_internacional2")[datalayer.indicator("turismo_internacional2")['VARIABLE'] == selected_item]
+    df_plot = datalayer.indicator("turismo_internacional2")
+    df_plot = df_plot[df_plot['VARIABLE'] == selected_item]
 
     fig = px.area(df_plot, x='AÑO', y='VALOR', color='CLASE', line_group='CLASE',
              labels={
@@ -397,7 +407,8 @@ def update_indicators_opt2_b3_g2(selected_item):
 ])
 def update_indicators_opt3_b2_g1(selected_item):
 
-    df_plot = datalayer.indicator("gen_empleo_turismo")[datalayer.indicator("gen_empleo_turismo")['SUBTEMA'] == selected_item]
+    df_plot = datalayer.indicator("gen_empleo_turismo")
+    df_plot = df_plot[df_plot['SUBTEMA'] == selected_item]
 
     fig = px.line(df_plot, x='AÑO', y='VALOR', color='VARIABLE', line_group='VARIABLE',
              labels={
@@ -417,7 +428,8 @@ def update_indicators_opt3_b2_g1(selected_item):
 ])
 def update_indicators_opt3_b2_g2(selected_year):
     selected_year = [int(x) for x in selected_year]
-    df_plot = datalayer.indicator("gen_empleo_turismo2")[datalayer.indicator("gen_empleo_turismo2")['AÑO'].isin(selected_year)]
+    df_plot = datalayer.indicator("gen_empleo_turismo2")
+    df_plot = df_plot[df_plot['AÑO'].isin(selected_year)]
 
     fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO',
              labels={
@@ -439,7 +451,8 @@ def update_indicators_opt3_b2_g2(selected_year):
 ])
 def update_indicators_opt4_b1_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
-    df_plot = datalayer.indicator("cert_turismo_sostenible")[datalayer.indicator("cert_turismo_sostenible")['AÑO'].isin(selected_year)]
+    df_plot = datalayer.indicator("cert_turismo_sostenible")
+    df_plot = df_plot[df_plot['AÑO'].isin(selected_year)]
 
     fig = px.bar(df_plot, x='VARIABLE', y='VALOR', color='VARIABLE',
              labels={
@@ -458,7 +471,8 @@ def update_indicators_opt4_b1_g1(selected_year):
 ])
 def update_indicators_opt4_b2_g1(selected_item):
 
-    df_plot = datalayer.indicator("prest_servicios_turisticos1")[datalayer.indicator("prest_servicios_turisticos1")['SUBTEMA'].isin(selected_item)]
+    df_plot = datalayer.indicator("prest_servicios_turisticos1")
+    df_plot = df_plot[df_plot['SUBTEMA'].isin(selected_item)]
 
     fig = px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA',
              labels={
@@ -477,7 +491,8 @@ def update_indicators_opt4_b2_g1(selected_item):
 ])
 def update_indicators_opt4_b2_g2(selected_item):
 
-    df_plot = datalayer.indicator("prest_servicios_turisticos2")[datalayer.indicator("prest_servicios_turisticos2")['SUBTEMA'].isin(selected_item)]
+    df_plot = datalayer.indicator("prest_servicios_turisticos2")
+    df_plot = df_plot[df_plot['SUBTEMA'].isin(selected_item)]
 
     fig = px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA',
              labels={
@@ -496,7 +511,8 @@ def update_indicators_opt4_b2_g2(selected_item):
 ])
 def update_indicators_opt4_b3_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
-    df_plot = datalayer.indicator("indice_competitividad_turistica")[datalayer.indicator("indice_competitividad_turistica")['AÑO'].isin(selected_year)]
+    df_plot = datalayer.indicator("indice_competitividad_turistica")
+    df_plot = df_plot[df_plot['AÑO'].isin(selected_year)]
 
     fig = px.bar_polar(df_plot, r='VALOR', theta='VARIABLE', color='AÑO', template='plotly_white',
              labels={

@@ -163,10 +163,31 @@ def test_import_reads_nothing(tmp_path):
 
 
 def test_sources_are_read_once(monkeypatch):
-    sources.clear_caches()
+    datalayer.clear_caches()
     reads = []
     real = pd.read_excel
     monkeypatch.setattr(pd, "read_excel", lambda *a, **k: reads.append(1) or real(*a, **k))
     first = sources.load_travelers()
     assert sources.load_travelers() is first
     assert reads == [1]
+
+
+# --------------------------------------------------------------------------
+# Indicator specs: edge cases the real data doesn't exercise
+# --------------------------------------------------------------------------
+
+
+def test_service_provider_split_excludes_exactly_400(tmp_path, monkeypatch):
+    header = '"TEMA","SUBTEMA","VARIABLE","CLASE","Fuente","AÑO","Mes","Valor"\n'
+    rows = "".join(
+        '"Prestadores de Servicios Turísticos - PST","P%s","Total","","src","2020","","%s"\n'
+        % (value, value)
+        for value in (399, 400, 401)
+    )
+    (tmp_path / config.INDICATORS_FILE).write_text(header + rows, encoding="utf-8")
+    monkeypatch.setenv("IDT_DATA_DIR", str(tmp_path))
+
+    large = datalayer.indicator("prest_servicios_turisticos1")
+    small = datalayer.indicator("prest_servicios_turisticos2")
+    assert list(large["VALOR"]) == [401.0]
+    assert list(small["VALOR"]) == [399.0]

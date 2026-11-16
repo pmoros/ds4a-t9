@@ -1,14 +1,29 @@
-"""Characterization tests for the data layer (wrangler.py + data.py)."""
+"""Characterization tests for the data layer (datalayer + data.py).
+
+The snapshot ids are the legacy ``data.df_*`` names, so these tests prove the
+datalayer reproduces every frame data.py used to build.
+"""
 
 import pandas as pd
 import pytest
 
 import data
+import datalayer
 import layouts
-import wrangler
+from datalayer import TravelerKind
 
-DATAFRAME_NAMES = sorted(
-    name for name, value in vars(data).items() if isinstance(value, pd.DataFrame)
+# Legacy data.df_<name> -> how to obtain the same frame from datalayer.
+FRAMES = {
+    "df_viajeros": lambda: datalayer.travelers(),
+    "df_viajeros_nacional": lambda: datalayer.travelers(TravelerKind.NATIONAL),
+    "df_viajeros_internacional": lambda: datalayer.travelers(TravelerKind.INTERNATIONAL),
+    "df_indicadores_turismo": lambda: datalayer.indicators_raw(),
+}
+FRAMES.update(
+    {
+        "df_" + name: (lambda name=name: datalayer.indicator(name))
+        for name in datalayer.INDICATOR_NAMES
+    }
 )
 
 
@@ -23,20 +38,13 @@ def _profile(df):
     }
 
 
-def test_expected_dataframes_exist():
-    assert "df_viajeros" in DATAFRAME_NAMES
-    assert "df_indicadores_turismo" in DATAFRAME_NAMES
+def test_every_legacy_frame_is_covered():
+    assert len(FRAMES) == 20
 
 
-@pytest.mark.parametrize("name", DATAFRAME_NAMES)
+@pytest.mark.parametrize("name", sorted(FRAMES))
 def test_dataframe_profile(name, snapshot_json):
-    assert _profile(getattr(data, name)) == snapshot_json
-
-
-def test_wrangler_returns_both_databases():
-    databases = wrangler.read__file_databases()
-    assert set(databases) == set(wrangler.DATABASE_NAMES)
-    assert all(col == col.upper() for col in databases["base_indicadores"].columns)
+    assert _profile(FRAMES[name]()) == snapshot_json
 
 
 @pytest.mark.parametrize(
@@ -59,31 +67,35 @@ def test_create_options_dropdown():
     assert layouts.create_options_dropdown(2021) == {"label": "2021", "value": "2021"}
 
 
+# Legacy card flag -> kind (note the inversion: 0 is international).
+FLAG_KIND = {0: TravelerKind.INTERNATIONAL, 1: TravelerKind.NATIONAL, 2: None}
+
+
 def _card_cases():
     # Same defaults the app offers: years/months in order of appearance in the data.
-    df = data.df_viajeros
+    df = datalayer.travelers()
     years = [int(y) for y in df["AÑO"].unique()[:2]]
     months = [m for m in df["MES"].unique() if m != "TOTAL"][:2]
     return [
         pytest.param(year, month, flag, id="%s-%s-flag%d" % (year, month, flag))
         for year in years
         for month in months
-        for flag in (0, 1, 2)  # 0: international, 1: national, other: both
+        for flag in (0, 1, 2)
     ]
 
 
 def _call_card(fn, *args):
     try:
-        return fn(data.df_viajeros, *args)
+        return fn(*args)
     except Exception as exc:
         return {"error": type(exc).__name__, "message": str(exc)}
 
 
 @pytest.mark.parametrize("year, month, flag", _card_cases())
 def test_travel_card(year, month, flag, snapshot_json):
-    assert _call_card(data.travelCard, year, month, flag) == snapshot_json
+    assert _call_card(datalayer.travel_card, year, month, FLAG_KIND[flag]) == snapshot_json
 
 
 @pytest.mark.parametrize("year, month, flag", _card_cases())
 def test_pref_card(year, month, flag, snapshot_json):
-    assert _call_card(data.prefCard, year, month, flag) == snapshot_json
+    assert _call_card(datalayer.preference_card, year, month, FLAG_KIND[flag]) == snapshot_json

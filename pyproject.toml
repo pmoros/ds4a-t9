@@ -41,8 +41,12 @@ dependencies = [
 # Test dependencies must live in the project venv (they import the app).
 # Standalone CLIs (ruff, pre-commit) are managed by mise, see mise.toml.
 dev = [
+    # Newest Playwright releases that still support Python 3.8. They are not
+    # installable on 3.7, where the e2e tests are skipped instead.
+    "playwright==1.48.0; python_version >= '3.8'",
     "pytest==7.4.4",
     "pytest-cov==4.1.0",
+    "pytest-playwright==0.5.2; python_version >= '3.8'",
     "syrupy==3.0.6",
 ]
 
@@ -52,6 +56,9 @@ package = false
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-ra --strict-markers"
+markers = [
+    "e2e: end-to-end browser tests (Playwright); deselect with -m 'not e2e'",
+]
 
 [tool.coverage.run]
 source = ["."]

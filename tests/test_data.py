@@ -7,10 +7,10 @@ datalayer reproduces every frame data.py used to build.
 import pandas as pd
 import pytest
 
-import data
 import datalayer
 import layouts
 from datalayer import TravelerKind
+from datalayer.formatting import millify
 
 # Legacy data.df_<name> -> how to obtain the same frame from datalayer.
 FRAMES = {
@@ -60,7 +60,7 @@ def test_dataframe_profile(name, snapshot_json):
     ],
 )
 def test_millify(value, expected):
-    assert data.millify(value) == expected
+    assert millify(value) == expected
 
 
 def test_create_options_dropdown():

@@ -56,11 +56,6 @@ def _read_geojson(path):
 CACHED_READERS = (_read_travelers, _read_indicators, _read_geojson)
 
 
-def clear_caches():
-    for reader in CACHED_READERS:
-        reader.cache_clear()
-
-
 def load_travelers():
     path = config.travelers_path()
     _check_exists(path)

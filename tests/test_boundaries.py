@@ -12,7 +12,7 @@ FORBIDDEN = {
     "data frames from data.py": r"\bdata\.df_",
     "the old loader": r"\bwrangler\b",
     "traveler kind literals (use TravelerKind)": r"TURISTAS (NACIONALES|INTERNACIONALES)",
-    "the copied national/international rule (use kind_from_clicks)": r"int\(national_bt\) >",
+    "the copied national/international rule (use kind_from_clicks)": r"int\((inter)?national_bt\) > int",
     "source file paths": r"""["']data/|\.xlsx|\.csv|colombia\.geojson""",
 }
 

@@ -51,8 +51,7 @@ df_tasa_ocupacion_hotelera = datalayer.indicator('tasa_ocupacion_hotelera')
 
 #TRAVELERS -> OPT1 -> BOARD1 -> PLOT RIGHT
 def viajeros_region_nacional_plot(years, months):
-    global df_viajeros_nacional
-    global geojson_col
+    df_viajeros_nacional = datalayer.travelers(datalayer.TravelerKind.NATIONAL)
 
     years = [int(x) for x in years]
     db_viajeros_nacional_filtered = df_viajeros_nacional[df_viajeros_nacional['AÑO'].isin(years)]
@@ -66,7 +65,7 @@ def viajeros_region_nacional_plot(years, months):
     plot_data,
     locations="ORIGEN",
     color="VIAJEROS",
-    geojson=geojson_col,
+    geojson=datalayer.load_geojson(),
     zoom=4.1,
     featureidkey="properties.NOMBRE_DPT",
     mapbox_style="carto-positron",
@@ -83,8 +82,7 @@ def viajeros_region_nacional_plot(years, months):
 
 
 def viajeros_region_internacional_plot(years, months):
-    global df_viajeros_internacional
-    global COUNTRIES_ALPHA3
+    df_viajeros_internacional = datalayer.travelers(datalayer.TravelerKind.INTERNATIONAL)
 
     years = [int(x) for x in years]
     db_viajeros_internacional_filtered = df_viajeros_internacional[df_viajeros_internacional['AÑO'].isin(years)]
@@ -104,7 +102,7 @@ def viajeros_region_internacional_plot(years, months):
 
 #-----------Static graphs (figures) ------------
 def get_indicators_opt3_b1_g1():
-    df_plot = df_pib
+    df_plot = datalayer.indicator('pib')
 
     fig = px.line(df_plot, x='AÑO', y='VALOR', color='CLASE', line_group='CLASE',
              category_orders={"CLASE":["Subsector: Alojamiento y comida","Sector: Alojamiento y comida"]},
@@ -120,7 +118,7 @@ def get_indicators_opt3_b1_g1():
 
 #Indicators-> SIGHTSEEING -> BOARD 4 -> GRAPH 1
 def get_indicators_opt4_b4_g1():
-    df_plot = df_indice_presion_turistica
+    df_plot = datalayer.indicator('indice_presion_turistica')
 
     fig = px.line(df_plot, x='AÑO', y='VALOR',
              labels={

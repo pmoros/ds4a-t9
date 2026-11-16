@@ -19,6 +19,8 @@ import layouts_indicators
 import layouts_about_us
 
 import data
+import datalayer
+from datalayer import TravelerKind
 
 # Alternative 1
 MAIN_COLOR_SELECTOR = "#6C7BC4"
@@ -137,7 +139,7 @@ def display_page(pathname):
 ])
 def update_indicators_opt1_b1_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
-    df_plot = data.df_airbnb_homeway[data.df_airbnb_homeway['AÑO'].isin(selected_year)]
+    df_plot = datalayer.indicator("airbnb_homeway")[datalayer.indicator("airbnb_homeway")['AÑO'].isin(selected_year)]
     df_plot = df_plot.groupby('SUBTEMA').sum().reset_index()
 
     fig = px.bar(df_plot, x='SUBTEMA', y='VALOR',color='SUBTEMA',
@@ -159,7 +161,7 @@ def update_indicators_opt1_b1_g1(selected_year):
 ])
 def update_indicators_opt1_b1_g2(selected_locations):
 
-    df_plot = data.df_airbnb_homeway[data.df_airbnb_homeway['SUBTEMA'].isin(selected_locations)]
+    df_plot = datalayer.indicator("airbnb_homeway")[datalayer.indicator("airbnb_homeway")['SUBTEMA'].isin(selected_locations)]
     df_plot = df_plot.groupby('SUBTEMA').mean().reset_index()
 
     fig = px.bar(df_plot, x='SUBTEMA', y='VALOR',color='SUBTEMA',
@@ -183,7 +185,7 @@ def update_indicators_opt1_b1_g2(selected_locations):
 def update_indicators_opt1_b2_g1(selected_year):
 
     selected_year = [int(x) for x in selected_year]
-    df_plot = data.df_tasa_ocupacion_hotelera[data.df_tasa_ocupacion_hotelera['AÑO'].isin(selected_year)]
+    df_plot = datalayer.indicator("tasa_ocupacion_hotelera")[datalayer.indicator("tasa_ocupacion_hotelera")['AÑO'].isin(selected_year)]
     df_plot = df_plot.groupby('MES').mean().reset_index()
     df_plot['MESNO'] = df_plot['MES'].replace(MESES_ORDEN)
     df_plot = df_plot.sort_values(by=['MESNO'])
@@ -215,7 +217,7 @@ def update_indicators_opt1_b2_g1(selected_year):
 ])
 def update_indicators_opt1_b2_g2(selected_year):
     selected_year = [int(x) for x in selected_year]
-    df_plot = data.df_tasa_ocupacion_hotelera[data.df_tasa_ocupacion_hotelera['AÑO'].isin(selected_year)]
+    df_plot = datalayer.indicator("tasa_ocupacion_hotelera")[datalayer.indicator("tasa_ocupacion_hotelera")['AÑO'].isin(selected_year)]
 
     fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO',
              labels={
@@ -244,7 +246,7 @@ def update_indicators_opt1_b2_g2(selected_year):
 ])
 def update_indicators_opt1_b3_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
-    df_plot = data.df_tasa_ocupacion_airbnb[data.df_tasa_ocupacion_airbnb['AÑO'].isin(selected_year)]
+    df_plot = datalayer.indicator("tasa_ocupacion_airbnb")[datalayer.indicator("tasa_ocupacion_airbnb")['AÑO'].isin(selected_year)]
     df_plot = df_plot.groupby('MES').mean().reset_index()
     # print(df_plot)
 
@@ -274,7 +276,7 @@ def update_indicators_opt1_b3_g1(selected_year):
 ])
 def update_indicators_opt1_b3_g2(selected_year):
     selected_year = [int(x) for x in selected_year]
-    df_plot = data.df_tasa_ocupacion_airbnb[data.df_tasa_ocupacion_airbnb['AÑO'].isin(selected_year)]
+    df_plot = datalayer.indicator("tasa_ocupacion_airbnb")[datalayer.indicator("tasa_ocupacion_airbnb")['AÑO'].isin(selected_year)]
 
     fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO',
              labels={
@@ -306,7 +308,7 @@ def update_indicators_opt1_b3_g2(selected_year):
 ])
 def update_indicators_opt2_b1_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
-    df_plot = data.df_bigdata[data.df_bigdata['AÑO'].isin(selected_year)]
+    df_plot = datalayer.indicator("bigdata")[datalayer.indicator("bigdata")['AÑO'].isin(selected_year)]
 
     fig = px.bar(df_plot, x='SUBTEMA', y='VALOR', color='VARIABLE', facet_col='AÑO',
              labels={
@@ -328,7 +330,7 @@ def update_indicators_opt2_b1_g1(selected_year):
 ])
 def update_indicators_opt2_b2_g1(selected_item):
 
-    df_plot = data.df_conect_internacional[data.df_conect_internacional['SUBTEMA'] == selected_item]
+    df_plot = datalayer.indicator("conect_internacional")[datalayer.indicator("conect_internacional")['SUBTEMA'] == selected_item]
     variable = df_plot['VARIABLE'].iloc[0]
 
     fig = px.bar(df_plot, x='AÑO', y='VALOR', color='AÑO',
@@ -350,7 +352,7 @@ def update_indicators_opt2_b2_g1(selected_item):
 ])
 def update_indicators_opt2_b3_g1(selected_item):
 
-    df_plot = data.df_turismo_internacional[data.df_turismo_internacional['VARIABLE'] == selected_item]
+    df_plot = datalayer.indicator("turismo_internacional")[datalayer.indicator("turismo_internacional")['VARIABLE'] == selected_item]
     clase = df_plot['CLASE'].iloc[0]
 
     fig = px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA',
@@ -372,7 +374,7 @@ def update_indicators_opt2_b3_g1(selected_item):
 ])
 def update_indicators_opt2_b3_g2(selected_item):
 
-    df_plot = data.df_turismo_internacional2[data.df_turismo_internacional2['VARIABLE'] == selected_item]
+    df_plot = datalayer.indicator("turismo_internacional2")[datalayer.indicator("turismo_internacional2")['VARIABLE'] == selected_item]
 
     fig = px.area(df_plot, x='AÑO', y='VALOR', color='CLASE', line_group='CLASE',
              labels={
@@ -395,7 +397,7 @@ def update_indicators_opt2_b3_g2(selected_item):
 ])
 def update_indicators_opt3_b2_g1(selected_item):
 
-    df_plot = data.df_gen_empleo_turismo[data.df_gen_empleo_turismo['SUBTEMA'] == selected_item]
+    df_plot = datalayer.indicator("gen_empleo_turismo")[datalayer.indicator("gen_empleo_turismo")['SUBTEMA'] == selected_item]
 
     fig = px.line(df_plot, x='AÑO', y='VALOR', color='VARIABLE', line_group='VARIABLE',
              labels={
@@ -415,7 +417,7 @@ def update_indicators_opt3_b2_g1(selected_item):
 ])
 def update_indicators_opt3_b2_g2(selected_year):
     selected_year = [int(x) for x in selected_year]
-    df_plot = data.df_gen_empleo_turismo2[data.df_gen_empleo_turismo2['AÑO'].isin(selected_year)]
+    df_plot = datalayer.indicator("gen_empleo_turismo2")[datalayer.indicator("gen_empleo_turismo2")['AÑO'].isin(selected_year)]
 
     fig = px.line(df_plot, x='MES', y='VALOR', color='AÑO', line_group='AÑO',
              labels={
@@ -437,7 +439,7 @@ def update_indicators_opt3_b2_g2(selected_year):
 ])
 def update_indicators_opt4_b1_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
-    df_plot = data.df_cert_turismo_sostenible[data.df_cert_turismo_sostenible['AÑO'].isin(selected_year)]
+    df_plot = datalayer.indicator("cert_turismo_sostenible")[datalayer.indicator("cert_turismo_sostenible")['AÑO'].isin(selected_year)]
 
     fig = px.bar(df_plot, x='VARIABLE', y='VALOR', color='VARIABLE',
              labels={
@@ -456,7 +458,7 @@ def update_indicators_opt4_b1_g1(selected_year):
 ])
 def update_indicators_opt4_b2_g1(selected_item):
 
-    df_plot = data.df_prest_servicios_turisticos1[data.df_prest_servicios_turisticos1['SUBTEMA'].isin(selected_item)]
+    df_plot = datalayer.indicator("prest_servicios_turisticos1")[datalayer.indicator("prest_servicios_turisticos1")['SUBTEMA'].isin(selected_item)]
 
     fig = px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA',
              labels={
@@ -475,7 +477,7 @@ def update_indicators_opt4_b2_g1(selected_item):
 ])
 def update_indicators_opt4_b2_g2(selected_item):
 
-    df_plot = data.df_prest_servicios_turisticos2[data.df_prest_servicios_turisticos2['SUBTEMA'].isin(selected_item)]
+    df_plot = datalayer.indicator("prest_servicios_turisticos2")[datalayer.indicator("prest_servicios_turisticos2")['SUBTEMA'].isin(selected_item)]
 
     fig = px.line(df_plot, x='AÑO', y='VALOR', color='SUBTEMA', line_group='SUBTEMA',
              labels={
@@ -494,7 +496,7 @@ def update_indicators_opt4_b2_g2(selected_item):
 ])
 def update_indicators_opt4_b3_g1(selected_year):
     selected_year = [int(x) for x in selected_year]
-    df_plot = data.df_indice_competitividad_turistica[data.df_indice_competitividad_turistica['AÑO'].isin(selected_year)]
+    df_plot = datalayer.indicator("indice_competitividad_turistica")[datalayer.indicator("indice_competitividad_turistica")['AÑO'].isin(selected_year)]
 
     fig = px.bar_polar(df_plot, r='VALOR', theta='VARIABLE', color='AÑO', template='plotly_white',
              labels={
@@ -528,19 +530,11 @@ def update_indicators_opt4_b3_g1(selected_year):
 
 def update_travelers_main_board_menu(national_bt, international_bt):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt):
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt):
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
-    if category == "TURISTAS NACIONALES":
-        menu_year = data.df_viajeros_nacional['AÑO'].unique()
-        menu_month = data.df_viajeros_nacional['MES'].unique()
-    elif category == "TURISTAS INTERNACIONALES":
-        menu_year = data.df_viajeros_internacional['AÑO'].unique()
-        menu_month = data.df_viajeros_internacional['MES'].unique()
+    menu_year = datalayer.options('AÑO', kind)
+    menu_month = datalayer.options('MES', kind)
 
     menu_year = list(map(layouts.create_options_dropdown, menu_year))
     menu_month = list(map(layouts.create_options_dropdown, menu_month))
@@ -565,18 +559,10 @@ def update_travelers_main_board_menu(national_bt, international_bt):
 ])
 def update_travelers_travel_card(national_bt, international_bt, selected_year, selected_month):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    category_flag = 1
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-        category_flag = 1
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
-        category_flag = 0
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
-    # pref_values = data.prefCard(data.df_viajeros, str(selected_year), selected_month, category_flag)
 
-    travel_values = data.travelCard(data.df_viajeros, int(selected_year), selected_month, category_flag)
+    travel_values = datalayer.travel_card(int(selected_year), selected_month, kind)
 
     
 
@@ -602,24 +588,15 @@ def update_travelers_travel_card(national_bt, international_bt, selected_year, s
 ])
 def update_travelers_pref_card(national_bt, international_bt, selected_year, selected_month):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    category_flag = 1
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-        category_flag = 1
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
-        category_flag = 0
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
-    # pref_values = data.prefCard(data.df_viajeros, str(selected_year), selected_month, category_flag)
     print("VAL", selected_year)
     print("TYPE", type(selected_year))
 
     print("VAL", selected_month)
     print("TYPE", type(selected_month))
 
-    # pref_values = data.prefCard(data.df_viajeros, 2019, "ENERO", 0)
-    pref_values = data.prefCard(data.df_viajeros, int(selected_year), selected_month, category_flag)
+    pref_values = datalayer.preference_card(int(selected_year), selected_month, kind)
 
     
 
@@ -647,19 +624,11 @@ def update_travelers_pref_card(national_bt, international_bt, selected_year, sel
 
 def update_travelers_opt1_board2_menu(national_bt, international_bt):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt):
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt):
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
-    if category == "TURISTAS NACIONALES":
-        menu_year = data.df_viajeros_nacional['AÑO'].unique()
-        menu_origin = data.df_viajeros_nacional['ORIGEN'].unique()
-    elif category == "TURISTAS INTERNACIONALES":
-        menu_year = data.df_viajeros_internacional['AÑO'].unique()
-        menu_origin = data.df_viajeros_internacional['ORIGEN'].unique()
+    menu_year = datalayer.options('AÑO', kind)
+    menu_origin = datalayer.options('ORIGEN', kind)
 
     menu_year = list(map(layouts.create_options_dropdown, menu_year))
     menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
@@ -682,19 +651,11 @@ def update_travelers_opt1_board2_menu(national_bt, international_bt):
 
 def update_travelers_opt1_board3_menu(national_bt, international_bt):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt):
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt):
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
-    if category == "TURISTAS NACIONALES":
-        menu_year = data.df_viajeros_nacional['AÑO'].unique()
-        menu_origin = data.df_viajeros_nacional['ORIGEN'].unique()
-    elif category == "TURISTAS INTERNACIONALES":
-        menu_year = data.df_viajeros_internacional['AÑO'].unique()
-        menu_origin = data.df_viajeros_internacional['ORIGEN'].unique()
+    menu_year = datalayer.options('AÑO', kind)
+    menu_origin = datalayer.options('ORIGEN', kind)
 
     menu_year = list(map(layouts.create_options_dropdown, menu_year))
     menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
@@ -719,19 +680,11 @@ def update_travelers_opt1_board3_menu(national_bt, international_bt):
 
 def update_travelers_opt1_board4_menu(national_bt, international_bt):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt):
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt):
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
-    if category == "TURISTAS NACIONALES":
-        menu_year = data.df_viajeros_nacional['AÑO'].unique()
-        menu_origin = data.df_viajeros_nacional['ORIGEN'].unique()
-    elif category == "TURISTAS INTERNACIONALES":
-        menu_year = data.df_viajeros_internacional['AÑO'].unique()
-        menu_origin = data.df_viajeros_internacional['ORIGEN'].unique()
+    menu_year = datalayer.options('AÑO', kind)
+    menu_origin = datalayer.options('ORIGEN', kind)
 
     menu_year = list(map(layouts.create_options_dropdown, menu_year))
     menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
@@ -755,19 +708,11 @@ def update_travelers_opt1_board4_menu(national_bt, international_bt):
 
 def update_travelers_opt1_board5_menu(national_bt, international_bt):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt):
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt):
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
-    if category == "TURISTAS NACIONALES":
-        menu_year = data.df_viajeros_nacional['AÑO'].unique()
-        menu_origin = data.df_viajeros_nacional['ORIGEN'].unique()
-    elif category == "TURISTAS INTERNACIONALES":
-        menu_year = data.df_viajeros_internacional['AÑO'].unique()
-        menu_origin = data.df_viajeros_internacional['ORIGEN'].unique()
+    menu_year = datalayer.options('AÑO', kind)
+    menu_origin = datalayer.options('ORIGEN', kind)
 
     menu_year = list(map(layouts.create_options_dropdown, menu_year))
     menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
@@ -795,19 +740,11 @@ def update_travelers_opt1_board5_menu(national_bt, international_bt):
 
 def update_travelers_board1_menu(national_bt, international_bt):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt):
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt):
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
-    if category == "TURISTAS NACIONALES":
-        menu_year = data.df_viajeros_nacional['AÑO'].unique()
-        menu_month = data.df_viajeros_nacional['MES'].unique()
-    elif category == "TURISTAS INTERNACIONALES":
-        menu_year = data.df_viajeros_internacional['AÑO'].unique()
-        menu_month = data.df_viajeros_internacional['MES'].unique()
+    menu_year = datalayer.options('AÑO', kind)
+    menu_month = datalayer.options('MES', kind)
 
     menu_year = list(map(layouts.create_options_dropdown, menu_year))
     menu_month = list(map(layouts.create_options_dropdown, menu_month))
@@ -830,17 +767,13 @@ def update_travelers_board1_menu(national_bt, international_bt):
 
 def update_travelers_opt1_b1_g2(national_bt, international_bt, years, months):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt):
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt):
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
     #Creating the right graph
-    if category == "TURISTAS NACIONALES":
+    if kind == TravelerKind.NATIONAL:
         my_plot = data.viajeros_region_nacional_plot(years, months)
-    elif category == "TURISTAS INTERNACIONALES":
+    elif kind == TravelerKind.INTERNATIONAL:
         my_plot = data.viajeros_region_internacional_plot(years, months)
 
     return my_plot
@@ -858,20 +791,11 @@ def update_travelers_opt1_b1_g2(national_bt, international_bt, years, months):
 ])
 def update_travelers_travelers_opt1_b2_g1(national_bt, international_bt, selected_year):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
     #Creating the right graph
-    if category == "TURISTAS NACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
-    elif category == "TURISTAS INTERNACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
-    else:
-        pass
+    df_plot = datalayer.travelers(kind)
 
 
     selected_year = [int(x) for x in selected_year]
@@ -913,20 +837,11 @@ def update_travelers_travelers_opt1_b2_g1(national_bt, international_bt, selecte
 ])
 def update_travelers_travelers_opt1_b2_g2(national_bt, international_bt, selected_year,selected_origin):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
     #Creating the right graph
-    if category == "TURISTAS NACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
-    elif category == "TURISTAS INTERNACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
-    else:
-        pass
+    df_plot = datalayer.travelers(kind)
 
     selected_year = [int(x) for x in selected_year]
     selected_origin = [str(x) for x in selected_origin]
@@ -967,20 +882,11 @@ def update_travelers_travelers_opt1_b2_g2(national_bt, international_bt, selecte
 ])
 def update_travelers_travelers_opt1_b3_g1(national_bt, international_bt, selected_year):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
     #Creating the right graph
-    if category == "TURISTAS NACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
-    elif category == "TURISTAS INTERNACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
-    else:
-        pass
+    df_plot = datalayer.travelers(kind)
 
 
     selected_year = [int(x) for x in selected_year]
@@ -1022,20 +928,11 @@ def update_travelers_travelers_opt1_b3_g1(national_bt, international_bt, selecte
 ])
 def update_travelers_travelers_opt1_b3_g2(national_bt, international_bt, selected_year,selected_origin):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
     #Creating the right graph
-    if category == "TURISTAS NACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
-    elif category == "TURISTAS INTERNACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
-    else:
-        pass
+    df_plot = datalayer.travelers(kind)
 
     selected_year = [int(x) for x in selected_year]
     selected_origin = [str(x) for x in selected_origin]
@@ -1076,20 +973,11 @@ def update_travelers_travelers_opt1_b3_g2(national_bt, international_bt, selecte
 ])
 def update_travelers_travelers_opt1_b4_g1(national_bt, international_bt, selected_year):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
     #Creating the right graph
-    if category == "TURISTAS NACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
-    elif category == "TURISTAS INTERNACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
-    else:
-        pass
+    df_plot = datalayer.travelers(kind)
 
 
     selected_year = [int(x) for x in selected_year]
@@ -1131,20 +1019,11 @@ def update_travelers_travelers_opt1_b4_g1(national_bt, international_bt, selecte
 ])
 def update_travelers_travelers_opt1_b4_g2(national_bt, international_bt, selected_year,selected_origin):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
     #Creating the right graph
-    if category == "TURISTAS NACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
-    elif category == "TURISTAS INTERNACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
-    else:
-        pass
+    df_plot = datalayer.travelers(kind)
 
     selected_year = [int(x) for x in selected_year]
     selected_origin = [str(x) for x in selected_origin]
@@ -1189,20 +1068,11 @@ def update_travelers_travelers_opt1_b4_g2(national_bt, international_bt, selecte
 ])
 def update_travelers_travelers_opt1_b5_g1(national_bt, international_bt, selected_year):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
     #Creating the right graph
-    if category == "TURISTAS NACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
-    elif category == "TURISTAS INTERNACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
-    else:
-        pass
+    df_plot = datalayer.travelers(kind)
 
 
     selected_year = [int(x) for x in selected_year]
@@ -1244,20 +1114,11 @@ def update_travelers_travelers_opt1_b5_g1(national_bt, international_bt, selecte
 ])
 def update_travelers_travelers_opt1_b5_g2(national_bt, international_bt, selected_year,selected_origin):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
     #Creating the right graph
-    if category == "TURISTAS NACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
-    elif category == "TURISTAS INTERNACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
-    else:
-        pass
+    df_plot = datalayer.travelers(kind)
 
     selected_year = [int(x) for x in selected_year]
     selected_origin = [str(x) for x in selected_origin]
@@ -1307,19 +1168,11 @@ def update_travelers_travelers_opt1_b5_g2(national_bt, international_bt, selecte
 
 def update_travelers_opt2_board3_menu(national_bt, international_bt):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt):
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt):
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
-    if category == "TURISTAS NACIONALES":
-        menu_year = data.df_viajeros_nacional['AÑO'].unique()
-        menu_origin = data.df_viajeros_nacional['ORIGEN'].unique()
-    elif category == "TURISTAS INTERNACIONALES":
-        menu_year = data.df_viajeros_internacional['AÑO'].unique()
-        menu_origin = data.df_viajeros_internacional['ORIGEN'].unique()
+    menu_year = datalayer.options('AÑO', kind)
+    menu_origin = datalayer.options('ORIGEN', kind)
 
     menu_year = list(map(layouts.create_options_dropdown, menu_year))
     menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
@@ -1345,19 +1198,11 @@ def update_travelers_opt2_board3_menu(national_bt, international_bt):
 
 def update_travelers_opt2_board4_menu(national_bt, international_bt):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt):
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt):
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
-    if category == "TURISTAS NACIONALES":
-        menu_year = data.df_viajeros_nacional['AÑO'].unique()
-        menu_origin = data.df_viajeros_nacional['ORIGEN'].unique()
-    elif category == "TURISTAS INTERNACIONALES":
-        menu_year = data.df_viajeros_internacional['AÑO'].unique()
-        menu_origin = data.df_viajeros_internacional['ORIGEN'].unique()
+    menu_year = datalayer.options('AÑO', kind)
+    menu_origin = datalayer.options('ORIGEN', kind)
 
     menu_year = list(map(layouts.create_options_dropdown, menu_year))
     menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
@@ -1383,19 +1228,11 @@ def update_travelers_opt2_board4_menu(national_bt, international_bt):
 
 def update_travelers_opt2_board5_menu(national_bt, international_bt):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt):
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt):
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
-    if category == "TURISTAS NACIONALES":
-        menu_year = data.df_viajeros_nacional['AÑO'].unique()
-        menu_origin = data.df_viajeros_nacional['ORIGEN'].unique()
-    elif category == "TURISTAS INTERNACIONALES":
-        menu_year = data.df_viajeros_internacional['AÑO'].unique()
-        menu_origin = data.df_viajeros_internacional['ORIGEN'].unique()
+    menu_year = datalayer.options('AÑO', kind)
+    menu_origin = datalayer.options('ORIGEN', kind)
 
     menu_year = list(map(layouts.create_options_dropdown, menu_year))
     menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
@@ -1421,19 +1258,11 @@ def update_travelers_opt2_board5_menu(national_bt, international_bt):
 
 def update_travelers_opt2_board6_menu(national_bt, international_bt):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt):
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt):
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
-    if category == "TURISTAS NACIONALES":
-        menu_year = data.df_viajeros_nacional['AÑO'].unique()
-        menu_origin = data.df_viajeros_nacional['ORIGEN'].unique()
-    elif category == "TURISTAS INTERNACIONALES":
-        menu_year = data.df_viajeros_internacional['AÑO'].unique()
-        menu_origin = data.df_viajeros_internacional['ORIGEN'].unique()
+    menu_year = datalayer.options('AÑO', kind)
+    menu_origin = datalayer.options('ORIGEN', kind)
 
     menu_year = list(map(layouts.create_options_dropdown, menu_year))
     menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
@@ -1459,19 +1288,11 @@ def update_travelers_opt2_board6_menu(national_bt, international_bt):
 
 def update_travelers_opt2_board7_menu(national_bt, international_bt):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt):
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt):
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
-    if category == "TURISTAS NACIONALES":
-        menu_year = data.df_viajeros_nacional['AÑO'].unique()
-        menu_origin = data.df_viajeros_nacional['ORIGEN'].unique()
-    elif category == "TURISTAS INTERNACIONALES":
-        menu_year = data.df_viajeros_internacional['AÑO'].unique()
-        menu_origin = data.df_viajeros_internacional['ORIGEN'].unique()
+    menu_year = datalayer.options('AÑO', kind)
+    menu_origin = datalayer.options('ORIGEN', kind)
 
     menu_year = list(map(layouts.create_options_dropdown, menu_year))
     menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
@@ -1501,19 +1322,11 @@ def update_travelers_opt2_board7_menu(national_bt, international_bt):
 
 def update_travelers_opt2_board1_menu(national_bt, international_bt):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt):
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt):
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
-    if category == "TURISTAS NACIONALES":
-        menu_year = data.df_viajeros_nacional['AÑO'].unique()
-        menu_origin = data.df_viajeros_nacional['ORIGEN'].unique()
-    elif category == "TURISTAS INTERNACIONALES":
-        menu_year = data.df_viajeros_internacional['AÑO'].unique()
-        menu_origin = data.df_viajeros_internacional['ORIGEN'].unique()
+    menu_year = datalayer.options('AÑO', kind)
+    menu_origin = datalayer.options('ORIGEN', kind)
 
     menu_year = list(map(layouts.create_options_dropdown, menu_year))
     menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
@@ -1535,20 +1348,11 @@ def update_travelers_opt2_board1_menu(national_bt, international_bt):
 ])
 def update_travelers_travelers_opt2_b1_g1(national_bt, international_bt, selected_year):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
     #Creating the right graph
-    if category == "TURISTAS NACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
-    elif category == "TURISTAS INTERNACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
-    else:
-        pass
+    df_plot = datalayer.travelers(kind)
 
 
     selected_year = [int(x) for x in selected_year]
@@ -1589,20 +1393,11 @@ def update_travelers_travelers_opt2_b1_g1(national_bt, international_bt, selecte
 ])
 def update_travelers_travelers_opt2_b1_g2(national_bt, international_bt, selected_year,selected_origin):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
     #Creating the right graph
-    if category == "TURISTAS NACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
-    elif category == "TURISTAS INTERNACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
-    else:
-        pass
+    df_plot = datalayer.travelers(kind)
 
     selected_year = [int(x) for x in selected_year]
     selected_origin = [str(x) for x in selected_origin]
@@ -1646,19 +1441,11 @@ def update_travelers_travelers_opt2_b1_g2(national_bt, international_bt, selecte
 
 def update_travelers_opt2_board1_menu(national_bt, international_bt):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt):
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt):
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
-    if category == "TURISTAS NACIONALES":
-        menu_year = data.df_viajeros_nacional['AÑO'].unique()
-        menu_origin = data.df_viajeros_nacional['ORIGEN'].unique()
-    elif category == "TURISTAS INTERNACIONALES":
-        menu_year = data.df_viajeros_internacional['AÑO'].unique()
-        menu_origin = data.df_viajeros_internacional['ORIGEN'].unique()
+    menu_year = datalayer.options('AÑO', kind)
+    menu_origin = datalayer.options('ORIGEN', kind)
 
     menu_year = list(map(layouts.create_options_dropdown, menu_year))
     menu_origin = list(map(layouts.create_options_dropdown, menu_origin))
@@ -1679,14 +1466,9 @@ def update_travelers_opt2_board1_menu(national_bt, international_bt):
 ])
 def update_travelers_travelers_opt2_b2_g3(national_bt, international_bt, selected_year):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    df_plot = data.df_viajeros_nacional[data.df_viajeros_nacional['SUBTEMA'] == "ATRACTIVOS"]
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-        df_plot = data.df_viajeros_nacional[data.df_viajeros_nacional['SUBTEMA'] == "ATRACTIVOS"]
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
-        df_plot = data.df_viajeros_internacional[data.df_viajeros_internacional['SUBTEMA'] == "ATRACTIVOS"]
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
+    df_plot = datalayer.travelers(kind)
+    df_plot = df_plot[df_plot['SUBTEMA'] == "ATRACTIVOS"]
 
     selected_year = [int(x) for x in selected_year]
     df_plot = df_plot[df_plot['AÑO'].isin(selected_year)]
@@ -1719,20 +1501,11 @@ def update_travelers_travelers_opt2_b2_g3(national_bt, international_bt, selecte
 ])
 def update_travelers_travelers_opt2_b2_g3(national_bt, international_bt, selected_year,selected_origin):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
     #Creating the right graph
-    if category == "TURISTAS NACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
-    elif category == "TURISTAS INTERNACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
-    else:
-        pass
+    df_plot = datalayer.travelers(kind)
 
     selected_year = [int(x) for x in selected_year]
     selected_origin = [str(x) for x in selected_origin]
@@ -1772,20 +1545,11 @@ def update_travelers_travelers_opt2_b2_g3(national_bt, international_bt, selecte
 ])
 def update_travelers_travelers_opt2_b3_g1(national_bt, international_bt, selected_year):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
     #Creating the right graph
-    if category == "TURISTAS NACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
-    elif category == "TURISTAS INTERNACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
-    else:
-        pass
+    df_plot = datalayer.travelers(kind)
 
     selected_year = [int(x) for x in selected_year]
     # selected_origin = [str(x) for x in selected_origin]
@@ -1828,20 +1592,11 @@ def update_travelers_travelers_opt2_b3_g1(national_bt, international_bt, selecte
 ])
 def update_travelers_travelers_opt2_b3_g2(national_bt, international_bt, selected_year,selected_origin):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
     #Creating the right graph
-    if category == "TURISTAS NACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
-    elif category == "TURISTAS INTERNACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
-    else:
-        pass
+    df_plot = datalayer.travelers(kind)
 
     selected_year = [int(x) for x in selected_year]
     selected_origin = [str(x) for x in selected_origin]
@@ -1881,20 +1636,11 @@ def update_travelers_travelers_opt2_b3_g2(national_bt, international_bt, selecte
 ])
 def update_travelers_travelers_opt2_b4_g1(national_bt, international_bt, selected_year):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
     #Creating the right graph
-    if category == "TURISTAS NACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
-    elif category == "TURISTAS INTERNACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
-    else:
-        pass
+    df_plot = datalayer.travelers(kind)
 
     selected_year = [int(x) for x in selected_year]
     df_plot = df_plot.loc[df_plot['AÑO'].isin(selected_year)].loc[df_plot['SUBTEMA'] == 'GRUPO']
@@ -1935,20 +1681,11 @@ def update_travelers_travelers_opt2_b4_g1(national_bt, international_bt, selecte
 ])
 def update_travelers_travelers_opt2_b4_g2(national_bt, international_bt, selected_year,selected_origin):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
     #Creating the right graph
-    if category == "TURISTAS NACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
-    elif category == "TURISTAS INTERNACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
-    else:
-        pass
+    df_plot = datalayer.travelers(kind)
 
     selected_year = [int(x) for x in selected_year]
     selected_origin = [str(x) for x in selected_origin]
@@ -1989,22 +1726,11 @@ def update_travelers_travelers_opt2_b4_g2(national_bt, international_bt, selecte
 ])
 def update_travelers_travelers_opt2_b5_g1(national_bt, international_bt, selected_year):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
-
-    df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
 
     #Creating the right graph
-    if category == "TURISTAS NACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
-    elif category == "TURISTAS INTERNACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
-    else:
-        pass
+    df_plot = datalayer.travelers(kind)
 
     selected_year = [int(x) for x in selected_year]
     df_plot = df_plot.loc[df_plot['AÑO'].isin(selected_year)].loc[df_plot['SUBTEMA'] == 'ALOJAMIENTO']
@@ -2049,20 +1775,11 @@ def update_travelers_travelers_opt2_b5_g1(national_bt, international_bt, selecte
 ])
 def update_travelers_travelers_opt2_b5_g2(national_bt, international_bt, selected_year,selected_origin):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
     #Creating the right graph
-    if category == "TURISTAS NACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
-    elif category == "TURISTAS INTERNACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
-    else:
-        pass
+    df_plot = datalayer.travelers(kind)
 
     selected_year = [int(x) for x in selected_year]
     selected_origin = [str(x) for x in selected_origin]
@@ -2102,20 +1819,11 @@ def update_travelers_travelers_opt2_b5_g2(national_bt, international_bt, selecte
 ])
 def update_travelers_travelers_opt2_b6_g1(national_bt, international_bt, selected_year):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
     #Creating the right graph
-    if category == "TURISTAS NACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
-    elif category == "TURISTAS INTERNACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
-    else:
-        pass
+    df_plot = datalayer.travelers(kind)
 
     selected_year = [int(x) for x in selected_year]
     df_plot = df_plot.loc[df_plot['AÑO'].isin(selected_year)].loc[df_plot['SUBTEMA'] == 'Noches Pernoctadas']
@@ -2156,20 +1864,11 @@ def update_travelers_travelers_opt2_b6_g1(national_bt, international_bt, selecte
 ])
 def update_travelers_travelers_opt2_b7_g1(national_bt, international_bt, selected_year):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
     #Creating the right graph
-    if category == "TURISTAS NACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
-    elif category == "TURISTAS INTERNACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
-    else:
-        pass
+    df_plot = datalayer.travelers(kind)
 
     selected_year = [int(x) for x in selected_year]
     df_plot = df_plot.loc[df_plot['AÑO'].isin(selected_year)].loc[df_plot['SUBTEMA'] == 'TRANSPORTE']
@@ -2210,20 +1909,11 @@ def update_travelers_travelers_opt2_b7_g1(national_bt, international_bt, selecte
 ])
 def update_travelers_travelers_opt2_b7_g2(national_bt, international_bt, selected_year,selected_origin):
     # USING TYPE OF TOURIST FILTER
-    category = "TURISTAS NACIONALES"
-    if int(national_bt) > int(international_bt) :
-        category = "TURISTAS NACIONALES"
-    elif int(international_bt) > int(national_bt) :
-        category = "TURISTAS INTERNACIONALES"
+    kind = datalayer.kind_from_clicks(national_bt, international_bt)
 
 
     #Creating the right graph
-    if category == "TURISTAS NACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS NACIONALES"]
-    elif category == "TURISTAS INTERNACIONALES":
-        df_plot = data.df_viajeros[data.df_viajeros['TEMA'] == "TURISTAS INTERNACIONALES"]
-    else:
-        pass
+    df_plot = datalayer.travelers(kind)
 
     selected_year = [int(x) for x in selected_year]
     selected_origin = [str(x) for x in selected_origin]

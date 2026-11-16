@@ -6,8 +6,6 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-#import requests
-import json
 import datalayer
 from datalayer.formatting import millify  # noqa: F401  (re-exported)
 
@@ -24,30 +22,6 @@ CONTINENTS_ALPHA3 = {"DEU": "Europe","ARG": "Americas", "BOL": "Americas", "BRA"
        "CRI": "Americas", "ECU": "Americas", "ESP": "Europe", "USA":"Americas", "FRA":"Europe",
        "ITA": "Europe", "MEX": "Americas", "PAN":"Americas", "PER":"Americas", "GBR":"Europe"}
 
-
-# ------ Data (temporary aliases; callers move to datalayer next) -----------
-df_viajeros = datalayer.travelers()
-df_viajeros_nacional = datalayer.travelers(datalayer.TravelerKind.NATIONAL)
-df_viajeros_internacional = datalayer.travelers(datalayer.TravelerKind.INTERNATIONAL)
-df_indicadores_turismo = datalayer.indicators_raw()
-geojson_col = datalayer.load_geojson()
-
-df_airbnb_homeway = datalayer.indicator('airbnb_homeway')
-df_bigdata = datalayer.indicator('bigdata')
-df_cert_turismo_sostenible = datalayer.indicator('cert_turismo_sostenible')
-df_conect_internacional = datalayer.indicator('conect_internacional')
-df_gen_empleo_turismo = datalayer.indicator('gen_empleo_turismo')
-df_gen_empleo_turismo2 = datalayer.indicator('gen_empleo_turismo2')
-df_indice_competitividad_turistica = datalayer.indicator('indice_competitividad_turistica')
-df_indice_presion_turistica = datalayer.indicator('indice_presion_turistica')
-df_turismo_internacional = datalayer.indicator('turismo_internacional')
-df_turismo_internacional2 = datalayer.indicator('turismo_internacional2')
-df_pib = datalayer.indicator('pib')
-df_prest_servicios_turisticos = datalayer.indicator('prest_servicios_turisticos')
-df_prest_servicios_turisticos1 = datalayer.indicator('prest_servicios_turisticos1')
-df_prest_servicios_turisticos2 = datalayer.indicator('prest_servicios_turisticos2')
-df_tasa_ocupacion_airbnb = datalayer.indicator('tasa_ocupacion_airbnb')
-df_tasa_ocupacion_hotelera = datalayer.indicator('tasa_ocupacion_hotelera')
 
 #TRAVELERS -> OPT1 -> BOARD1 -> PLOT RIGHT
 def viajeros_region_nacional_plot(years, months):
@@ -127,16 +101,4 @@ def get_indicators_opt4_b4_g1():
             color_discrete_sequence=COLOR_PALETTE_DISCRETE,
             )
 
-    return fig    
-
-
-#Main card functions (legacy signatures; flag 0: international, 1: national, other: both)
-_FLAG_KIND = {0: datalayer.TravelerKind.INTERNATIONAL, 1: datalayer.TravelerKind.NATIONAL}
-
-
-def prefCard(df, año, mes, flag):
-    return datalayer.preference_card(año, mes, _FLAG_KIND.get(flag))
-
-
-def travelCard(df, año, mes, flag):
-    return datalayer.travel_card(año, mes, _FLAG_KIND.get(flag))
+    return fig

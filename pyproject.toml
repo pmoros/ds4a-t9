@@ -91,5 +91,4 @@ exclude = [
     "layouts_about_us.py",
     "layouts_indicators.py",
     "layouts_viajeros.py",
-    "wrangler.py",
 ]

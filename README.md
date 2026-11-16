@@ -43,7 +43,9 @@ Local tooling is managed by [mise](https://mise.jdx.dev) (`mise.toml`): it pins 
 ```bash
 mise install                  # Python 3.8, uv, ruff, pre-commit
 mise run hooks                # install the git pre-commit hooks
-mise run test                 # create .venv if needed and run pytest
+mise run test                 # full suite: unit + characterization + e2e browser tests
+mise run test-fast            # everything except the browser tests
+mise run e2e                  # only the browser tests (installs Chromium on first run)
 mise run test -- -k millify   # extra args go to pytest
 mise run lint                 # ruff check + format check
 mise run ci                   # everything CI runs
@@ -57,6 +59,10 @@ mise tasks                    # list all tasks
 * `test_callbacks.py` runs all 54 Dash callbacks with first-load values, for national and international travelers, and snapshots their output (figures, card values, dropdown options, or the raised error).
 * `test_pages.py` covers routing, page layouts and HTTP smoke tests.
 * `test_data.py` profiles every DataFrame built in `data.py` and snapshots the travelers/preferences cards.
+
+### End-to-end tests
+
+`tests/e2e/` drives the real app in headless Chromium (Playwright) to check that every page renders, navigation works, and the main cards, toggles and filters behave as expected. The app is served in-process, and the browser's network is hermetic: third-party requests (S3 images, CDN CSS, map tiles and topojson) are answered from `tests/e2e/fixtures/` or with stubs, so runs are deterministic and offline. Any page error, console error or failed callback fails the test. On failure, screenshots and Playwright traces are written to `test-results/` (open a trace with `uv run playwright show-trace <file>`).
 
 Snapshots live in `tests/__snapshots__/`. If a change in output is **intended**, regenerate them with `mise run snapshot-update` and review the diff.
 

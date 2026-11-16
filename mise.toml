@@ -36,20 +36,39 @@ UV_PYTHON_DOWNLOADS = "never"
 description = "Create .venv with the pinned runtime stack and test dependencies"
 run = "uv sync --locked"
 
-[tasks.test]
-description = "Run the test-suite (extra args go to pytest)"
+[tasks.e2e-setup]
+description = "Install the pinned Chromium build for the e2e tests (idempotent)"
 depends = ["setup"]
-run = "uv run pytest"
+run = "uv run playwright install chromium"
+
+# Failure artifacts (screenshots + Playwright traces) land in test-results/.
+[vars]
+e2e_opts = "--output=test-results --screenshot=only-on-failure --tracing=retain-on-failure"
+
+[tasks.test]
+description = "Run the full test-suite, e2e included (extra args go to pytest)"
+depends = ["setup", "e2e-setup"]
+run = "uv run pytest {{ vars.e2e_opts }}"
+
+[tasks.test-fast]
+description = "Run everything except the browser (e2e) tests"
+depends = ["setup"]
+run = "uv run pytest -m 'not e2e'"
+
+[tasks.e2e]
+description = "Run only the end-to-end browser tests"
+depends = ["setup", "e2e-setup"]
+run = "uv run pytest -m e2e {{ vars.e2e_opts }}"
 
 [tasks.cov]
-description = "Run the test-suite with coverage"
-depends = ["setup"]
-run = "uv run pytest --cov --cov-report=term --cov-report=xml"
+description = "Run the full test-suite with coverage"
+depends = ["setup", "e2e-setup"]
+run = "uv run pytest {{ vars.e2e_opts }} --cov --cov-report=term --cov-report=xml"
 
 [tasks."snapshot-update"]
 description = "Regenerate characterization snapshots (review the diff!)"
 depends = ["setup"]
-run = "uv run pytest --snapshot-update"
+run = "uv run pytest -m 'not e2e' --snapshot-update"
 
 [tasks.lint]
 description = "Lint and check formatting"

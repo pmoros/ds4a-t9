@@ -135,3 +135,6 @@ test/
 
 # Tooling
 .ruff_cache/
+
+# e2e failure artifacts (screenshots, Playwright traces)
+test-results/

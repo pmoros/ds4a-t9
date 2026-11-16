@@ -15,21 +15,21 @@ BARS_2015_2016 = {"Chapinero": 734.5, "Usaquén": 346.0, "Candelaria": 96.125}
 LOCATIONS = 16
 
 
-def _assert_bars(actual, expected):
+def _assert_bars(dash, expected):
+    actual = dash.wait_for_bars(GRAPH, expected, LOCATIONS)
     assert len(actual) == LOCATIONS
     for location, value in expected.items():
-        assert actual[location] == pytest.approx(value), location
+        assert actual.get(location) == pytest.approx(value), location
 
 
 def test_adding_a_year_updates_the_figure(dash):
     """R8: Given the accommodation page, when I add 2016, the bars are recomputed."""
     dash.open("/indicators/accomodation", "ACCOMMODATION")
     expect(dash.dropdown_values(YEAR_SELECTOR)).to_have_text(["2015"])
-    _assert_bars(dash.figure_bars(GRAPH), BARS_2015)
+    _assert_bars(dash, BARS_2015)
 
     dash.dropdown_type(YEAR_SELECTOR, "2016")
     dash.page.keyboard.press("Enter")
 
     expect(dash.dropdown_values(YEAR_SELECTOR)).to_have_text(["2015", "2016"])
-    dash.wait_idle()
-    _assert_bars(dash.figure_bars(GRAPH), BARS_2015_2016)
+    _assert_bars(dash, BARS_2015_2016)

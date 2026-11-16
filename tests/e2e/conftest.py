@@ -21,16 +21,37 @@ from urllib.parse import urlparse
 
 import pytest
 
-pytest.importorskip("playwright", reason="e2e tests need Playwright (Python >= 3.8)")
-
-from playwright.sync_api import Error as PlaywrightError  # noqa: E402
-from playwright.sync_api import expect  # noqa: E402
-from werkzeug.serving import make_server  # noqa: E402
+# Without Playwright (Python 3.7) this directory is not collected at all; see
+# collect_ignore in tests/conftest.py.
+from playwright.sync_api import Error as PlaywrightError
+from playwright.sync_api import expect
+from werkzeug.serving import make_server
 
 FIXTURES = Path(__file__).parent / "fixtures"
 APP_TITLE = "IDT Dashboard"
 UPDATE_PATH = "/_dash-update-component"
 LOCAL_HOSTS = {"127.0.0.1", "localhost"}
+
+# Every third-party host the app is known to contact (all answered by stubs).
+# A request to any other host fails the test, so a new external dependency
+# gets noticed instead of being stubbed silently.
+KNOWN_EXTERNAL_HOSTS = (
+    "ds4a-team9-idt.s3.us-east-2.amazonaws.com",  # images
+    "stackpath.bootstrapcdn.com",  # Bootswatch theme (vendored)
+    "fonts.googleapis.com",
+    "fonts.gstatic.com",
+    "static.wixstatic.com",
+    "cdn.plot.ly",  # geo topojson (vendored)
+    ".global.ssl.fastly.net",  # Carto basemap tiles (cartodb-basemaps-*)
+)
+
+
+def _is_known_external(host):
+    return any(
+        host == known or (known.startswith(".") and host.endswith(known))
+        for known in KNOWN_EXTERNAL_HOSTS
+    )
+
 
 DESKTOP = {"width": 1280, "height": 900}
 MOBILE = {"width": 375, "height": 812}
@@ -202,25 +223,61 @@ class DashPage:
     def dropdown_type(self, component_id, text):
         self.dropdown(component_id).locator(".Select-input input").fill(text)
 
-    def figure_bars(self, graph_id):
-        """{trace name: first y value} for a bar figure rendered in the browser."""
+    def wait_for_bars(self, graph_id, expected, traces):
+        """Poll until a bar figure has ``traces`` traces and the ``expected``
+        {trace name: first y} values; return what is rendered at the end.
+
+        Polling (rather than reading once after wait_idle) avoids racing
+        Plotly's re-render after the callback response arrives.
+        """
+        try:
+            self.page.wait_for_function(
+                """([id, expected, traces]) => {
+                     const gd = document.querySelector('#' + id + ' .js-plotly-plot');
+                     if (!gd || !Array.isArray(gd.data) || gd.data.length !== traces) return false;
+                     const bars = Object.fromEntries(gd.data.map(t => [t.name, Number(t.y[0])]));
+                     return Object.entries(expected).every(
+                       ([name, v]) => name in bars && Math.abs(bars[name] - v) <= 1e-6 * Math.max(1, Math.abs(v)));
+                   }""",
+                arg=[graph_id, expected, traces],
+            )
+        except PlaywrightError:
+            pass  # fall through so the caller's assertion shows the actual values
         return self.page.evaluate(
             """id => {
                  const gd = document.querySelector('#' + id + ' .js-plotly-plot');
+                 if (!gd || !Array.isArray(gd.data)) return {};
                  return Object.fromEntries(gd.data.map(t => [t.name, Number(t.y[0])]));
                }""",
             graph_id,
         )
 
+    # -- teardown checks -----------------------------------------------------
+
+    def settle(self):
+        """Let in-flight callbacks finish so late failures are still caught."""
+        try:
+            self.wait_idle()
+        except PlaywrightError as exc:
+            self.errors.append("app did not settle: %s" % exc)
+
+    def unknown_hosts(self):
+        hosts = {urlparse(url).hostname or url for url in self.stubbed}
+        return sorted(h for h in hosts if not _is_known_external(h))
+
 
 def _assert_clean(dash_page):
     assert dash_page.errors == [], "browser errors:\n" + "\n".join(dash_page.errors)
+    assert dash_page.unknown_hosts() == [], (
+        "the app contacted new third-party hosts; stub them and add them to " "KNOWN_EXTERNAL_HOSTS"
+    )
 
 
 @pytest.fixture
 def dash(page):
     dash_page = DashPage(page)
     yield dash_page
+    dash_page.settle()
     _assert_clean(dash_page)
 
 
@@ -229,5 +286,6 @@ def mobile_dash(browser, browser_context_args):
     context = browser.new_context(**{**browser_context_args, "viewport": MOBILE})
     dash_page = DashPage(context.new_page())
     yield dash_page
+    dash_page.settle()
     context.close()
     _assert_clean(dash_page)

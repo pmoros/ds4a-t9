@@ -6,7 +6,7 @@ import dash_html_components as html
 import dash_bootstrap_components as dbc
 
 import layouts
-import data
+import datalayer
 
 # Alternative 1
 MAIN_COLOR_SELECTOR = "#6C7BC4"
@@ -115,11 +115,11 @@ travelers_opt1_card1_subtitle = "Get to know the number of travelers that visit 
 #Pass options to the menus ---- Card1
 
 #Loading years
-card1_menu_year = data.df_viajeros['AÑO'].unique()
+card1_menu_year = datalayer.options('AÑO')
 travelers_opt1_card_options['board1-menu-year'] = list(map(layouts.create_options_dropdown, card1_menu_year))
 
 #Loading months
-card1_menu_month = data.df_viajeros['MES'].unique()
+card1_menu_month = datalayer.options('MES')
 travelers_opt1_card_options['board1-menu-month'] = list(map(layouts.create_options_dropdown, card1_menu_month))
 
 
@@ -133,12 +133,12 @@ travelers_opt1_card2_label_bottom = "Comparison of the age distribution of trave
 #Pass options to the menus ---- Card2
 
 #Loading years
-card2_menu_year = data.df_viajeros['AÑO'].unique()
+card2_menu_year = datalayer.options('AÑO')
 travelers_opt1_card_options['travelers_opt1-board2-menu-top-year'] = list(map(layouts.create_options_dropdown, card2_menu_year))
 travelers_opt1_card_options['travelers_opt1-board2-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card2_menu_year))
 
 #Loading origin
-card2_menu_origin = data.df_viajeros['ORIGEN'].unique()
+card2_menu_origin = datalayer.options('ORIGEN')
 travelers_opt1_card_options['travelers_opt1-board2-bottom-origin'] = list(map(layouts.create_options_dropdown, card2_menu_origin))
 
 
@@ -152,12 +152,12 @@ travelers_opt1_card3_label_bottom = "Comparison of the gender of travelers who v
 #Pass options to the menus ---- Card3
 
 #Loading years
-card3_menu_year = data.df_viajeros['AÑO'].unique()
+card3_menu_year = datalayer.options('AÑO')
 travelers_opt1_card_options['travelers_opt1-board3-menu-top-year'] = list(map(layouts.create_options_dropdown, card3_menu_year))
 travelers_opt1_card_options['travelers_opt1-board3-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card3_menu_year))
 
 #Loading origin
-card3_menu_origin = data.df_viajeros['ORIGEN'].unique()
+card3_menu_origin = datalayer.options('ORIGEN')
 travelers_opt1_card_options['travelers_opt1-board3-bottom-origin'] = list(map(layouts.create_options_dropdown, card3_menu_origin))
 
 
@@ -169,12 +169,12 @@ travelers_opt1_card4_label_top = "Distribution of the educational level of the t
 travelers_opt1_card4_label_bottom = "Comparison of the educational level of travelers who visited Bogotá according to their origin"
 
 #Loading years
-card4_menu_year = data.df_viajeros['AÑO'].unique()
+card4_menu_year = datalayer.options('AÑO')
 travelers_opt1_card_options['travelers_opt1-board4-menu-top-year'] = list(map(layouts.create_options_dropdown, card4_menu_year))
 travelers_opt1_card_options['travelers_opt1-board4-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card4_menu_year))
 
 #Loading origin
-card4_menu_origin = data.df_viajeros['ORIGEN'].unique()
+card4_menu_origin = datalayer.options('ORIGEN')
 travelers_opt1_card_options['travelers_opt1-board4-bottom-origin'] = list(map(layouts.create_options_dropdown, card4_menu_origin))
 
 # --------Card 5 ------
@@ -185,12 +185,12 @@ travelers_opt1_card5_label_top = "Distribution of the occupation of the total nu
 travelers_opt1_card5_label_bottom = "Comparison of the occupation of travelers who visited Bogotá according to their origin"
 
 #Loading years
-card5_menu_year = data.df_viajeros['AÑO'].unique()
+card5_menu_year = datalayer.options('AÑO')
 travelers_opt1_card_options['travelers_opt1-board5-menu-top-year'] = list(map(layouts.create_options_dropdown, card5_menu_year))
 travelers_opt1_card_options['travelers_opt1-board5-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card5_menu_year))
 
 #Loading origin
-card5_menu_origin = data.df_viajeros['ORIGEN'].unique()
+card5_menu_origin = datalayer.options('ORIGEN')
 travelers_opt1_card_options['travelers_opt1-board5-bottom-origin'] = list(map(layouts.create_options_dropdown, card5_menu_origin))
 
 opt1 = dbc.Container(
@@ -856,12 +856,12 @@ travelers_opt2_card1_label_bottom = "Comparison of the reason for travel of trav
 #Pass options to the menus ---- Card1
 
 #Loading years
-card1_menu_year = data.df_viajeros['AÑO'].unique()
+card1_menu_year = datalayer.options('AÑO')
 travelers_opt2_card_options['travelers_opt2-board1-menu-top-year'] = list(map(layouts.create_options_dropdown, card1_menu_year))
 travelers_opt2_card_options['travelers_opt2-board1-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card1_menu_year))
 
 #Loading origin
-card1_menu_origin = data.df_viajeros['ORIGEN'].unique()
+card1_menu_origin = datalayer.options('ORIGEN')
 travelers_opt2_card_options['travelers_opt2-board1-bottom-origin'] = list(map(layouts.create_options_dropdown, card1_menu_origin))
 
 
@@ -875,12 +875,12 @@ travelers_opt2_card2_label_bottom = "Comparison of the reason for travel of trav
 #Pass options to the menus ---- Card2
 
 #Loading years
-card2_menu_year = data.df_viajeros['AÑO'].unique()
+card2_menu_year = datalayer.options('AÑO')
 travelers_opt2_card_options['travelers_opt2-board2-menu-top-year'] = list(map(layouts.create_options_dropdown, card2_menu_year))
 travelers_opt2_card_options['travelers_opt2-board2-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card2_menu_year))
 
 #Loading origin
-card2_menu_origin = data.df_viajeros['ORIGEN'].unique()
+card2_menu_origin = datalayer.options('ORIGEN')
 travelers_opt2_card_options['travelers_opt2-board2-bottom-origin'] = list(map(layouts.create_options_dropdown, card2_menu_origin))
 
 
@@ -894,11 +894,11 @@ travelers_opt2_card3_label_bottom = "Comparison of the distribution of spending 
 #Pass options to the menus ---- Card3
 
 #Loading years
-card3_menu_year = data.df_viajeros['AÑO'].unique()
+card3_menu_year = datalayer.options('AÑO')
 travelers_opt2_card_options['travelers_opt2-board3-menu-top-year'] = list(map(layouts.create_options_dropdown, card3_menu_year))
 travelers_opt2_card_options['travelers_opt2-board3-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card3_menu_year))
 #Loading origin
-card3_menu_origin = data.df_viajeros['ORIGEN'].unique()
+card3_menu_origin = datalayer.options('ORIGEN')
 travelers_opt2_card_options['travelers_opt2-board3-bottom-origin'] = list(map(layouts.create_options_dropdown, card3_menu_origin))
 
 # --------Card 4 ------
@@ -911,11 +911,11 @@ travelers_opt2_card4_label_bottom = "Comparison of the travel group of travelers
 #Pass options to the menus ---- Card4
 
 #Loading years
-card4_menu_year = data.df_viajeros['AÑO'].unique()
+card4_menu_year = datalayer.options('AÑO')
 travelers_opt2_card_options['travelers_opt2-board4-menu-top-year'] = list(map(layouts.create_options_dropdown, card4_menu_year))
 travelers_opt2_card_options['travelers_opt2-board4-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card4_menu_year))
 #Loading origin
-card4_menu_origin = data.df_viajeros['ORIGEN'].unique()
+card4_menu_origin = datalayer.options('ORIGEN')
 travelers_opt2_card_options['travelers_opt2-board4-bottom-origin'] = list(map(layouts.create_options_dropdown, card4_menu_origin))
 
 # --------Card 5 ------
@@ -928,11 +928,11 @@ travelers_opt2_card5_label_bottom = "Comparison of the place of accommodation of
 #Pass options to the menus ---- Card5
 
 #Loading years
-card5_menu_year = data.df_viajeros['AÑO'].unique()
+card5_menu_year = datalayer.options('AÑO')
 travelers_opt2_card_options['travelers_opt2-board5-menu-top-year'] = list(map(layouts.create_options_dropdown, card5_menu_year))
 travelers_opt2_card_options['travelers_opt2-board5-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card5_menu_year))
 #Loading origin
-card5_menu_origin = data.df_viajeros['ORIGEN'].unique()
+card5_menu_origin = datalayer.options('ORIGEN')
 travelers_opt2_card_options['travelers_opt2-board5-bottom-origin'] = list(map(layouts.create_options_dropdown, card5_menu_origin))
 
 # --------Card 6 ------
@@ -945,7 +945,7 @@ travelers_opt2_card6_label_bottom = "Comparison of the number of nights spent by
 #Pass options to the menus ---- Card6
 
 #Loading years
-card6_menu_year = data.df_viajeros['AÑO'].unique()
+card6_menu_year = datalayer.options('AÑO')
 travelers_opt2_card_options['travelers_opt2-board6-menu-top-year'] = list(map(layouts.create_options_dropdown, card6_menu_year))
 
 # --------Card 7 ------
@@ -958,11 +958,11 @@ travelers_opt2_card7_label_bottom = "Comparison of the means of transport most f
 #Pass options to the menus ---- Card7
 
 #Loading years
-card7_menu_year = data.df_viajeros['AÑO'].unique()
+card7_menu_year = datalayer.options('AÑO')
 travelers_opt2_card_options['travelers_opt2-board7-menu-top-year'] = list(map(layouts.create_options_dropdown, card7_menu_year))
 travelers_opt2_card_options['travelers_opt2-board7-menu-bottom-year'] = list(map(layouts.create_options_dropdown, card7_menu_year))
 #Loading origin
-card7_menu_origin = data.df_viajeros['ORIGEN'].unique()
+card7_menu_origin = datalayer.options('ORIGEN')
 travelers_opt2_card_options['travelers_opt2-board7-bottom-origin'] = list(map(layouts.create_options_dropdown, card7_menu_origin))
 
 

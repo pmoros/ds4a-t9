@@ -1,0 +1,27 @@
+# Only what the app needs at runtime goes into the image: code, data/ and assets/.
+.git
+.github
+.gitattributes
+.gitignore
+.pre-commit-config.yaml
+.venv
+venv
+**/__pycache__
+**/*.pyc
+.pytest_cache
+.ruff_cache
+.coverage
+coverage.xml
+test-results
+tests
+docs
+Temp.py
+Dockerfile
+.dockerignore
+mise.toml
+pyproject.toml
+uv.lock
+setup
+update_dependencies
+dependencies.txt
+README.md

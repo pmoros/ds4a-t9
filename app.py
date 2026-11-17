@@ -1962,7 +1962,9 @@ app.layout = index()
 
 
 
-# Call app server
+# Development server only; production runs `gunicorn -c gunicorn.conf.py app:server`.
 if __name__ == "__main__":
-    # set debug to false when deploying app
-    app.run_server(debug=True, host="0.0.0.0", port=9000)
+    import settings
+
+    config = settings.load()
+    app.run_server(debug=config.debug, host=config.host, port=config.port)

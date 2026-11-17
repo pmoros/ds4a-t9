@@ -72,12 +72,23 @@ description = "Regenerate characterization snapshots (review the diff!)"
 depends = ["setup"]
 run = "uv run pytest -m 'not e2e' --snapshot-update"
 
+[tasks.serve]
+description = "Run the Dash development server (debug on; PORT/HOST from env)"
+depends = ["setup"]
+env = { DASH_DEBUG = "1" }
+run = "uv run python app.py"
+
+[tasks."serve-prod"]
+description = "Run the app the way production does (gunicorn + gunicorn.conf.py)"
+depends = ["setup"]
+run = "uv run gunicorn -c gunicorn.conf.py app:server"
+
 [tasks.lint]
 description = "Lint, check formatting and Python 3.7 compatibility"
 run = [
   "ruff check .",
   "ruff format --check .",
-  "vermin --target=3.7- --violations --no-tips --eval-annotations datalayer data.py app.py layouts.py layouts_viajeros.py layouts_indicators.py",
+  "vermin --target=3.7- --violations --no-tips --eval-annotations datalayer data.py app.py layouts.py layouts_viajeros.py layouts_indicators.py settings.py gunicorn.conf.py",
 ]
 
 [tasks.fmt]

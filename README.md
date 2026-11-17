@@ -4,37 +4,44 @@
 
 This application has been developed using **Python**, mainly the **Dash Framework**. We suggest to deploy it in a **RHEL ** **based operating system**, however it is possible to deploy it using other O.S, this guide and the elements provided to make this process easier may not work that well.
 
-## Setup
-
-We provided a nice **bash** script to initialize the *production environment* for the application, this file is *setup* and in order to run it use the code below.
-
-```bash
-# Move to the project's folder
-cd DS4A-T9 # You need to place your path
-
-# Give execution permission
-chmod +x setup
-
-# Run the script
-./setup
-```
-
-Once you have done this, it's pretty important that before launching the application you launch the *virtual environment* using `source venv/bin/activate`, otherwise the application will not find the required dependencies.
-
 ## Running
 
-### Manual deployment
+The app is configured only through environment variables:
 
-Now that you have already set up the environment for the application to run properly, we provided a script *deploy_app*, just run `./deploy_app.sh` and it will launch instantly.
+| Variable | Default | Used by | Purpose |
+|---|---|---|---|
+| `PORT` | `8050` | gunicorn, dev server | Port to listen on |
+| `WEB_CONCURRENCY` | `2` | gunicorn | Worker processes |
+| `GUNICORN_THREADS` | `4` | gunicorn | Threads per worker |
+| `HOST` | `127.0.0.1` | dev server | Interface for `python app.py` (gunicorn always binds `0.0.0.0`) |
+| `DASH_DEBUG` | `false` | dev server | Dash debug mode; never enable it on a reachable host |
+| `IDT_DATA_DIR`, `IDT_GEOJSON_PATH` | repo files | app | Data location (see [Data layer](#data-layer)) |
 
-### Cloud based assistant
+### Docker
 
-The application has a *Procfile* that defines properties that tools used by cloud providers can easily use to launch the application. With that said, below you can find how to deploy the application using different providers.
+```bash
+docker build -t ds4a-t9 .
+docker run --rm -p 8050:8050 ds4a-t9            # http://localhost:8050
+docker run --rm -e PORT=9000 -p 9000:9000 ds4a-t9
+```
 
-* [Heroku](https://dash.plotly.com/deployment)
-  * Be aware to initialize a complete new repository when using this alternative
-* [AWS](https://austinlasseter.medium.com/deploying-a-dash-app-with-elastic-beanstalk-console-27a834ebe91d)
-  * *You might have to meet costs.*
+The image runs gunicorn as a non-root user and has a health check on `/`.
+
+### Heroku-style platforms
+
+`Procfile` runs `gunicorn -c gunicorn.conf.py app:server`, which binds the
+`$PORT` the platform provides. `runtime.txt` pins Python 3.7.11.
+
+### Locally
+
+With [mise](https://mise.jdx.dev) (see [Development](#development)):
+
+```bash
+mise run serve        # Dash dev server with debug and reload, on 127.0.0.1:8050
+mise run serve-prod   # gunicorn, exactly as in production
+```
+
+Without mise: `pip install -r requirements.txt`, then `./deploy_app.sh`.
 
 ## Development
 

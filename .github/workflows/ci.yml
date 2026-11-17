@@ -48,3 +48,24 @@ jobs:
         with:
           name: e2e-failure-artifacts
           path: test-results/
+
+  docker:
+    # The production image: builds, passes `pip check`, runs as non-root on a
+    # custom PORT and serves the app.
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t ds4a-t9:ci .
+      - name: Run the container and wait for it to serve
+        run: |
+          docker run -d --name app -e PORT=9090 -p 9090:9090 ds4a-t9:ci
+          for i in $(seq 1 60); do
+            if curl -fsS -o /dev/null http://127.0.0.1:9090/; then break; fi
+            sleep 2
+          done
+          curl -fsS -o /dev/null http://127.0.0.1:9090/
+          curl -fsS -o /dev/null http://127.0.0.1:9090/_dash-layout
+          test "$(docker exec app id -u)" != "0"
+          ! docker exec app test -e /app/.venv
+      - if: always()
+        run: docker logs app

@@ -1,3 +1,1 @@
-# The following line makes predeploy.py happy
-# app:server
-web: bash ./deploy_app.sh
+web: gunicorn -c gunicorn.conf.py app:server

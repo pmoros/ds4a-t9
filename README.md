@@ -22,7 +22,7 @@ The app is configured only through environment variables:
 ```bash
 docker build -t ds4a-t9 .
 docker run --rm -p 8050:8050 ds4a-t9            # http://localhost:8050
-docker run --rm -e PORT=9000 -p 9000:9000 ds4a-t9
+docker run --rm -e PORT=8080 -p 8080:8080 ds4a-t9
 ```
 
 The image runs gunicorn as a non-root user and has a health check on `/`.

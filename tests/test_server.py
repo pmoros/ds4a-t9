@@ -106,8 +106,9 @@ def test_gunicorn_serves_the_app(tmp_path):
     finally:
         process.send_signal(signal.SIGTERM)
         try:
-            assert process.wait(timeout=30) == 0
-        finally:
-            if process.poll() is None:
-                process.kill()
-            log.close()
+            process.wait(timeout=30)
+        except subprocess.TimeoutExpired:
+            process.kill()
+            process.wait()
+        log.close()
+    assert process.returncode == 0, "gunicorn did not shut down cleanly"

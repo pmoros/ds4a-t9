@@ -61,11 +61,14 @@ jobs:
           docker run -d --name app -e PORT=9090 -p 9090:9090 ds4a-t9:ci
           for i in $(seq 1 60); do
             if curl -fsS -o /dev/null http://127.0.0.1:9090/; then break; fi
+            if [ "$(docker inspect -f '{{.State.Running}}' app)" != "true" ]; then
+              echo "container exited during startup"; exit 1
+            fi
             sleep 2
           done
           curl -fsS -o /dev/null http://127.0.0.1:9090/
           curl -fsS -o /dev/null http://127.0.0.1:9090/_dash-layout
-          test "$(docker exec app id -u)" != "0"
-          ! docker exec app test -e /app/.venv
+          if [ "$(docker exec app id -u)" = "0" ]; then echo "runs as root"; exit 1; fi
+          if docker exec app test -e /app/.venv; then echo ".venv leaked into the image"; exit 1; fi
       - if: always()
-        run: docker logs app
+        run: docker logs app || true

@@ -29,6 +29,17 @@ def test_index_html_keeps_theme_meta_and_title(client):
     assert "<title>IDT Dashboard</title>" in html
 
 
+def test_assets_folder_is_the_repo_assets_dir(legacy_app):
+    assert legacy_app.app.config.assets_folder == str(REPO_ROOT / "assets")
+
+
+def test_pages_are_built_once_and_reused(legacy_app):
+    from dashboard import routes
+
+    for path in ["/", "/travelers/who", "/indicators/economic", "/about-us"]:
+        assert routes.display_page(path) is routes.display_page(path)
+
+
 def test_app_keeps_dash_settings(legacy_app):
     assert legacy_app.app.config.suppress_callback_exceptions is True
     assert legacy_app.app.title == "IDT Dashboard"

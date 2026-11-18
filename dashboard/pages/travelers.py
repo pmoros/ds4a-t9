@@ -15,9 +15,6 @@ from dashboard import components
 
 @lru_cache(maxsize=None)
 def _build():
-    # Ideal
-    # MAIN_COLOR_SELECTOR = "#E6F0FF"
-
     # --------Viajeros layouts------------
 
     # --- Layout general

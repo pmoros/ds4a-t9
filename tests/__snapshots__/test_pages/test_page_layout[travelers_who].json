@@ -257,6 +257,7 @@
                                         {
                                           "namespace": "dash_core_components",
                                           "props": {
+                                            "clearable": false,
                                             "id": "main-board-menu-year",
                                             "placeholder": "Year"
                                           },
@@ -287,6 +288,7 @@
                                         {
                                           "namespace": "dash_core_components",
                                           "props": {
+                                            "clearable": false,
                                             "id": "main-board-menu-month",
                                             "placeholder": "Month"
                                           },

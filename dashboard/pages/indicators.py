@@ -477,6 +477,7 @@ def _build():
                                                 "value"
                                             ],
                                             id="opt2-board2-menu-year",
+                                            clearable=False,
                                         ),
                                         html.P(
                                             opt2_card2_label, className="board-standard-label-graph"
@@ -515,6 +516,7 @@ def _build():
                                                 "value"
                                             ],
                                             id="opt2-board3-menu-top-year",
+                                            clearable=False,
                                         ),
                                         html.P(
                                             opt2_card3_label, className="board-standard-label-graph"
@@ -544,6 +546,7 @@ def _build():
                                                                 "opt2-board3-menu-bottom-year"
                                                             ][0]["value"],
                                                             id="opt2-board3-menu-bottom-year",
+                                                            clearable=False,
                                                         )
                                                     ],
                                                     xs={"size": 12},
@@ -671,6 +674,7 @@ def _build():
                                                 "value"
                                             ],
                                             id="opt3-board2-menu-top-year",
+                                            clearable=False,
                                         ),
                                         html.P(
                                             opt3_card2_label_top,

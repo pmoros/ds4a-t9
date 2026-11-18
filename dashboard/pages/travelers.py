@@ -301,7 +301,7 @@ def _build():
                                                             # Menu Year main tablero
                                                             placeholder="Year",
                                                             id="main-board-menu-year",
-                                                            # multi=True,
+                                                            clearable=False,
                                                         ),
                                                     ],
                                                 ),
@@ -317,7 +317,7 @@ def _build():
                                                             # Menu Year main tablero
                                                             placeholder="Month",
                                                             id="main-board-menu-month",
-                                                            # multi=True,
+                                                            clearable=False,
                                                         ),
                                                     ]
                                                 )
@@ -1337,7 +1337,7 @@ def _build():
                                                             # Menu Year segundo tablero
                                                             placeholder="Year",
                                                             id="main-board-menu-year",
-                                                            # multi=True,
+                                                            clearable=False,
                                                         ),
                                                     ],
                                                 ),
@@ -1353,7 +1353,7 @@ def _build():
                                                             # Menu Year segundo tablero
                                                             placeholder="Month",
                                                             id="main-board-menu-month",
-                                                            # multi=True,
+                                                            clearable=False,
                                                         ),
                                                     ]
                                                 )

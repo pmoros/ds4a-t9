@@ -6,8 +6,8 @@ certifi==2026.10.23
 cffi==2.1.1 ; platform_python_implementation == 'PyPy'
 charset-normalizer==3.5.2
 click==8.5.1
-dash==2.18.2
-dash-bootstrap-components==0.13.1
+dash==4.5.0
+dash-bootstrap-components==2.0.4
 dash-core-components==2.0.0
 dash-html-components==2.0.0
 dash-table==5.0.0
@@ -26,7 +26,7 @@ numpy==2.5.5
 openpyxl==3.1.5
 packaging==26.3
 pandas==3.1.1
-plotly==5.24.1
+plotly==7.1.0
 pycparser==3.12 ; implementation_name != 'PyPy' and platform_python_implementation == 'PyPy'
 python-dateutil==4.0.0
 requests==2.34.2

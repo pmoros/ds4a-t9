@@ -17,3 +17,8 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    # Python minor upgrades move runtime.txt, mise.toml and requires-python
+    # together; patch releases of the base image are fine.
+    ignore:
+      - dependency-name: python
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]

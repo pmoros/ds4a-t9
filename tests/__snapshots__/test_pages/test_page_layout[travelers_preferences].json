@@ -329,7 +329,7 @@
                                               {
                                                 "namespace": "dash_html_components",
                                                 "props": {
-                                                  "children": "None",
+                                                  "children": null,
                                                   "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-sightseeing.png",
                                                   "style": {
                                                     "height": "6rem",
@@ -346,7 +346,7 @@
                                                     {
                                                       "namespace": "dash_html_components",
                                                       "props": {
-                                                        "children": "None",
+                                                        "children": null,
                                                         "className": "main-board-content-big",
                                                         "id": "main-board-content-purpose-0"
                                                       },
@@ -355,7 +355,7 @@
                                                     {
                                                       "namespace": "dash_html_components",
                                                       "props": {
-                                                        "children": "None",
+                                                        "children": null,
                                                         "className": "main-board-subtitle",
                                                         "id": "main-board-content-purpose-1"
                                                       },
@@ -410,7 +410,7 @@
                                               {
                                                 "namespace": "dash_html_components",
                                                 "props": {
-                                                  "children": "None",
+                                                  "children": null,
                                                   "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-most-visited.png",
                                                   "style": {
                                                     "height": "6rem",
@@ -427,7 +427,7 @@
                                                     {
                                                       "namespace": "dash_html_components",
                                                       "props": {
-                                                        "children": "None",
+                                                        "children": null,
                                                         "className": "main-board-content-big",
                                                         "id": "most-visited-content-0"
                                                       },
@@ -436,7 +436,7 @@
                                                     {
                                                       "namespace": "dash_html_components",
                                                       "props": {
-                                                        "children": "None",
+                                                        "children": null,
                                                         "className": "main-board-subtitle",
                                                         "id": "most-visited-content-1"
                                                       },
@@ -496,7 +496,7 @@
                                         {
                                           "namespace": "dash_html_components",
                                           "props": {
-                                            "children": "None",
+                                            "children": null,
                                             "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-travelgroup.png",
                                             "style": {
                                               "height": "6rem",
@@ -509,7 +509,7 @@
                                         {
                                           "namespace": "dash_html_components",
                                           "props": {
-                                            "children": "None",
+                                            "children": null,
                                             "className": "main-board-content-small",
                                             "id": "main-board-content-travelgroup"
                                           },
@@ -546,7 +546,7 @@
                                         {
                                           "namespace": "dash_html_components",
                                           "props": {
-                                            "children": "None",
+                                            "children": null,
                                             "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-accommodation.png",
                                             "style": {
                                               "height": "6rem",
@@ -559,7 +559,7 @@
                                         {
                                           "namespace": "dash_html_components",
                                           "props": {
-                                            "children": "None",
+                                            "children": null,
                                             "className": "main-board-content-small",
                                             "id": "main-board-content-accomodation"
                                           },
@@ -596,7 +596,7 @@
                                         {
                                           "namespace": "dash_html_components",
                                           "props": {
-                                            "children": "None",
+                                            "children": null,
                                             "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-expense.png",
                                             "style": {
                                               "height": "6rem",
@@ -609,7 +609,7 @@
                                         {
                                           "namespace": "dash_html_components",
                                           "props": {
-                                            "children": "None",
+                                            "children": null,
                                             "className": "main-board-content-small",
                                             "id": "main-board-content-expense"
                                           },

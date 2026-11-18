@@ -6,12 +6,12 @@
     "VALOR",
     "AÑO-MES"
   ],
-  "content_hash": "-125935742651557616",
+  "content_hash": "18320808331057994000",
   "dtypes": {
     "AÑO": "int64",
-    "AÑO-MES": "object",
-    "MES": "object",
-    "SUBTEMA": "object",
+    "AÑO-MES": "text",
+    "MES": "text",
+    "SUBTEMA": "text",
     "VALOR": "float64"
   },
   "numeric_sums": {

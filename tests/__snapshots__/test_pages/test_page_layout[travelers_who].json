@@ -329,7 +329,7 @@
                                               {
                                                 "namespace": "dash_html_components",
                                                 "props": {
-                                                  "children": "None",
+                                                  "children": null,
                                                   "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-board-logo1.png",
                                                   "style": {
                                                     "height": "6rem",
@@ -345,7 +345,7 @@
                                                   "children": {
                                                     "namespace": "dash_html_components",
                                                     "props": {
-                                                      "children": "None",
+                                                      "children": null,
                                                       "id": "main-board-content-cantidad"
                                                     },
                                                     "type": "P"
@@ -400,7 +400,7 @@
                                                     {
                                                       "namespace": "dash_html_components",
                                                       "props": {
-                                                        "children": "None",
+                                                        "children": null,
                                                         "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-genero-hombre.png",
                                                         "style": {
                                                           "height": "6rem",
@@ -417,7 +417,7 @@
                                                           {
                                                             "namespace": "dash_html_components",
                                                             "props": {
-                                                              "children": "None",
+                                                              "children": null,
                                                               "className": "main-board-content-big",
                                                               "id": "main-board-content-genero-hombre"
                                                             },
@@ -450,7 +450,7 @@
                                                     {
                                                       "namespace": "dash_html_components",
                                                       "props": {
-                                                        "children": "None",
+                                                        "children": null,
                                                         "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-genero-mujer.png",
                                                         "style": {
                                                           "height": "6rem",
@@ -467,7 +467,7 @@
                                                           {
                                                             "namespace": "dash_html_components",
                                                             "props": {
-                                                              "children": "None",
+                                                              "children": null,
                                                               "className": "main-board-content-big",
                                                               "id": "main-board-content-genero-mujer"
                                                             },
@@ -529,7 +529,7 @@
                                         {
                                           "namespace": "dash_html_components",
                                           "props": {
-                                            "children": "None",
+                                            "children": null,
                                             "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-origin.png",
                                             "style": {
                                               "height": "6rem",
@@ -542,7 +542,7 @@
                                         {
                                           "namespace": "dash_html_components",
                                           "props": {
-                                            "children": "None",
+                                            "children": null,
                                             "className": "main-board-content-small",
                                             "id": "main-board-content-origin"
                                           },
@@ -579,7 +579,7 @@
                                         {
                                           "namespace": "dash_html_components",
                                           "props": {
-                                            "children": "None",
+                                            "children": null,
                                             "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-education.png",
                                             "style": {
                                               "height": "6rem",
@@ -592,7 +592,7 @@
                                         {
                                           "namespace": "dash_html_components",
                                           "props": {
-                                            "children": "None",
+                                            "children": null,
                                             "className": "main-board-content-small",
                                             "id": "main-board-content-education"
                                           },
@@ -629,7 +629,7 @@
                                         {
                                           "namespace": "dash_html_components",
                                           "props": {
-                                            "children": "None",
+                                            "children": null,
                                             "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/viajeros-main-age.png",
                                             "style": {
                                               "height": "6rem",
@@ -642,7 +642,7 @@
                                         {
                                           "namespace": "dash_html_components",
                                           "props": {
-                                            "children": "None",
+                                            "children": null,
                                             "className": "main-board-content-small",
                                             "id": "main-board-content-age"
                                           },

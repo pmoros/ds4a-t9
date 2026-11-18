@@ -9,10 +9,10 @@
   "content_hash": "7297990655695271273",
   "dtypes": {
     "AÑO": "int64",
-    "MES": "object",
-    "SUBTEMA": "object",
+    "MES": "text",
+    "SUBTEMA": "text",
     "VALOR": "float64",
-    "VARIABLE": "object"
+    "VARIABLE": "text"
   },
   "numeric_sums": {
     "AÑO": 161160.0,

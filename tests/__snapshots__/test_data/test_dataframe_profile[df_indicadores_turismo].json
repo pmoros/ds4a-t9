@@ -12,13 +12,13 @@
   "content_hash": "2090233640021082647",
   "dtypes": {
     "AÑO": "int64",
-    "CLASE": "object",
-    "FUENTE": "object",
-    "MES": "object",
-    "SUBTEMA": "object",
-    "TEMA": "object",
-    "VALOR": "object",
-    "VARIABLE": "object"
+    "CLASE": "text",
+    "FUENTE": "text",
+    "MES": "text",
+    "SUBTEMA": "text",
+    "TEMA": "text",
+    "VALOR": "text",
+    "VARIABLE": "text"
   },
   "numeric_sums": {
     "AÑO": 1682817.0

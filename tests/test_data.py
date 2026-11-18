@@ -10,6 +10,7 @@ import pytest
 import datalayer
 from datalayer import TravelerKind
 from dashboard.components import create_options_dropdown
+from helpers import dtype_kind, frame_hash
 from datalayer.formatting import millify
 
 # Legacy data.df_<name> -> how to obtain the same frame from datalayer.
@@ -32,9 +33,9 @@ def _profile(df):
     return {
         "shape": list(df.shape),
         "columns": list(df.columns),
-        "dtypes": {col: str(dtype) for col, dtype in df.dtypes.items()},
+        "dtypes": {col: dtype_kind(dtype) for col, dtype in df.dtypes.items()},
         "numeric_sums": {col: round(float(numeric[col].sum()), 6) for col in numeric},
-        "content_hash": str(pd.util.hash_pandas_object(df, index=True).sum()),
+        "content_hash": frame_hash(df),
     }
 
 

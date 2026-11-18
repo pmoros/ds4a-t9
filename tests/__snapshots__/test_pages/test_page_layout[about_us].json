@@ -155,7 +155,7 @@
                                     {
                                       "namespace": "dash_html_components",
                                       "props": {
-                                        "children": "None",
+                                        "children": null,
                                         "className": "thumbnail-team-dimension",
                                         "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/ElizabethRendonPic.png"
                                       },
@@ -227,7 +227,7 @@
                                     {
                                       "namespace": "dash_html_components",
                                       "props": {
-                                        "children": "None",
+                                        "children": null,
                                         "className": "thumbnail-team-dimension",
                                         "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/SergioRairanPic.png"
                                       },
@@ -299,7 +299,7 @@
                                     {
                                       "namespace": "dash_html_components",
                                       "props": {
-                                        "children": "None",
+                                        "children": null,
                                         "className": "thumbnail-team-dimension",
                                         "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/AlbertoCortesPic.png"
                                       },
@@ -379,7 +379,7 @@
                                     {
                                       "namespace": "dash_html_components",
                                       "props": {
-                                        "children": "None",
+                                        "children": null,
                                         "className": "thumbnail-team-dimension",
                                         "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/DiegoCabreraPic.png"
                                       },
@@ -451,7 +451,7 @@
                                     {
                                       "namespace": "dash_html_components",
                                       "props": {
-                                        "children": "None",
+                                        "children": null,
                                         "className": "thumbnail-team-dimension",
                                         "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/PaulMorosPic.png"
                                       },
@@ -516,7 +516,7 @@
                                     {
                                       "namespace": "dash_html_components",
                                       "props": {
-                                        "children": "None",
+                                        "children": null,
                                         "className": "thumbnail-team-dimension",
                                         "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/KellyGarciaPic.png"
                                       },

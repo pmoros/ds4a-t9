@@ -7,7 +7,7 @@
   "content_hash": "6548666596539864800",
   "dtypes": {
     "AÑO": "int64",
-    "SUBTEMA": "object",
+    "SUBTEMA": "text",
     "VALOR": "float64"
   },
   "numeric_sums": {

@@ -77,7 +77,7 @@ def travelers_subtopic(frame, subtopic, years, origins=None, not_known=None):
 
 
 def by_month_and_item(frame):
-    return frame.groupby(["MES", "ITEM"]).sum().reset_index()
+    return frame.groupby(["MES", "ITEM"]).sum(numeric_only=True).reset_index()
 
 
 # --------------------------------------------------------------------------
@@ -153,7 +153,7 @@ def monthly_bar_by_origin(frame, palette, labels):
 
 def total_by_item(frame, palette):
     fig = px.bar(
-        frame.groupby("ITEM").sum().reset_index(),
+        frame.groupby("ITEM").sum(numeric_only=True).reset_index(),
         x="ITEM",
         y="VIAJEROS",
         color="ITEM",
@@ -168,7 +168,7 @@ def region_map(kind, years, months):
     frame = datalayer.travelers(kind)
     frame = in_years(frame, years)
     frame = frame[frame["MES"].isin(months)]
-    plot_data = frame.groupby("ORIGEN").sum().reset_index()
+    plot_data = frame.groupby("ORIGEN").sum(numeric_only=True).reset_index()
 
     if kind == TravelerKind.NATIONAL:
         return px.choropleth_mapbox(

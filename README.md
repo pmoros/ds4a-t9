@@ -30,7 +30,7 @@ The image runs gunicorn as a non-root user and has a health check on `/`.
 ### Heroku-style platforms
 
 `Procfile` runs `gunicorn -c gunicorn.conf.py app:server`, which binds the
-`$PORT` the platform provides. `runtime.txt` pins Python 3.7.11.
+`$PORT` the platform provides. `runtime.txt` pins Python 3.13.
 
 ### Locally
 
@@ -45,10 +45,10 @@ Without mise: `pip install -r requirements.txt`, then `./deploy_app.sh`.
 
 ## Development
 
-Local tooling is managed by [mise](https://mise.jdx.dev) (`mise.toml`): it pins Python, [uv](https://docs.astral.sh/uv/), ruff and pre-commit, and defines the common tasks. CI uses the same file. Python dependencies live in `pyproject.toml` / `uv.lock`, mirroring `requirements.txt` (still used by the Dockerfile and Procfile).
+Local tooling is managed by [mise](https://mise.jdx.dev) (`mise.toml`): it pins Python, [uv](https://docs.astral.sh/uv/), ruff and pre-commit, and defines the common tasks. CI uses the same file. Python dependencies live in `pyproject.toml` / `uv.lock`; `requirements.txt` (used by the Dockerfile and Procfile) is exported from the lock with `mise run export-requirements`.
 
 ```bash
-mise install                  # Python 3.8, uv, ruff, pre-commit
+mise install                  # Python 3.13, uv, ruff, pre-commit
 mise run hooks                # install the git pre-commit hooks
 mise run test                 # full suite: unit + characterization + e2e browser tests
 mise run test-fast            # everything except the browser tests

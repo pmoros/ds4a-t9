@@ -5,7 +5,7 @@ repos:
       - id: ruff
       - id: ruff-format
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0  # last release compatible with pre-commit 2.x (Python 3.7)
+    rev: v6.0.0
     hooks:
       - id: check-yaml
       - id: check-toml

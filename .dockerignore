@@ -21,7 +21,4 @@ Dockerfile
 mise.toml
 pyproject.toml
 uv.lock
-setup
-update_dependencies
-dependencies.txt
 README.md

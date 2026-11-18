@@ -40,6 +40,11 @@ def test_pages_are_built_once_and_reused(legacy_app):
         assert routes.display_page(path) is routes.display_page(path)
 
 
+def test_responses_are_compressed(client):
+    response = client.get("/_dash-layout", headers={"Accept-Encoding": "gzip"})
+    assert response.headers.get("Content-Encoding") == "gzip"
+
+
 def test_app_keeps_dash_settings(legacy_app):
     assert legacy_app.app.config.suppress_callback_exceptions is True
     assert legacy_app.app.title == "IDT Dashboard"

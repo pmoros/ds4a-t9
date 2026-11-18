@@ -3,54 +3,35 @@ name = "idt-dashboard"
 version = "0.1.0"
 description = "DS4A Team 9 - IDT Bogotá tourism dashboard (Dash)"
 readme = "README.md"
-# Production still runs Python 3.7.11 (runtime.txt / Dockerfile). The upper
-# bound keeps the resolver on versions that ship wheels for the pinned stack.
-requires-python = ">=3.7.1,<3.10"
-# Runtime dependencies mirror requirements.txt exactly (minus dev-only tools),
-# with Werkzeug pinned to 2.0.3 as the Dockerfile installs it.
-# Upgrades are intentionally out of scope until the characterization tests
-# in tests/ are in place (see refactor plan, Phase 3).
+# Same interpreter as production (runtime.txt / Dockerfile).
+requires-python = ">=3.13,<3.14"
+# Direct dependencies only; uv.lock pins everything, and requirements.txt (used
+# by the Docker image) is exported from it: `mise run export-requirements`.
 dependencies = [
-    "Brotli==1.0.9",
-    "click==8.0.1",
-    "dash==1.21.0",
-    "dash-bootstrap-components==0.13.0",
-    "dash-core-components==1.17.1",
-    "dash-html-components==1.1.4",
-    "dash-table==4.12.0",
-    "et-xmlfile==1.1.0",
-    "Flask==2.0.1",
-    "Flask-Compress==1.10.1",
-    "future==0.18.2",
-    "gunicorn==20.1.0",
-    "itsdangerous==2.0.1",
-    "Jinja2==3.0.1",
-    "MarkupSafe==2.0.1",
-    "numpy==1.21.2",
-    "openpyxl==3.0.7",
-    "pandas==1.3.2",
-    "plotly==5.2.2",
-    "python-dateutil==2.8.2",
-    "pytz==2021.1",
-    "six==1.16.0",
-    "tenacity==8.0.1",
-    "Werkzeug==2.0.3",
+    # Dash 2.18 is the newest release that still loads dash-bootstrap-components
+    # 0.13 (Bootstrap 4), so the UI looks exactly the same. Dash 4 + Bootstrap 5
+    # is a separate, visible change.
+    "dash[compress]==2.18.2",
+    "dash-bootstrap-components==0.13.1",
+    # Dash 2.18 serves plotly.js from plotly.py; 5.24 ships plotly.js 2.35.
+    "plotly==5.24.1",
+    "Flask==3.0.3",
+    "Werkzeug==3.0.6",
+    "gunicorn==27.0.1",
+    "numpy==2.5.5",
+    "openpyxl==3.1.5",
+    "pandas==3.1.1",
 ]
 
 [dependency-groups]
 # Test dependencies must live in the project venv (they import the app).
 # Standalone CLIs (ruff, pre-commit) are managed by mise, see mise.toml.
 dev = [
-    # Newest Playwright releases that still support Python 3.8. They are not
-    # installable on 3.7, where the e2e tests are skipped instead.
-    "playwright==1.48.0; python_version >= '3.8'",
-    "pytest==7.4.4",
-    "pytest-cov==4.1.0",
-    "pytest-playwright==0.5.2; python_version >= '3.8'",
-    # syrupy >=4 writes None as JSON null (3.x wrote the string "None"). 4.x
-    # does not install on 3.7, which is dropped in the upgrade PR that follows.
-    "syrupy==4.6.4; python_full_version >= '3.8.1'",
-    "syrupy==3.0.6; python_full_version < '3.8.1'",
+    "playwright==1.65.2",
+    "pytest==9.2.0",
+    "pytest-cov==7.1.0",
+    "pytest-playwright==0.10.0",
+    "syrupy==7.0.2",
 ]
 
 [tool.uv]
@@ -58,7 +39,8 @@ package = false
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "-ra --strict-markers"
+# Dash ships a pytest plugin (dash.testing) this suite does not use.
+addopts = "-ra --strict-markers -p no:dash"
 markers = [
     "e2e: end-to-end browser tests (Playwright); deselect with -m 'not e2e'",
 ]
@@ -68,7 +50,7 @@ source = ["."]
 omit = ["tests/*", "Temp.py"]
 
 [tool.ruff]
-target-version = "py37"
+target-version = "py313"
 line-length = 100
 # Temp.py is unused scratch code with undefined names; it is removed in a later PR.
 extend-exclude = ["Temp.py"]

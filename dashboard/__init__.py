@@ -22,6 +22,8 @@ def create_app(warm=True):
     app = dash.Dash(
         "app",
         assets_folder=str(ASSETS_DIR),
+        # Dash 1.x compressed responses by default; Dash 2 needs it asked for.
+        compress=True,
         external_stylesheets=[dbc.themes.SANDSTONE],
         meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}],
     )

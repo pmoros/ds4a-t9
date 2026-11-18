@@ -55,7 +55,12 @@ def _ranked(df, subtheme, exclude=None):
     rows = df.loc[df[SUBTHEME] == subtheme]
     if exclude is not None:
         rows = rows.drop(index=rows.loc[rows[ITEM] == exclude].index)
-    return rows.groupby(ITEM).sum().sort_values(by=TRAVELERS, ascending=False).reset_index()
+    return (
+        rows.groupby(ITEM)
+        .sum(numeric_only=True)
+        .sort_values(by=TRAVELERS, ascending=False)
+        .reset_index()
+    )
 
 
 def _top_share(ranked):
@@ -75,18 +80,25 @@ def travel_card(year, month, kind=None):
     """
     df = _for_period(year, month, kind)
 
-    total = df.groupby([YEAR, MONTH]).sum()
+    total = df.groupby([YEAR, MONTH]).sum(numeric_only=True)
     total = millify(total.reset_index(drop=True)[TRAVELERS][0])
 
     gender = df.loc[df[SUBTHEME] == "GENERO"]
     male = gender.loc[df[ITEM] == "A. HOMBRE"]
     gender = gender.drop(index=gender.loc[gender[ITEM] == "C. NS/NR"].index)
-    gender_total = gender.groupby([YEAR, MONTH]).sum().reset_index(drop=True)[TRAVELERS][0]
-    male = male.groupby([YEAR, MONTH]).sum()
+    gender_total = (
+        gender.groupby([YEAR, MONTH]).sum(numeric_only=True).reset_index(drop=True)[TRAVELERS][0]
+    )
+    male = male.groupby([YEAR, MONTH]).sum(numeric_only=True)
     male = int((male.reset_index(drop=True)[TRAVELERS][0] / gender_total) * 100)
     female = 100 - male
 
-    origin = df.groupby(ORIGIN).sum().sort_values(by=TRAVELERS, ascending=False).reset_index()
+    origin = (
+        df.groupby(ORIGIN)
+        .sum(numeric_only=True)
+        .sort_values(by=TRAVELERS, ascending=False)
+        .reset_index()
+    )
     origin = origin[[ORIGIN, TRAVELERS]].iloc[0][ORIGIN]
 
     return {

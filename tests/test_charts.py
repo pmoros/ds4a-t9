@@ -112,3 +112,17 @@ def test_occupancy_mean_averages_over_every_selected_year():
     fig = occupancy_mean("tasa_ocupacion_airbnb", charts.MONTH_NUMBERS)([str(y) for y in years])
     expected = frame[frame["AÑO"].isin(years)].groupby("MES")["VALOR"].mean()
     assert list(fig.data[0].y) == pytest.approx(list(expected))
+
+
+def test_listing_mean_by_several_locations_matches_the_data():
+    # Not reached by the first-load snapshots: pandas 3 made mean() on text
+    # columns raise, so this pins the numeric_only behaviour.
+    import datalayer
+    from dashboard.callbacks.indicators import listings_mean_by_location
+
+    frame = datalayer.indicator("airbnb_homeway")
+    locations = list(frame["SUBTEMA"].unique()[:3])
+    fig = listings_mean_by_location(locations)
+    expected = frame[frame["SUBTEMA"].isin(locations)].groupby("SUBTEMA")["VALOR"].mean()
+    plotted = {trace.name: float(trace.y[0]) for trace in fig.data}
+    assert plotted == pytest.approx(expected.to_dict())

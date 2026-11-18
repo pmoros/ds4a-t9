@@ -27,7 +27,7 @@ def occupancy_mean(name, tickvals, sort_months=False):
 
     def figure(selected_year):
         frame = charts.in_years(datalayer.indicator(name), selected_year)
-        frame = frame.groupby("MES").mean().reset_index()
+        frame = frame.groupby("MES").mean(numeric_only=True).reset_index()
         if sort_months:
             frame["MESNO"] = frame["MES"].replace(MESES_ORDEN)
             frame = frame.sort_values(by=["MESNO"])
@@ -78,7 +78,7 @@ def providers(name):
 
 def listings_by_location(selected_year):
     frame = charts.in_years(datalayer.indicator("airbnb_homeway"), selected_year)
-    frame = frame.groupby("SUBTEMA").sum().reset_index()
+    frame = frame.groupby("SUBTEMA").sum(numeric_only=True).reset_index()
     fig = px.bar(
         frame, x="SUBTEMA", y="VALOR", color="SUBTEMA", labels=LOCATION,
         color_discrete_sequence=PALETTE,
@@ -89,7 +89,7 @@ def listings_by_location(selected_year):
 def listings_mean_by_location(selected_locations):
     frame = datalayer.indicator("airbnb_homeway")
     frame = frame[frame["SUBTEMA"].isin(selected_locations)]
-    frame = frame.groupby("SUBTEMA").mean().reset_index()
+    frame = frame.groupby("SUBTEMA").mean(numeric_only=True).reset_index()
     fig = px.bar(
         frame, x="SUBTEMA", y="VALOR", color="SUBTEMA", labels=LOCATION,
         color_discrete_sequence=PALETTE,

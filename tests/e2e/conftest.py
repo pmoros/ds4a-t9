@@ -21,8 +21,6 @@ from urllib.parse import urlparse
 
 import pytest
 
-# Without Playwright (Python 3.7) this directory is not collected at all; see
-# collect_ignore in tests/conftest.py.
 from playwright.sync_api import Error as PlaywrightError
 from playwright.sync_api import expect
 from werkzeug.serving import make_server
@@ -70,7 +68,7 @@ STUB_CONTENT_TYPES = {
     "xhr": "application/json",
 }
 
-# Counts Dash callback requests that are still in flight. Dash 1.21's
+# Counts Dash callback requests that are still in flight. Dash's
 # renderer uses window.fetch for /_dash-update-component.
 TRACK_DASH_REQUESTS = (
     """

@@ -4,7 +4,7 @@ import pytest
 from playwright.sync_api import expect
 
 import app as legacy
-import dash_core_components as dcc
+from dash import dcc
 from helpers import iter_components, page_layouts
 
 pytestmark = pytest.mark.e2e

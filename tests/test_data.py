@@ -1,4 +1,4 @@
-"""Characterization tests for the data layer (datalayer + data.py).
+"""Characterization tests for the data layer.
 
 The snapshot ids are the legacy ``data.df_*`` names, so these tests prove the
 datalayer reproduces every frame data.py used to build.

@@ -59,11 +59,13 @@ def _build():
                             html.Div(
                                 [
                                     # Botón Nacionales
-                                    dbc.Button(
+                                    # html.Button, not dbc.Button: the kind toggle compares
+                                    # n_clicks_timestamp, which dbc 1.x removed.
+                                    html.Button(
                                         "National travelers",
                                         n_clicks_timestamp="0",
                                         id="viajeros-selector-national",
-                                        className="main-primary-selector-subpage btn-block",
+                                        className="main-primary-selector-subpage btn btn-primary w-100",
                                     ),
                                 ],
                                 style={"textAlign": "center"},
@@ -75,11 +77,13 @@ def _build():
                             html.Div(
                                 [
                                     # Botón Internacionales
-                                    dbc.Button(
+                                    # html.Button, not dbc.Button: the kind toggle compares
+                                    # n_clicks_timestamp, which dbc 1.x removed.
+                                    html.Button(
                                         "International travelers",
                                         n_clicks_timestamp="0",
                                         id="viajeros-selector-international",
-                                        className="main-primary-selector-subpage btn-block",
+                                        className="main-primary-selector-subpage btn btn-primary w-100",
                                     ),
                                 ],
                                 style={"textAlign": "center"},

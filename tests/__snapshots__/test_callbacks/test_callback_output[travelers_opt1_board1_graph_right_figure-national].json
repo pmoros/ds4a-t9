@@ -24,8 +24,8 @@
         "opacity": 0.5
       },
       "name": "",
-      "subplot": "mapbox",
-      "type": "choroplethmapbox",
+      "subplot": "map",
+      "type": "choroplethmap",
       "z": [
         2451997.7832561727,
         4808104.113827161,
@@ -45,6 +45,7 @@
   ],
   "layout": {
     "coloraxis": {
+      "autocolorscale": false,
       "colorbar": {
         "title": {
           "text": "VIAJEROS"
@@ -96,7 +97,7 @@
     "legend": {
       "tracegroupgap": 0
     },
-    "mapbox": {
+    "map": {
       "center": {
         "lat": 4.824335,
         "lon": -74.063644

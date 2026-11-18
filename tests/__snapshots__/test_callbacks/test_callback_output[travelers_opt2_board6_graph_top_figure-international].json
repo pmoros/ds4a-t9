@@ -1,7 +1,6 @@
 {
   "data": [
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=De 4 a 30 Noches<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "De 4 a 30 Noches",
       "marker": {
@@ -11,7 +10,6 @@
         }
       },
       "name": "De 4 a 30 Noches",
-      "offsetgroup": "De 4 a 30 Noches",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -48,7 +46,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=Dos Noches<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "Dos Noches",
       "marker": {
@@ -58,7 +55,6 @@
         }
       },
       "name": "Dos Noches",
-      "offsetgroup": "Dos Noches",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -95,7 +91,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=Mas de 31 Noches<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "Mas de 31 Noches",
       "marker": {
@@ -105,7 +100,6 @@
         }
       },
       "name": "Mas de 31 Noches",
-      "offsetgroup": "Mas de 31 Noches",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -142,7 +136,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=Tres Noches<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "Tres Noches",
       "marker": {
@@ -152,7 +145,6 @@
         }
       },
       "name": "Tres Noches",
-      "offsetgroup": "Tres Noches",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -189,7 +181,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=Una Noche<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "Una Noche",
       "marker": {
@@ -199,7 +190,6 @@
         }
       },
       "name": "Una Noche",
-      "offsetgroup": "Una Noche",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",

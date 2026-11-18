@@ -100,10 +100,10 @@
                         "props": {
                           "children": [
                             {
-                              "namespace": "dash_bootstrap_components",
+                              "namespace": "dash_html_components",
                               "props": {
                                 "children": "National travelers",
-                                "className": "main-primary-selector-subpage btn-block",
+                                "className": "main-primary-selector-subpage btn btn-primary w-100",
                                 "id": "viajeros-selector-national",
                                 "n_clicks_timestamp": "0"
                               },
@@ -133,10 +133,10 @@
                         "props": {
                           "children": [
                             {
-                              "namespace": "dash_bootstrap_components",
+                              "namespace": "dash_html_components",
                               "props": {
                                 "children": "International travelers",
-                                "className": "main-primary-selector-subpage btn-block",
+                                "className": "main-primary-selector-subpage btn btn-primary w-100",
                                 "id": "viajeros-selector-international",
                                 "n_clicks_timestamp": "0"
                               },

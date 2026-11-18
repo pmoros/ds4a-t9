@@ -1,7 +1,6 @@
 {
   "data": [
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Establishment Type=%{x}<br>Total=%{y}<extra></extra>",
       "legendgroup": "Establecimientos gastronómicos",
       "marker": {
@@ -11,7 +10,6 @@
         }
       },
       "name": "Establecimientos gastronómicos",
-      "offsetgroup": "Establecimientos gastronómicos",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -26,7 +24,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Establishment Type=%{x}<br>Total=%{y}<extra></extra>",
       "legendgroup": "Empresas de transporte terrestre",
       "marker": {
@@ -36,7 +33,6 @@
         }
       },
       "name": "Empresas de transporte terrestre",
-      "offsetgroup": "Empresas de transporte terrestre",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -51,7 +47,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Establishment Type=%{x}<br>Total=%{y}<extra></extra>",
       "legendgroup": "Sedes para eventos",
       "marker": {
@@ -61,7 +56,6 @@
         }
       },
       "name": "Sedes para eventos",
-      "offsetgroup": "Sedes para eventos",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -76,7 +70,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Establishment Type=%{x}<br>Total=%{y}<extra></extra>",
       "legendgroup": "Establecimientos de alojamiento",
       "marker": {
@@ -86,7 +79,6 @@
         }
       },
       "name": "Establecimientos de alojamiento",
-      "offsetgroup": "Establecimientos de alojamiento",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -101,7 +93,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Establishment Type=%{x}<br>Total=%{y}<extra></extra>",
       "legendgroup": "Agencias de viajes",
       "marker": {
@@ -111,7 +102,6 @@
         }
       },
       "name": "Agencias de viajes",
-      "offsetgroup": "Agencias de viajes",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",

@@ -1,7 +1,6 @@
 {
   "data": [
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=B. DE 18 A 30<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "B. DE 18 A 30",
       "marker": {
@@ -11,7 +10,6 @@
         }
       },
       "name": "B. DE 18 A 30",
-      "offsetgroup": "B. DE 18 A 30",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -48,7 +46,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=C. DE 31 A 45<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "C. DE 31 A 45",
       "marker": {
@@ -58,7 +55,6 @@
         }
       },
       "name": "C. DE 31 A 45",
-      "offsetgroup": "C. DE 31 A 45",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -95,7 +91,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=D. DE 46 A 60<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "D. DE 46 A 60",
       "marker": {
@@ -105,7 +100,6 @@
         }
       },
       "name": "D. DE 46 A 60",
-      "offsetgroup": "D. DE 46 A 60",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -142,7 +136,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=E. MAYOR A 60<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "E. MAYOR A 60",
       "marker": {
@@ -152,7 +145,6 @@
         }
       },
       "name": "E. MAYOR A 60",
-      "offsetgroup": "E. MAYOR A 60",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -189,7 +181,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=F. MENOR DE 18<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "F. MENOR DE 18",
       "marker": {
@@ -199,7 +190,6 @@
         }
       },
       "name": "F. MENOR DE 18",
-      "offsetgroup": "F. MENOR DE 18",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",

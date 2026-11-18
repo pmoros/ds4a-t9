@@ -1,7 +1,6 @@
 {
   "data": [
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=A. VACACIONES_RECREACION_OCIO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "A. VACACIONES_RECREACION_OCIO",
       "marker": {
@@ -11,7 +10,6 @@
         }
       },
       "name": "A. VACACIONES_RECREACION_OCIO",
-      "offsetgroup": "A. VACACIONES_RECREACION_OCIO",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -48,7 +46,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=B. VISITA A FAMILIARES Y AMIGOS<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "B. VISITA A FAMILIARES Y AMIGOS",
       "marker": {
@@ -58,7 +55,6 @@
         }
       },
       "name": "B. VISITA A FAMILIARES Y AMIGOS",
-      "offsetgroup": "B. VISITA A FAMILIARES Y AMIGOS",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -95,7 +91,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=C. EDUCACION Y FORMACION<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "C. EDUCACION Y FORMACION",
       "marker": {
@@ -105,7 +100,6 @@
         }
       },
       "name": "C. EDUCACION Y FORMACION",
-      "offsetgroup": "C. EDUCACION Y FORMACION",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -142,7 +136,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=D. SALUD Y ATENCION MEDICA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "D. SALUD Y ATENCION MEDICA",
       "marker": {
@@ -152,7 +145,6 @@
         }
       },
       "name": "D. SALUD Y ATENCION MEDICA",
-      "offsetgroup": "D. SALUD Y ATENCION MEDICA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -189,7 +181,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=E. RELIGION_PEREGRINACIONES<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "E. RELIGION_PEREGRINACIONES",
       "marker": {
@@ -199,7 +190,6 @@
         }
       },
       "name": "E. RELIGION_PEREGRINACIONES",
-      "offsetgroup": "E. RELIGION_PEREGRINACIONES",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -236,7 +226,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=F. COMPRAS<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "F. COMPRAS",
       "marker": {
@@ -246,7 +235,6 @@
         }
       },
       "name": "F. COMPRAS",
-      "offsetgroup": "F. COMPRAS",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -283,7 +271,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=G. NEGOCIOS Y MOTIVOS PROFESIONALES<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "G. NEGOCIOS Y MOTIVOS PROFESIONALES",
       "marker": {
@@ -293,7 +280,6 @@
         }
       },
       "name": "G. NEGOCIOS Y MOTIVOS PROFESIONALES",
-      "offsetgroup": "G. NEGOCIOS Y MOTIVOS PROFESIONALES",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -330,7 +316,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=H. TRABAJO REMUNERADO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "H. TRABAJO REMUNERADO",
       "marker": {
@@ -340,7 +325,6 @@
         }
       },
       "name": "H. TRABAJO REMUNERADO",
-      "offsetgroup": "H. TRABAJO REMUNERADO",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -377,7 +361,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=I. OTRO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "I. OTRO",
       "marker": {
@@ -387,7 +370,6 @@
         }
       },
       "name": "I. OTRO",
-      "offsetgroup": "I. OTRO",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",

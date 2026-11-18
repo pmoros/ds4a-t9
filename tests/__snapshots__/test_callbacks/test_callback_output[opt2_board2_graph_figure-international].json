@@ -1,7 +1,6 @@
 {
   "data": [
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Year=%{marker.color}<br>Total=%{y}<extra></extra>",
       "legendgroup": "",
       "marker": {
@@ -23,7 +22,6 @@
         }
       },
       "name": "",
-      "offsetgroup": "",
       "orientation": "v",
       "showlegend": false,
       "textposition": "auto",
@@ -59,6 +57,7 @@
   "layout": {
     "barmode": "relative",
     "coloraxis": {
+      "autocolorscale": false,
       "colorbar": {
         "title": {
           "text": "Year"

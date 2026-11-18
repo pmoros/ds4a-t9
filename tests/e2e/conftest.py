@@ -26,6 +26,7 @@ from playwright.sync_api import expect
 from werkzeug.serving import make_server
 
 FIXTURES = Path(__file__).parent / "fixtures"
+EMPTY_MAP_STYLE = json.dumps({"version": 8, "sources": {}, "layers": []})
 APP_TITLE = "IDT Dashboard"
 UPDATE_PATH = "/_dash-update-component"
 LOCAL_HOSTS = {"127.0.0.1", "localhost"}
@@ -35,12 +36,12 @@ LOCAL_HOSTS = {"127.0.0.1", "localhost"}
 # gets noticed instead of being stubbed silently.
 KNOWN_EXTERNAL_HOSTS = (
     "ds4a-team9-idt.s3.us-east-2.amazonaws.com",  # images
-    "stackpath.bootstrapcdn.com",  # Bootswatch theme (vendored)
+    "cdn.jsdelivr.net",  # Bootswatch theme (vendored)
     "fonts.googleapis.com",
     "fonts.gstatic.com",
     "static.wixstatic.com",
     "cdn.plot.ly",  # geo topojson (vendored)
-    ".global.ssl.fastly.net",  # Carto basemap tiles (cartodb-basemaps-*)
+    "basemaps.cartocdn.com",  # Carto MapLibre style (stubbed with an empty style)
 )
 
 
@@ -139,12 +140,15 @@ def _fulfill_external(route, stubbed):
     parsed = urlparse(url)
     stubbed.append(url)
 
-    if "bootswatch/4.5.2/sandstone" in url:
-        route.fulfill(path=FIXTURES / "bootswatch-4.5.2-sandstone.min.css")
+    if "bootswatch@5.3.6/dist/sandstone" in url:
+        route.fulfill(path=FIXTURES / "bootswatch-5.3.6-sandstone.min.css")
+    elif parsed.path.endswith("/style.json"):
+        # MapLibre basemap style (Carto). An empty style draws no basemap and
+        # requests no tiles, sprites or fonts; the choropleth still renders.
+        route.fulfill(body=EMPTY_MAP_STYLE, content_type="application/json")
     elif parsed.hostname == "cdn.plot.ly" and parsed.path.endswith(".json"):
         route.fulfill(path=FIXTURES / "world_110m.json")
     elif request.resource_type == "image" or parsed.path.lower().endswith(IMAGE_SUFFIXES):
-        # Also covers Carto basemap tiles, which mapbox-gl requests via fetch.
         route.fulfill(body=PNG_1X1, content_type="image/png")
     else:
         content_type = STUB_CONTENT_TYPES.get(request.resource_type, "text/plain")
@@ -210,30 +214,38 @@ class DashPage:
             pass  # fall through to report the actual count
         return self.page.evaluate(COUNT_GRAPHS_WITH_DATA)
 
-    # -- dcc.Dropdown helpers (react-select) ---------------------------------
+    # -- dcc.Dropdown helpers (Dash 4) ---------------------------------------
+    # The open menu is rendered in a popover at the end of <body>, outside the
+    # component's own element; only one is open at a time.
 
     def dropdown(self, component_id):
         return self.page.locator("#%s" % component_id)
 
     def dropdown_values(self, component_id):
-        return self.dropdown(component_id).locator(".Select-value-label")
+        return self.dropdown(component_id).locator(".dash-dropdown-value-item")
+
+    def dropdown_menu(self):
+        return self.page.locator(".dash-dropdown-content")
 
     def dropdown_type(self, component_id, text):
-        self.dropdown(component_id).locator(".Select-input input").fill(text)
+        self.dropdown(component_id).locator(".dash-dropdown-trigger").click()
+        self.dropdown_menu().locator("input.dash-dropdown-search").fill(text)
 
     def wait_for_bars(self, graph_id, expected, traces):
         """Poll until a bar figure has ``traces`` traces and the ``expected``
         {trace name: first y} values; return what is rendered at the end.
 
         Polling (rather than reading once after wait_idle) avoids racing
-        Plotly's re-render after the callback response arrives.
+        Plotly's re-render after the callback response arrives. Values are read
+        from ``_fullData``: plotly >= 6 sends arrays base64-encoded, and only
+        the computed traces hold them decoded.
         """
         try:
             self.page.wait_for_function(
                 """([id, expected, traces]) => {
                      const gd = document.querySelector('#' + id + ' .js-plotly-plot');
                      if (!gd || !Array.isArray(gd.data) || gd.data.length !== traces) return false;
-                     const bars = Object.fromEntries(gd.data.map(t => [t.name, Number(t.y[0])]));
+                     const bars = Object.fromEntries(gd._fullData.map(t => [t.name, Number(t.y[0])]));
                      return Object.entries(expected).every(
                        ([name, v]) => name in bars && Math.abs(bars[name] - v) <= 1e-6 * Math.max(1, Math.abs(v)));
                    }""",
@@ -245,7 +257,7 @@ class DashPage:
             """id => {
                  const gd = document.querySelector('#' + id + ' .js-plotly-plot');
                  if (!gd || !Array.isArray(gd.data)) return {};
-                 return Object.fromEntries(gd.data.map(t => [t.name, Number(t.y[0])]));
+                 return Object.fromEntries(gd._fullData.map(t => [t.name, Number(t.y[0])]));
                }""",
             graph_id,
         )

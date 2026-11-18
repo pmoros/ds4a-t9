@@ -1,7 +1,6 @@
 {
   "data": [
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=A. PRIMARIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "A. PRIMARIA",
       "marker": {
@@ -11,7 +10,6 @@
         }
       },
       "name": "A. PRIMARIA",
-      "offsetgroup": "A. PRIMARIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -48,7 +46,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=B. SECUNDARIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "B. SECUNDARIA",
       "marker": {
@@ -58,7 +55,6 @@
         }
       },
       "name": "B. SECUNDARIA",
-      "offsetgroup": "B. SECUNDARIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -95,7 +91,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=C. TECNICO O TECNOLOGICO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "C. TECNICO O TECNOLOGICO",
       "marker": {
@@ -105,7 +100,6 @@
         }
       },
       "name": "C. TECNICO O TECNOLOGICO",
-      "offsetgroup": "C. TECNICO O TECNOLOGICO",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -142,7 +136,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=D. PROFESIONAL UNIVERSITARIO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "D. PROFESIONAL UNIVERSITARIO",
       "marker": {
@@ -152,7 +145,6 @@
         }
       },
       "name": "D. PROFESIONAL UNIVERSITARIO",
-      "offsetgroup": "D. PROFESIONAL UNIVERSITARIO",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -189,7 +181,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=E. ESTUDIOS DE POSGRADO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "E. ESTUDIOS DE POSGRADO",
       "marker": {
@@ -199,7 +190,6 @@
         }
       },
       "name": "E. ESTUDIOS DE POSGRADO",
-      "offsetgroup": "E. ESTUDIOS DE POSGRADO",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -236,7 +226,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=F. NINGUNO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "F. NINGUNO",
       "marker": {
@@ -246,7 +235,6 @@
         }
       },
       "name": "F. NINGUNO",
-      "offsetgroup": "F. NINGUNO",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",

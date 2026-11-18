@@ -59,7 +59,8 @@ def test_entrypoints_use_gunicorn_with_its_config(entrypoint):
 
 
 def test_debug_is_never_hardcoded():
-    assert "debug=True" not in (REPO_ROOT / "app.py").read_text(encoding="utf-8")
+    sources = [REPO_ROOT / "app.py", *sorted((REPO_ROOT / "dashboard").rglob("*.py"))]
+    assert [str(p) for p in sources if "debug=True" in p.read_text(encoding="utf-8")] == []
 
 
 # --------------------------------------------------------------------------

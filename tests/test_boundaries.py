@@ -1,4 +1,4 @@
-"""AC5: callbacks and layouts get data only through datalayer."""
+"""AC5: callbacks and pages get data only through datalayer."""
 
 import re
 from pathlib import Path
@@ -6,7 +6,9 @@ from pathlib import Path
 import pytest
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-CALLERS = ["app.py", "layouts.py", "layouts_viajeros.py", "layouts_indicators.py"]
+CALLERS = ["app.py"] + sorted(
+    str(p.relative_to(REPO_ROOT)) for p in (REPO_ROOT / "dashboard").rglob("*.py")
+)
 
 FORBIDDEN = {
     "data frames from data.py": r"\bdata\.df_",

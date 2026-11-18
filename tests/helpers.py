@@ -78,8 +78,8 @@ def iter_components(root):
 
 
 def display_page(app_module, pathname):
-    """Call the router callback directly (Dash 1.x wraps it with add_context)."""
-    return app_module.display_page.__wrapped__(pathname)
+    """Call the router directly (``app.display_page`` is the plain function)."""
+    return app_module.display_page(pathname)
 
 
 def page_layouts(app_module):

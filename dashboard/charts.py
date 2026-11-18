@@ -171,14 +171,15 @@ def region_map(kind, years, months):
     plot_data = frame.groupby("ORIGEN").sum(numeric_only=True).reset_index()
 
     if kind == TravelerKind.NATIONAL:
-        return px.choropleth_mapbox(
+        # MapLibre map (plotly >= 6); the Mapbox-based choropleth_mapbox is gone.
+        return px.choropleth_map(
             plot_data,
             locations="ORIGEN",
             color="VIAJEROS",
             geojson=datalayer.load_geojson(),
             zoom=4.1,
             featureidkey="properties.NOMBRE_DPT",
-            mapbox_style="carto-positron",
+            map_style="carto-positron",
             center={"lat": 4.824335, "lon": -74.063644},
             color_continuous_scale="Viridis",
             opacity=0.5,

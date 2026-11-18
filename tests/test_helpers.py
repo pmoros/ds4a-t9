@@ -54,3 +54,24 @@ def test_frame_hash_ignores_text_storage_but_not_values():
     assert frame_hash(FRAME) == frame_hash(FRAME.astype({"x": "string"}))
     assert frame_hash(FRAME) != frame_hash(FRAME.assign(x=["a", "c"]))
     assert 0 <= int(frame_hash(FRAME)) < 2**64
+
+
+def test_typed_arrays_are_decoded_to_lists():
+    import base64
+
+    import numpy as np
+
+    raw = base64.b64encode(np.array([1.5, 2.5]).tobytes()).decode()
+    assert to_jsonable({"y": {"bdata": raw, "dtype": "f8"}}) == {"y": [1.5, 2.5]}
+    grid = base64.b64encode(np.arange(4, dtype="i2").tobytes()).decode()
+    assert to_jsonable({"z": {"bdata": grid, "dtype": "i2", "shape": "2, 2"}}) == {
+        "z": [[0, 1], [2, 3]]
+    }
+
+
+def test_offset_groups_are_dropped_unless_bars_are_grouped():
+    stacked = to_jsonable(px.bar(FRAME, x="x", y="y", color="x"))
+    assert all("offsetgroup" not in t and "alignmentgroup" not in t for t in stacked["data"])
+
+    grouped = to_jsonable(px.bar(FRAME, x="x", y="y", color="x", barmode="group"))
+    assert [t["offsetgroup"] for t in grouped["data"]] == ["a", "b"]

@@ -1,7 +1,6 @@
 {
   "data": [
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=A. PRIMARIA<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "A. PRIMARIA, ALEMANIA",
       "marker": {
@@ -11,7 +10,6 @@
         }
       },
       "name": "A. PRIMARIA, ALEMANIA",
-      "offsetgroup": "A. PRIMARIA, ALEMANIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -48,7 +46,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=B. SECUNDARIA<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "B. SECUNDARIA, ALEMANIA",
       "marker": {
@@ -58,7 +55,6 @@
         }
       },
       "name": "B. SECUNDARIA, ALEMANIA",
-      "offsetgroup": "B. SECUNDARIA, ALEMANIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -95,7 +91,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=C. TECNICO O TECNOLOGICO<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "C. TECNICO O TECNOLOGICO, ALEMANIA",
       "marker": {
@@ -105,7 +100,6 @@
         }
       },
       "name": "C. TECNICO O TECNOLOGICO, ALEMANIA",
-      "offsetgroup": "C. TECNICO O TECNOLOGICO, ALEMANIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -142,7 +136,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=D. PROFESIONAL UNIVERSITARIO<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "D. PROFESIONAL UNIVERSITARIO, ALEMANIA",
       "marker": {
@@ -152,7 +145,6 @@
         }
       },
       "name": "D. PROFESIONAL UNIVERSITARIO, ALEMANIA",
-      "offsetgroup": "D. PROFESIONAL UNIVERSITARIO, ALEMANIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -189,7 +181,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=E. ESTUDIOS DE POSGRADO<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "E. ESTUDIOS DE POSGRADO, ALEMANIA",
       "marker": {
@@ -199,7 +190,6 @@
         }
       },
       "name": "E. ESTUDIOS DE POSGRADO, ALEMANIA",
-      "offsetgroup": "E. ESTUDIOS DE POSGRADO, ALEMANIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -236,7 +226,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=F. NINGUNO<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "F. NINGUNO, ALEMANIA",
       "marker": {
@@ -246,7 +235,6 @@
         }
       },
       "name": "F. NINGUNO, ALEMANIA",
-      "offsetgroup": "F. NINGUNO, ALEMANIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",

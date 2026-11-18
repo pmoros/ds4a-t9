@@ -1,7 +1,6 @@
 {
   "data": [
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
       "legendgroup": "Barrios Unidos",
       "marker": {
@@ -11,7 +10,6 @@
         }
       },
       "name": "Barrios Unidos",
-      "offsetgroup": "Barrios Unidos",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -27,7 +25,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
       "legendgroup": "Bosa",
       "marker": {
@@ -37,7 +34,6 @@
         }
       },
       "name": "Bosa",
-      "offsetgroup": "Bosa",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",

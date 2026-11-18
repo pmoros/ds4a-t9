@@ -8,10 +8,12 @@
   graph callbacks, as they do in the browser).
 """
 
+import base64
 import hashlib
 import json
 import re
 
+import numpy as np
 import pandas as pd
 import plotly.utils
 from dash.development.base_component import Component
@@ -52,6 +54,11 @@ MAX_PASSES = 6
 #   (backgrounds, grids, colorway, fonts), so only that is digested. ``mapbox``
 #   is left out because plotly renamed the map style defaults.
 # * fillpattern {"shape": ""} on traces: an empty default newer plotly emits.
+# * {"bdata", "dtype"[, "shape"]}: plotly >= 6 sends numpy arrays base64-encoded;
+#   decoded back to plain lists (lossless).
+# * alignmentgroup / offsetgroup: plotly >= 6 only emits them where they
+#   matter, i.e. grouped bars. They are dropped everywhere else, and kept on
+#   figures with layout.barmode == "group" so a grouping change still shows.
 
 
 def _digest(value):
@@ -64,7 +71,36 @@ def _template_digest(template):
     return _digest(layout)
 
 
+_NUMPY_DTYPES = {"f8": "<f8", "f4": "<f4", "i1": "i1", "u1": "u1", "i2": "<i2"}
+_NUMPY_DTYPES.update({"u2": "<u2", "i4": "<i4", "u4": "<u4", "i8": "<i8", "u8": "<u8"})
+
+
+def _decode_typed_array(value):
+    array = np.frombuffer(base64.b64decode(value["bdata"]), dtype=_NUMPY_DTYPES[value["dtype"]])
+    if "shape" in value:
+        shape = [int(n) for n in str(value["shape"]).split(",")]
+        array = array.reshape(shape)
+    return array.tolist()
+
+
+def _is_typed_array(value):
+    return isinstance(value, dict) and set(value) - {"shape"} == {"bdata", "dtype"}
+
+
+def _drop_offset_groups(figure):
+    if figure.get("layout", {}).get("barmode") == "group":
+        return figure
+    for trace in figure.get("data", []):
+        trace.pop("alignmentgroup", None)
+        trace.pop("offsetgroup", None)
+    return figure
+
+
 def _scrub(value):
+    if _is_typed_array(value):
+        return _decode_typed_array(value)
+    if isinstance(value, dict) and isinstance(value.get("data"), list) and "layout" in value:
+        value = _drop_offset_groups(dict(value, data=[dict(t) for t in value["data"]]))
     if isinstance(value, dict):
         out = {}
         for key, item in value.items():

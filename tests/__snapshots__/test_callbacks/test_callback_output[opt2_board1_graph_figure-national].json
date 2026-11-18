@@ -1,7 +1,6 @@
 {
   "data": [
     {
-      "alignmentgroup": "True",
       "hovertemplate": "VARIABLE=Capacidad aérea<br>Year=2018<br>Country=%{x}<br>Total=%{y}<extra></extra>",
       "legendgroup": "Capacidad aérea",
       "marker": {
@@ -11,7 +10,6 @@
         }
       },
       "name": "Capacidad aérea",
-      "offsetgroup": "Capacidad aérea",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",

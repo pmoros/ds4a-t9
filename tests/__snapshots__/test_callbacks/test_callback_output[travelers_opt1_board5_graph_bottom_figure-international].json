@@ -1,7 +1,6 @@
 {
   "data": [
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=A. EMPLEADO<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "A. EMPLEADO, ALEMANIA",
       "marker": {
@@ -11,7 +10,6 @@
         }
       },
       "name": "A. EMPLEADO, ALEMANIA",
-      "offsetgroup": "A. EMPLEADO, ALEMANIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -48,7 +46,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=B. PATRON O EMPLEADOR<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "B. PATRON O EMPLEADOR, ALEMANIA",
       "marker": {
@@ -58,7 +55,6 @@
         }
       },
       "name": "B. PATRON O EMPLEADOR, ALEMANIA",
-      "offsetgroup": "B. PATRON O EMPLEADOR, ALEMANIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -95,7 +91,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=C. TRABAJADOR INDEPENDIENTE<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "C. TRABAJADOR INDEPENDIENTE, ALEMANIA",
       "marker": {
@@ -105,7 +100,6 @@
         }
       },
       "name": "C. TRABAJADOR INDEPENDIENTE, ALEMANIA",
-      "offsetgroup": "C. TRABAJADOR INDEPENDIENTE, ALEMANIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -142,7 +136,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=D. OFICIOS DEL HOGAR<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "D. OFICIOS DEL HOGAR, ALEMANIA",
       "marker": {
@@ -152,7 +145,6 @@
         }
       },
       "name": "D. OFICIOS DEL HOGAR, ALEMANIA",
-      "offsetgroup": "D. OFICIOS DEL HOGAR, ALEMANIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -189,7 +181,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=E. RENTISTA Y/O PENSIONADO<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "E. RENTISTA Y/O PENSIONADO, ALEMANIA",
       "marker": {
@@ -199,7 +190,6 @@
         }
       },
       "name": "E. RENTISTA Y/O PENSIONADO, ALEMANIA",
-      "offsetgroup": "E. RENTISTA Y/O PENSIONADO, ALEMANIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -236,7 +226,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=F. ESTUDIANTE<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "F. ESTUDIANTE, ALEMANIA",
       "marker": {
@@ -246,7 +235,6 @@
         }
       },
       "name": "F. ESTUDIANTE, ALEMANIA",
-      "offsetgroup": "F. ESTUDIANTE, ALEMANIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -283,7 +271,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=G. OTRO<br>ORIGIN=ALEMANIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "G. OTRO, ALEMANIA",
       "marker": {
@@ -293,7 +280,6 @@
         }
       },
       "name": "G. OTRO, ALEMANIA",
-      "offsetgroup": "G. OTRO, ALEMANIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",

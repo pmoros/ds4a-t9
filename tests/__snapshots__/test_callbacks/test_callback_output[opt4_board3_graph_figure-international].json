@@ -51,6 +51,7 @@
   "layout": {
     "barmode": "relative",
     "coloraxis": {
+      "autocolorscale": false,
       "colorbar": {
         "title": {
           "text": "Year"

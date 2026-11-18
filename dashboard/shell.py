@@ -93,7 +93,7 @@ navBar = dbc.NavbarSimple(
     expand="lg",
     # fluid=True,
     sticky="top",
-    className="mr-auto",
+    className="me-auto",
 )
 
 # Footer

@@ -68,9 +68,7 @@ def test_switching_to_international_travelers(dash):
 
     # The options list is virtualized, so search instead of scanning it.
     dash.dropdown_type(ORIGIN_SELECTOR, "ESTADOS")
-    expect(dash.dropdown(ORIGIN_SELECTOR).locator(".Select-menu-outer")).to_contain_text(
-        "ESTADOS UNIDOS"
-    )
+    expect(dash.dropdown_menu()).to_contain_text("ESTADOS UNIDOS")
     dash.page.keyboard.press("Escape")
     dash.wait_idle()
 

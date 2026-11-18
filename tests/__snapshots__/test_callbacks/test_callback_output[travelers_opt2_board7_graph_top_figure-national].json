@@ -1,7 +1,6 @@
 {
   "data": [
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=A. VEHICULO PROPIO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "A. VEHICULO PROPIO",
       "marker": {
@@ -11,7 +10,6 @@
         }
       },
       "name": "A. VEHICULO PROPIO",
-      "offsetgroup": "A. VEHICULO PROPIO",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -48,7 +46,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=B. VEHICULO PARTICULAR UBER<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "B. VEHICULO PARTICULAR UBER",
       "marker": {
@@ -58,7 +55,6 @@
         }
       },
       "name": "B. VEHICULO PARTICULAR UBER",
-      "offsetgroup": "B. VEHICULO PARTICULAR UBER",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -95,7 +91,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=C. BICICLETA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "C. BICICLETA",
       "marker": {
@@ -105,7 +100,6 @@
         }
       },
       "name": "C. BICICLETA",
-      "offsetgroup": "C. BICICLETA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -142,7 +136,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=D. VEHICULO DE ALQUILER<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "D. VEHICULO DE ALQUILER",
       "marker": {
@@ -152,7 +145,6 @@
         }
       },
       "name": "D. VEHICULO DE ALQUILER",
-      "offsetgroup": "D. VEHICULO DE ALQUILER",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -189,7 +181,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=E. VEHICULO DE FAMILIARES<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "E. VEHICULO DE FAMILIARES",
       "marker": {
@@ -199,7 +190,6 @@
         }
       },
       "name": "E. VEHICULO DE FAMILIARES",
-      "offsetgroup": "E. VEHICULO DE FAMILIARES",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -236,7 +226,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=F. TRANSPORTE PUBLICO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "F. TRANSPORTE PUBLICO",
       "marker": {
@@ -246,7 +235,6 @@
         }
       },
       "name": "F. TRANSPORTE PUBLICO",
-      "offsetgroup": "F. TRANSPORTE PUBLICO",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -283,7 +271,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=G. TRANSPORTE EN TAXI<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "G. TRANSPORTE EN TAXI",
       "marker": {
@@ -293,7 +280,6 @@
         }
       },
       "name": "G. TRANSPORTE EN TAXI",
-      "offsetgroup": "G. TRANSPORTE EN TAXI",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -330,7 +316,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=H. OTRO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "H. OTRO",
       "marker": {
@@ -340,7 +325,6 @@
         }
       },
       "name": "H. OTRO",
-      "offsetgroup": "H. OTRO",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",

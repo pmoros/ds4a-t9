@@ -1,7 +1,6 @@
 {
   "data": [
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=A. EMPLEADO<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "A. EMPLEADO, ANTIOQUIA",
       "marker": {
@@ -11,7 +10,6 @@
         }
       },
       "name": "A. EMPLEADO, ANTIOQUIA",
-      "offsetgroup": "A. EMPLEADO, ANTIOQUIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -48,7 +46,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=B. PATRON O EMPLEADOR<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "B. PATRON O EMPLEADOR, ANTIOQUIA",
       "marker": {
@@ -58,7 +55,6 @@
         }
       },
       "name": "B. PATRON O EMPLEADOR, ANTIOQUIA",
-      "offsetgroup": "B. PATRON O EMPLEADOR, ANTIOQUIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -95,7 +91,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=C. TRABAJADOR INDEPENDIENTE<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "C. TRABAJADOR INDEPENDIENTE, ANTIOQUIA",
       "marker": {
@@ -105,7 +100,6 @@
         }
       },
       "name": "C. TRABAJADOR INDEPENDIENTE, ANTIOQUIA",
-      "offsetgroup": "C. TRABAJADOR INDEPENDIENTE, ANTIOQUIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -142,7 +136,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=D. OFICIOS DEL HOGAR<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "D. OFICIOS DEL HOGAR, ANTIOQUIA",
       "marker": {
@@ -152,7 +145,6 @@
         }
       },
       "name": "D. OFICIOS DEL HOGAR, ANTIOQUIA",
-      "offsetgroup": "D. OFICIOS DEL HOGAR, ANTIOQUIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -189,7 +181,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=E. RENTISTA Y/O PENSIONADO<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "E. RENTISTA Y/O PENSIONADO, ANTIOQUIA",
       "marker": {
@@ -199,7 +190,6 @@
         }
       },
       "name": "E. RENTISTA Y/O PENSIONADO, ANTIOQUIA",
-      "offsetgroup": "E. RENTISTA Y/O PENSIONADO, ANTIOQUIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -236,7 +226,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=F. ESTUDIANTE<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "F. ESTUDIANTE, ANTIOQUIA",
       "marker": {
@@ -246,7 +235,6 @@
         }
       },
       "name": "F. ESTUDIANTE, ANTIOQUIA",
-      "offsetgroup": "F. ESTUDIANTE, ANTIOQUIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -283,7 +271,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=G. OTRO<br>ORIGIN=ANTIOQUIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "G. OTRO, ANTIOQUIA",
       "marker": {
@@ -293,7 +280,6 @@
         }
       },
       "name": "G. OTRO, ANTIOQUIA",
-      "offsetgroup": "G. OTRO, ANTIOQUIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",

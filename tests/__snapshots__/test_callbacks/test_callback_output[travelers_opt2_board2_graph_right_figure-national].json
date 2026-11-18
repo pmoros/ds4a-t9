@@ -1,7 +1,6 @@
 {
   "data": [
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Atraction=%{x}<br>VIAJEROS=%{y}<extra></extra>",
       "legendgroup": "A. MONSERRATE",
       "marker": {
@@ -11,7 +10,6 @@
         }
       },
       "name": "A. MONSERRATE",
-      "offsetgroup": "A. MONSERRATE",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -26,7 +24,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Atraction=%{x}<br>VIAJEROS=%{y}<extra></extra>",
       "legendgroup": "B. CABLE",
       "marker": {
@@ -36,7 +33,6 @@
         }
       },
       "name": "B. CABLE",
-      "offsetgroup": "B. CABLE",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -51,7 +47,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Atraction=%{x}<br>VIAJEROS=%{y}<extra></extra>",
       "legendgroup": "C. CORFERIAS",
       "marker": {
@@ -61,7 +56,6 @@
         }
       },
       "name": "C. CORFERIAS",
-      "offsetgroup": "C. CORFERIAS",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -76,7 +70,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Atraction=%{x}<br>VIAJEROS=%{y}<extra></extra>",
       "legendgroup": "D. ZONAS",
       "marker": {
@@ -86,7 +79,6 @@
         }
       },
       "name": "D. ZONAS",
-      "offsetgroup": "D. ZONAS",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -101,7 +93,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Atraction=%{x}<br>VIAJEROS=%{y}<extra></extra>",
       "legendgroup": "E. USAQUEN",
       "marker": {
@@ -111,7 +102,6 @@
         }
       },
       "name": "E. USAQUEN",
-      "offsetgroup": "E. USAQUEN",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -126,7 +116,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Atraction=%{x}<br>VIAJEROS=%{y}<extra></extra>",
       "legendgroup": "F. HUMEDAL",
       "marker": {
@@ -136,7 +125,6 @@
         }
       },
       "name": "F. HUMEDAL",
-      "offsetgroup": "F. HUMEDAL",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -151,7 +139,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Atraction=%{x}<br>VIAJEROS=%{y}<extra></extra>",
       "legendgroup": "G. PARQUES",
       "marker": {
@@ -161,7 +148,6 @@
         }
       },
       "name": "G. PARQUES",
-      "offsetgroup": "G. PARQUES",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -176,7 +162,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Atraction=%{x}<br>VIAJEROS=%{y}<extra></extra>",
       "legendgroup": "H. CCOMERCIAL",
       "marker": {
@@ -186,7 +171,6 @@
         }
       },
       "name": "H. CCOMERCIAL",
-      "offsetgroup": "H. CCOMERCIAL",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -201,7 +185,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Atraction=%{x}<br>VIAJEROS=%{y}<extra></extra>",
       "legendgroup": "I. OTRO",
       "marker": {
@@ -211,7 +194,6 @@
         }
       },
       "name": "I. OTRO",
-      "offsetgroup": "I. OTRO",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",

@@ -54,3 +54,16 @@
     }
     
   }
+/* Bootstrap 5 makes every direct child of a .row full-width (`.row > *`).
+   Bootstrap 4 did not, and rows built with dbc.Row(justify="center") or a
+   justify-content-* class (headings, paragraphs, the About-us quote) keeping their own width so they are centred or pushed to the end. Restore
+   that for justified rows only. */
+.row[class*="justify-content-"] > :not([class*="col"]) {
+  width: auto;
+}
+
+/* Bootswatch 4 Sandstone set body text at 0.875rem; Bootswatch 5 uses 1rem.
+   Keep the original size so text wraps as it was designed. */
+:root {
+  --bs-body-font-size: 0.875rem;
+}

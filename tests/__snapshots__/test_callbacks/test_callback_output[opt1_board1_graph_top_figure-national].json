@@ -1,7 +1,6 @@
 {
   "data": [
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
       "legendgroup": "Barrios Unidos",
       "marker": {
@@ -11,7 +10,6 @@
         }
       },
       "name": "Barrios Unidos",
-      "offsetgroup": "Barrios Unidos",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -26,7 +24,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
       "legendgroup": "Bosa",
       "marker": {
@@ -36,7 +33,6 @@
         }
       },
       "name": "Bosa",
-      "offsetgroup": "Bosa",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -51,7 +47,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
       "legendgroup": "Candelaria",
       "marker": {
@@ -61,7 +56,6 @@
         }
       },
       "name": "Candelaria",
-      "offsetgroup": "Candelaria",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -76,7 +70,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
       "legendgroup": "Chapinero",
       "marker": {
@@ -86,7 +79,6 @@
         }
       },
       "name": "Chapinero",
-      "offsetgroup": "Chapinero",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -101,7 +93,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
       "legendgroup": "Engativá",
       "marker": {
@@ -111,7 +102,6 @@
         }
       },
       "name": "Engativá",
-      "offsetgroup": "Engativá",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -126,7 +116,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
       "legendgroup": "Fontibón",
       "marker": {
@@ -136,7 +125,6 @@
         }
       },
       "name": "Fontibón",
-      "offsetgroup": "Fontibón",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -151,7 +139,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
       "legendgroup": "Kennedy",
       "marker": {
@@ -161,7 +148,6 @@
         }
       },
       "name": "Kennedy",
-      "offsetgroup": "Kennedy",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -176,7 +162,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
       "legendgroup": "Los Martires",
       "marker": {
@@ -186,7 +171,6 @@
         }
       },
       "name": "Los Martires",
-      "offsetgroup": "Los Martires",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -201,7 +185,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
       "legendgroup": "Puente Aranda",
       "marker": {
@@ -211,7 +194,6 @@
         }
       },
       "name": "Puente Aranda",
-      "offsetgroup": "Puente Aranda",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -226,7 +208,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
       "legendgroup": "Rafael Uribe Uribe",
       "marker": {
@@ -236,7 +217,6 @@
         }
       },
       "name": "Rafael Uribe Uribe",
-      "offsetgroup": "Rafael Uribe Uribe",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -251,7 +231,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
       "legendgroup": "San Cristobal",
       "marker": {
@@ -261,7 +240,6 @@
         }
       },
       "name": "San Cristobal",
-      "offsetgroup": "San Cristobal",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -276,7 +254,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
       "legendgroup": "Santa Fe",
       "marker": {
@@ -286,7 +263,6 @@
         }
       },
       "name": "Santa Fe",
-      "offsetgroup": "Santa Fe",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -301,7 +277,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
       "legendgroup": "Suba",
       "marker": {
@@ -311,7 +286,6 @@
         }
       },
       "name": "Suba",
-      "offsetgroup": "Suba",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -326,7 +300,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
       "legendgroup": "Teusaquillo",
       "marker": {
@@ -336,7 +309,6 @@
         }
       },
       "name": "Teusaquillo",
-      "offsetgroup": "Teusaquillo",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -351,7 +323,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
       "legendgroup": "Usaquén",
       "marker": {
@@ -361,7 +332,6 @@
         }
       },
       "name": "Usaquén",
-      "offsetgroup": "Usaquén",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -376,7 +346,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "Location=%{x}<br>Value=%{y}<extra></extra>",
       "legendgroup": "Usme",
       "marker": {
@@ -386,7 +355,6 @@
         }
       },
       "name": "Usme",
-      "offsetgroup": "Usme",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",

@@ -177,7 +177,7 @@
               "type": "NavItem"
             }
           ],
-          "className": "mr-auto",
+          "className": "me-auto",
           "color": "#20284D",
           "dark": false,
           "expand": "lg",

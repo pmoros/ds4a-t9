@@ -1,7 +1,6 @@
 {
   "data": [
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=A. SOLO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "A. SOLO",
       "marker": {
@@ -11,7 +10,6 @@
         }
       },
       "name": "A. SOLO",
-      "offsetgroup": "A. SOLO",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -48,7 +46,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=B. FAMILIA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "B. FAMILIA",
       "marker": {
@@ -58,7 +55,6 @@
         }
       },
       "name": "B. FAMILIA",
-      "offsetgroup": "B. FAMILIA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -95,7 +91,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=C. PAREJA<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "C. PAREJA",
       "marker": {
@@ -105,7 +100,6 @@
         }
       },
       "name": "C. PAREJA",
-      "offsetgroup": "C. PAREJA",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -142,7 +136,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=D. AMIGOS<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "D. AMIGOS",
       "marker": {
@@ -152,7 +145,6 @@
         }
       },
       "name": "D. AMIGOS",
-      "offsetgroup": "D. AMIGOS",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -189,7 +181,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=E. COMPAÑEROS DE TRABAJO Y ESTUDIO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "E. COMPAÑEROS DE TRABAJO Y ESTUDIO",
       "marker": {
@@ -199,7 +190,6 @@
         }
       },
       "name": "E. COMPAÑEROS DE TRABAJO Y ESTUDIO",
-      "offsetgroup": "E. COMPAÑEROS DE TRABAJO Y ESTUDIO",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",
@@ -236,7 +226,6 @@
       "yaxis": "y"
     },
     {
-      "alignmentgroup": "True",
       "hovertemplate": "=F. OTRO<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "F. OTRO",
       "marker": {
@@ -246,7 +235,6 @@
         }
       },
       "name": "F. OTRO",
-      "offsetgroup": "F. OTRO",
       "orientation": "v",
       "showlegend": true,
       "textposition": "auto",

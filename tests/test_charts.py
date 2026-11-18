@@ -42,6 +42,11 @@ def test_subtopic_filter_keeps_the_original_index():
     assert list(frame.index) == [0, 3]
 
 
+def test_subtopic_filter_keeps_every_selected_origin():
+    frame = charts.travelers_subtopic(_travelers(), "EDAD", [2019], origins=["BOGOTA", "META"])
+    assert list(frame["VIAJEROS"]) == [10, 99, 5]
+
+
 def test_years_of_coerces_to_int():
     assert charts.years_of(["2019", 2020]) == [2019, 2020]
 
@@ -95,3 +100,15 @@ def test_menu_loader_wraps_values_per_dropdown(monkeypatch, wrap, expected_value
     result = menu_loader(["AÑO", "MES"], wrap)("0", "0")
     assert result[:2] == ([{"label": "1", "value": "1"}], [{"label": "a", "value": "a"}])
     assert result[2:] == expected_values
+
+
+def test_occupancy_mean_averages_over_every_selected_year():
+    import datalayer
+    from dashboard.callbacks.indicators import occupancy_mean
+
+    frame = datalayer.indicator("tasa_ocupacion_airbnb")
+    # Three years: with two, mean and median coincide.
+    years = sorted(frame["AÑO"].unique())[:3]
+    fig = occupancy_mean("tasa_ocupacion_airbnb", charts.MONTH_NUMBERS)([str(y) for y in years])
+    expected = frame[frame["AÑO"].isin(years)].groupby("MES")["VALOR"].mean()
+    assert list(fig.data[0].y) == pytest.approx(list(expected))

@@ -88,7 +88,7 @@ description = "Lint, check formatting and Python 3.7 compatibility"
 run = [
   "ruff check .",
   "ruff format --check .",
-  "vermin --target=3.7- --violations --no-tips --eval-annotations datalayer dashboard data.py app.py settings.py gunicorn.conf.py",
+  "vermin --target=3.7- --violations --no-tips --eval-annotations datalayer dashboard app.py settings.py gunicorn.conf.py",
 ]
 
 [tasks.fmt]

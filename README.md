@@ -65,7 +65,8 @@ mise tasks                    # list all tasks
 
 * `test_callbacks.py` runs all 54 Dash callbacks with first-load values, for national and international travelers, and snapshots their output (figures, card values, dropdown options, or the raised error).
 * `test_pages.py` covers routing, page layouts and HTTP smoke tests.
-* `test_data.py` profiles every DataFrame built in `data.py` and snapshots the travelers/preferences cards.
+* `test_data.py` profiles every DataFrame the data layer builds and snapshots the travelers/preferences cards.
+* `test_charts.py` unit-tests the chart builders and filters on small synthetic frames.
 
 ### End-to-end tests
 
@@ -82,7 +83,8 @@ dashboard/
   shell.py          header, navbar, footer, page container
   routes.py         pathname -> page
   pages/            one module per section; pages are built on first use and cached
-  callbacks/        callback registration (routing, indicators, travelers)
+  callbacks/        callbacks declared as tables, registered in order
+  charts.py         figure builders and the frame filters behind them
   components.py     shared UI pieces (banners, board headers, dropdown options)
   theme.py          colours, palettes, month order
 datalayer/          all data access (below)

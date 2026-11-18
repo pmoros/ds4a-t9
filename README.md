@@ -73,6 +73,25 @@ mise tasks                    # list all tasks
 
 Snapshots live in `tests/__snapshots__/`. If a change in output is **intended**, regenerate them with `mise run snapshot-update` and review the diff.
 
+### Code layout
+
+```
+app.py              WSGI entry point: app = create_app(); server = app.server
+dashboard/
+  __init__.py       create_app(warm=True)
+  shell.py          header, navbar, footer, page container
+  routes.py         pathname -> page
+  pages/            one module per section; pages are built on first use and cached
+  callbacks/        callback registration (routing, indicators, travelers)
+  components.py     shared UI pieces (banners, board headers, dropdown options)
+  theme.py          colours, palettes, month order
+datalayer/          all data access (below)
+```
+
+`create_app()` builds every page at startup, so a bad data directory fails
+before gunicorn forks its workers. `create_app(warm=False)` defers all reads
+until a page is requested.
+
 ### Data layer
 
 All data access goes through the `datalayer` package. Callbacks and layouts

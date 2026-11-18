@@ -16,7 +16,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: jdx/mise-action@v2
         with:
           version: 2026.11.8
@@ -30,7 +30,7 @@ jobs:
     # Pinned so Playwright's `install-deps` sees a known Ubuntu release.
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: jdx/mise-action@v2
         with:
           version: 2026.11.8
@@ -58,7 +58,7 @@ jobs:
     # custom PORT and serves the app.
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: docker build -t ds4a-t9:ci .
       - name: Run the container and wait for it to serve
         run: |

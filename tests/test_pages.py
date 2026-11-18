@@ -1,7 +1,6 @@
 """Routing, page layouts and HTTP smoke tests."""
 
 import pytest
-
 from helpers import PAGE_PATHS, display_page, iter_components, page_layouts, slug, to_jsonable
 
 NOT_FOUND = "ERROR 404: Page not found!"
@@ -16,10 +15,9 @@ def test_unknown_route_returns_404_text(legacy_app):
     assert display_page(legacy_app, "/does-not-exist") == NOT_FOUND
 
 
-def test_empty_pathname_is_not_home(legacy_app):
-    # Characterizes a known bug: `pathname.endswith("/" or "")` only checks "/",
-    # so an empty pathname falls through to the 404 text.
-    assert display_page(legacy_app, "") == NOT_FOUND
+def test_empty_pathname_is_home(legacy_app):
+    # Used to be a 404: the old check was `pathname.endswith("/" or "")`.
+    assert display_page(legacy_app, "") == display_page(legacy_app, "/")
 
 
 @pytest.mark.parametrize("path", PAGE_PATHS, ids=[slug(p) or "home" for p in PAGE_PATHS])
@@ -52,4 +50,4 @@ def test_http_dash_layout(client):
 def test_http_dash_dependencies(client):
     response = client.get("/_dash-dependencies")
     assert response.status_code == 200
-    assert len(response.get_json()) == 54
+    assert len(response.get_json()) == 53

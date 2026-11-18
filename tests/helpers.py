@@ -146,10 +146,7 @@ def initial_props(app_module):
 
 def parse_outputs(output_key):
     """'a.figure' -> [('a', 'figure')]; '..a.x...b.y..' -> [('a','x'), ('b','y')]."""
-    if output_key.startswith(".."):
-        parts = output_key[2:-2].split("...")
-    else:
-        parts = [output_key]
+    parts = output_key[2:-2].split("...") if output_key.startswith("..") else [output_key]
     return [tuple(part.rsplit(".", 1)) for part in parts]
 
 
@@ -187,7 +184,7 @@ def run_callbacks(app_module, overrides):
                 continue
             outputs = parse_outputs(key)
             values = [value] if len(outputs) == 1 else list(value)
-            for target, out_value in zip(outputs, values):
+            for target, out_value in zip(outputs, values, strict=False):
                 state[target] = out_value
         if results == previous:
             return results, passes
@@ -202,7 +199,7 @@ def run_callbacks(app_module, overrides):
 
 def _is_text(dtype):
     # pandas 1 stores strings as object; pandas 3 has a dedicated str dtype.
-    return dtype == object or pd.api.types.is_string_dtype(dtype)
+    return pd.api.types.is_object_dtype(dtype) or pd.api.types.is_string_dtype(dtype)
 
 
 def dtype_kind(dtype):

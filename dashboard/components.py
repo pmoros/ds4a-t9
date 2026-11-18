@@ -7,7 +7,7 @@ from dash import html
 def get_main_banner_empty(img_url):
     banner = html.Div(
         className="container-fluid main-banner row-full",
-        style={"backgroundImage": """url("{}")""".format(img_url), "backgroundPosition": "center"},
+        style={"backgroundImage": f"""url("{img_url}")""", "backgroundPosition": "center"},
     )
 
     return banner
@@ -21,7 +21,7 @@ def get_main_banner(img_url, text_div):
                     children=[text_div],
                     className="container-fluid main-banner row-full",
                     style={
-                        "backgroundImage": """url("{}")""".format(img_url),
+                        "backgroundImage": f"""url("{img_url}")""",
                         "backgroundPosition": "center",
                     },
                 ),
@@ -41,7 +41,7 @@ def get_main_banner_darker(img_url, text_div):
                     children=[text_div],
                     className="container-fluid main-banner-darker row-full",
                     style={
-                        "backgroundImage": """url("{}")""".format(img_url),
+                        "backgroundImage": f"""url("{img_url}")""",
                         "backgroundPosition": "center",
                     },
                 ),
@@ -76,15 +76,6 @@ def get_board_header(title, subtitle):
 
 
 def create_options_dropdown(val):
-    try:
-        val_casted = str(val)
-        label = val_casted
-        value = val_casted
-
-        my_dict = {}
-        my_dict["label"] = label
-        my_dict["value"] = value
-    except:
-        raise Exception("You're trying to use a binary object as label")
-
-    return my_dict
+    """A dcc.Dropdown option whose label and value are both ``str(val)``."""
+    text = str(val)
+    return {"label": text, "value": text}

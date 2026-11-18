@@ -2,7 +2,6 @@
 
 import pandas as pd
 import plotly.express as px
-
 from helpers import dtype_kind, frame_hash, to_jsonable
 
 FRAME = pd.DataFrame({"x": ["a", "b"], "y": [1, 2]})

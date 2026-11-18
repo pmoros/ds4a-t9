@@ -57,7 +57,7 @@ def _python(code, **env):
         env=dict(os.environ, **env),
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
-        universal_newlines=True,
+        text=True,
         timeout=300,
     )
 

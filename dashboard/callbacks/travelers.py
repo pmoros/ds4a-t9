@@ -50,7 +50,7 @@ def menu_loader(columns, wrap):
         }
         menus = [options[column] for column in columns]
         firsts = [menu[0]["value"] for menu in menus]
-        values = [[first] if listed else first for first, listed in zip(firsts, wrap)]
+        values = [[first] if listed else first for first, listed in zip(firsts, wrap, strict=False)]
         return tuple(menus + values)
 
     return callback
@@ -161,7 +161,6 @@ def _card(ids, callback):
 
 WHO, PREFS = "travelers_opt1-board", "travelers_opt2-board"
 _MAIN_MENUS = [Input("main-board-menu-year", "value"), Input("main-board-menu-month", "value")]
-_BOARD6 = "travelers_opt2-board6-row1-menu-"
 BAR, POLAR = charts.monthly_bar, charts.monthly_polar
 LINE, BAR_BY_ORIGIN = charts.monthly_line_by_origin, charts.monthly_bar_by_origin
 
@@ -201,14 +200,6 @@ CALLBACKS = [
     _board_menus(PREFS + "3"),
     _board_menus(PREFS + "4"),
     _board_menus(PREFS + "5"),
-    # Dead legacy callback: these board-6 "row1" dropdowns exist in no layout
-    # (suppress_callback_exceptions hides that). Kept so the callback map and
-    # its snapshots stay identical; removing it is a visible change for later.
-    _menus(
-        [_BOARD6 + "left-year", _BOARD6 + "right-year", _BOARD6 + "right-origin"],
-        ["AÑO", "AÑO", "ORIGEN"],
-        [True, False, True],
-    ),
     _board_menus(PREFS + "7"),
     _board_menus(PREFS + "1"),
     _top(PREFS + "1", "MOTIVO", None, BAR, PALETTE, LABELS),

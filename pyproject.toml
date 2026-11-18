@@ -43,16 +43,15 @@ markers = [
 
 [tool.coverage.run]
 source = ["."]
-omit = ["tests/*", "Temp.py"]
+omit = ["tests/*"]
 
 [tool.ruff]
 target-version = "py313"
 line-length = 100
-# Temp.py is unused scratch code with undefined names; it is removed in a later PR.
-extend-exclude = ["Temp.py"]
 
 [tool.ruff.lint]
-# Deliberately narrow for the legacy modules: only rules that catch real bugs
-# (syntax errors, undefined names, invalid comparisons). The rule set grows as
-# modules are refactored.
-select = ["E9", "F63", "F7", "F82"]
+select = ["E", "W", "F", "I", "B", "UP", "SIM"]
+# Long lines are left to the formatter; the ones it can't wrap are strings
+# (copy text, URLs) that read better whole. printf-style formatting is kept
+# where it is clearer than f-strings (e.g. JavaScript templates full of braces).
+ignore = ["E501", "UP031"]

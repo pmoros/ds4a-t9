@@ -58,7 +58,7 @@ run = "uv run pytest -m e2e {{ vars.e2e_opts }}"
 [tasks.cov]
 description = "Run the full test-suite with coverage"
 depends = ["setup", "e2e-setup"]
-run = "uv run pytest {{ vars.e2e_opts }} --cov --cov-report=term --cov-report=xml"
+run = "uv run pytest {{ vars.e2e_opts }} --cov --cov-report=term --cov-report=xml --cov-fail-under=95"
 
 [tasks."snapshot-update"]
 description = "Regenerate characterization snapshots (review the diff!)"

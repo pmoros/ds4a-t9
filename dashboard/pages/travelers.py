@@ -3,23 +3,20 @@
 Pages are built on first request and cached (see dashboard.pages).
 """
 
-from functools import lru_cache
+from functools import cache
 
 import dash_bootstrap_components as dbc
-from dash import dcc
-from dash import html
+from dash import dcc, html
 
 import datalayer
 from dashboard import components
 
 
-@lru_cache(maxsize=None)
+@cache
 def _build():
     # --------Viajeros layouts------------
 
     # --- Layout general
-    main_selector_choices = ["National Travelers", "International Travelers"]
-
     main_selector_choices_label = (
         "Interact with each of the filters and discover the information of your interest"
     )
@@ -1268,7 +1265,6 @@ def _build():
     )
 
     travelers_opt2_card6_label_top = "Number of nights spent by the total number of travelers who visited Bogotá in the selected years"
-    travelers_opt2_card6_label_bottom = "Comparison of the number of nights spent by travelers who visited Bogotá according to their origin"
 
     # Pass options to the menus ---- Card6
 

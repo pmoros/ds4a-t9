@@ -10,9 +10,9 @@ The two occupancy-rate series need a different step order and are written as
 builder functions instead.
 """
 
+from collections.abc import Callable
 from dataclasses import dataclass, replace
-from functools import lru_cache
-from typing import Callable, Optional, Tuple
+from functools import cache
 
 import pandas as pd
 
@@ -26,11 +26,11 @@ PERCENT = "percent"  # strings like "61.1%"
 @dataclass(frozen=True)
 class IndicatorSpec:
     theme: str
-    drop: Tuple[str, ...]
-    value: Optional[str] = FLOAT  # FLOAT, PERCENT, or None to leave VALOR as is
-    variables: Optional[Tuple[str, ...]] = None  # keep only these VARIABLE values
-    renames: Tuple[Tuple[str, str], ...] = ()  # (old, new), replaced frame-wide
-    rows: Optional[Callable[[pd.DataFrame], pd.DataFrame]] = None
+    drop: tuple[str, ...]
+    value: str | None = FLOAT  # FLOAT, PERCENT, or None to leave VALOR as is
+    variables: tuple[str, ...] | None = None  # keep only these VARIABLE values
+    renames: tuple[tuple[str, str], ...] = ()  # (old, new), replaced frame-wide
+    rows: Callable[[pd.DataFrame], pd.DataFrame] | None = None
 
     def build(self, raw):
         df = raw.copy()
@@ -193,6 +193,6 @@ def indicator(name):
     return _build(name, str(config.indicators_path()))
 
 
-@lru_cache(maxsize=None)
+@cache
 def _build(name, path):  # path is part of the cache key only
     return BUILDERS[name](sources.load_indicators())

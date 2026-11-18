@@ -52,7 +52,7 @@
       "hovertemplate": "=B. MUJER<br>MONTH=%{x}<br>TRAVELERS=%{y}<extra></extra>",
       "legendgroup": "B. MUJER",
       "marker": {
-        "color": " #BADA55",
+        "color": "#BADA55",
         "pattern": {
           "shape": ""
         }

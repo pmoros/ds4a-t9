@@ -67,11 +67,3 @@ def test_typed_arrays_are_decoded_to_lists():
     assert to_jsonable({"z": {"bdata": grid, "dtype": "i2", "shape": "2, 2"}}) == {
         "z": [[0, 1], [2, 3]]
     }
-
-
-def test_offset_groups_are_dropped_unless_bars_are_grouped():
-    stacked = to_jsonable(px.bar(FRAME, x="x", y="y", color="x"))
-    assert all("offsetgroup" not in t and "alignmentgroup" not in t for t in stacked["data"])
-
-    grouped = to_jsonable(px.bar(FRAME, x="x", y="y", color="x", barmode="group"))
-    assert [t["offsetgroup"] for t in grouped["data"]] == ["a", "b"]

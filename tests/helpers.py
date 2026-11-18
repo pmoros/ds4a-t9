@@ -56,9 +56,6 @@ MAX_PASSES = 6
 # * fillpattern {"shape": ""} on traces: an empty default newer plotly emits.
 # * {"bdata", "dtype"[, "shape"]}: plotly >= 6 sends numpy arrays base64-encoded;
 #   decoded back to plain lists (lossless).
-# * alignmentgroup / offsetgroup: plotly >= 6 only emits them where they
-#   matter, i.e. grouped bars. They are dropped everywhere else, and kept on
-#   figures with layout.barmode == "group" so a grouping change still shows.
 
 
 def _digest(value):
@@ -87,20 +84,9 @@ def _is_typed_array(value):
     return isinstance(value, dict) and set(value) - {"shape"} == {"bdata", "dtype"}
 
 
-def _drop_offset_groups(figure):
-    if figure.get("layout", {}).get("barmode") == "group":
-        return figure
-    for trace in figure.get("data", []):
-        trace.pop("alignmentgroup", None)
-        trace.pop("offsetgroup", None)
-    return figure
-
-
 def _scrub(value):
     if _is_typed_array(value):
         return _decode_typed_array(value)
-    if isinstance(value, dict) and isinstance(value.get("data"), list) and "layout" in value:
-        value = _drop_offset_groups(dict(value, data=[dict(t) for t in value["data"]]))
     if isinstance(value, dict):
         out = {}
         for key, item in value.items():

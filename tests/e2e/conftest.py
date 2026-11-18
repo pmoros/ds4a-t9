@@ -231,6 +231,18 @@ class DashPage:
         self.dropdown(component_id).locator(".dash-dropdown-trigger").click()
         self.dropdown_menu().locator("input.dash-dropdown-search").fill(text)
 
+    def dropdown_pick(self, component_id, text):
+        """Search for ``text`` and click its option once the menu shows it.
+
+        Pressing Enter right after typing races the menu's re-render (its first
+        rows are "Select All / Deselect All"), so wait for the option itself.
+        """
+        self.dropdown_type(component_id, text)
+        option = self.dropdown_menu().get_by_role("option", name=text, exact=True)
+        expect(option).to_be_visible()
+        option.click()
+        self.page.keyboard.press("Escape")
+
     def wait_for_bars(self, graph_id, expected, traces):
         """Poll until a bar figure has ``traces`` traces and the ``expected``
         {trace name: first y} values; return what is rendered at the end.

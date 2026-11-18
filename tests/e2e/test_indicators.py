@@ -28,8 +28,7 @@ def test_adding_a_year_updates_the_figure(dash):
     expect(dash.dropdown_values(YEAR_SELECTOR)).to_have_text(["2015"])
     _assert_bars(dash, BARS_2015)
 
-    dash.dropdown_type(YEAR_SELECTOR, "2016")
-    dash.page.keyboard.press("Enter")
+    dash.dropdown_pick(YEAR_SELECTOR, "2016")
 
     expect(dash.dropdown_values(YEAR_SELECTOR)).to_have_text(["2015", "2016"])
     _assert_bars(dash, BARS_2015_2016)

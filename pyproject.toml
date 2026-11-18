@@ -76,19 +76,7 @@ extend-exclude = ["Temp.py"]
 # modules are refactored.
 select = ["E9", "F63", "F7", "F82"]
 
-[tool.ruff.lint.per-file-ignores]
-# index.py symbols are pulled in through `from index import *`.
-"app.py" = ["F405"]
-
 [tool.ruff.format]
 # Formatting is enforced on new code only, to keep this PR free of churn in
 # the legacy modules (they are restructured in later PRs).
-exclude = [
-    "app.py",
-    "data.py",
-    "index.py",
-    "layouts.py",
-    "layouts_about_us.py",
-    "layouts_indicators.py",
-    "layouts_viajeros.py",
-]
+exclude = ["data.py"]

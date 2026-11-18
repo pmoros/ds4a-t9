@@ -8,8 +8,8 @@ import pandas as pd
 import pytest
 
 import datalayer
-import layouts
 from datalayer import TravelerKind
+from dashboard.components import create_options_dropdown
 from datalayer.formatting import millify
 
 # Legacy data.df_<name> -> how to obtain the same frame from datalayer.
@@ -64,7 +64,7 @@ def test_millify(value, expected):
 
 
 def test_create_options_dropdown():
-    assert layouts.create_options_dropdown(2021) == {"label": "2021", "value": "2021"}
+    assert create_options_dropdown(2021) == {"label": "2021", "value": "2021"}
 
 
 # Legacy card flag -> kind (note the inversion: 0 is international).

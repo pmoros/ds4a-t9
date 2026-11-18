@@ -21,9 +21,7 @@ ROUTES = [
 
 
 def display_page(pathname):
-    # Legacy quirk kept on purpose: `"/" or ""` is just "/", so an empty
-    # pathname is a 404 (characterized in tests/test_pages.py).
-    if pathname.endswith("/" or ""):
+    if pathname == "" or pathname.endswith("/"):
         return home.home()
     for suffix, page in ROUTES:
         if pathname.endswith(suffix):

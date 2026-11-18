@@ -13,6 +13,7 @@
 """
 
 import base64
+import contextlib
 import json
 import logging
 import threading
@@ -20,7 +21,6 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 import pytest
-
 from playwright.sync_api import Error as PlaywrightError
 from playwright.sync_api import expect
 from werkzeug.serving import make_server
@@ -206,12 +206,11 @@ class DashPage:
 
     def graphs_with_data(self, expected):
         """Wait until ``expected`` graphs have traces; return the final count."""
-        try:
+        # On timeout, fall through to report the actual count.
+        with contextlib.suppress(PlaywrightError):
             self.page.wait_for_function(
                 "n => (%s)() === n" % COUNT_GRAPHS_WITH_DATA.strip(), arg=expected
             )
-        except PlaywrightError:
-            pass  # fall through to report the actual count
         return self.page.evaluate(COUNT_GRAPHS_WITH_DATA)
 
     # -- dcc.Dropdown helpers (Dash 4) ---------------------------------------
@@ -252,7 +251,8 @@ class DashPage:
         from ``_fullData``: plotly >= 6 sends arrays base64-encoded, and only
         the computed traces hold them decoded.
         """
-        try:
+        # On timeout, fall through so the caller's assertion shows the actual values.
+        with contextlib.suppress(PlaywrightError):
             self.page.wait_for_function(
                 """([id, expected, traces]) => {
                      const gd = document.querySelector('#' + id + ' .js-plotly-plot');
@@ -263,8 +263,6 @@ class DashPage:
                    }""",
                 arg=[graph_id, expected, traces],
             )
-        except PlaywrightError:
-            pass  # fall through so the caller's assertion shows the actual values
         return self.page.evaluate(
             """id => {
                  const gd = document.querySelector('#' + id + ' .js-plotly-plot');

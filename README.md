@@ -59,11 +59,12 @@ mise run ci                   # everything CI runs
 mise tasks                    # list all tasks
 ```
 
-### Characterization tests
+### Tests
 
-`tests/` freezes the current behaviour of the app before refactoring:
+Characterization snapshots pin what the app outputs, so refactors and upgrades
+are proven by snapshots that don't change:
 
-* `test_callbacks.py` runs all 54 Dash callbacks with first-load values, for national and international travelers, and snapshots their output (figures, card values, dropdown options, or the raised error).
+* `test_callbacks.py` runs all 53 Dash callbacks with first-load values, for national and international travelers, and snapshots their output (figures, card values, dropdown options, or the raised error).
 * `test_pages.py` covers routing, page layouts and HTTP smoke tests.
 * `test_data.py` profiles every DataFrame the data layer builds and snapshots the travelers/preferences cards.
 * `test_charts.py` unit-tests the chart builders and filters on small synthetic frames.
@@ -72,7 +73,9 @@ mise tasks                    # list all tasks
 
 `tests/e2e/` drives the real app in headless Chromium (Playwright) to check that every page renders, navigation works, and the main cards, toggles and filters behave as expected. The app is served in-process, and the browser's network is hermetic: third-party requests (S3 images, CDN CSS, map tiles and topojson) are answered from `tests/e2e/fixtures/` or with stubs, so runs are deterministic and offline. Any page error, console error or failed callback fails the test. On failure, screenshots and Playwright traces are written to `test-results/` (open a trace with `uv run playwright show-trace <file>`).
 
-Snapshots live in `tests/__snapshots__/`. If a change in output is **intended**, regenerate them with `mise run snapshot-update` and review the diff.
+Snapshots live in `tests/__snapshots__/`. If a change in output is **intended**, regenerate them with `mise run snapshot-update` and review the diff. `tests/helpers.py` canonicalises representation that changes between library releases (plotly's base64 arrays and template defaults, pandas' text dtype), so a library upgrade alone does not change them; `tests/test_helpers.py` shows what is normalised and what must still be detected.
+
+CI runs lint (ruff, plus a check that `requirements.txt` matches `uv.lock`), the full suite with a 95% coverage floor, and builds and runs the Docker image.
 
 ### Code layout
 

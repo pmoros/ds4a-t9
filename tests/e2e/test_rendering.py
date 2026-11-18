@@ -1,11 +1,11 @@
 """R1, R2, R9, R10: every page renders in a real browser."""
 
 import pytest
+from dash import dcc
+from helpers import iter_components, page_layouts
 from playwright.sync_api import expect
 
 import app as legacy
-from dash import dcc
-from helpers import iter_components, page_layouts
 
 pytestmark = pytest.mark.e2e
 

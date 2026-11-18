@@ -12,4 +12,4 @@ def millify(n):
         0,
         min(len(MILLNAMES) - 1, int(np.floor(0 if n == 0 else np.log10(abs(n)) / 3))),
     )
-    return "{:.0f}{}".format(n / 10 ** (3 * millidx), MILLNAMES[millidx])
+    return f"{n / 10 ** (3 * millidx):.0f}{MILLNAMES[millidx]}"

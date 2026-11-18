@@ -6,7 +6,7 @@ changing IDT_DATA_DIR takes effect without stale results.
 """
 
 import json
-from functools import lru_cache
+from functools import cache
 from pathlib import Path
 
 import pandas as pd
@@ -32,14 +32,14 @@ def _require_columns(df, required, path):
         raise DataSchemaError("%s is missing columns: %s" % (Path(path).name, ", ".join(missing)))
 
 
-@lru_cache(maxsize=None)
+@cache
 def _read_travelers(path):
     df = pd.read_excel(path)
     _require_columns(df, TRAVELERS_COLUMNS, path)
     return df
 
 
-@lru_cache(maxsize=None)
+@cache
 def _read_indicators(path):
     df = pd.read_csv(path)
     df.columns = [column.upper() for column in df.columns]
@@ -47,7 +47,7 @@ def _read_indicators(path):
     return df
 
 
-@lru_cache(maxsize=None)
+@cache
 def _read_geojson(path):
     with open(path, encoding="utf-8") as handle:
         return json.load(handle)

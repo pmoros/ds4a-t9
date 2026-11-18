@@ -3,13 +3,13 @@
 Pages are built on first request and cached (see dashboard.pages).
 """
 
-from functools import lru_cache
+from functools import cache
 
 import dash_bootstrap_components as dbc
 from dash import html
 
 
-@lru_cache(maxsize=None)
+@cache
 def _build():
     landingPage_title = ["Welcome", "to the Bogotá tourist information system"]
     landingPage_subtitle = [

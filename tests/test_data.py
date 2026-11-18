@@ -4,13 +4,12 @@ The snapshot ids are the legacy ``data.df_*`` names, so these tests prove the
 datalayer reproduces every frame data.py used to build.
 """
 
-import pandas as pd
 import pytest
+from helpers import dtype_kind, frame_hash
 
 import datalayer
-from datalayer import TravelerKind
 from dashboard.components import create_options_dropdown
-from helpers import dtype_kind, frame_hash
+from datalayer import TravelerKind
 from datalayer.formatting import millify
 
 # Legacy data.df_<name> -> how to obtain the same frame from datalayer.

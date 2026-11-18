@@ -8,10 +8,10 @@ Returned frames are shared, cached objects: filter or copy them, never modify
 them in place (that would change what every later request sees).
 """
 
-from .indicators import NAMES as INDICATOR_NAMES
-from .indicators import indicator
 from . import indicators as _indicators
 from . import sources as _sources
+from .indicators import NAMES as INDICATOR_NAMES
+from .indicators import indicator
 from .schema import TravelerKind
 from .sources import DataSchemaError, load_geojson, load_indicators
 from .travelers import (

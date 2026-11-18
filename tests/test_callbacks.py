@@ -7,9 +7,9 @@ Update intentionally with ``pytest --snapshot-update``.
 """
 
 import pytest
+from helpers import SCENARIOS, callback_id, run_callbacks
 
 import app as legacy
-from helpers import SCENARIOS, callback_id, run_callbacks
 
 CALLBACK_KEYS = sorted(legacy.app.callback_map)
 
@@ -23,7 +23,7 @@ def _results(scenario):
 
 
 def test_callback_count():
-    assert len(CALLBACK_KEYS) == 54
+    assert len(CALLBACK_KEYS) == 53
 
 
 @pytest.mark.parametrize("scenario", sorted(SCENARIOS))

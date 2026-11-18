@@ -1,11 +1,9 @@
 """The page frame: header, navigation bar, footer and the page container."""
 
 import dash_bootstrap_components as dbc
-from dash import dcc
-from dash import html
+from dash import dcc, html
 
 from dashboard.theme import MAIN_COLOR_CONTRAST
-
 
 # Header
 header = html.Div(
@@ -123,7 +121,7 @@ footer = html.Div(
                 html.Img(
                     id="mintic-footer-logo",
                     src=LOGOS_FOOTER["mintic"],
-                    style={"width": "167px", "height": "36px", "height": "100%"},
+                    style={"width": "167px", "height": "100%"},
                 ),
             ],
             className="footer-logos-container",

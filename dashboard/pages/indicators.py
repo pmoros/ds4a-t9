@@ -3,17 +3,16 @@
 Pages are built on first request and cached (see dashboard.pages).
 """
 
-from functools import lru_cache
+from functools import cache
 
 import dash_bootstrap_components as dbc
-from dash import dcc
-from dash import html
+from dash import dcc, html
 
 import datalayer
 from dashboard import charts, components
 
 
-@lru_cache(maxsize=None)
+@cache
 def _build():
     banner_image = (
         "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/indicators-banner.jpg"

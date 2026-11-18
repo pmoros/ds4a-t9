@@ -1,7 +1,7 @@
 """R5, R6, R7: travelers pages, main cards and the traveler-type toggle.
 
 Expected values are literals (the ones pinned by the characterization
-snapshots), so a regression in data.py fails here too. It does not move the
+snapshots), so a regression in the data layer fails here too. It does not move the
 expectation along with it.
 """
 
@@ -43,7 +43,7 @@ ORIGIN_SELECTOR = "travelers_opt1-board2-bottom-origin"
 
 
 def _expect_card(page, ids, values):
-    for component_id, value in zip(ids, values):
+    for component_id, value in zip(ids, values, strict=False):
         expect(page.locator("#%s" % component_id)).to_have_text(value)
 
 

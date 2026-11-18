@@ -3,13 +3,13 @@
 Pages are built on first request and cached (see dashboard.pages).
 """
 
-from functools import lru_cache
+from functools import cache
 
 import dash_bootstrap_components as dbc
 from dash import html
 
 
-@lru_cache(maxsize=None)
+@cache
 def _build():
     about_us_page_title = html.Div(
         [

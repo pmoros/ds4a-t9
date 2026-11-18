@@ -32,3 +32,14 @@ def test_adding_a_year_updates_the_figure(dash):
 
     expect(dash.dropdown_values(YEAR_SELECTOR)).to_have_text(["2015", "2016"])
     _assert_bars(dash, BARS_2015_2016)
+
+
+def test_clearing_every_year_keeps_the_page_working(dash):
+    """A cleared multi-select sends []; its callback must answer, not fail."""
+    dash.open("/indicators/accomodation", "ACCOMMODATION")
+    _assert_bars(dash, BARS_2015)
+
+    dash.dropdown(YEAR_SELECTOR).locator(".dash-dropdown-clear").click()
+
+    expect(dash.dropdown_values(YEAR_SELECTOR)).to_have_count(0)
+    dash.wait_idle()  # the dash fixture fails the test on any callback error

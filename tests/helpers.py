@@ -168,6 +168,17 @@ def _call(spec, state):
 
 def run_callbacks(app_module, overrides):
     """Return ({output_key: jsonable result}, passes_needed)."""
+    results, passes, _ = settle_callbacks(app_module, overrides)
+    return results, passes
+
+
+def call_callback(spec, state):
+    """Run one callback_map entry against ``state``: (ok, value or error dict)."""
+    return _call(spec, state)
+
+
+def settle_callbacks(app_module, overrides):
+    """Like run_callbacks, but also return the settled {(id, prop): value} state."""
     state = initial_props(app_module)
     # dcc.Location only gets its pathname from the browser; emulate landing on "/".
     state[("url", "pathname")] = "/"
@@ -187,7 +198,7 @@ def run_callbacks(app_module, overrides):
             for target, out_value in zip(outputs, values, strict=False):
                 state[target] = out_value
         if results == previous:
-            return results, passes
+            return results, passes, state
         previous = results
     raise AssertionError("callback chain did not converge in %d passes" % MAX_PASSES)
 

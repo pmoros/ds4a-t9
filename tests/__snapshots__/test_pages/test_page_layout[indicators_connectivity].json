@@ -257,6 +257,7 @@
                             {
                               "namespace": "dash_core_components",
                               "props": {
+                                "clearable": false,
                                 "id": "opt2-board2-menu-year",
                                 "options": [
                                   {
@@ -378,6 +379,7 @@
                             {
                               "namespace": "dash_core_components",
                               "props": {
+                                "clearable": false,
                                 "id": "opt2-board3-menu-top-year",
                                 "options": [
                                   {
@@ -436,6 +438,7 @@
                                         {
                                           "namespace": "dash_core_components",
                                           "props": {
+                                            "clearable": false,
                                             "id": "opt2-board3-menu-bottom-year",
                                             "options": [
                                               {

@@ -77,3 +77,11 @@ def test_preferences_main_card(dash):
     """R7"""
     dash.open("/travelers/preferences", "THE PREFERENCES")
     _expect_card(dash.page, PREF_CARD_IDS, PREF_CARD)
+
+
+def test_month_selector_cannot_be_cleared(dash):
+    """Clearing the month used to send None and answer HTTP 500."""
+    dash.open("/travelers/who", "THE TRAVELERS")
+    expect(dash.dropdown_values("main-board-menu-month")).to_have_text(["ENERO"])
+    expect(dash.dropdown("main-board-menu-month").locator(".dash-dropdown-clear")).to_have_count(0)
+    expect(dash.dropdown("main-board-menu-year").locator(".dash-dropdown-clear")).to_have_count(0)

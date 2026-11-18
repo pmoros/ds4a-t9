@@ -347,6 +347,7 @@
                             {
                               "namespace": "dash_core_components",
                               "props": {
+                                "clearable": false,
                                 "id": "opt3-board2-menu-top-year",
                                 "options": [
                                   {

@@ -19,9 +19,11 @@ KIND_INPUTS = [
 ]
 
 # Axis/legend labels used by the boards.
-TOP = {"VIAJEROS": "TRAVELERS", "MES": "MONTH", "ITEM": ""}
-TOP_ORIGIN = dict(TOP, ORIGEN="ORIGIN")
-BOTTOM_PURPOSE = {"VIAJEROS": "TRAVELERS", "MES": "MONTH", "ITEM": "PURPOSE, ORIGIN", "ORIGEN": ""}
+LABELS = {"VIAJEROS": "TRAVELERS", "MES": "MONTH", "ITEM": ""}
+LABELS_ORIGIN = dict(LABELS, ORIGEN="ORIGIN")
+# Legacy quirk kept on purpose: some charts that are not about trip purpose
+# (e.g. age) still title their legend "PURPOSE, ORIGIN".
+LABELS_PURPOSE = {"VIAJEROS": "TRAVELERS", "MES": "MONTH", "ITEM": "PURPOSE, ORIGIN", "ORIGEN": ""}
 
 
 def _kind(national_bt, international_bt):
@@ -157,11 +159,11 @@ def _card(ids, callback):
     return [Output(i, "children") for i in ids], _MAIN_MENUS, callback
 
 
-O1, O2 = "travelers_opt1-board", "travelers_opt2-board"
+WHO, PREFS = "travelers_opt1-board", "travelers_opt2-board"
 _MAIN_MENUS = [Input("main-board-menu-year", "value"), Input("main-board-menu-month", "value")]
 _BOARD6 = "travelers_opt2-board6-row1-menu-"
-B, P = charts.monthly_bar, charts.monthly_polar
-L, BO = charts.monthly_line_by_origin, charts.monthly_bar_by_origin
+BAR, POLAR = charts.monthly_bar, charts.monthly_polar
+LINE, BAR_BY_ORIGIN = charts.monthly_line_by_origin, charts.monthly_bar_by_origin
 
 CALLBACKS = [
     _menus(["main-board-menu-year", "main-board-menu-month"], ["AÑO", "MES"], [False, False]),
@@ -178,53 +180,55 @@ CALLBACKS = [
         + ["main-board-content-expense"],
         preference_card,
     ),
-    _board_menus(O1 + "2"),
-    _board_menus(O1 + "3"),
-    _board_menus(O1 + "4"),
-    _board_menus(O1 + "5"),
+    _board_menus(WHO + "2"),
+    _board_menus(WHO + "3"),
+    _board_menus(WHO + "4"),
+    _board_menus(WHO + "5"),
     _menus(["board1-menu-year", "board1-menu-month"], ["AÑO", "MES"], [True, True]),
     _single(
         Output("travelers_opt1-board1-graph-right", "figure"),
         [Input("board1-menu-year", "value"), Input("board1-menu-month", "value")],
         region_map,
     ),
-    _top(O1 + "2", "EDAD", "A. NS/NR", B, PALETTE, TOP),
-    _bottom(O1 + "2", "EDAD", "A. NS/NR", L, PALETTE, BOTTOM_PURPOSE),
-    _top(O1 + "3", "GENERO", "C. NS/NR", B, PALETTE_2, TOP_ORIGIN, barmode="group"),
-    _bottom(O1 + "3", "GENERO", "C. NS/NR", L, PALETTE_2, TOP_ORIGIN),
-    _top(O1 + "4", "EDUCACION", "G. NS/NR", B, PALETTE, TOP_ORIGIN),
-    _bottom(O1 + "4", "EDUCACION", "G. NS/NR", BO, PALETTE, TOP_ORIGIN),
-    _top(O1 + "5", "OCUPACION", "H. NS/NR", B, PALETTE, TOP_ORIGIN),
-    _bottom(O1 + "5", "OCUPACION", "H. NS/NR", BO, PALETTE, TOP_ORIGIN),
-    _board_menus(O2 + "3"),
-    _board_menus(O2 + "4"),
-    _board_menus(O2 + "5"),
-    # Board 6 has one bottom chart fed by a single-select year (legacy shape).
+    _top(WHO + "2", "EDAD", "A. NS/NR", BAR, PALETTE, LABELS),
+    _bottom(WHO + "2", "EDAD", "A. NS/NR", LINE, PALETTE, LABELS_PURPOSE),
+    _top(WHO + "3", "GENERO", "C. NS/NR", BAR, PALETTE_2, LABELS_ORIGIN, barmode="group"),
+    _bottom(WHO + "3", "GENERO", "C. NS/NR", LINE, PALETTE_2, LABELS_ORIGIN),
+    _top(WHO + "4", "EDUCACION", "G. NS/NR", BAR, PALETTE, LABELS_ORIGIN),
+    _bottom(WHO + "4", "EDUCACION", "G. NS/NR", BAR_BY_ORIGIN, PALETTE, LABELS_ORIGIN),
+    _top(WHO + "5", "OCUPACION", "H. NS/NR", BAR, PALETTE, LABELS_ORIGIN),
+    _bottom(WHO + "5", "OCUPACION", "H. NS/NR", BAR_BY_ORIGIN, PALETTE, LABELS_ORIGIN),
+    _board_menus(PREFS + "3"),
+    _board_menus(PREFS + "4"),
+    _board_menus(PREFS + "5"),
+    # Dead legacy callback: these board-6 "row1" dropdowns exist in no layout
+    # (suppress_callback_exceptions hides that). Kept so the callback map and
+    # its snapshots stay identical; removing it is a visible change for later.
     _menus(
         [_BOARD6 + "left-year", _BOARD6 + "right-year", _BOARD6 + "right-origin"],
         ["AÑO", "AÑO", "ORIGEN"],
         [True, False, True],
     ),
-    _board_menus(O2 + "7"),
-    _board_menus(O2 + "1"),
-    _top(O2 + "1", "MOTIVO", None, B, PALETTE, TOP),
-    _bottom(O2 + "1", "MOTIVO", None, L, PALETTE, BOTTOM_PURPOSE),
-    _board_menus(O2 + "2"),
+    _board_menus(PREFS + "7"),
+    _board_menus(PREFS + "1"),
+    _top(PREFS + "1", "MOTIVO", None, BAR, PALETTE, LABELS),
+    _bottom(PREFS + "1", "MOTIVO", None, LINE, PALETTE, LABELS_PURPOSE),
+    _board_menus(PREFS + "2"),
     _single(
-        Output(O2 + "2-graph-right", "figure"),
-        [Input(O2 + "2-menu-bottom-year", "value")],
+        Output(PREFS + "2-graph-right", "figure"),
+        [Input(PREFS + "2-menu-bottom-year", "value")],
         attractions_total,
     ),
-    _bottom(O2 + "2", "ATRACTIVOS", None, L, PALETTE, BOTTOM_PURPOSE),
-    _top(O2 + "3", "GASTO DISTRI", None, P, PALETTE, TOP_ORIGIN),
-    _bottom(O2 + "3", "GASTO DISTRI", None, L, PALETTE, TOP_ORIGIN),
-    _top(O2 + "4", "GRUPO", None, B, PALETTE, TOP),
-    _bottom(O2 + "4", "GRUPO", None, L, PALETTE, TOP_ORIGIN),
-    _top(O2 + "5", "ALOJAMIENTO", "G. NS/NR", B, PALETTE, TOP),
-    _bottom(O2 + "5", "ALOJAMIENTO", None, L, PALETTE, TOP_ORIGIN),
-    _top(O2 + "6", "Noches Pernoctadas", None, B, PALETTE, TOP),
-    _top(O2 + "7", "TRANSPORTE", None, B, PALETTE, TOP_ORIGIN),
-    _bottom(O2 + "7", "TRANSPORTE", None, L, PALETTE, TOP_ORIGIN),
+    _bottom(PREFS + "2", "ATRACTIVOS", None, LINE, PALETTE, LABELS_PURPOSE),
+    _top(PREFS + "3", "GASTO DISTRI", None, POLAR, PALETTE, LABELS_ORIGIN),
+    _bottom(PREFS + "3", "GASTO DISTRI", None, LINE, PALETTE, LABELS_ORIGIN),
+    _top(PREFS + "4", "GRUPO", None, BAR, PALETTE, LABELS),
+    _bottom(PREFS + "4", "GRUPO", None, LINE, PALETTE, LABELS_ORIGIN),
+    _top(PREFS + "5", "ALOJAMIENTO", "G. NS/NR", BAR, PALETTE, LABELS),
+    _bottom(PREFS + "5", "ALOJAMIENTO", None, LINE, PALETTE, LABELS_ORIGIN),
+    _top(PREFS + "6", "Noches Pernoctadas", None, BAR, PALETTE, LABELS),
+    _top(PREFS + "7", "TRANSPORTE", None, BAR, PALETTE, LABELS_ORIGIN),
+    _bottom(PREFS + "7", "TRANSPORTE", None, LINE, PALETTE, LABELS_ORIGIN),
 ]
 
 

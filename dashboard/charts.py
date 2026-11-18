@@ -1,6 +1,7 @@
 """Figure builders and the frame filters that feed them.
 
-Pure functions: frames and plain values in, plotly figures out. No Dash
+Frames and plain values in, plotly figures out (``region_map`` and the static
+indicator figures read their frame from ``datalayer`` themselves). No Dash
 imports, so they can be unit-tested without an app. Every builder reproduces
 the original figure exactly (the callback snapshots prove it).
 """

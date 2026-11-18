@@ -1,7 +1,6 @@
 """Colours, palettes and month ordering shared by pages and callbacks."""
 
 MAIN_COLOR_CONTRAST = "#20284D"
-MAIN_COLOR_SELECTOR = "#7484d4"
 
 # The stray space in " #BADA55" is legacy and appears in the snapshots; it is
 # fixed in the hygiene phase as a visible change.

@@ -1,7 +1,0 @@
-dash
-dash-bootstrap-components
-dash-table
-pandas
-numpy
-gunicorn
-openpyxl

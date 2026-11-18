@@ -6,7 +6,7 @@ Pages are built on first request and cached (see dashboard.pages).
 from functools import lru_cache
 
 import dash_bootstrap_components as dbc
-import dash_html_components as html
+from dash import html
 
 
 @lru_cache(maxsize=None)

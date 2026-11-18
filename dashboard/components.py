@@ -1,7 +1,7 @@
 """Reusable UI pieces: banners, board headers, dropdown options."""
 
 import dash_bootstrap_components as dbc
-import dash_html_components as html
+from dash import html
 
 
 def get_main_banner_empty(img_url):

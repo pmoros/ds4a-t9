@@ -11,4 +11,4 @@ if __name__ == "__main__":
     import settings
 
     config = settings.load()
-    app.run_server(debug=config.debug, host=config.host, port=config.port)
+    app.run(debug=config.debug, host=config.host, port=config.port)

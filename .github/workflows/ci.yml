@@ -21,6 +21,10 @@ jobs:
         with:
           version: 2026.11.8
       - run: mise run lint
+      # The Docker image and Procfile install requirements.txt; it must match
+      # uv.lock (Dependabot only updates the lock).
+      - name: requirements.txt matches uv.lock
+        run: mise run export-requirements && git diff --exit-code requirements.txt
 
   test:
     # Pinned so Playwright's `install-deps` sees a known Ubuntu release.

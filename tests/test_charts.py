@@ -115,8 +115,7 @@ def test_occupancy_mean_averages_over_every_selected_year():
 
 
 def test_listing_mean_by_several_locations_matches_the_data():
-    # Not reached by the first-load snapshots: pandas 3 made mean() on text
-    # columns raise, so this pins the numeric_only behaviour.
+    # Not reached by the first-load snapshots, which select a single location.
     import datalayer
     from dashboard.callbacks.indicators import listings_mean_by_location
 
@@ -126,3 +125,10 @@ def test_listing_mean_by_several_locations_matches_the_data():
     expected = frame[frame["SUBTEMA"].isin(locations)].groupby("SUBTEMA")["VALOR"].mean()
     plotted = {trace.name: float(trace.y[0]) for trace in fig.data}
     assert plotted == pytest.approx(expected.to_dict())
+
+
+def test_monthly_totals_keep_only_numeric_columns():
+    # pandas 3 concatenates text columns in sum() unless numeric_only is set;
+    # the charts never read them, but they cost time and memory.
+    totals = charts.by_month_and_item(_travelers())
+    assert list(totals.columns) == ["MES", "ITEM", "AÑO", "VIAJEROS"]

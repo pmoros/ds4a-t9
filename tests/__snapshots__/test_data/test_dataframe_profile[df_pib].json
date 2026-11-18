@@ -4,11 +4,11 @@
     "AÑO",
     "VALOR"
   ],
-  "content_hash": "-1951814126003253215",
+  "content_hash": "16494929947706298401",
   "dtypes": {
     "AÑO": "int64",
-    "CLASE": "object",
-    "VALOR": "object"
+    "CLASE": "text",
+    "VALOR": "text"
   },
   "numeric_sums": {
     "AÑO": 32244.0

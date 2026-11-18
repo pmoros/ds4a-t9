@@ -204,7 +204,7 @@
                   {
                     "namespace": "dash_html_components",
                     "props": {
-                      "children": "None",
+                      "children": null,
                       "id": "page-content"
                     },
                     "type": "Div"
@@ -242,7 +242,7 @@
                   {
                     "namespace": "dash_html_components",
                     "props": {
-                      "children": "None",
+                      "children": null,
                       "id": "correlation-footer-logo",
                       "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/footer-logo-correlation.png",
                       "style": {
@@ -255,7 +255,7 @@
                   {
                     "namespace": "dash_html_components",
                     "props": {
-                      "children": "None",
+                      "children": null,
                       "id": "mintic-footer-logo",
                       "src": "https://ds4a-team9-idt.s3.us-east-2.amazonaws.com/assets-static/footer-logo-mintic.png",
                       "style": {

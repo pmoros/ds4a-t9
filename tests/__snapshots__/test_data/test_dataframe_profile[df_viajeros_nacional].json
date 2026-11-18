@@ -8,14 +8,14 @@
     "VIAJEROS",
     "ORIGEN"
   ],
-  "content_hash": "-5599586249673627614",
+  "content_hash": "12847157824035924002",
   "dtypes": {
     "AÑO": "int64",
-    "ITEM": "object",
-    "MES": "object",
-    "ORIGEN": "object",
-    "SUBTEMA": "object",
-    "TEMA": "object",
+    "ITEM": "text",
+    "MES": "text",
+    "ORIGEN": "text",
+    "SUBTEMA": "text",
+    "TEMA": "text",
     "VIAJEROS": "float64"
   },
   "numeric_sums": {

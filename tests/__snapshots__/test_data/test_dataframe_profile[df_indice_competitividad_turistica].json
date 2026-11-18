@@ -5,12 +5,12 @@
     "AÑO",
     "VALOR"
   ],
-  "content_hash": "-7138581364981597370",
+  "content_hash": "11308162708727954246",
   "dtypes": {
     "AÑO": "int64",
-    "SUBTEMA": "object",
+    "SUBTEMA": "text",
     "VALOR": "float64",
-    "VARIABLE": "object"
+    "VARIABLE": "text"
   },
   "numeric_sums": {
     "AÑO": 72630.0,

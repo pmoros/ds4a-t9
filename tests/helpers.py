@@ -12,6 +12,7 @@ import hashlib
 import json
 import re
 
+import pandas as pd
 import plotly.utils
 from dash.development.base_component import Component
 
@@ -27,10 +28,6 @@ PAGE_PATHS = [
     "/about-us",
 ]
 
-# Large, uninteresting blobs are replaced by a digest so snapshots stay small
-# but still detect any change.
-_DIGEST_KEYS = {"geojson", "template"}
-
 NATIONAL_BUTTON = "viajeros-selector-national"
 INTERNATIONAL_BUTTON = "viajeros-selector-international"
 
@@ -45,15 +42,41 @@ SCENARIOS = {
 
 MAX_PASSES = 6
 
+# Snapshots must not depend on the library versions that produced them, so
+# representation that changes between releases is canonicalised here. Each rule
+# is covered by tests/test_helpers.py, including cases that must still differ.
+#
+# * geojson: a large blob, stored as a digest.
+# * template: plotly's theme. Its ``data`` part holds per-trace defaults that
+#   change every release; ``layout`` is what makes a theme look the way it does
+#   (backgrounds, grids, colorway, fonts), so only that is digested. ``mapbox``
+#   is left out because plotly renamed the map style defaults.
+# * fillpattern {"shape": ""} on traces: an empty default newer plotly emits.
+
 
 def _digest(value):
     raw = json.dumps(value, sort_keys=True).encode()
     return "sha256:" + hashlib.sha256(raw).hexdigest()
 
 
+def _template_digest(template):
+    layout = {k: v for k, v in template.get("layout", {}).items() if k != "mapbox"}
+    return _digest(layout)
+
+
 def _scrub(value):
     if isinstance(value, dict):
-        return {k: (_digest(v) if k in _DIGEST_KEYS else _scrub(v)) for k, v in value.items()}
+        out = {}
+        for key, item in value.items():
+            if key == "geojson":
+                out[key] = _digest(item)
+            elif key == "template" and isinstance(item, dict):
+                out[key] = _template_digest(item)
+            elif key == "fillpattern" and item == {"shape": ""}:
+                continue
+            else:
+                out[key] = _scrub(item)
+        return out
     if isinstance(value, list):
         return [_scrub(v) for v in value]
     return value
@@ -148,3 +171,24 @@ def run_callbacks(app_module, overrides):
             return results, passes
         previous = results
     raise AssertionError("callback chain did not converge in %d passes" % MAX_PASSES)
+
+
+# --------------------------------------------------------------------------
+# DataFrame profiles (independent of the pandas version)
+# --------------------------------------------------------------------------
+
+
+def _is_text(dtype):
+    # pandas 1 stores strings as object; pandas 3 has a dedicated str dtype.
+    return dtype == object or pd.api.types.is_string_dtype(dtype)
+
+
+def dtype_kind(dtype):
+    return "text" if _is_text(dtype) else str(dtype)
+
+
+def frame_hash(df):
+    """Content hash that only depends on the values, not on how text is stored."""
+    text = [col for col, dtype in df.dtypes.items() if _is_text(dtype)]
+    canonical = df.astype({col: object for col in text})
+    return str(int(pd.util.hash_pandas_object(canonical, index=True).sum()) % 2**64)

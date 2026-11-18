@@ -47,7 +47,10 @@ dev = [
     "pytest==7.4.4",
     "pytest-cov==4.1.0",
     "pytest-playwright==0.5.2; python_version >= '3.8'",
-    "syrupy==3.0.6",
+    # syrupy >=4 writes None as JSON null (3.x wrote the string "None"). 4.x
+    # does not install on 3.7, which is dropped in the upgrade PR that follows.
+    "syrupy==4.6.4; python_full_version >= '3.8.1'",
+    "syrupy==3.0.6; python_full_version < '3.8.1'",
 ]
 
 [tool.uv]

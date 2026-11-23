@@ -8,7 +8,7 @@ requires-python = ">=3.13,<3.14"
 # Direct dependencies only; uv.lock pins everything, and requirements.txt (used
 # by the Docker image) is exported from it: `mise run export-requirements`.
 dependencies = [
-    "dash[compress]==4.5.0",
+    "dash[compress]==4.5.1",
     "dash-bootstrap-components==2.0.4",
     "plotly==7.1.0",
     "Flask==3.1.3",
